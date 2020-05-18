@@ -2,7 +2,4 @@ theme: jekyll-theme-minimal
 
 title: BrkRaw
 description: A comprehensive tool to access raw data of Bruker Biospin Preclinical MRI Systems
-
-# logo:
 show_downloads: true
-google_analytics
