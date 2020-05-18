@@ -1,5 +1,5 @@
 theme: jekyll-theme-minimal
 
 title: BrkRaw
-description: A comprehensive tool to access raw data of Bruker Biospin Preclinical MRI Systems
+description: Python module for raw Bruker Biospin data
 show_downloads: true
