@@ -1,6 +1,6 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3818614.svg)](https://doi.org/10.5281/zenodo.3818614)
 
-# BrkRaw: Comprehensive tool to access Bruker PV dataset
+# BrkRaw: Comprehensive tool to access raw Bruker Biospin data
 ## Version: 0.3
 
 ### Description
