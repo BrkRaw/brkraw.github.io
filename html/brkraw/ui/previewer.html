@@ -1,0 +1,686 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.8.1" />
+<title>brkraw.ui.previewer API documentation</title>
+<meta name="description" content="" />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css' rel='stylesheet'>
+<link href='https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/8.0.0/sanitize.min.css' rel='stylesheet'>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet">
+<style>.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>brkraw.ui.previewer</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">import tkinter as tk
+from PIL import Image, ImageTk
+import numpy as np
+from .config import viewer_width, viewer_height
+
+
+class Previewer(tk.Frame):
+    def __init__(self, *args, **kwargs):
+        super(Previewer, self).__init__(*args, **kwargs)
+        # variables
+        self._dataobj = None
+        self._imgobj = None
+        self._is_tripilot = False
+        self._current_slice = 0
+        self._current_frame = 0
+
+        self.tkimg = None
+        self.slice_axis = tk.IntVar()
+        self.slice_axis.set(99)
+
+        self._set_axisbuttons()
+        self._set_canvas()
+        self._set_sliders()
+
+    def _set_canvas(self):
+        self._canvas = tk.Canvas(self,
+                                 width=viewer_width,
+                                 height=viewer_height)
+        self._canvas.place(x=50, y=30)
+
+    def _set_axisbuttons(self):
+        self._axis_buttons = []
+
+        tk.Label(self, text=&#39;Slice Axis::&#39;).place(x=50, y=5)
+        for i, axis in enumerate([&#39;x&#39;, &#39;y&#39;, &#39;z&#39;]):
+            button = tk.Radiobutton(self,
+                                    text=axis,
+                                    padx=10,
+                                    variable=self.slice_axis,
+                                    command=self._change_sliceaxis,
+                                    value=i)
+            button.place(x=150 + i*50, y=5)
+
+            if self.slice_axis.get() == 99:
+                button[&#39;state&#39;] = &#39;disabled&#39;
+            self._axis_buttons.append(button)
+
+    def _set_sliders(self, n_slice=0, n_frame=0):
+
+        tk.Label(self, text=&#39;Slice&#39;).place(x=70, y=455)
+        tk.Label(self, text=&#39;Frame&#39;).place(x=70, y=495)
+        self.slice_slider = tk.Scale(self, from_=0, to=n_slice - 1,
+                                     orient=tk.HORIZONTAL,
+                                     command=self._change_slice, length=300)
+
+        self.frame_slider = tk.Scale(self, from_=0, to=n_frame - 1,
+                                     orient=tk.HORIZONTAL,
+                                     command=self._change_frame, length=300)
+
+        self.slice_slider.set(self._current_slice)
+        self.frame_slider.set(self._current_frame)
+        self.slice_slider.place(x=130, y=440)
+        self.frame_slider.place(x=130, y=480)
+
+        if n_slice == 0:
+            self.slice_slider.config(state=tk.DISABLED)
+        if n_frame == 0:
+            self.frame_slider.config(state=tk.DISABLED)
+
+    def update_image(self):
+        self._canvas.create_image((int(viewer_width / 2), int(viewer_height / 2)),
+                                  image=self.tkimg)
+
+    def _load_image(self, brkraw_obj, scan_id, reco_id):
+        from ..lib.utils import multiply_all
+        # update image when scan_id and reco_id is changed
+        visu_pars = brkraw_obj._get_visu_pars(scan_id, reco_id)
+        dataobj = brkraw_obj.get_dataobj(scan_id, reco_id, slope=False)
+
+        if len(dataobj.shape) &gt; 3:
+            x, y, z = dataobj.shape[:3]
+            f = multiply_all(dataobj.shape[3:])
+            # all converted nifti must be 4D
+            self._dataobj = dataobj.reshape([x, y, z, f])[:,:,::-1, ...]
+        else:
+            self._dataobj = dataobj
+
+        # shape = brkraw_obj._get_matrix_size(visu_pars, dataobj)
+        # self._dataobj = dataobj.reshape(shape[::-1]).T[:,:,::-1, ...]
+
+        n_slicepacks = brkraw_obj._get_slice_info(visu_pars)[&#39;num_slice_packs&#39;]
+        spatial_info = brkraw_obj._get_spatial_info(visu_pars)
+
+        self._resol = spatial_info[&#39;spatial_resol&#39;]
+        self._matrix_size = spatial_info[&#39;matrix_size&#39;]
+
+        if n_slicepacks &gt; 1:
+            self._is_tripilot = True
+        else:
+            self._is_tripilot = False
+
+    def _change_sliceaxis(self):
+        if self.slice_axis.get() in range(3):
+            self._imgobj = np.swapaxes(self._dataobj, axis1=self.slice_axis.get(), axis2=2)
+            shape = self._imgobj.shape
+            n_slice = shape[2]
+
+            self._current_slice = int(n_slice / 2)
+            self._current_frame = 0
+
+            shape = self._imgobj.shape
+            if len(shape) &gt; 3:
+                n_frame = shape[3]
+            else:
+                n_frame = 0
+            n_slice = shape[2]
+
+            self._current_slice = int(n_slice / 2)
+            self._current_frame = 0
+
+            self._set_sliders(n_slice, n_frame)
+
+    def _convert_image(self):
+        if len(self._imgobj.shape) &gt; 3:
+            img = self._imgobj[:,:,self._current_slice,self._current_frame]
+        else:
+            img = self._imgobj[:,:,self._current_slice]
+
+        slice_axis = self.slice_axis.get()
+        if slice_axis in range(3):
+            axis_ref = np.array([0, 1, 2])
+            axis_ref[slice_axis], axis_ref[2] = axis_ref[2], axis_ref[slice_axis]
+
+            self._img_resol = np.array(self._resol[0])[axis_ref]
+            self._img_size = np.array(self._matrix_size[0])[axis_ref]
+        else:
+            self._img_resol = np.array(self._resol[0])
+            self._img_size = np.array(self._matrix_size[0])
+
+        img_fov = self._img_resol.astype(float) * self._img_size.astype(float)
+        max_val = img_fov[:2].max()
+        img_fov /= max_val
+        img_fov *= 400
+
+        # check resolution
+        img_width, img_height = int(img_fov[0]), int(img_fov[1])
+
+        self.tkimg = self.convert_pil2tk(self.convert_npy2pil(img),
+                                         img_width, img_height)
+
+    def _change_slice(self, event):
+        self._current_slice = self.slice_slider.get()
+        self._convert_image()
+        self.update_image()
+
+    def _change_frame(self, event):
+        self._current_frame = self.frame_slider.get()
+        self._convert_image()
+        self.update_image()
+
+    def load_data(self, brkraw_obj, scan_id, reco_id):
+        # load image from dataset
+        self._load_image(brkraw_obj, scan_id, reco_id)
+        shape = self._dataobj.shape
+        if len(shape) &gt; 3:
+            n_frame = shape[3]
+        else:
+            n_frame = 0
+        n_slice = shape[2]
+
+        self._current_slice = int(n_slice/2)
+        self._current_frame = 0
+
+        if self._is_tripilot:
+            self.slice_axis.set(99)
+            for button in self._axis_buttons:
+                button[&#39;state&#39;] = &#39;disabled&#39;
+        else:
+            for button in self._axis_buttons:
+                button[&#39;state&#39;] = &#39;normal&#39;
+            self.slice_axis.set(2)
+        self._set_sliders(n_slice, n_frame)
+        self._imgobj = self._dataobj
+        self._convert_image()
+        self.update_image()
+
+    @staticmethod
+    def convert_npy2pil(data, mode=None, rescale=True):
+        &#34;&#34;&#34; convert 2D numpy.array to PIL.Image object
+
+        Args:
+            data: 2D array data
+            mode: mode of image object
+                link=https://pillow.readthedocs.io/en/latest/handbook/concepts.html#modes
+            rescale: rescale value to 0~255
+
+        Returns: PIL.Image object
+
+        &#34;&#34;&#34;
+        if rescale == True:
+            rescaled_data = data / data.max() * 255
+        else:
+            rescaled_data = data
+        rescaled_data = rescaled_data.astype(&#39;uint8&#39;)
+        return Image.fromarray(rescaled_data.T, mode=mode)
+
+    @staticmethod
+    def convert_pil2tk(pilobj, width, height, method=&#39;nearest&#39;):
+        &#34;&#34;&#34; convert PIL.Image object to tkinter.PhotoImage object
+        This will allow plotting image on Tk.Canvas
+
+        Args:
+            pilobj: 2D image object
+            width: width of the image
+            height: height of the image
+            method: Method for interpolation
+
+        Returns: TkImage object
+
+        &#34;&#34;&#34;
+        if method == &#39;nearest&#39;:
+            method = Image.NEAREST
+        else:
+            method = Image.ANTIALIAS
+        return ImageTk.PhotoImage(pilobj.resize((width, height), method))</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="brkraw.ui.previewer.Previewer"><code class="flex name class">
+<span>class <span class="ident">Previewer</span></span>
+<span>(</span><span>*args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Frame widget which may contain other widgets and can have a 3D border.</p>
+<p>Construct a frame widget with the parent MASTER.</p>
+<p>Valid resource names: background, bd, bg, borderwidth, class,
+colormap, container, cursor, height, highlightbackground,
+highlightcolor, highlightthickness, relief, takefocus, visual, width.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Previewer(tk.Frame):
+    def __init__(self, *args, **kwargs):
+        super(Previewer, self).__init__(*args, **kwargs)
+        # variables
+        self._dataobj = None
+        self._imgobj = None
+        self._is_tripilot = False
+        self._current_slice = 0
+        self._current_frame = 0
+
+        self.tkimg = None
+        self.slice_axis = tk.IntVar()
+        self.slice_axis.set(99)
+
+        self._set_axisbuttons()
+        self._set_canvas()
+        self._set_sliders()
+
+    def _set_canvas(self):
+        self._canvas = tk.Canvas(self,
+                                 width=viewer_width,
+                                 height=viewer_height)
+        self._canvas.place(x=50, y=30)
+
+    def _set_axisbuttons(self):
+        self._axis_buttons = []
+
+        tk.Label(self, text=&#39;Slice Axis::&#39;).place(x=50, y=5)
+        for i, axis in enumerate([&#39;x&#39;, &#39;y&#39;, &#39;z&#39;]):
+            button = tk.Radiobutton(self,
+                                    text=axis,
+                                    padx=10,
+                                    variable=self.slice_axis,
+                                    command=self._change_sliceaxis,
+                                    value=i)
+            button.place(x=150 + i*50, y=5)
+
+            if self.slice_axis.get() == 99:
+                button[&#39;state&#39;] = &#39;disabled&#39;
+            self._axis_buttons.append(button)
+
+    def _set_sliders(self, n_slice=0, n_frame=0):
+
+        tk.Label(self, text=&#39;Slice&#39;).place(x=70, y=455)
+        tk.Label(self, text=&#39;Frame&#39;).place(x=70, y=495)
+        self.slice_slider = tk.Scale(self, from_=0, to=n_slice - 1,
+                                     orient=tk.HORIZONTAL,
+                                     command=self._change_slice, length=300)
+
+        self.frame_slider = tk.Scale(self, from_=0, to=n_frame - 1,
+                                     orient=tk.HORIZONTAL,
+                                     command=self._change_frame, length=300)
+
+        self.slice_slider.set(self._current_slice)
+        self.frame_slider.set(self._current_frame)
+        self.slice_slider.place(x=130, y=440)
+        self.frame_slider.place(x=130, y=480)
+
+        if n_slice == 0:
+            self.slice_slider.config(state=tk.DISABLED)
+        if n_frame == 0:
+            self.frame_slider.config(state=tk.DISABLED)
+
+    def update_image(self):
+        self._canvas.create_image((int(viewer_width / 2), int(viewer_height / 2)),
+                                  image=self.tkimg)
+
+    def _load_image(self, brkraw_obj, scan_id, reco_id):
+        from ..lib.utils import multiply_all
+        # update image when scan_id and reco_id is changed
+        visu_pars = brkraw_obj._get_visu_pars(scan_id, reco_id)
+        dataobj = brkraw_obj.get_dataobj(scan_id, reco_id, slope=False)
+
+        if len(dataobj.shape) &gt; 3:
+            x, y, z = dataobj.shape[:3]
+            f = multiply_all(dataobj.shape[3:])
+            # all converted nifti must be 4D
+            self._dataobj = dataobj.reshape([x, y, z, f])[:,:,::-1, ...]
+        else:
+            self._dataobj = dataobj
+
+        # shape = brkraw_obj._get_matrix_size(visu_pars, dataobj)
+        # self._dataobj = dataobj.reshape(shape[::-1]).T[:,:,::-1, ...]
+
+        n_slicepacks = brkraw_obj._get_slice_info(visu_pars)[&#39;num_slice_packs&#39;]
+        spatial_info = brkraw_obj._get_spatial_info(visu_pars)
+
+        self._resol = spatial_info[&#39;spatial_resol&#39;]
+        self._matrix_size = spatial_info[&#39;matrix_size&#39;]
+
+        if n_slicepacks &gt; 1:
+            self._is_tripilot = True
+        else:
+            self._is_tripilot = False
+
+    def _change_sliceaxis(self):
+        if self.slice_axis.get() in range(3):
+            self._imgobj = np.swapaxes(self._dataobj, axis1=self.slice_axis.get(), axis2=2)
+            shape = self._imgobj.shape
+            n_slice = shape[2]
+
+            self._current_slice = int(n_slice / 2)
+            self._current_frame = 0
+
+            shape = self._imgobj.shape
+            if len(shape) &gt; 3:
+                n_frame = shape[3]
+            else:
+                n_frame = 0
+            n_slice = shape[2]
+
+            self._current_slice = int(n_slice / 2)
+            self._current_frame = 0
+
+            self._set_sliders(n_slice, n_frame)
+
+    def _convert_image(self):
+        if len(self._imgobj.shape) &gt; 3:
+            img = self._imgobj[:,:,self._current_slice,self._current_frame]
+        else:
+            img = self._imgobj[:,:,self._current_slice]
+
+        slice_axis = self.slice_axis.get()
+        if slice_axis in range(3):
+            axis_ref = np.array([0, 1, 2])
+            axis_ref[slice_axis], axis_ref[2] = axis_ref[2], axis_ref[slice_axis]
+
+            self._img_resol = np.array(self._resol[0])[axis_ref]
+            self._img_size = np.array(self._matrix_size[0])[axis_ref]
+        else:
+            self._img_resol = np.array(self._resol[0])
+            self._img_size = np.array(self._matrix_size[0])
+
+        img_fov = self._img_resol.astype(float) * self._img_size.astype(float)
+        max_val = img_fov[:2].max()
+        img_fov /= max_val
+        img_fov *= 400
+
+        # check resolution
+        img_width, img_height = int(img_fov[0]), int(img_fov[1])
+
+        self.tkimg = self.convert_pil2tk(self.convert_npy2pil(img),
+                                         img_width, img_height)
+
+    def _change_slice(self, event):
+        self._current_slice = self.slice_slider.get()
+        self._convert_image()
+        self.update_image()
+
+    def _change_frame(self, event):
+        self._current_frame = self.frame_slider.get()
+        self._convert_image()
+        self.update_image()
+
+    def load_data(self, brkraw_obj, scan_id, reco_id):
+        # load image from dataset
+        self._load_image(brkraw_obj, scan_id, reco_id)
+        shape = self._dataobj.shape
+        if len(shape) &gt; 3:
+            n_frame = shape[3]
+        else:
+            n_frame = 0
+        n_slice = shape[2]
+
+        self._current_slice = int(n_slice/2)
+        self._current_frame = 0
+
+        if self._is_tripilot:
+            self.slice_axis.set(99)
+            for button in self._axis_buttons:
+                button[&#39;state&#39;] = &#39;disabled&#39;
+        else:
+            for button in self._axis_buttons:
+                button[&#39;state&#39;] = &#39;normal&#39;
+            self.slice_axis.set(2)
+        self._set_sliders(n_slice, n_frame)
+        self._imgobj = self._dataobj
+        self._convert_image()
+        self.update_image()
+
+    @staticmethod
+    def convert_npy2pil(data, mode=None, rescale=True):
+        &#34;&#34;&#34; convert 2D numpy.array to PIL.Image object
+
+        Args:
+            data: 2D array data
+            mode: mode of image object
+                link=https://pillow.readthedocs.io/en/latest/handbook/concepts.html#modes
+            rescale: rescale value to 0~255
+
+        Returns: PIL.Image object
+
+        &#34;&#34;&#34;
+        if rescale == True:
+            rescaled_data = data / data.max() * 255
+        else:
+            rescaled_data = data
+        rescaled_data = rescaled_data.astype(&#39;uint8&#39;)
+        return Image.fromarray(rescaled_data.T, mode=mode)
+
+    @staticmethod
+    def convert_pil2tk(pilobj, width, height, method=&#39;nearest&#39;):
+        &#34;&#34;&#34; convert PIL.Image object to tkinter.PhotoImage object
+        This will allow plotting image on Tk.Canvas
+
+        Args:
+            pilobj: 2D image object
+            width: width of the image
+            height: height of the image
+            method: Method for interpolation
+
+        Returns: TkImage object
+
+        &#34;&#34;&#34;
+        if method == &#39;nearest&#39;:
+            method = Image.NEAREST
+        else:
+            method = Image.ANTIALIAS
+        return ImageTk.PhotoImage(pilobj.resize((width, height), method))</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>tkinter.Frame</li>
+<li>tkinter.Widget</li>
+<li>tkinter.BaseWidget</li>
+<li>tkinter.Misc</li>
+<li>tkinter.Pack</li>
+<li>tkinter.Place</li>
+<li>tkinter.Grid</li>
+</ul>
+<h3>Static methods</h3>
+<dl>
+<dt id="brkraw.ui.previewer.Previewer.convert_npy2pil"><code class="name flex">
+<span>def <span class="ident">convert_npy2pil</span></span>(<span>data, mode=None, rescale=True)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>convert 2D numpy.array to PIL.Image object</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>data</code></strong></dt>
+<dd>2D array data</dd>
+<dt><strong><code>mode</code></strong></dt>
+<dd>mode of image object
+link=<a href="https://pillow.readthedocs.io/en/latest/handbook/concepts.html#modes">https://pillow.readthedocs.io/en/latest/handbook/concepts.html#modes</a></dd>
+<dt><strong><code>rescale</code></strong></dt>
+<dd>rescale value to 0~255</dd>
+<dt><strong><code>Returns</code></strong> :&ensp;<code>PIL.Image object</code></dt>
+<dd>&nbsp;</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@staticmethod
+def convert_npy2pil(data, mode=None, rescale=True):
+    &#34;&#34;&#34; convert 2D numpy.array to PIL.Image object
+
+    Args:
+        data: 2D array data
+        mode: mode of image object
+            link=https://pillow.readthedocs.io/en/latest/handbook/concepts.html#modes
+        rescale: rescale value to 0~255
+
+    Returns: PIL.Image object
+
+    &#34;&#34;&#34;
+    if rescale == True:
+        rescaled_data = data / data.max() * 255
+    else:
+        rescaled_data = data
+    rescaled_data = rescaled_data.astype(&#39;uint8&#39;)
+    return Image.fromarray(rescaled_data.T, mode=mode)</code></pre>
+</details>
+</dd>
+<dt id="brkraw.ui.previewer.Previewer.convert_pil2tk"><code class="name flex">
+<span>def <span class="ident">convert_pil2tk</span></span>(<span>pilobj, width, height, method='nearest')</span>
+</code></dt>
+<dd>
+<div class="desc"><p>convert PIL.Image object to tkinter.PhotoImage object
+This will allow plotting image on Tk.Canvas</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>pilobj</code></strong></dt>
+<dd>2D image object</dd>
+<dt><strong><code>width</code></strong></dt>
+<dd>width of the image</dd>
+<dt><strong><code>height</code></strong></dt>
+<dd>height of the image</dd>
+<dt><strong><code>method</code></strong></dt>
+<dd>Method for interpolation</dd>
+<dt><strong><code>Returns</code></strong> :&ensp;<code>TkImage object</code></dt>
+<dd>&nbsp;</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@staticmethod
+def convert_pil2tk(pilobj, width, height, method=&#39;nearest&#39;):
+    &#34;&#34;&#34; convert PIL.Image object to tkinter.PhotoImage object
+    This will allow plotting image on Tk.Canvas
+
+    Args:
+        pilobj: 2D image object
+        width: width of the image
+        height: height of the image
+        method: Method for interpolation
+
+    Returns: TkImage object
+
+    &#34;&#34;&#34;
+    if method == &#39;nearest&#39;:
+        method = Image.NEAREST
+    else:
+        method = Image.ANTIALIAS
+    return ImageTk.PhotoImage(pilobj.resize((width, height), method))</code></pre>
+</details>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="brkraw.ui.previewer.Previewer.load_data"><code class="name flex">
+<span>def <span class="ident">load_data</span></span>(<span>self, brkraw_obj, scan_id, reco_id)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def load_data(self, brkraw_obj, scan_id, reco_id):
+    # load image from dataset
+    self._load_image(brkraw_obj, scan_id, reco_id)
+    shape = self._dataobj.shape
+    if len(shape) &gt; 3:
+        n_frame = shape[3]
+    else:
+        n_frame = 0
+    n_slice = shape[2]
+
+    self._current_slice = int(n_slice/2)
+    self._current_frame = 0
+
+    if self._is_tripilot:
+        self.slice_axis.set(99)
+        for button in self._axis_buttons:
+            button[&#39;state&#39;] = &#39;disabled&#39;
+    else:
+        for button in self._axis_buttons:
+            button[&#39;state&#39;] = &#39;normal&#39;
+        self.slice_axis.set(2)
+    self._set_sliders(n_slice, n_frame)
+    self._imgobj = self._dataobj
+    self._convert_image()
+    self.update_image()</code></pre>
+</details>
+</dd>
+<dt id="brkraw.ui.previewer.Previewer.update_image"><code class="name flex">
+<span>def <span class="ident">update_image</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def update_image(self):
+    self._canvas.create_image((int(viewer_width / 2), int(viewer_height / 2)),
+                              image=self.tkimg)</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="brkraw.ui" href="index.html">brkraw.ui</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="brkraw.ui.previewer.Previewer" href="#brkraw.ui.previewer.Previewer">Previewer</a></code></h4>
+<ul class="">
+<li><code><a title="brkraw.ui.previewer.Previewer.convert_npy2pil" href="#brkraw.ui.previewer.Previewer.convert_npy2pil">convert_npy2pil</a></code></li>
+<li><code><a title="brkraw.ui.previewer.Previewer.convert_pil2tk" href="#brkraw.ui.previewer.Previewer.convert_pil2tk">convert_pil2tk</a></code></li>
+<li><code><a title="brkraw.ui.previewer.Previewer.load_data" href="#brkraw.ui.previewer.Previewer.load_data">load_data</a></code></li>
+<li><code><a title="brkraw.ui.previewer.Previewer.update_image" href="#brkraw.ui.previewer.Previewer.update_image">update_image</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.8.1</a>.</p>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad()</script>
+</body>
+</html>

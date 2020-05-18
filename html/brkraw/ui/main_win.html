@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.8.1" />
+<title>brkraw.ui.main_win API documentation</title>
+<meta name="description" content="" />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css' rel='stylesheet'>
+<link href='https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/8.0.0/sanitize.min.css' rel='stylesheet'>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet">
+<style>.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>brkraw.ui.main_win</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">import tkinter as tk
+from tkinter import filedialog
+from brkraw import __version__, load
+from .scan_list import ScanList
+from .scan_info import ScanInfo
+from .subj_info import SubjInfo
+from .previewer import Previewer
+from .config import win_pre_width as _width, win_pre_height as _height
+from .config import win_pst_width, win_pst_height
+from .config import window_posx, window_posy
+
+
+class MainWindow(tk.Tk):
+    def __init__(self, *args, **kwargs):
+        super(MainWindow, self).__init__(*args, **kwargs)
+        self._raw = None
+        self._scan_id = None
+        self._reco_id = None
+        self._output = None
+        self.title(&#39;BrkRaw GUI - v{}&#39;.format(__version__))
+
+        # initiated windows size and location
+        self.geometry(&#39;{}x{}+{}+{}&#39;.format(_width, _height,
+                                           window_posx, window_posy))
+        # minimal size
+        self.minsize(_width, _height)
+        self.maxsize(_width, _height)
+
+        self._init_layout()
+
+    def open_filediag(self):
+        self._path = filedialog.askopenfilename(
+            initialdir = &#34;.&#34;,
+            title = &#34;Select file&#34;,
+            filetypes = ((&#34;Zip compressed&#34;, &#34;*.zip&#34;),
+                         (&#34;Paravision 6 format&#34;, &#34;*.PVdatasets&#34;),
+                         ))
+        self._extend_layout()
+        self._load_dataset()
+
+    def open_dirdiag(self):
+        self._path = filedialog.askdirectory(
+            initialdir = &#34;.&#34;,
+            title = &#34;Select directory&#34;)
+        self._extend_layout()
+        self._load_dataset()
+
+    def _init_layout(self):
+        # level 1
+        self._subj_info   = SubjInfo(self)
+        self._subj_info.pack(
+            side=tk.TOP,    fill=tk.X, anchor=tk.CENTER)
+
+        # Button binding
+        self._subj_info._loadfile.config(command=self.open_filediag)
+        self._subj_info._loaddir.config(command=self.open_dirdiag)
+
+    def _close(self):
+        if self._raw != None:
+            self.geometry(&#39;{}x{}+{}+{}&#39;.format(_width, _height,
+                                               window_posx, window_posy))
+
+            # close opened frames
+            self._subj_info._clean_path()
+            self._subj_info._main_frame.destroy()
+            self._subj_info._path.destroy()
+            self._subj_info._path_label.destroy()
+            # self._subj_info._close.destroy()
+            self._subj_info._refresh.destroy()
+            self._main_frame.destroy()
+
+            self._raw.close()
+            self._raw = None
+
+            # minimal size
+            self.minsize(_width, _height)
+            self.maxsize(_width, _height)
+
+    def _extend_layout(self):
+        # Change windows size
+        self._close()
+        if len(self._path) != 0:
+            self.geometry(&#39;{}x{}+{}+{}&#39;.format(win_pst_width, win_pst_height,
+                                               window_posx, window_posy))
+            self.minsize(win_pst_width, win_pst_height)
+            self.maxsize(win_pst_width, win_pst_height)
+
+            # extend level 1
+            self._subj_info._extend_layout()
+            # self._subj_info._close.config(command=self._close)
+            self._subj_info._refresh.config(command=self._refresh)
+
+            self._main_frame = tk.Frame(self)
+            self._main_frame.pack(
+                side=tk.BOTTOM, fill=tk.BOTH,   expand=True)
+
+            # level 2
+            self._scan_list   = ScanList(self._main_frame)
+            view_frame  = tk.Frame(self._main_frame)
+            self._scan_list.pack(
+                side=tk.LEFT,   fill=tk.BOTH)
+            view_frame.pack(
+                side=tk.LEFT,   fill=tk.BOTH,   expand=True)
+
+            # level 3
+            self._scan_info = ScanInfo(view_frame)
+            self._preview   = Previewer(view_frame)
+            self._preview.pack(
+                side=tk.LEFT, fill=tk.BOTH, expand=True)
+            self._scan_info.pack(
+                side=tk.LEFT,   fill=tk.BOTH, padx=10, pady=10)
+            self._bind_scanlist()
+            self._set_convert_button()
+
+    def _refresh(self):
+        self._close()
+        self._extend_layout()
+        self._load_dataset()
+
+    def _load_dataset(self):
+        if len(self._path) != 0:
+            self._raw = load(self._path)
+            self._init_update()
+
+    def _init_update(self):
+        # take first image from dataset
+        self._scan_id, recos = [v for i, v in enumerate(self._raw._avail.items()) if i == 0][0]
+
+        self._reco_id = recos[0]
+        # update subject info
+        self._subj_info.load_data(self._raw)
+
+        # update scan and reco listbox
+        self._scan_list.load_data(self._raw)
+        self._scan_list._update_recos(self._raw, self._scan_id)
+
+        # update scan info of first image
+        self._scan_info.load_data(self._raw, self._scan_id, self._reco_id)
+
+        # update preview of first image
+        self._preview.load_data(self._raw, self._scan_id, self._reco_id)
+
+    def _bind_scanlist(self):
+        self._scan_list._scanlist.bind(&#39;&lt;&lt;ListboxSelect&gt;&gt;&#39;, self._update_scanid)
+        self._scan_list._recolist.bind(&#39;&lt;&lt;ListboxSelect&gt;&gt;&#39;, self._update_recoid)
+
+    def _update_scanid(self, event):
+        w = event.widget
+        index = int(w.curselection()[0])
+        self._scan_id = self._raw._pvobj.avail_scan_id[index]
+        self._reco_id = self._raw._avail[self._scan_id][0]
+        self._scan_list._update_recos(self._raw, self._scan_id)
+        self._update_data()
+
+    def _update_recoid(self, event):
+        w = event.widget
+        index = int(w.curselection()[0])
+        self._reco_id = self._raw._avail[self._scan_id][index]
+        self._update_data()
+
+    def _update_data(self):
+        # update scan info of first image
+        self._scan_info.load_data(self._raw, self._scan_id, self._reco_id)
+        # update preview of first image
+        self._preview.load_data(self._raw, self._scan_id, self._reco_id)
+
+    def _set_convert_button(self):
+        self._scan_list._updt_bt.config(state=tk.NORMAL)
+        self._scan_list._conv_bt.config(state=tk.NORMAL)
+        self._scan_list._updt_bt.config(command=self._set_output)
+        self._scan_list._conv_bt.config(command=self._save_as)
+
+    def _set_output(self):
+        self._output = filedialog.askdirectory(initialdir=self._output,
+                                               title=&#34;Select Output Directory&#34;)
+
+    def _save_as(self):
+        date = self._raw.get_scan_time()[&#39;date&#39;].strftime(&#34;%y%m%d&#34;)
+        pvobj = self._raw._pvobj
+        filename = &#39;{}_{}_{}_{}_{}_{}&#39;.format(date,
+                                              pvobj.subj_id,
+                                              pvobj.session_id,
+                                              pvobj.study_id,
+                                              self._scan_id, self._reco_id)
+        self._raw.save_as(self._scan_id, self._reco_id, filename, dir=self._output)
+        from tkinter import messagebox
+        messagebox.showinfo(title=&#39;File conversion&#39;,
+                            message=&#39;{}/{}.nii.gz has been converted&#39;.format(self._output,
+                                                                       filename))
+
+
+if __name__ == &#39;__main__&#39;:
+    root = MainWindow()
+    root.mainloop()</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="brkraw.ui.main_win.MainWindow"><code class="flex name class">
+<span>class <span class="ident">MainWindow</span></span>
+<span>(</span><span>*args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Toplevel widget of Tk which represents mostly the main window
+of an application. It has an associated Tcl interpreter.</p>
+<p>Return a new Toplevel widget on screen SCREENNAME. A new Tcl interpreter will
+be created. BASENAME will be used for the identification of the profile file (see
+readprofile).
+It is constructed from sys.argv[0] without extensions if None is given. CLASSNAME
+is the name of the widget class.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class MainWindow(tk.Tk):
+    def __init__(self, *args, **kwargs):
+        super(MainWindow, self).__init__(*args, **kwargs)
+        self._raw = None
+        self._scan_id = None
+        self._reco_id = None
+        self._output = None
+        self.title(&#39;BrkRaw GUI - v{}&#39;.format(__version__))
+
+        # initiated windows size and location
+        self.geometry(&#39;{}x{}+{}+{}&#39;.format(_width, _height,
+                                           window_posx, window_posy))
+        # minimal size
+        self.minsize(_width, _height)
+        self.maxsize(_width, _height)
+
+        self._init_layout()
+
+    def open_filediag(self):
+        self._path = filedialog.askopenfilename(
+            initialdir = &#34;.&#34;,
+            title = &#34;Select file&#34;,
+            filetypes = ((&#34;Zip compressed&#34;, &#34;*.zip&#34;),
+                         (&#34;Paravision 6 format&#34;, &#34;*.PVdatasets&#34;),
+                         ))
+        self._extend_layout()
+        self._load_dataset()
+
+    def open_dirdiag(self):
+        self._path = filedialog.askdirectory(
+            initialdir = &#34;.&#34;,
+            title = &#34;Select directory&#34;)
+        self._extend_layout()
+        self._load_dataset()
+
+    def _init_layout(self):
+        # level 1
+        self._subj_info   = SubjInfo(self)
+        self._subj_info.pack(
+            side=tk.TOP,    fill=tk.X, anchor=tk.CENTER)
+
+        # Button binding
+        self._subj_info._loadfile.config(command=self.open_filediag)
+        self._subj_info._loaddir.config(command=self.open_dirdiag)
+
+    def _close(self):
+        if self._raw != None:
+            self.geometry(&#39;{}x{}+{}+{}&#39;.format(_width, _height,
+                                               window_posx, window_posy))
+
+            # close opened frames
+            self._subj_info._clean_path()
+            self._subj_info._main_frame.destroy()
+            self._subj_info._path.destroy()
+            self._subj_info._path_label.destroy()
+            # self._subj_info._close.destroy()
+            self._subj_info._refresh.destroy()
+            self._main_frame.destroy()
+
+            self._raw.close()
+            self._raw = None
+
+            # minimal size
+            self.minsize(_width, _height)
+            self.maxsize(_width, _height)
+
+    def _extend_layout(self):
+        # Change windows size
+        self._close()
+        if len(self._path) != 0:
+            self.geometry(&#39;{}x{}+{}+{}&#39;.format(win_pst_width, win_pst_height,
+                                               window_posx, window_posy))
+            self.minsize(win_pst_width, win_pst_height)
+            self.maxsize(win_pst_width, win_pst_height)
+
+            # extend level 1
+            self._subj_info._extend_layout()
+            # self._subj_info._close.config(command=self._close)
+            self._subj_info._refresh.config(command=self._refresh)
+
+            self._main_frame = tk.Frame(self)
+            self._main_frame.pack(
+                side=tk.BOTTOM, fill=tk.BOTH,   expand=True)
+
+            # level 2
+            self._scan_list   = ScanList(self._main_frame)
+            view_frame  = tk.Frame(self._main_frame)
+            self._scan_list.pack(
+                side=tk.LEFT,   fill=tk.BOTH)
+            view_frame.pack(
+                side=tk.LEFT,   fill=tk.BOTH,   expand=True)
+
+            # level 3
+            self._scan_info = ScanInfo(view_frame)
+            self._preview   = Previewer(view_frame)
+            self._preview.pack(
+                side=tk.LEFT, fill=tk.BOTH, expand=True)
+            self._scan_info.pack(
+                side=tk.LEFT,   fill=tk.BOTH, padx=10, pady=10)
+            self._bind_scanlist()
+            self._set_convert_button()
+
+    def _refresh(self):
+        self._close()
+        self._extend_layout()
+        self._load_dataset()
+
+    def _load_dataset(self):
+        if len(self._path) != 0:
+            self._raw = load(self._path)
+            self._init_update()
+
+    def _init_update(self):
+        # take first image from dataset
+        self._scan_id, recos = [v for i, v in enumerate(self._raw._avail.items()) if i == 0][0]
+
+        self._reco_id = recos[0]
+        # update subject info
+        self._subj_info.load_data(self._raw)
+
+        # update scan and reco listbox
+        self._scan_list.load_data(self._raw)
+        self._scan_list._update_recos(self._raw, self._scan_id)
+
+        # update scan info of first image
+        self._scan_info.load_data(self._raw, self._scan_id, self._reco_id)
+
+        # update preview of first image
+        self._preview.load_data(self._raw, self._scan_id, self._reco_id)
+
+    def _bind_scanlist(self):
+        self._scan_list._scanlist.bind(&#39;&lt;&lt;ListboxSelect&gt;&gt;&#39;, self._update_scanid)
+        self._scan_list._recolist.bind(&#39;&lt;&lt;ListboxSelect&gt;&gt;&#39;, self._update_recoid)
+
+    def _update_scanid(self, event):
+        w = event.widget
+        index = int(w.curselection()[0])
+        self._scan_id = self._raw._pvobj.avail_scan_id[index]
+        self._reco_id = self._raw._avail[self._scan_id][0]
+        self._scan_list._update_recos(self._raw, self._scan_id)
+        self._update_data()
+
+    def _update_recoid(self, event):
+        w = event.widget
+        index = int(w.curselection()[0])
+        self._reco_id = self._raw._avail[self._scan_id][index]
+        self._update_data()
+
+    def _update_data(self):
+        # update scan info of first image
+        self._scan_info.load_data(self._raw, self._scan_id, self._reco_id)
+        # update preview of first image
+        self._preview.load_data(self._raw, self._scan_id, self._reco_id)
+
+    def _set_convert_button(self):
+        self._scan_list._updt_bt.config(state=tk.NORMAL)
+        self._scan_list._conv_bt.config(state=tk.NORMAL)
+        self._scan_list._updt_bt.config(command=self._set_output)
+        self._scan_list._conv_bt.config(command=self._save_as)
+
+    def _set_output(self):
+        self._output = filedialog.askdirectory(initialdir=self._output,
+                                               title=&#34;Select Output Directory&#34;)
+
+    def _save_as(self):
+        date = self._raw.get_scan_time()[&#39;date&#39;].strftime(&#34;%y%m%d&#34;)
+        pvobj = self._raw._pvobj
+        filename = &#39;{}_{}_{}_{}_{}_{}&#39;.format(date,
+                                              pvobj.subj_id,
+                                              pvobj.session_id,
+                                              pvobj.study_id,
+                                              self._scan_id, self._reco_id)
+        self._raw.save_as(self._scan_id, self._reco_id, filename, dir=self._output)
+        from tkinter import messagebox
+        messagebox.showinfo(title=&#39;File conversion&#39;,
+                            message=&#39;{}/{}.nii.gz has been converted&#39;.format(self._output,
+                                                                       filename))</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>tkinter.Tk</li>
+<li>tkinter.Misc</li>
+<li>tkinter.Wm</li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="brkraw.ui.main_win.MainWindow.open_dirdiag"><code class="name flex">
+<span>def <span class="ident">open_dirdiag</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def open_dirdiag(self):
+    self._path = filedialog.askdirectory(
+        initialdir = &#34;.&#34;,
+        title = &#34;Select directory&#34;)
+    self._extend_layout()
+    self._load_dataset()</code></pre>
+</details>
+</dd>
+<dt id="brkraw.ui.main_win.MainWindow.open_filediag"><code class="name flex">
+<span>def <span class="ident">open_filediag</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def open_filediag(self):
+    self._path = filedialog.askopenfilename(
+        initialdir = &#34;.&#34;,
+        title = &#34;Select file&#34;,
+        filetypes = ((&#34;Zip compressed&#34;, &#34;*.zip&#34;),
+                     (&#34;Paravision 6 format&#34;, &#34;*.PVdatasets&#34;),
+                     ))
+    self._extend_layout()
+    self._load_dataset()</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="brkraw.ui" href="index.html">brkraw.ui</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="brkraw.ui.main_win.MainWindow" href="#brkraw.ui.main_win.MainWindow">MainWindow</a></code></h4>
+<ul class="">
+<li><code><a title="brkraw.ui.main_win.MainWindow.open_dirdiag" href="#brkraw.ui.main_win.MainWindow.open_dirdiag">open_dirdiag</a></code></li>
+<li><code><a title="brkraw.ui.main_win.MainWindow.open_filediag" href="#brkraw.ui.main_win.MainWindow.open_filediag">open_filediag</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.8.1</a>.</p>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad()</script>
+</body>
+</html>
