@@ -1,5 +1,11 @@
-theme: jekyll-theme-minimal
+theme           : just-the-docs
+logo            : "imgs/brkraw_logo.png"
+aux_links       :
+  "BrkRaw on GitHub":
+    - "//github.com/brkraw/bruker"
 
-title: BrkRaw
-description: Python module for raw Bruker Biospin data
-show_downloads: true
+heading_anchors : true
+footer_content  : "Copyrignt &copy; 2019-2020 SungHo Lee. Distributed by an
+  <a href=\"https://github.com/brkraw/bruker/LICENSE\">GNU General Public License v3.0</a>"
+
+color_scheme    : nil
