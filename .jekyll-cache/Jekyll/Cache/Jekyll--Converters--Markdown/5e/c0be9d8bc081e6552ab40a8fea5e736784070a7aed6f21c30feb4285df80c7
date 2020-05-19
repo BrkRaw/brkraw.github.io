@@ -1,0 +1,18 @@
+I"<h1 id="credits">Credits:</h1>
+<h2 id="authors">Authors</h2>
+<ul>
+  <li><strong>SungHo Lee</strong> (shlee@unc.edu): main developer</li>
+  <li><strong>Woomi Ban</strong> (banwoomi@unc.edu): sub-developer who tested and refined the module structure</li>
+  <li><strong>Yen-Yu Ian Shih</strong> (shihy@neurology.unc.edu): technical and academical advisory on this project (as well as funding)</li>
+</ul>
+
+<h2 id="contributors">Contributors</h2>
+<ul>
+  <li><strong>Drs. Chris Rorden and Sebastiano Ferraris</strong>: The pioneers related this project who had been inspired the developer
+ through their great tools including <a href="https://github.com/rordenlab/dcm2niix">dcm2niix</a> and 
+ <a href="https://github.com/SebastianoF/bruker2nifti">bruker2nifti</a>, as well as their comments to improve this project.</li>
+  <li><strong>Drs. Mikael Naveau and Gabriel A. Devenyi</strong>: The publisher of 
+<a href="https://gitlab.com/naveau/bruker2nifti_qa">bruker2nifti_qa</a>, the set of data 
+to help benchmark testing of Bruker converter.</li>
+</ul>
+:ET

@@ -1,0 +1,18 @@
+I"•<h1 id="installation">Installation</h1>
+
+<h3 id="requirements">Requirements</h3>
+<ul>
+  <li>The installed Python must be compiled properly, 
+If you use pyenv and are having any issue with python please refer following link: 
+<a href="https://github.com/pyenv/pyenv/wiki/common-build-problems">Common Build Problems in PyENV</a></li>
+  <li>To use gui feature, the installed python should compiled with tkinter module.</li>
+  <li>You can test the tkinter installation with below command on your shell.
+    <pre><code class="language-angular2html">$ python -m tkinter -c 'tkinter._test()'
+</code></pre>
+  </li>
+  <li>In Mac OSX, Homebrew installed tcl-tk and pyenv may have an issue with tkinter, please refer following link to solve the issue:
+<a href="https://github.com/pyenv/pyenv/issues/1375">Issue with Homebrew installed tcl-tk on pyenv</a></li>
+</ul>
+
+<h2 id="installation-in-python">Installation in python</h2>
+:ET

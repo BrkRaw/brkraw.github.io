@@ -1,0 +1,12 @@
+I"(<h4 id="python-api">Python API</h4>
+<ul>
+  <li>import module
+    <pre><code class="language-angular2html">&gt;&gt;&gt; import brkraw
+</code></pre>
+  </li>
+  <li>load dataset
+    <pre><code class="language-angular2html">&gt;&gt;&gt; rawdata = brkraw.load(&lt;PATH&gt;)
+</code></pre>
+  </li>
+</ul>
+:ET

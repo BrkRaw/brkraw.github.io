@@ -1,0 +1,27 @@
+I"@<h1 id="data-management-tool">Data management tool</h1>
+<p><img src="../imgs/brk_backup.png" alt="brk-backup" />
+<strong>brk-backup script utilizing the Python API to immediately access both raw data and archived data 
+to parse the metadata for data management.</strong></p>
+
+<ul>
+  <li>Print out archived dataset and its condition
+    <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">$</span> <span class="nx">brk</span><span class="o">-</span><span class="nx">backup</span> <span class="nx">archived</span> <span class="o">&lt;</span><span class="nx">rawdata</span> <span class="nx">path</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="nx">backup</span> <span class="nx">path</span><span class="o">&gt;</span>
+<span class="nx">$</span> <span class="nx">brk</span><span class="o">-</span><span class="nx">backup</span> <span class="nx">archived</span> <span class="o">&lt;</span><span class="nx">rawdata</span> <span class="nx">path</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="nx">backup</span> <span class="nx">path</span><span class="o">&gt;</span> <span class="o">-</span><span class="nx">l</span>  <span class="c1">// generate log file instead of printing</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Print out review backup status
+    <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">$</span> <span class="nx">brk</span><span class="o">-</span><span class="nx">backup</span> <span class="nx">review</span> <span class="o">&lt;</span><span class="nx">rawdata</span> <span class="nx">path</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="nx">backup</span> <span class="nx">path</span><span class="o">&gt;</span>
+<span class="nx">$</span> <span class="nx">brk</span><span class="o">-</span><span class="nx">backup</span> <span class="nx">review</span> <span class="o">&lt;</span><span class="nx">rawdata</span> <span class="nx">path</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="nx">backup</span> <span class="nx">path</span><span class="o">&gt;</span> <span class="o">-</span><span class="nx">l</span>  <span class="c1">// generate log file instead of printing</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Archive data from rawdata path to backup path, if the dataset has been archived and identical, then skip
+    <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">$</span> <span class="nx">brk</span><span class="o">-</span><span class="nx">backup</span> <span class="nx">backup</span> <span class="o">&lt;</span><span class="nx">rawdata</span> <span class="nx">path</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="nx">backup</span> <span class="nx">path</span><span class="o">&gt;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Remove files classified as unnecessary via review process among backed up data. The interactive UI will ask you
+to confirm each step to prevent erase important data
+    <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">$</span> <span class="nx">brk</span><span class="o">-</span><span class="nx">backup</span> <span class="nx">clean</span> <span class="o">&lt;</span><span class="nx">rawdata</span> <span class="nx">path</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="nx">backup</span> <span class="nx">path</span><span class="o">&gt;</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+:ET

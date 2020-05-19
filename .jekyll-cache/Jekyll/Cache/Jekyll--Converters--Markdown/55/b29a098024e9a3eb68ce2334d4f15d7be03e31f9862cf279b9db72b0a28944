@@ -1,0 +1,23 @@
+I"�<h1 id="bids-converter">BIDS converter</h1>
+<p><img src="../imgs/brkraw_bids_conv.png" alt="brkraw bids" />
+<strong>The usage of the command-line tool ‘brkraw’ for BIDS data organization.</strong></p>
+
+<ul>
+  <li>Upgraded feature to reduce the burden on renaming according to BIDS standard.</li>
+  <li>Create a BIDS file table with excel format to use as a template for updating metadata 
+that required to use for file naming.</li>
+  <li>This command will also generate the BIDS_META_REF.json which allows you to set 
+custom syntax to parse the metadata from the rawdata. The default reference of 
+the current version is based on BIDS 1.2.2.</li>
+  <li>The bids_converter command will also generate empty template of <code class="highlighter-rouge">dataset_description.json</code> and <code class="highlighter-rouge">README</code></li>
+  <li>To learn more detail, please check our example 
+<a href="https://github.com/dvm-shlee/bruker/blob/master/examples/BrkRaw_PythonAPI.ipynb">Jupyter Notebooks</a>.
+    <pre><code class="language-angular2html">$ brkraw bids_helper &lt;input dir&gt; &lt;output filename&gt; [-j]
+</code></pre>
+  </li>
+  <li>Build BIDS dataset according to the excel file generated with ‘bids_helper’ command above.
+    <pre><code class="language-angular2html">$ brkraw bids_convert &lt;input dir&gt; &lt;BIDS datasheet.xlsx&gt; [-r &lt;JSON syntax template.json&gt;] [-o &lt;output dir&gt;]
+</code></pre>
+  </li>
+</ul>
+:ET

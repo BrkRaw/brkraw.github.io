@@ -1,0 +1,33 @@
+I"]	<p><a href="https://zenodo.org/badge/latestdoi/245546149"><img src="https://zenodo.org/badge/245546149.svg" alt="DOI" /></a></p>
+
+<h2 id="brkraw-a-comprehensive-tool-to-access-raw-data-of-bruker-biospin-preclinical-mri-systems">BrkRaw: A comprehensive tool to access raw data of Bruker Biospin Preclinical MRI Systems</h2>
+<h4 id="version-033">Version: 0.3.3</h4>
+
+<h4 id="description">Description</h4>
+
+<p>The ‘BrkRaw’ is a python module designed to provide a comprehensive tool to access raw data acquired from 
+Bruker Biospin preclinical MRI scanner. This module is also compatible with the zip compressed data 
+to enable use of the archived data directly.<br />
+The module is comprised of four components, including graphical user interface (GUI), command-line tools, 
+high-level and low-level python APIs.</p>
+<ul>
+  <li>For the GUI, we focused on improving convenience for checking metadata and previewing the reconstructed image.</li>
+  <li>For the command-line tool, we focused on providing tools for converting, organizing, archiving, and managing data.
+The command-line tool also provides easy-to-use function to convert large set of raw data into organized structure
+according to <a href="https://bids.neuroimaging.io">BIDS</a>.</li>
+  <li>For the high-level python API, we focused on enhancing the accessibility of reconstructed image data with 
+preserved image orientation and metadata for the image analysis. 
+It compatible users’ convenient objects type (<a href="https://nipy.org/nibabel/">nibabel</a> or 
+<a href="https://simpleitk.readthedocs.io/en/master/gettingStarted.html#python-binary-files">SimpleITK</a>) 
+without the conversion step.</li>
+  <li>For the low-level python API, we focused on providing a consistent method to access raw Bruker data including 
+parameter and binary files with the python compatible datatype while keeping the sake of simplicity.</li>
+</ul>
+
+<h5 id="conversion-reliability">Conversion reliability</h5>
+<p><img src="imgs/Bruker2Nifti_QA_challenge.png" alt="Robust Orientation" />
+We’ve tested our converter using the sample dataset from <a href="https://gitlab.com/naveau/bruker2nifti_qa">Bruker2Nifti_QA</a> 
+and the results showed correct geometry and orientation for all datasets.
+We are still looking for more datasets showing orientation issue, 
+<strong>if you have any shareable dataset, please contact the developer.</strong></p>
+:ET

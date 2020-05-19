@@ -1,0 +1,232 @@
+I"�0<p><a href="https://doi.org/10.5281/zenodo.3818614"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.3818614.svg" alt="DOI" /></a></p>
+
+<h1 id="brkraw-comprehensive-tool-to-access-raw-bruker-biospin-data">BrkRaw: Comprehensive tool to access raw Bruker Biospin data</h1>
+<h2 id="version-03">Version: 0.3</h2>
+
+<h3 id="description">Description</h3>
+
+<p>The ‘BrkRaw’ python module is designed to be a more comprehensive tool for the preclinical MRI community for accessing and 
+utilizing raw data. And since the converter is front-line tools for medical imaging, the functionality is developed to cover 
+the requirements from the various user, including MRI system operator, maintainer, MR sequence developer, imaging researcher, 
+and data scientist. In addition to these, we had put extra efforts to preserve the metadata as well as provide tools to help 
+organize the data structure into a shareable format that suggested from the open science community for pursuing 
+reproducible science <a href="https://bids.neuroimaging.io">BIDS</a>. Therefore, the module designed not only can be used for the NifTi converter, 
+but also provides command-line tools and python API for previewing, organizing and archiving data, and parsing metadata, 
+accessing the data as users convenient object type (<a href="https://nipy.org/nibabel/">nibabel</a> or 
+<a href="https://simpleitk.readthedocs.io/en/master/gettingStarted.html#python-binary-files">SimpleITK</a>) 
+without the conversion step. The module is compatible with the ZIP file format, so no need to uncompress the file to access data.
+The goal of this project is providing easy-to-access of the Bruker’s PVdatasets. 
+The major features of this module are as follows.</p>
+
+<ul>
+  <li>Reliable converting function with
+    <ul>
+      <li>preserving the subject position and orientation to converted the NifTi1 file.</li>
+      <li>correction of animal orientation based on the species and position. (Anterior of subject is Anterior).</li>
+      <li>providing fMRI and DTI study friendly features: slice-order update on the header, Diffusion parameter file generation.</li>
+      <li>BIDS(v1.2.2) support: parameter file generation with custom syntax, automatic generation of the folder structure.</li>
+    </ul>
+  </li>
+  <li>Capability of quick image validation by
+    <ul>
+      <li>providing the GUI tool for preview the dataset without conversion.</li>
+      <li>the command-line tool function for previewing metadata of the dataset for each scan.</li>
+    </ul>
+  </li>
+  <li>Data management tool ‘brk-backup’
+    <ul>
+      <li>Data management tool ‘brk-backup’ for archiving and performing inspection the backup status.</li>
+    </ul>
+  </li>
+  <li>Robust and easy-to-use python API for developers, including JCAMP-DX parser.
+    <ul>
+      <li>Object-oriented robust dataset parser.</li>
+      <li>compressed data readability (compatible with .zip and .PVdatasets format).</li>
+      <li>the python API also providing data handler object through either nibabel and simpleITK to make convenient to the researcher can implement their own code.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="update-notes">Update notes:</h3>
+<h5 id="brkraw-v032">BrkRaw v0.3.2</h5>
+
+<ol>
+  <li>Improved BIDS converter.
+    <ul>
+      <li>Bruker FieldMap will be accommodated into the BIDS excel sheets. With new feature, bids_converter separates fieldmap and magnitude image.</li>
+      <li>Multi-echo sequenced data will be converted as separate format.</li>
+    </ul>
+  </li>
+  <li>Bug patches.
+    <ul>
+      <li>GUI visualization or crash issues related to certain conditions are patched.</li>
+      <li>Matrix size instability has been patched, except multi-echo, all data will be converted to 3D + frame</li>
+      <li>DTI slope correction issue is patched.</li>
+    </ul>
+  </li>
+</ol>
+
+<p><img src="imgs/brkraw_alignment.png" alt="example_alignment" />
+<strong>Fig1.</strong> Example subject alignment shown on FSLeyes, the overlayed localizer image for each slice axis(gray) and 
+a EPI image(red) are align in the same space while the preserve subject orientation (correct R-L, I-S, A-P on rodent)</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+
+
+#### Known issues
+- The converter has not been tested the Paravision 360
+- Most of the GUI issues could be related to tkinter, please follow the above instruction first before open a issue.
+- Few update committed since the first stable version release, if you have any issue, please try the latest version.
+- For other unexpected issues, please use the issue channel.
+- There will be potential bug that occurred with new version updated, please let developer knows those issue by openning
+issue channel. Thank you for your contribution!
+
+## Usage
+### Command-line tool (brkraw)
+#### Quick access of metadata
+- Printing out dataset information
+```angular2html
+$ brkraw info &lt;input raw data&gt;
+</code></pre></div></div>
+<p><img src="imgs/brkraw_print_summary.png" alt="brkraw info" />
+<strong>Example of printed out dataset information</strong></p>
+
+<h4 id="the-legacy-version-of-nifti1-conversion">The Legacy version of NifTi1 conversion</h4>
+<ul>
+  <li>This method has been inherited from old brk2nii and <a href="https://pypi.org/project/pyBruker">PyBruker</a> which 
+has been removed from repository and is not existing anymore. This function is useful if you want to convert 
+whole dataset without need to considering data structure, or only needs to convert specific scan and reco.</li>
+  <li>Convert a whole session, (adding option ‘-b’ or ‘–bids’ will generate JSON file that contains MR parameters 
+based-on BIDS standard)
+    <pre><code class="language-angular2html">$ brkraw tonii &lt;input raw data&gt;
+</code></pre>
+  </li>
+  <li>Convert a scan, (default reco_id is 1)
+    <pre><code class="language-angular2html">$ brkraw tonii &lt;input raw data&gt; [-s &lt;scan id&gt;] [-r &lt;reco id&gt;]
+</code></pre>
+  </li>
+  <li>Build BIDS dataset with multiple Bruker raw datasets.</li>
+  <li>You need to copy all data into one parent folder, compressed zip file will also work (we recommend to use zip file)</li>
+  <li>All dataset under parent folder will be converted into ./Data folder with BIDS structure, but filename will not follow
+the BIDS standard. If you need to share your data, we recommend to use bids_converter function instead.</li>
+</ul>
+
+<p><img src="imgs/brkraw_bids.png" alt="brkraw info" />
+<strong>Example of automatically generated BIDS dataset</strong></p>
+
+<pre><code class="language-angular2html">$ brkraw tonii_all &lt;input dir&gt;
+</code></pre>
+
+<h4 id="automatic-bids-organizer-with-template-files">Automatic BIDS organizer with template files</h4>
+<p><img src="imgs/brkraw_bids_conv.png" alt="brkraw bids" />
+<strong>The usage of the command-line tool ‘brkraw’ for BIDS data organization.</strong></p>
+
+<ul>
+  <li>Upgraded feature to reduce the burden on renaming according to BIDS standard.</li>
+  <li>Create a BIDS file table with excel format to use as a template for updating metadata 
+that required to use for file naming.</li>
+  <li>This command will also generate the BIDS_META_REF.json which allows you to set 
+custom syntax to parse the metadata from the rawdata. The default reference of 
+the current version is based on BIDS 1.2.2.</li>
+  <li>The bids_converter command will also generate empty template of <code class="highlighter-rouge">dataset_description.json</code> and <code class="highlighter-rouge">README</code></li>
+  <li>To learn more detail, please check our example 
+<a href="https://github.com/dvm-shlee/bruker/blob/master/examples/BrkRaw_PythonAPI.ipynb">Jupyter Notebooks</a>.
+    <pre><code class="language-angular2html">$ brkraw bids_helper &lt;input dir&gt; &lt;output filename&gt; [-j]
+</code></pre>
+  </li>
+  <li>Build BIDS dataset according to the excel file generated with ‘bids_helper’ command above.
+    <pre><code class="language-angular2html">$ brkraw bids_convert &lt;input dir&gt; &lt;BIDS datasheet.xlsx&gt; [-r &lt;JSON syntax template.json&gt;] [-o &lt;output dir&gt;]
+</code></pre>
+  </li>
+  <li>Run GUI with input and output path
+    <pre><code class="language-angular2html">$ brkraw gui -i &lt;session path&gt; -o &lt;output path&gt;
+</code></pre>
+    <p><img src="imgs/brkraw_gui.png" alt="brkraw GUI" />
+<strong>brkraw gui interface.</strong></p>
+  </li>
+  <li>You can run GUI without any path option. It will show you only two buttons (Open File / Open Directory). 
+In case you are opening zipped PVdataset, please use ‘Open File’ button. For later case, 
+Make sure you are entered to the PVdataset root folder where the subject file located.
+If you does not enter to the dataset folder, the GUI will freeze. This case, just force quit the GUI.</li>
+</ul>
+
+<pre><code class="language-angular2html">$ brkraw gui
+</code></pre>
+
+<h3 id="data-management-tool">Data management tool</h3>
+<p><img src="imgs/brk_backup.png" alt="brk-backup" />
+<strong>brk-backup script utilizing the Python API to immediately access both raw data and archived data 
+to parse the metadata for data management.</strong></p>
+
+<ul>
+  <li>Print out archived dataset and its condition
+```angular2html
+$ brk-backup archived <rawdata path=""> <backup path=""></backup></rawdata></li>
+</ul>
+
+<p>$ brk-backup archived <rawdata path=""> <backup path=""> -l  // generate log file instead of printing</backup></rawdata></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+- Print out review backup status
+```angular2html
+$ brk-backup review &lt;rawdata path&gt; &lt;backup path&gt;
+
+$ brk-backup review &lt;rawdata path&gt; &lt;backup path&gt; -l  // generate log file instead of printing
+</code></pre></div></div>
+
+<ul>
+  <li>Archive data from rawdata path to backup path, if the dataset has been archived and identical, then skip
+    <pre><code class="language-angular2html">$ brk-backup backup &lt;rawdata path&gt; &lt;backup path&gt;
+</code></pre>
+  </li>
+  <li>Remove files classified as unnecessary via review process among backed up data. The interactive UI will ask you
+to confirm each step to prevent erase important data
+    <pre><code class="language-angular2html">$ brk-backup clean &lt;rawdata path&gt; &lt;backup path&gt;
+</code></pre>
+  </li>
+</ul>
+
+<h4 id="windows-10">Windows 10</h4>
+<ul>
+  <li>Same as above, but use brkraw.exe instead of brkraw command.</li>
+  <li>If this command is not working, please check the version of your Anaconda and Python.</li>
+</ul>
+
+<h4 id="python-api">Python API</h4>
+<ul>
+  <li>import module
+    <pre><code class="language-angular2html">&gt;&gt;&gt; import brkraw
+</code></pre>
+  </li>
+  <li>load dataset
+    <pre><code class="language-angular2html">&gt;&gt;&gt; rawdata = brkraw.load(&lt;PATH&gt;)
+</code></pre>
+  </li>
+  <li>
+    <p>For more detail, Please check out our 
+<a href="https://github.com/dvm-shlee/bruker/blob/master/examples/BrkRaw_PythonAPI.ipynb">Jupyter Notebooks</a> 
+in the example directory.</p>
+  </li>
+  <li>Please contact shlee@unc.edu if you interest to contributing in this project any direction.
+    <ol>
+      <li>Improve BIDS organization</li>
+      <li>Develop documentation or tutorials for below items using our Python API.</li>
+    </ol>
+    <ul>
+      <li>FieldMap correction, reconstruction (integrate BART tool), acute quality control, fMRI and DTI analysis</li>
+    </ul>
+  </li>
+  <li><strong>if you experience any bug or have any suggestion to improve this tool, please let us know.</strong></li>
+</ul>
+
+<h3 id="acknowledgements">Acknowledgements</h3>
+<p>We thank to the researchers of the Rorden lab at the University of South Carolina, 
+especially Drs. Chris Rorden and Sebastiano Ferraris, regarding their pioneer works and sharing excellent tools 
+for raw data conversion to the community that inspired the first author of this project, 
+as well as their sharing know-how.  We also thank Dr. Mikael Naveau at Cyceron and Gabriel A. Devenyi 
+at Douglas Mental Health University Institute who shared the dataset for benchmarking converter.
+Lastly, We thank to the staff and colleagues in the Center for Animal MRI (CAMRI) 
+at the University of North Carolina at Chapel Hill for the testing and providing helpful feedback. 
+Especially thanks to Ms. Tzu-Wen Wang for the test the tool at the front-line. 
+This work was supported by NIH (Grant No: RF1MH117053, R01MH111429, and R01NS091236).</p>
+
+:ET

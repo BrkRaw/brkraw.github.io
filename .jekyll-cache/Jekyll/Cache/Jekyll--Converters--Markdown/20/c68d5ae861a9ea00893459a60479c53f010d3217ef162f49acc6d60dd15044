@@ -1,0 +1,46 @@
+I"G
+<h1 class="no_toc" id="converting-nifti-legacy">converting NifTi (Legacy)</h1>
+
+<h2 class="no_toc text-delta" id="table-of-contents">Table of contents</h2>
+<ol id="markdown-toc">
+  <li><a href="#quick-access-of-metadata" id="markdown-toc-quick-access-of-metadata">Quick access of metadata</a></li>
+  <li><a href="#the-legacy-version-of-nifti1-conversion" id="markdown-toc-the-legacy-version-of-nifti1-conversion">The Legacy version of NifTi1 conversion</a></li>
+</ol>
+<hr />
+
+<h2 id="quick-access-of-metadata">Quick access of metadata</h2>
+<ul>
+  <li>Printing out dataset information
+    <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">$</span> <span class="nx">brkraw</span> <span class="nx">info</span> <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">raw</span> <span class="nx">data</span><span class="o">&gt;</span>
+</code></pre></div>    </div>
+    <p><img src="../imgs/brkraw_print_summary.png" alt="brkraw info" />
+<strong>Example of printed out dataset information</strong></p>
+  </li>
+</ul>
+
+<h2 id="the-legacy-version-of-nifti1-conversion">The Legacy version of NifTi1 conversion</h2>
+<ul>
+  <li>This method has been inherited from old brk2nii and <a href="https://pypi.org/project/pyBruker">PyBruker</a> which 
+has been removed from repository and is not existing anymore. This function is useful if you want to convert 
+whole dataset without need to considering data structure, or only needs to convert specific scan and reco.</li>
+  <li>Convert a whole session, (adding option ‘-b’ or ‘–bids’ will generate JSON file that contains MR parameters 
+based-on BIDS standard)
+    <pre><code class="language-angular2html">$ brkraw tonii &lt;input raw data&gt;
+</code></pre>
+  </li>
+  <li>Convert a scan, (default reco_id is 1)
+    <pre><code class="language-angular2html">$ brkraw tonii &lt;input raw data&gt; [-s &lt;scan id&gt;] [-r &lt;reco id&gt;]
+</code></pre>
+  </li>
+  <li>Build BIDS dataset with multiple Bruker raw datasets.</li>
+  <li>You need to copy all data into one parent folder, compressed zip file will also work (we recommend to use zip file)</li>
+  <li>All dataset under parent folder will be converted into ./Data folder with BIDS structure, but filename will not follow
+the BIDS standard. If you need to share your data, we recommend to use bids_converter function instead.</li>
+</ul>
+
+<p><img src="imgs/brkraw_bids.png" alt="brkraw info" />
+<strong>Example of automatically generated BIDS dataset</strong></p>
+
+<pre><code class="language-angular2html">$ brkraw tonii_all &lt;input dir&gt;
+</code></pre>
+:ET

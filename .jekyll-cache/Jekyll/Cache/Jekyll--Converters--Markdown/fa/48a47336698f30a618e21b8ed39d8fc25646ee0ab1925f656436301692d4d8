@@ -1,0 +1,10 @@
+I"b<h2 id="quick-access-of-metadata">Quick access of metadata</h2>
+<ul>
+  <li>Printing out dataset information
+    <pre><code class="language-angular2html">$ brkraw info &lt;input raw data&gt;
+</code></pre>
+    <p><img src="../imgs/brkraw_print_summary.png" alt="brkraw info" />
+<strong>Example of printed out dataset information</strong></p>
+  </li>
+</ul>
+:ET

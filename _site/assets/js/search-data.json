@@ -1,0 +1,70 @@
+{
+  
+  "0": {
+    "title": "Acknowledgements",
+    "content": "Acknowledgements . We thank to the researchers of the Rorden lab at the University of South Carolina, especially Drs. Chris Rorden and Sebastiano Ferraris, regarding their pioneer works and sharing excellent tools for raw data conversion to the community that inspired the first author of this project, as well as their sharing know-how. We also thank Dr. Mikael Naveau at Cyceron and Gabriel A. Devenyi at Douglas Mental Health University Institute who shared the dataset for benchmarking converter. Lastly, We thank to the staff and colleagues in the Center for Animal MRI (CAMRI) at the University of North Carolina at Chapel Hill for the testing and providing helpful feedback. Especially thanks to Ms. Tzu-Wen Wang for the test the tool at the front-line. This work was supported by NIH (Grant No: RF1MH117053, R01MH111429, and R01NS091236). .",
+    "url": "http://localhost:4000/docs/acknowledgements.html",
+    "relUrl": "/docs/acknowledgements.html"
+  }
+  ,"1": {
+    "title": "Python API",
+    "content": "Python API . import module &gt;&gt;&gt; import brkraw as br . | load dataset &gt;&gt;&gt; rawdata = br.load(&lt;PATH&gt;) . | If you want to learn more detail about Pythop API, please check our example Jupyter Notebooks. | .",
+    "url": "http://localhost:4000/docs/ap_parent.html",
+    "relUrl": "/docs/ap_parent.html"
+  }
+  ,"2": {
+    "title": "How to Cite",
+    "content": "How to cite . SungHo Lee. (2020, May 13). dvm-shlee/bruker: BrkRaw v0.3.2 (Version 0.3.2). Zenodo. http://doi.org/10.5281/zenodo.3818614 . BibTeX . @software{sungho_lee_2020_3818614, author = {SungHo Lee and Woomi Ban and Yen-Yu Ian Shih}, title = {dvm-shlee/bruker: BrkRaw v0.3.2}, month = may, year = 2020, publisher = {Zenodo}, version = {0.3.2}, doi = {10.5281/zenodo.3818614}, url = {https://doi.org/10.5281/zenodo.3818614} } .",
+    "url": "http://localhost:4000/docs/cite.html",
+    "relUrl": "/docs/cite.html"
+  }
+  ,"3": {
+    "title": "Credits",
+    "content": "Credits: . Authors . SungHo Lee (shlee@unc.edu): Main developer | . | Woomi Ban (banwoomi@unc.edu): Sub-developer who tested and refined the module structure | . | Yen-Yu Ian Shih (shihy@neurology.unc.edu): Technical and academical advisory on this project (as well as funding) | . | . Contributors . Drs. Chris Rorden and Sebastiano Ferraris: The pioneers related this project who had been inspired the developer through their great tools including dcm2niix and bruker2nifti, as well as their comments to improve this project. | . | Drs. Mikael Naveau and Gabriel A. Devenyi: The distributor of bruker2nifti_qa, the set of data to help benchmark testing of Bruker converter. | . | .",
+    "url": "http://localhost:4000/docs/credits.html",
+    "relUrl": "/docs/credits.html"
+  }
+  ,"4": {
+    "title": "Data management",
+    "content": "Data management tool . brk-backup script utilizing the Python API to immediately access both raw data and archived data to parse the metadata for data management. . Print out archived dataset and its condition $ brk-backup archived &lt;rawdata path&gt; &lt;backup path&gt; [-l] . | Print out review backup status $ brk-backup review &lt;rawdata path&gt; &lt;backup path&gt; [-l] . | Archive data from rawdata path to backup path, if the dataset has been archived and identical, then skip $ brk-backup backup &lt;rawdata path&gt; &lt;backup path&gt; . | Remove files classified as unnecessary via review process among backed up data. The interactive UI will ask you to confirm each step to prevent erase important data $ brk-backup clean &lt;rawdata path&gt; &lt;backup path&gt; . | .",
+    "url": "http://localhost:4000/docs/dm_main.html",
+    "relUrl": "/docs/dm_main.html"
+  }
+  ,"5": {
+    "title": "BIDS converter",
+    "content": "BIDS converter . The usage of the command-line tool ‘brkraw’ for BIDS data organization. . Upgraded feature to reduce the burden on renaming according to BIDS standard. | Create a BIDS file table with excel format to use as a template for updating metadata that required to use for file naming. | This command will also generate the .json which allows you to set custom JSON syntax to parse the metadata from the raw Bruker data according to the BIDS v1.2.2. | To learn more detail regarding the JSON syntax, please check our example Jupyter Notebooks. | The bids_converter command will generate empty template of dataset_description.json and README | . $ brkraw bids_helper &lt;input dir&gt; &lt;output filename&gt; [-j] . Build BIDS dataset according to the excel file generated with ‘bids_helper’ command above. | . $ brkraw bids_convert &lt;input dir&gt; &lt;BIDS datasheet.xlsx&gt; [-r &lt;JSON syntax template.json&gt;] [-o &lt;output dir&gt;] .",
+    "url": "http://localhost:4000/docs/gs_bids.html",
+    "relUrl": "/docs/gs_bids.html"
+  }
+  ,"6": {
+    "title": "Graphic User Interface (GUI)",
+    "content": "Graphical User Interface (GUI) . Run GUI with input and output path $ brkraw gui -i &lt;session path&gt; -o &lt;output path&gt; . | . brkraw gui interface. . You can run GUI without any path option. It will show you only two buttons (Open File / Open Directory). In case you are opening zipped PVdataset, please use ‘Open File’ button. For later case, Make sure you are entered to the PVdataset root folder where the subject file located. If you does not enter to the dataset folder, the GUI will freeze. This case, just force quit the GUI. | . $ brkraw gui .",
+    "url": "http://localhost:4000/docs/gs_gui.html",
+    "relUrl": "/docs/gs_gui.html"
+  }
+  ,"7": {
+    "title": "Installation",
+    "content": "Installation . Requirements . Operating System Mac OS, Linux and Windows 10 | . | Compatible Python version Python 3.6, 3.7 | . | Dependency: shleeh (&gt;=0.0.4) | nibabel (&gt;=3.0.2) | SimpleITK ()&gt;=1.2.4) | numpy (&gt;=1.18.0) | pandas (&gt;=1.0.0) | pillow (&gt;=7.1.1) | tqdm (&gt;=4.45.0) | openpyxl (&gt;=3.0.3) | xlrd (&gt;=1.0.0) | . | . Python build . The installed Python must be compiled properly, If you use pyenv and are having any issue with python please refer following link: Common Build Problems in PyENV | To use gui feature, the installed python should compiled with tkinter module. | You can test the tkinter installation with below command on your shell. | . $ python -m tkinter -c &#39;tkinter._test()&#39; . In Mac OSX, Homebrew installed tcl-tk and pyenv may have an issue with tkinter, please refer following link to solve the issue: Issue with Homebrew installed tcl-tk on pyenv | . Install via PyPI . $ pip install bruker . Install via Github . $ pip install git+https://github.com/brkraw/bruker .",
+    "url": "http://localhost:4000/docs/gs_inst.html",
+    "relUrl": "/docs/gs_inst.html"
+  }
+  ,"8": {
+    "title": "converting NifTi (Legacy)",
+    "content": "converting NifTi (Legacy) . . Quick access of metadata | brkraw command-line tool tonii: Convert single scan to NifTi | tonii_all: Convert whole study to NifTi | | . Quick access of metadata . Printing out dataset information | . $ brkraw info &lt;input raw data&gt; . Example of printed out dataset information . brkraw command-line tool . This method has been inherited from old brk2nii and PyBruker which has been removed from repository and is not existing anymore. This function is useful if you want to convert whole dataset without need to considering data structure, or only needs to convert specific scan and reco. | . tonii: Convert single scan to NifTi . $ brkraw tonii &lt;input raw data&gt; [-s &lt;scan id&gt;] [-r &lt;reco id&gt;] . tonii_all: Convert whole study to NifTi . Convert a whole session, (adding option ‘-b’ or ‘–bids’ will generate JSON file that contains MR parameters based-on BIDS standard) | . $ brkraw tonii &lt;input raw data&gt; . Build BIDS dataset with multiple Bruker raw datasets. | You need to copy all data into one parent folder, compressed zip file will also work (we recommend to use zip file) | All dataset under parent folder will be converted into ./Data folder with BIDS structure, but filename will not follow the BIDS standard. If you need to share your data, we recommend to use bids_converter function instead. | . Example of automatically generated BIDS dataset . $ brkraw tonii_all &lt;input dir&gt; .",
+    "url": "http://localhost:4000/docs/gs_nii.html",
+    "relUrl": "/docs/gs_nii.html"
+  }
+  ,"9": {
+    "title": "Getting Started",
+    "content": "Getting started .",
+    "url": "http://localhost:4000/docs/gs_parent.html",
+    "relUrl": "/docs/gs_parent.html"
+  }
+  ,"10": {
+    "title": "Home",
+    "content": ". BrkRaw: A comprehensive tool to access raw Bruker Biospin data . Version: 0.3.3 . Description . The ‘BrkRaw’ is a python module designed to provide a comprehensive tool to access raw data acquired from Bruker Biospin preclinical MRI scanner. This module is also compatible with the zip compressed data to enable use of the archived data directly. The module is comprised of four components, including graphical user interface (GUI), command-line tools, high-level and low-level python APIs. . For the GUI, we focused on improving convenience for checking metadata and previewing the reconstructed image. | For the command-line tool, we focused on providing tools for converting, organizing, archiving, and managing data. The command-line tool also provides easy-to-use function to convert large set of raw data into organized structure according to BIDS. | For the high-level python API, we focused on enhancing the accessibility of reconstructed image data with preserved image orientation and metadata for the image analysis. It compatible users’ convenient objects type (nibabel or SimpleITK) without the conversion step. | For the low-level python API, we focused on providing a consistent method to access raw Bruker data including parameter and binary files with the python compatible datatype while keeping the sake of simplicity. | . Conversion reliability . We’ve tested our converter using the sample dataset from Bruker2Nifti_QA and the results showed correct geometry and orientation for all datasets. We are still looking for more datasets showing orientation issue, if you have any shareable dataset, please contact the developer. .",
+    "url": "http://localhost:4000/",
+    "relUrl": "/"
+  }
+  
+}

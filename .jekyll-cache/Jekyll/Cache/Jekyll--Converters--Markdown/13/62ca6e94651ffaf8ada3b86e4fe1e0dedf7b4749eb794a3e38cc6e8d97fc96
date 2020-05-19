@@ -1,0 +1,54 @@
+I"Ì	<h1 id="installation">Installation</h1>
+<h2 id="requirements">Requirements</h2>
+
+<ul>
+  <li><strong>Operating System</strong>
+    <ul>
+      <li>Mac OS, Linux and Windows 10</li>
+    </ul>
+  </li>
+  <li><strong>Python version</strong>
+    <ul>
+      <li>Python 3.6, 3.7</li>
+    </ul>
+  </li>
+  <li><strong>Dependency</strong>:
+    <ul>
+      <li>shleeh (&gt;=0.0.4)</li>
+      <li>nibabel (&gt;=3.0.2)</li>
+      <li>SimpleITK ()&gt;=1.2.4)</li>
+      <li>numpy (&gt;=1.18.0)</li>
+      <li>pandas (&gt;=1.0.0)</li>
+      <li>pillow (&gt;=7.1.1)</li>
+      <li>tqdm (&gt;=4.45.0)</li>
+      <li>openpyxl (&gt;=3.0.3)</li>
+      <li>xlrd (&gt;=1.0.0)</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="troubleshoot">Troubleshoot</h2>
+<ul>
+  <li>The installed Python must be compiled properly, 
+If you use pyenv and are having any issue with python please refer following link: 
+<a href="https://github.com/pyenv/pyenv/wiki/common-build-problems">Common Build Problems in PyENV</a></li>
+  <li>To use gui feature, the installed python should compiled with tkinter module.</li>
+  <li>You can test the tkinter installation with below command on your shell.</li>
+</ul>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">$</span> <span class="nx">python</span> <span class="o">-</span><span class="nx">m</span> <span class="nx">tkinter</span> <span class="o">-</span><span class="nx">c</span> <span class="dl">'</span><span class="s1">tkinter._test()</span><span class="dl">'</span>
+</code></pre></div></div>
+
+<ul>
+  <li>In Mac OSX, Homebrew installed tcl-tk and pyenv may have an issue with tkinter, please refer following link to solve the issue:
+<a href="https://github.com/pyenv/pyenv/issues/1375">Issue with Homebrew installed tcl-tk on pyenv</a></li>
+</ul>
+
+<h2 id="install-via-pypi">Install via PyPI</h2>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">$</span> <span class="nx">pip</span> <span class="nx">install</span> <span class="nx">bruker</span>
+</code></pre></div></div>
+
+<h2 id="install-via-github">Install via Github</h2>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">$</span> <span class="nx">pip</span> <span class="nx">install</span> <span class="nx">git</span><span class="o">+</span><span class="nx">https</span><span class="p">:</span><span class="c1">//github.com/brkraw/bruker</span>
+</code></pre></div></div>
+:ET

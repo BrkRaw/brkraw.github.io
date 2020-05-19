@@ -1,0 +1,27 @@
+I"�
+<h1 id="bids-converter">BIDS converter</h1>
+<p><img src="../imgs/brkraw_bids_conv.png" alt="brkraw bids" />
+<strong>The usage of the command-line tool ‘brkraw’ for BIDS data organization.</strong></p>
+
+<ul>
+  <li>Upgraded feature to reduce the burden on renaming according to BIDS standard.</li>
+  <li>Create a BIDS file table with excel format to use as a template for updating metadata 
+that required to use for file naming.</li>
+  <li>This command will also generate the <output filename="">.json which allows you to set 
+custom syntax to parse the metadata from the rawdata. The default reference of 
+the current version is based on BIDS 1.2.2.</output></li>
+  <li>The bids_converter command will also generate empty template of <code class="highlighter-rouge">dataset_description.json</code> and <code class="highlighter-rouge">README</code></li>
+  <li>To learn more detail, please check our example 
+<a href="https://github.com/dvm-shlee/bruker/blob/master/examples/BrkRaw_PythonAPI.ipynb">Jupyter Notebooks</a>.</li>
+</ul>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">$</span> <span class="nx">brkraw</span> <span class="nx">bids_helper</span> <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">dir</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="nx">output</span> <span class="nx">filename</span><span class="o">&gt;</span> <span class="p">[</span><span class="o">-</span><span class="nx">j</span><span class="p">]</span>
+</code></pre></div></div>
+
+<ul>
+  <li>Build BIDS dataset according to the excel file generated with ‘bids_helper’ command above.</li>
+</ul>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">$</span> <span class="nx">brkraw</span> <span class="nx">bids_convert</span> <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">dir</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="nx">BIDS</span> <span class="nx">datasheet</span><span class="p">.</span><span class="nx">xlsx</span><span class="o">&gt;</span> <span class="p">[</span><span class="o">-</span><span class="nx">r</span> <span class="o">&lt;</span><span class="nx">JSON</span> <span class="nx">syntax</span> <span class="nx">template</span><span class="p">.</span><span class="nx">json</span><span class="o">&gt;</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="nx">o</span> <span class="o">&lt;</span><span class="nx">output</span> <span class="nx">dir</span><span class="o">&gt;</span><span class="p">]</span>
+</code></pre></div></div>
+:ET

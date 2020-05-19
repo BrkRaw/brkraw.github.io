@@ -1,0 +1,12 @@
+I",<h2 id="python-api">Python API</h2>
+<ul>
+  <li>import module
+    <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="k">import</span> <span class="nx">brkraw</span> <span class="k">as</span> <span class="nx">br</span>
+</code></pre></div>    </div>
+  </li>
+  <li>load dataset
+    <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="nx">rawdata</span> <span class="o">=</span> <span class="nx">br</span><span class="p">.</span><span class="nx">load</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">PATH</span><span class="o">&gt;</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+:ET

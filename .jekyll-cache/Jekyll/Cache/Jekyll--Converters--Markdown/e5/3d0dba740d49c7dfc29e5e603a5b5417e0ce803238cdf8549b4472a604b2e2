@@ -1,0 +1,16 @@
+I"š<h1 id="citing-brkraw">Citing BrkRaw</h1>
+<p>SungHo Lee. (2020, May 13). dvm-shlee/bruker: BrkRaw v0.3.2 (Version 0.3.2). Zenodo. http://doi.org/10.5281/zenodo.3818614</p>
+
+<p><strong>BibTeX</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@software{sungho_lee_2020_3818614,
+  author       = {SungHo Lee and Woomi Ban and Yen-Yu Ian Shih},
+  title        = {dvm-shlee/bruker: BrkRaw v0.3.2},
+  month        = may,
+  year         = 2020,
+  publisher    = {Zenodo},
+  version      = {0.3.2},
+  doi          = {10.5281/zenodo.3818614},
+  url          = {https://doi.org/10.5281/zenodo.3818614}
+}
+</code></pre></div></div>
+:ET

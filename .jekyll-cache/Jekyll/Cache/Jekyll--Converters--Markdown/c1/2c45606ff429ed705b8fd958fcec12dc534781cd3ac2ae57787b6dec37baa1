@@ -1,0 +1,32 @@
+I" <h1 id="data-management-tool">Data management tool</h1>
+<p><img src="../imgs/brk_backup.png" alt="brk-backup" />
+<strong>brk-backup script utilizing the Python API to immediately access both raw data and archived data 
+to parse the metadata for data management.</strong></p>
+
+<ul>
+  <li>Print out archived dataset and its condition
+```angular2html
+$ brk-backup archived <rawdata path=""> <backup path=""></backup></rawdata></li>
+</ul>
+
+<p>$ brk-backup archived <rawdata path=""> <backup path=""> -l  // generate log file instead of printing</backup></rawdata></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+- Print out review backup status
+```angular2html
+$ brk-backup review &lt;rawdata path&gt; &lt;backup path&gt;
+
+$ brk-backup review &lt;rawdata path&gt; &lt;backup path&gt; -l  // generate log file instead of printing
+</code></pre></div></div>
+
+<ul>
+  <li>Archive data from rawdata path to backup path, if the dataset has been archived and identical, then skip
+    <pre><code class="language-angular2html">$ brk-backup backup &lt;rawdata path&gt; &lt;backup path&gt;
+</code></pre>
+  </li>
+  <li>Remove files classified as unnecessary via review process among backed up data. The interactive UI will ask you
+to confirm each step to prevent erase important data
+    <pre><code class="language-angular2html">$ brk-backup clean &lt;rawdata path&gt; &lt;backup path&gt;
+</code></pre>
+  </li>
+</ul>
+:ET
