@@ -15,8 +15,6 @@ nav_order: 3
 run 'brkraw bids_helper' command with *\<input dir\>* and your preferred *\<output filename\>*.
 - The JSON syntax template allows building a JSON metadata to meet the BIDS requirement for each converted image. The 
 module provides this JSON syntax template according to BIDS v1.2.2 in case of adding the option '-j' on the command.
-- To learn more detail regarding the JSON syntax, please check our example
-[Jupyter Notebooks](https://github.com/brkraw/bruker/blob/master/examples/BrkRaw_PythonAPI.ipynb).
 - The bids_convert command also will generate empty template of `dataset_description.json` and `README` to better fit
 with BIDS guideline, please make sure test your data with official 
 [BIDS validator](https://bids-standard.github.io/bids-validator/)
@@ -34,3 +32,6 @@ to *\<output dir\>* with JSON header files for each converted image by parsing t
 ```js
 $ brkraw bids_convert <input dir> <BIDS datasheet.xlsx> -r <JSON syntax template.json> -o <output dir>
 ```
+
+- To learn more detail regarding the JSON syntax, please check our example
+[Jupyter Notebooks](https://github.com/brkraw/bruker/blob/master/examples/BrkRaw_PythonAPI.ipynb).
