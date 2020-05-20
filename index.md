@@ -21,7 +21,8 @@ high-level and low-level python APIs.
 - For the GUI, we focused on improving convenience for checking metadata and previewing the reconstructed image.
 - For the command-line tool, we focused on providing tools for converting, organizing, archiving, and managing data.
 The command-line tool also provides easy-to-use function to convert large set of raw data into organized structure
-according to [BIDS](https://bids.neuroimaging.io).
+according to [BIDS](https://bids.neuroimaging.io). (Getting Start page for 
+ [BIDS converter](https://brkraw.github.io/docs/gs_bids.html))
 - For the high-level python API, we focused on enhancing the accessibility of reconstructed image data with 
 preserved image orientation and metadata for the image analysis. 
 It compatible users' convenient objects type ([nibabel](https://nipy.org/nibabel/) or 
