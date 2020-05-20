@@ -19,7 +19,7 @@ nav_order: 2
 ```js
 $ brkraw info <input raw data>
 ```
-![brkraw info](../imgs/brkraw_print_summary.png)
+![brkraw info](../imgs/brkraw_info.png)
 **Example of printed out dataset information**
 
 ## **brkraw** command-line tool
