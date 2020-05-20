@@ -27,8 +27,10 @@ with BIDS guideline, please make sure test your data with official
 $ brkraw bids_helper <input dir> <output filename> -j
 ```
 
-- After update the datasheet and syntax, below command will generate fully organized BIDS dataset.
+- After updating the datasheet and syntax, the below command will generate a fully organized BIDS dataset 
+to *\<output dir\>* with JSON header files for each converted image by parsing the parameters specified on 
+*\<JSON syntax template.json\>*.
 
 ```js
-$ brkraw bids_convert <input dir> <BIDS datasheet.xlsx> [-r <JSON syntax template.json>] [-o <output dir>]
+$ brkraw bids_convert <input dir> <BIDS datasheet.xlsx> -r <JSON syntax template.json> -o <output dir>
 ```
