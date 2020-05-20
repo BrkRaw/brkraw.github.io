@@ -40,14 +40,10 @@ based-on BIDS standard)
 $ brkraw tonii <input raw data>
 ```
 
-
 - Build BIDS dataset with multiple Bruker raw datasets.
 - You need to copy all data into one parent folder, compressed zip file will also work (we recommend to use zip file)
 - All dataset under parent folder will be converted into ./Data folder with BIDS structure, but filename will not follow
-the BIDS standard. If you need to share your data, we recommend to use bids_converter function instead.
-
-![brkraw info](../imgs/brkraw_bids.png)
-**Example of automatically generated BIDS dataset**
+the BIDS standard. If you need to share your data, we recommend to use bids_convert function instead.
 
 ```js
 $ brkraw tonii_all <input dir>
