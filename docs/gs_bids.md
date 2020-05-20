@@ -6,7 +6,7 @@ nav_order: 3
 ---
 
 # BIDS converter
-![brkraw bids](../imgs/brkraw_bids_conv.png)
+![brkraw bids](../imgs/brkraw_bids.png)
 **The usage of the command-line tool 'brkraw' for BIDS data organization.**
 
 - Upgraded feature to reduce the burden on renaming according to BIDS standard.
