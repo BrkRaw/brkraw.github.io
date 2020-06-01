@@ -25,23 +25,25 @@ $ brkraw info <input raw data>
 ## **brkraw** command-line tool
 - This method has been inherited from old brk2nii and [PyBruker](https://pypi.org/project/pyBruker) which 
 has been removed from repository and is not existing anymore. This function is useful if you want to convert 
-whole dataset without need to considering data structure, or only needs to convert specific scan and reco.
+whole dataset without need to considering data structure, or only needs to convert specific Scan and Reco IDs.
+- In case you want to convert a specific Scan, provide the option '--scanid' with corresponding Scan ID.  
+- In case a Scan has multiple Reco images, provide '--recoid' with corresponding Reco ID. 
+Without this option, the default Reco ID would be 1.
 
 ### **tonii**: Convert single scan to NifTi
 ```js
 $ brkraw tonii <input raw data> [-s <scan id>] [-r <reco id>]
 ```
 
-### **tonii_all**: Convert whole study to NifTi
-- Convert a whole session, (adding option '-b' or '--bids' will generate JSON file that contains MR parameters 
-based-on BIDS standard)
-
+- Without the --scanid (-s), all scan images in the raw data will be converted.
 ```js
 $ brkraw tonii <input raw data>
 ```
 
-- Build BIDS dataset with multiple Bruker raw datasets.
-- You need to copy all data into one parent folder, compressed zip file will also work (we recommend to use zip file)
+### **tonii_all**: Convert whole study to NifTi
+- The function to convert multiple raw dataset.
+- You must provide the parent folder where more than one raw data is existing.
+- By adding option '-b' or '--bids', it will generate JSON file that contains META parameters.
 - All dataset under parent folder will be converted into ./Data folder with BIDS structure, but filename will not follow
 the BIDS standard. If you need to share your data, we recommend to use bids_convert function instead.
 
