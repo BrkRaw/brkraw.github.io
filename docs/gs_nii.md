@@ -23,6 +23,7 @@ $ brkraw info <input raw data>
 **Example of printed out dataset information**
 
 ## **brkraw** command-line tool
+### **tonii**: Convert single scan to NifTi
 - This method has been inherited from old brk2nii and [PyBruker](https://pypi.org/project/pyBruker) which 
 has been removed from repository and is not existing anymore. This function is useful if you want to convert 
 whole dataset without need to considering data structure, or only needs to convert specific Scan and Reco IDs.
@@ -30,7 +31,7 @@ whole dataset without need to considering data structure, or only needs to conve
 - In case a Scan has multiple Reco images, provide '--recoid' with corresponding Reco ID. 
 Without this option, the default Reco ID would be 1.
 
-### **tonii**: Convert single scan to NifTi
+
 ```js
 $ brkraw tonii <input raw data> [-s <scan id>] [-r <reco id>]
 ```
