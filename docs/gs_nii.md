@@ -23,6 +23,10 @@ $ brkraw info <input raw data>
 **Example of printed out dataset information**
 
 ## **brkraw** command-line tool
+### Common features for all conversion
+- If the data is aquired with DWI sequence, the bvals and bvecs will automatically generated.
+- In case you want to ignoring data slope value, use '--ignore_slope' option.
+
 ### **tonii**: Convert single scan to NifTi
 - This method has been inherited from old brk2nii and [PyBruker](https://pypi.org/project/pyBruker) which 
 has been removed from repository and is not existing anymore. This function is useful if you want to convert 
@@ -51,7 +55,3 @@ the BIDS standard. If you need to share your data, we recommend to use bids_conv
 ```js
 $ brkraw tonii_all <input dir>
 ```
-
-#### Common features for all conversion
-- If the data is aquired with DWI sequence, the bvals and bvecs will automatically generated.
-- In case you want to ignoring data slope value, use '--ignore_slope' option.
