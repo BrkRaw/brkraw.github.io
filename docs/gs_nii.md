@@ -30,8 +30,6 @@ whole dataset without need to considering data structure, or only needs to conve
 - In case you want to convert a specific Scan, provide the option '--scanid' with corresponding Scan ID.  
 - In case a Scan has multiple Reco images, provide '--recoid' with corresponding Reco ID. 
 Without this option, the default Reco ID would be 1.
-- If the data is aquired with DWI sequence, the bvals and bvecs will automatically generated.
-
 
 ```js
 $ brkraw tonii <input raw data> [-s <scan id>] [-r <reco id>]
@@ -53,5 +51,6 @@ the BIDS standard. If you need to share your data, we recommend to use bids_conv
 $ brkraw tonii_all <input dir>
 ```
 
-### TIP: Ignoring slope value
+#### Common features for all conversion
+- If the data is aquired with DWI sequence, the bvals and bvecs will automatically generated.
 - In case you want to ignoring data slope value, use '--ignore_slope' option.
