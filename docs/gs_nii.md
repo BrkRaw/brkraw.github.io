@@ -36,6 +36,7 @@ $ brkraw tonii <input raw data> [-s <scan id>] [-r <reco id>]
 ```
 
 - Without the --scanid (-s), all scan images in the raw data will be converted.
+
 ```js
 $ brkraw tonii <input raw data>
 ```
