@@ -30,6 +30,7 @@ whole dataset without need to considering data structure, or only needs to conve
 - In case you want to convert a specific Scan, provide the option '--scanid' with corresponding Scan ID.  
 - In case a Scan has multiple Reco images, provide '--recoid' with corresponding Reco ID. 
 Without this option, the default Reco ID would be 1.
+- If the data is aquired with DWI sequence, the bvals and bvecs will automatically generated.
 
 
 ```js
