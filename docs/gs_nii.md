@@ -51,3 +51,6 @@ the BIDS standard. If you need to share your data, we recommend to use bids_conv
 ```js
 $ brkraw tonii_all <input dir>
 ```
+
+### TIP: Ignoring slope value
+- In case you want to ignoring data slope value, use '--ignore_slope' option.
