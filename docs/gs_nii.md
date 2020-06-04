@@ -25,7 +25,7 @@ $ brkraw info <input raw data>
 ## **brkraw** command-line tool
 ### Common features for all conversion
 - If the data is aquired with DWI sequence, the bvals and bvecs will automatically generated.
-- In case you want to ignoring data slope value, use '--ignore_slope' option.
+- In case you want to ignoring data rescale, use '--ignore-rescale' option.
 
 ### **tonii**: Convert single scan to NifTi
 - This method has been inherited from old brk2nii and [PyBruker](https://pypi.org/project/pyBruker) which 
