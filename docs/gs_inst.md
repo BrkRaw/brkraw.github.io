@@ -38,7 +38,7 @@ $ python -m tkinter -c 'tkinter._test()'
 
 ## Install via PyPI
 ```js
-$ pip install bruker==0.3.3rc8
+$ pip install bruker==0.3.3
 ```
 
 ## Install via Github
