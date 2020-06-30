@@ -10,9 +10,9 @@ has_children: false
 - **SungHo Lee** (shlee@unc.edu): 
     - Main developer
 - **Woomi Ban** (banwoomi@unc.edu): 
-    - Sub-developer who tested and refined the module structure
+    - Sub-developer, tester and module refiner
 - **Yen-Yu Ian Shih** (shihy@neurology.unc.edu): 
-    - Technical and academical advisory on this project (as well as funding)
+    - Project sponsor and technical and academic advisory 
 
 ## Contributors
 - **Drs. Chris Rorden and Sebastiano Ferraris**: 
