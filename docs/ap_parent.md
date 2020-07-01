@@ -18,5 +18,5 @@ has_children: # true
 >>> rawdata = br.load(<PATH>)
 ```
 
-- If you want to learn more detail about Pythop API, please check our example
+- If you want to learn more detail about Python API, please check our example
 [Jupyter Notebooks](https://github.com/brkraw/bruker/blob/master/examples/BrkRaw_PythonAPI.ipynb).
