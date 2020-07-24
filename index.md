@@ -17,7 +17,7 @@ The ‘BrkRaw’ is a python module designed to provide a comprehensive tool to 
 Bruker Biospin preclinical MRI scanner. This module is also compatible with the zip compressed data 
 to enable use of the archived data directly.  
 The module is comprised of four components, including graphical user interface (GUI), command-line tools, 
-high-level and low-level python APIs.
+high-level and low-level python application programming interfaces (APIs).
 - For the GUI, we focused on improving convenience for checking metadata and previewing the reconstructed image.
 - For the command-line tool, we focused on providing tools for converting, organizing, archiving, and managing data.
 The command-line tool also provides easy-to-use function to convert large set of raw data into organized structure
@@ -28,8 +28,8 @@ preserved image orientation and metadata for the image analysis.
 It compatible users' convenient objects type ([nibabel](https://nipy.org/nibabel/) or 
 [SimpleITK](https://simpleitk.readthedocs.io/en/master/gettingStarted.html#python-binary-files)) 
 without the conversion step. 
-- For the low-level python API, we focused on providing a consistent method to access raw Bruker data including 
-parameter and binary files with the python compatible datatype while keeping the sake of simplicity.
+- For the low-level python API, we provided a method that is consistent and simple that allows access to the raw Bruker
+data including parameter and binary files with the python compatible datatype.
 
 ## Conversion reliability
 ![Robust Orientation](imgs/bruker2nifti_qa.png)

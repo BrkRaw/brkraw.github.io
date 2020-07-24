@@ -25,14 +25,14 @@ $ brkraw info <input raw data>
 ## **brkraw** command-line tool
 ### Common features for all conversion
 - If the data is aquired with DWI sequence, the bvals and bvecs will automatically generated.
-- In case you want to ignoring data rescale, use '--ignore-rescale' option.
+- In the case you want to ignore data rescale, use the '--ignore-rescale' option.
 
 ### **tonii**: Convert single scan to NifTi
 - This method has been inherited from old brk2nii and [PyBruker](https://pypi.org/project/pyBruker) which 
-has been removed from repository and is not existing anymore. This function is useful if you want to convert 
-whole dataset without need to considering data structure, or only needs to convert specific Scan and Reco IDs.
-- In case you want to convert a specific Scan, provide the option '--scanid' with corresponding Scan ID.  
-- In case a Scan has multiple Reco images, provide '--recoid' with corresponding Reco ID. 
+has been removed from repository and archived. This function is useful if you want to convert 
+whole datasets without needing to consider data structure or converting specific Scan and Reco IDs.
+- If you want to convert a specific Scan, provide the option '--scanid' with corresponding Scan ID.  
+- If a Scan has multiple Reco images, provide '--recoid' with corresponding Reco ID. 
 Without this option, the default Reco ID would be 1.
 
 ```js
