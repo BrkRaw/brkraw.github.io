@@ -11,10 +11,10 @@ has_children: false
     - Main developer
 - **Woomi Ban** (banwoomi@unc.edu):
     - Sub-developer, tester and module refiner
+- **Jaiden Seongmi Dumas** (jaiden@unc.edu):
+    -Document reviser, proofreader, and content editor related to the user community
 - **Yen-Yu Ian Shih** (shihy@neurology.unc.edu):
     - Project sponsor and technical and academic advisory
-- **Jaiden Seongmi Dumas** (jaiden@unc.edu):
-    - Project editor
 
 ## Contributors
 - **Drs. Chris Rorden and Sebastiano Ferraris**:
