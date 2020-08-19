@@ -19,4 +19,4 @@ has_children: # true
 ```
 
 - If you want to learn more detail about Python API, please check our example
-[Jupyter Notebooks](https://github.com/brkraw/bruker/blob/master/examples/BrkRaw_PythonAPI.ipynb).
+[Jupyter Notebooks](https://mybinder.org/v2/gh/BrkRaw/tutorials/ac95b2c87b05664cb678c5dc1a930641397130ed).

@@ -14,13 +14,14 @@ nav_order: 1
 - **Dependency**: 
     - shleeh (>=0.0.4)
     - nibabel (>=3.0.2)
-    - SimpleITK ()>=1.2.4)
     - numpy (>=1.18.0)
     - pandas (>=1.0.0)
     - pillow (>=7.1.1)
     - tqdm (>=4.45.0)
     - openpyxl (>=3.0.3)
     - xlrd (>=1.0.0)
+- **Optional dependency**:
+    - SimpleITK ()>=1.2.4)
 
 ## Python build
 - The installed Python must be compiled properly, 
@@ -38,7 +39,12 @@ $ python -m tkinter -c 'tkinter._test()'
 
 ## Install via PyPI
 ```js
-$ pip install bruker==0.3.3rc8
+$ pip install bruker
+```
+
+## Install with SimpleITK support
+```js
+$ pip install bruker'[SimpleITK]'
 ```
 
 ## Install via Github
