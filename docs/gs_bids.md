@@ -30,7 +30,7 @@ to *\<output dir\>* with JSON header files for each converted image by parsing t
 *\<JSON syntax template.json\>*.
 
 ```js
-$ brkraw bids_convert <input dir> <BIDS datasheet.xlsx> -r <JSON syntax template.json> -o <output dir>
+$ brkraw bids_convert <input dir> <BIDS datasheet.xlsx> -j <JSON syntax template.json> -o <output dir>
 ```
 
 - To learn more detail about building your own JSON syntax template, please check our example in
