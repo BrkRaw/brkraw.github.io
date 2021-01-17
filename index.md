@@ -11,29 +11,27 @@ permalink: /
 # BrkRaw: A comprehensive tool to access raw Bruker Biospin data
 #### Version: 0.3.3
 
-## Description
+## Introduction
 
-The ‘BrkRaw’ is a python module designed to provide a comprehensive tool to access raw data acquired from 
-Bruker Biospin preclinical MRI scanner. This module is also compatible with the zip compressed data 
-to enable use of the archived data directly.  
-The module is comprised of four components, including graphical user interface (GUI), command-line tools, 
-high-level and low-level python application programming interfaces (APIs).
-- For the GUI, we focused on improving convenience for checking metadata and previewing the reconstructed image.
-- For the command-line tool, we focused on providing tools for converting, organizing, archiving, and managing data.
-The command-line tool also provides easy-to-use function to convert large set of raw data into organized structure
-according to [BIDS](https://bids.neuroimaging.io). (Getting Start page for 
- [BIDS converter](https://brkraw.github.io/docs/gs_bids.html))
-- For the high-level python API, we focused on enhancing the accessibility of reconstructed image data with 
-preserved image orientation and metadata for the image analysis. 
-It compatible users' convenient objects type ([nibabel](https://nipy.org/nibabel/) or 
-[SimpleITK](https://simpleitk.readthedocs.io/en/master/gettingStarted.html#python-binary-files)) 
-without the conversion step. 
-- For the low-level python API, we provided a method that is consistent and simple that allows access to the raw Bruker
-data including parameter and binary files with the python compatible datatype.
+The 'BrkRaw' is a python module providing flexibility in handling data with advanced functionalities that 
+the conventional converter did not provide, which includes
 
-## Conversion reliability
-![Robust Orientation](imgs/bruker2nifti_qa.png)
-We've tested our converter using the sample dataset from [Bruker2Nifti_QA](https://gitlab.com/naveau/bruker2nifti_qa) 
-and the results showed correct geometry and orientation for all datasets.
-We are still looking for more datasets showing orientation issue, 
-**if you have any shareable dataset, please contact the developer.**
+1. Python API to load data with image analysis friendly image object ([nibabel](https://nipy.org/nibabel/) or 
+[simpleITK](https://simpleitk.readthedocs.io/en/master/gettingStarted.html#python-binary-files)).
+2. The fidelity of correct orientation and coordinates based on the subject and scanner space.
+3. Excel sheet guided automate [BIDS](https://bids.neuroimaging.io) organizer.
+4. Command-line tools to help quickly access data before conversion (check data information and GUI previewer)
+    
+### Statement of need
+We designed this python module aims for the preclinical MRI researcher or MR physician who utilizing the Bruker 
+preclinical MRI scanner for their research as well as medical imaging scientists who interested in accessing 
+preclinical MRI data more flexible manner.
+
+### Getting start
+1. [Installation](https://brkraw.github.io/docs/gs_inst.html)
+2. [How to convert assess and convert raw data into NifTi format](https://brkraw.github.io/docs/gs_nii.html)
+3. [How to convert and organize into BIDS of the multiple data](https://brkraw.github.io/docs/gs_bids.html)
+4. [How to preview data without conversion](https://brkraw.github.io/docs/gs_gui.html)
+
+### Tutorials
+1. [Python API - Jupyter notebook](https://mybinder.org/v2/gh/BrkRaw/tutorials/ac95b2c87b05664cb678c5dc1a930641397130ed)
