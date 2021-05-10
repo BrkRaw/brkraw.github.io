@@ -25,6 +25,9 @@ with BIDS guideline, please make sure test your data with official
 $ brkraw bids_helper <input dir> <output filename> -j
 ```
 
+- Update the datasheet. For example, if you have a “Gradient echo EPI” scan for BOLD purpose, you could fill in datasheet.xlsx 
+with "bold" under "modality" column and "resting" under "task" column for the corresponding scan. Save it when finish.
+
 - After updating the datasheet and syntax, the below command will generate a fully organized BIDS dataset 
 to *\<output dir\>* with JSON header files for each converted image by parsing the parameters specified on 
 *\<JSON syntax template.json\>*.
