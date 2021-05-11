@@ -25,8 +25,21 @@ with BIDS guideline, please make sure test your data with official
 $ brkraw bids_helper <input dir> <output filename> -j
 ```
 
-- Update the datasheet. For example, if you have a “Gradient echo EPI” scan for BOLD purpose, you could fill in datasheet.xlsx 
-with "bold" under "modality" column and "resting" under "task" column for the corresponding scan. Save it when finish.
+- Update the datasheet.xlsx. In some cases, it is necessary to update the datasheet.xlsx. There are multiple columns without 
+pre-filled value in the datasheet.xlsx file. Here is a little explaination:  
+
+  | Column Name | Purpose | Valid value | If omitted |
+  | --- | --- | --- | --- |
+  | task  | form the `_task-<label>` part of output filename for the scan | value compitable with BIDS | omitted in output file name, invalid for func |
+  | acq  | form the `_acq-<label>` part of output filename for the scan | value compitable with BIDS | omitted in output file name |
+  | ce  | form the `_ce-<label>` part of output filename for the scan | value compitable with BIDS | omitted in output file name |
+  | rec  | form the `_rec-<label>` part of output filename for the scan | value compitable with BIDS | omitted in output file name |
+  | dir  | form the `_dir-<label>` part of output filename for the scan | value compitable with BIDS | omitted in output file name |
+  | modality  | form the `_<modality>` part of output filename for the scan | value compitable with BIDS | use guessed value from method, maybe invalid in some cases |  
+  
+  For example, if you have a “Gradient echo EPI” scan for BOLD purpose, you could fill in datasheet.xlsx 
+  with "bold" under "modality" column and "resting" under "task" column for the corresponding scan.
+  If you don't put "bold" as modality, it may generated a file with name containing "EPI", fails the bids validator. 
 
 - After updating the datasheet and syntax, the below command will generate a fully organized BIDS dataset 
 to *\<output dir\>* with JSON header files for each converted image by parsing the parameters specified on 
