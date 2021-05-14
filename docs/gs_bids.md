@@ -34,4 +34,4 @@ $ brkraw bids_convert <input dir> <BIDS datasheet.xlsx> -j <JSON syntax template
 ```
 
 - To learn more detail about building your own JSON syntax template, please check our example in
-[Jupyter Notebooks](https://github.com/brkraw/bruker/blob/master/examples/BrkRaw_PythonAPI.ipynb).
+[Jupyter Notebooks](https://mybinder.org/v2/gh/BrkRaw/tutorials/ac95b2c87b05664cb678c5dc1a930641397130ed)
