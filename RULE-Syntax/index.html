@@ -1237,7 +1237,7 @@
 
 
 <h1 id="rule-syntax-guide-specsrules-module">Rule Syntax guide (specs.rules module)<a class="headerlink" href="#rule-syntax-guide-specsrules-module" title="Permanent link">&para;</a></h1>
-<p>This document describes the rule syntax used to select specs and entry points
+<p>This document describes the rule syntax used to select specs and hooks
 from <code>~/.brkraw/rules/*.yaml</code>. Rule files are loaded in filename order and
 evaluated top to bottom. If multiple rules match the same category, the last
 matching rule wins (override).</p>
@@ -1308,19 +1308,22 @@ in a single file.</p>
 <p><code>description</code> (optional): human-readable explanation.</p>
 </li>
 <li>
-<p><code>when</code> (required): variable bindings using remapper-style sources. Each</p>
+<p><code>when</code> (optional): variable bindings using remapper-style sources. Each</p>
 </li>
 </ul>
 <p>variable may include <code>transform</code> to normalize values before matching.</p>
 <ul>
 <li>
-<p><code>if</code> (optional): condition expression using the variables from <code>when</code>.</p>
+<p><code>if</code> (required when <code>when</code> is present): condition expression using the variables from <code>when</code>.</p>
 </li>
 <li>
-<p><code>use</code> (required): target spec name or spec path, or entry point name.</p>
+<p><code>use</code> (required): target spec name or spec path, or hook name.</p>
 </li>
 <li>
 <p><code>version</code> (optional): spec version to select when <code>use</code> is a spec name.</p>
+</li>
+<li>
+<p>Default rules can omit <code>when</code>/<code>if</code>, but must be the first entry in a category.</p>
 </li>
 </ul>
 <h2 id="variable-binding-when">Variable Binding (<code>when</code>)<a class="headerlink" href="#variable-binding-when" title="Permanent link">&para;</a></h2>
@@ -1343,6 +1346,9 @@ via <code>__meta__.transforms_source</code>.</p>
 <h2 id="conditions-if">Conditions (<code>if</code>)<a class="headerlink" href="#conditions-if" title="Permanent link">&para;</a></h2>
 <p>The <code>if</code> field uses a simple structured expression. Supported operators:</p>
 <ul>
+<li>
+<p><code>always</code>: <code>true</code> or <code>false</code></p>
+</li>
 <li>
 <p><code>eq</code>: <code>["$var", "value"]</code></p>
 </li>
