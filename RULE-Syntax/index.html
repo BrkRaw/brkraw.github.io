@@ -1237,7 +1237,7 @@
 
 
 <h1 id="rule-syntax-guide-specsrules-module">Rule Syntax guide (specs.rules module)<a class="headerlink" href="#rule-syntax-guide-specsrules-module" title="Permanent link">&para;</a></h1>
-<p>This document describes the rule syntax used to select specs and entry points
+<p>This document describes the rule syntax used to select specs and hooks
 from <code>~/.brkraw/rules/*.yaml</code>. Rule files are loaded in filename order and
 evaluated top to bottom. If multiple rules match the same category, the last
 matching rule wins (override).</p>
@@ -1255,7 +1255,7 @@ in a single file.</p>
 <p>sidecar metadata, especially when a separate rule set is needed for metadata
   creation.</p>
 <ul>
-<li><code>converter_entrypoint</code>: rules that choose a converter entry point. These are</li>
+<li><code>converter_hook</code>: rules that choose a converter hook. These are</li>
 </ul>
 <p>used by the loader when converting to NIfTI so that a custom reconstruction
   can be selected for scans matching the rule conditions.</p>
@@ -1277,7 +1277,7 @@ in a single file.</p>
 <span class="w">    </span><span class="nt">use</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;mrs&quot;</span>
 <span class="w">    </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1.0.0&quot;</span>
 
-<span class="nt">converter_entrypoint</span><span class="p">:</span>
+<span class="nt">converter_hook</span><span class="p">:</span>
 
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;mrs-reco&quot;</span>
 
@@ -1317,7 +1317,7 @@ in a single file.</p>
 <p><code>if</code> (optional): condition expression using the variables from <code>when</code>.</p>
 </li>
 <li>
-<p><code>use</code> (required): target spec name or spec path, or entry point name.</p>
+<p><code>use</code> (required): target spec name or spec path, or hook name.</p>
 </li>
 <li>
 <p><code>version</code> (optional): spec version to select when <code>use</code> is a spec name.</p>
@@ -1392,9 +1392,9 @@ via <code>__meta__.transforms_source</code>.</p>
 </ul>
 <p><code>__meta__.transforms_source</code>.</p>
 <ul>
-<li><code>converter_entrypoint</code> uses the entry point name registered under</li>
+<li><code>converter_hook</code> uses the hook name registered under</li>
 </ul>
-<p><code>brkraw.converter</code> (or another configured group).</p>
+<p><code>brkraw.converter_hook</code> (or another configured group).</p>
 <p>When <code>use</code> is a spec name, rules will:</p>
 <ul>
 <li>
