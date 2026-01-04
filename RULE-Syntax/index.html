@@ -1237,7 +1237,7 @@
 
 
 <h1 id="rule-syntax-guide-specsrules-module">Rule Syntax guide (specs.rules module)<a class="headerlink" href="#rule-syntax-guide-specsrules-module" title="Permanent link">&para;</a></h1>
-<p>This document describes the rule syntax used to select specs and hooks
+<p>This document describes the rule syntax used to select specs and entry points
 from <code>~/.brkraw/rules/*.yaml</code>. Rule files are loaded in filename order and
 evaluated top to bottom. If multiple rules match the same category, the last
 matching rule wins (override).</p>
@@ -1317,7 +1317,7 @@ in a single file.</p>
 <p><code>if</code> (optional): condition expression using the variables from <code>when</code>.</p>
 </li>
 <li>
-<p><code>use</code> (required): target spec name or spec path, or hook name.</p>
+<p><code>use</code> (required): target spec name or spec path, or entry point name.</p>
 </li>
 <li>
 <p><code>version</code> (optional): spec version to select when <code>use</code> is a spec name.</p>
@@ -1394,7 +1394,7 @@ via <code>__meta__.transforms_source</code>.</p>
 <ul>
 <li><code>converter_hook</code> uses the hook name registered under</li>
 </ul>
-<p><code>brkraw.converter_hook</code> (or another configured group).</p>
+<p><code>brkraw.converter</code> (or another configured group).</p>
 <p>When <code>use</code> is a spec name, rules will:</p>
 <ul>
 <li>

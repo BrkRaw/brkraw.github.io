@@ -900,10 +900,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#install_map" class="md-nav__link">
+  <a href="#install_context_map" class="md-nav__link">
     <span class="md-ellipsis">
       
-        install_map
+        install_context_map
       
     </span>
   </a>
@@ -1206,10 +1206,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#install_map" class="md-nav__link">
+  <a href="#install_context_map" class="md-nav__link">
     <span class="md-ellipsis">
       
-        install_map
+        install_context_map
       
     </span>
   </a>
@@ -1338,11 +1338,11 @@
 
 <span class="n">spec_path</span> <span class="o">=</span> <span class="n">addon</span><span class="o">.</span><span class="n">resolve_pruner_spec_reference</span><span class="p">(</span><span class="s2">&quot;pruner_default&quot;</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="s2">&quot;1.0.0&quot;</span><span class="p">)</span>
 </code></pre></div>
-<h2 id="install_map">install_map<a class="headerlink" href="#install_map" title="Permanent link">&para;</a></h2>
-<p>Attach a map file to an installed spec (and update <code>__meta__.map_file</code>).</p>
+<h2 id="install_context_map">install_context_map<a class="headerlink" href="#install_context_map" title="Permanent link">&para;</a></h2>
+<p>Attach a context map to an installed spec (and update <code>__meta__.context_map</code>).</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">brkraw.apps</span><span class="w"> </span><span class="kn">import</span> <span class="n">addon</span>
 
-<span class="n">addon</span><span class="o">.</span><span class="n">install_map</span><span class="p">(</span>
+<span class="n">addon</span><span class="o">.</span><span class="n">install_context_map</span><span class="p">(</span>
     <span class="s2">&quot;maps.yaml&quot;</span><span class="p">,</span>
     <span class="s2">&quot;metadata_common&quot;</span><span class="p">,</span>
     <span class="n">category</span><span class="o">=</span><span class="s2">&quot;metadata_spec&quot;</span><span class="p">,</span>
@@ -1356,7 +1356,7 @@
 <p>Errors:</p>
 <ul>
 <li>
-<p><code>FileNotFoundError</code>: map file or spec not found.</p>
+<p><code>FileNotFoundError</code>: context map or spec not found.</p>
 </li>
 <li>
 <p><code>RuntimeError</code>: map already attached (use <code>force=True</code>).</p>

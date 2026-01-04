@@ -1052,7 +1052,29 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Concepts">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extensibility-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Extensibility overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#terminology" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Terminology
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Terminology">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1180,7 +1202,29 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Concepts">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extensibility-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Extensibility overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#terminology" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Terminology
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Terminology">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1292,6 +1336,59 @@ hooks, and CLI plugins.</p>
 <p>BrkRaw separates <em>selection logic</em> (rules) from <em>parameter mapping</em> (specs) and</p>
 <p><em>conversion overrides</em> (converter_hook). This lets you compose behavior</p>
 <p>without modifying core code.</p>
+<h2 id="extensibility-overview">Extensibility overview<a class="headerlink" href="#extensibility-overview" title="Permanent link">&para;</a></h2>
+<p>BrkRaw exposes extension points in layers so you can plug in just the part you
+need:</p>
+<ul>
+<li>
+<p><strong>CLI plugins</strong> (<code>brkraw.cli</code> entrypoint): add new CLI commands and workflows.</p>
+</li>
+<li>
+<p><strong>Rules</strong>: selectors that decide which specs or hooks apply to a given scan.</p>
+</li>
+<li>
+<p><strong>Converter hooks</strong> (<code>brkraw.converter_hook</code> entrypoint): override
+  <code>get_dataobj</code>, <code>get_affine</code>, and/or <code>get_nifti1image</code> to integrate custom
+  reconstruction pipelines, with full access to FID and sequence parameters.</p>
+</li>
+<li>
+<p><strong>Specs</strong>: remap parameter files into structured metadata for info tables or
+  sidecar JSON (e.g., BIDS-style fields).</p>
+</li>
+<li>
+<p><strong>Transforms</strong>: Python snippets used by specs to derive or normalize values.</p>
+</li>
+<li>
+<p><strong>Context maps</strong> (<code>__meta__.context_map</code>): project-specific value mapping on
+  top of spec outputs (e.g., subject/session/run mapping).</p>
+</li>
+<li>
+<p><strong>Output formats</strong>: use spec/transform/context-map outputs to generate
+  standardized filenames and folder structures.</p>
+</li>
+</ul>
+<h2 id="terminology">Terminology<a class="headerlink" href="#terminology" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p><strong>Rule</strong>: a selector that matches scan parameters and chooses specs/hooks.</p>
+</li>
+<li>
+<p><strong>Converter hook</strong>: a plugin that overrides one or more conversion methods.</p>
+</li>
+<li>
+<p><strong>Spec</strong>: a mapping recipe from Bruker parameters to structured outputs.</p>
+</li>
+<li>
+<p><strong>Transform</strong>: a Python function applied during spec resolution.</p>
+</li>
+<li>
+<p><strong>Context map</strong>: a project-scoped mapping table applied after spec/transform
+  resolution.</p>
+</li>
+<li>
+<p><strong>Output format</strong>: formatting rules for dataset paths and filenames.</p>
+</li>
+</ul>
 <h3 id="rules">Rules<a class="headerlink" href="#rules" title="Permanent link">&para;</a></h3>
 <p>Rules select specs or converter hooks based on Paravision parameters. You
 can check fields from <code>method</code>, <code>acqp</code>, <code>visu_pars</code>, and others. When a rule

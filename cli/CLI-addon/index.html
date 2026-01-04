@@ -1240,7 +1240,7 @@ installed separately under <code>pruner_specs/</code>.</p>
 </li>
 </ul>
 <h2 id="brkraw-addon-attach-map">brkraw addon attach-map<a class="headerlink" href="#brkraw-addon-attach-map" title="Permanent link">&para;</a></h2>
-<p>Attach a map file to an installed spec.</p>
+<p>Attach a context map to an installed spec.</p>
 <p>Examples:</p>
 <ul>
 <li>
@@ -1256,10 +1256,10 @@ installed separately under <code>pruner_specs/</code>.</p>
 <p>The spec must already be installed.</p>
 </li>
 <li>
-<p>The map file is copied into <code>maps/</code>, and the spec <code>__meta__.map_file</code> is updated.</p>
+<p>The context map is copied into <code>maps/</code>, and the spec <code>__meta__.context_map</code> is updated.</p>
 </li>
 <li>
-<p>If the spec already has a map file, you will be prompted to replace it.</p>
+<p>If the spec already has a context map, you will be prompted to replace it.</p>
 </li>
 <li>
 <p>Use <code>--force</code> to replace without prompting.</p>
@@ -1291,7 +1291,7 @@ installed separately under <code>pruner_specs/</code>.</p>
 <p><code>--kind</code> can limit removal to <code>spec</code>, <code>pruner</code>, <code>rule</code>, <code>transform</code>, or <code>map</code>.</p>
 </li>
 <li>
-<p>Removing a map file clears any matching <code>__meta__.map_file</code> entries.</p>
+<p>Removing a context map clears any matching <code>__meta__.context_map</code> entries.</p>
 </li>
 </ul>
 <h2 id="brkraw-addon-edit">brkraw addon edit<a class="headerlink" href="#brkraw-addon-edit" title="Permanent link">&para;</a></h2>
