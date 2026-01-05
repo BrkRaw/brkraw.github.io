@@ -1578,12 +1578,21 @@ implemented as addons (rules/specs/transforms/context_map) or plugins.</p>
 <p>If you think a change must live in core, start with a GitHub Discussion and
 explain why it cannot be handled through addons or plugins.</p>
 <h2 id="defaults-we-want-help-with">Defaults we want help with<a class="headerlink" href="#defaults-we-want-help-with" title="Permanent link">&para;</a></h2>
-<p>We are looking for suggestions on default rules/specs to ship out of the box.
-If you work with specific Bruker sequences, please propose:</p>
+<p>We are looking for suggestions on default rules/specs to ship out of the box,
+especially for modality-specific workflows. If you work with specific Bruker
+sequences, please propose:</p>
 <ul>
-<li><code>info_spec</code> improvements for <code>brkraw info</code> / <code>BrukerLoader.info</code>.</li>
-<li><code>metadata_spec</code> mappings for sidecar metadata (BIDS or lab standards).</li>
+<li>Modality-specific <code>info_spec</code> improvements for <code>brkraw info</code> /
+  <code>BrukerLoader.info</code>.</li>
+<li><code>metadata_spec</code> mappings geared toward BIDS or lab standards.</li>
 <li>Rules that select the right spec based on <code>method</code>, <code>acqp</code>, or <code>visu_pars</code>.</li>
+<li><code>context_map</code> patterns that capture common lab or modality use cases.</li>
+</ul>
+<p>We also welcome contributions for documentation, including:</p>
+<ul>
+<li>End-to-end use-case scenarios with <code>context_map</code>, rules, and specs.</li>
+<li>Modality-specific tutorials (for example DWI, fMRI, MRS).</li>
+<li>Updates or corrections to the docs.</li>
 </ul>
 <p>Even small improvements (for example, better labels or parameter keys) are
 useful. Open a Discussion with your sequence details and the parameter files
