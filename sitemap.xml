@@ -1,79 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://brkraw.github.io/</loc>
+         <loc>https://brkraw.github.io/index.html</loc>
          <lastmod>2026-01-05</lastmod>
     </url>
     <url>
-         <loc>https://brkraw.github.io/addons-and-plugins/</loc>
+         <loc>https://brkraw.github.io/configuration.html</loc>
          <lastmod>2026-01-05</lastmod>
     </url>
     <url>
-         <loc>https://brkraw.github.io/configuration/</loc>
+         <loc>https://brkraw.github.io/getting-started.html</loc>
          <lastmod>2026-01-05</lastmod>
     </url>
     <url>
-         <loc>https://brkraw.github.io/contribution/</loc>
+         <loc>https://brkraw.github.io/api/addon.html</loc>
          <lastmod>2026-01-05</lastmod>
     </url>
     <url>
-         <loc>https://brkraw.github.io/contributors/</loc>
+         <loc>https://brkraw.github.io/api/cli-workflows.html</loc>
          <lastmod>2026-01-05</lastmod>
     </url>
     <url>
-         <loc>https://brkraw.github.io/getting-started/</loc>
+         <loc>https://brkraw.github.io/api/layout.html</loc>
          <lastmod>2026-01-05</lastmod>
     </url>
     <url>
-         <loc>https://brkraw.github.io/python-api/</loc>
+         <loc>https://brkraw.github.io/api/overview.html</loc>
          <lastmod>2026-01-05</lastmod>
     </url>
     <url>
-         <loc>https://brkraw.github.io/rule-syntax/</loc>
+         <loc>https://brkraw.github.io/api/pruner.html</loc>
          <lastmod>2026-01-05</lastmod>
     </url>
     <url>
-         <loc>https://brkraw.github.io/spec-syntax/</loc>
+         <loc>https://brkraw.github.io/cli/addon.html</loc>
          <lastmod>2026-01-05</lastmod>
     </url>
     <url>
-         <loc>https://brkraw.github.io/api/addon/</loc>
+         <loc>https://brkraw.github.io/cli/config.html</loc>
          <lastmod>2026-01-05</lastmod>
     </url>
     <url>
-         <loc>https://brkraw.github.io/api/cli-workflows/</loc>
+         <loc>https://brkraw.github.io/cli/convert.html</loc>
          <lastmod>2026-01-05</lastmod>
     </url>
     <url>
-         <loc>https://brkraw.github.io/api/layout/</loc>
+         <loc>https://brkraw.github.io/cli/info-and-params.html</loc>
          <lastmod>2026-01-05</lastmod>
     </url>
     <url>
-         <loc>https://brkraw.github.io/api/pruner/</loc>
+         <loc>https://brkraw.github.io/cli/prune.html</loc>
          <lastmod>2026-01-05</lastmod>
     </url>
     <url>
-         <loc>https://brkraw.github.io/cli/addon/</loc>
+         <loc>https://brkraw.github.io/cli/session.html</loc>
          <lastmod>2026-01-05</lastmod>
     </url>
     <url>
-         <loc>https://brkraw.github.io/cli/config/</loc>
+         <loc>https://brkraw.github.io/contrib/addons-and-plugins.html</loc>
          <lastmod>2026-01-05</lastmod>
     </url>
     <url>
-         <loc>https://brkraw.github.io/cli/convert/</loc>
+         <loc>https://brkraw.github.io/contrib/contribution.html</loc>
          <lastmod>2026-01-05</lastmod>
     </url>
     <url>
-         <loc>https://brkraw.github.io/cli/info-and-params/</loc>
+         <loc>https://brkraw.github.io/contrib/contributors.html</loc>
          <lastmod>2026-01-05</lastmod>
     </url>
     <url>
-         <loc>https://brkraw.github.io/cli/prune/</loc>
+         <loc>https://brkraw.github.io/contrib/development-model.html</loc>
          <lastmod>2026-01-05</lastmod>
     </url>
     <url>
-         <loc>https://brkraw.github.io/cli/session/</loc>
+         <loc>https://brkraw.github.io/contrib/rule-syntax.html</loc>
+         <lastmod>2026-01-05</lastmod>
+    </url>
+    <url>
+         <loc>https://brkraw.github.io/contrib/spec-syntax.html</loc>
          <lastmod>2026-01-05</lastmod>
     </url>
 </urlset>

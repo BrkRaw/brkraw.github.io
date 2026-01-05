@@ -10,29 +10,31 @@
       
       
       
-        <link rel="canonical" href="https://brkraw.github.io/index.html">
+        <link rel="canonical" href="https://brkraw.github.io/contrib/rule-syntax.html">
       
       
+        <link rel="prev" href="contribution.html">
       
-        <link rel="next" href="getting-started.html">
+      
+        <link rel="next" href="spec-syntax.html">
       
       
         
       
       
-      <link rel="icon" href="assets/favicon.ico">
+      <link rel="icon" href="../assets/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
-        <title>Preclinical MRI dataset toolkit</title>
+        <title>Rule Syntax - Preclinical MRI dataset toolkit</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -45,9 +47,9 @@
       
     
     
-      <link rel="stylesheet" href="stylesheets/extra.css">
+      <link rel="stylesheet" href="../stylesheets/extra.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -72,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#preclinical-mri-dataset-toolkit" class="md-skip">
+        <a href="#rule-syntax-guide-specsrules-module" class="md-skip">
           Skip to content
         </a>
       
@@ -86,9 +88,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="index.html" title="Preclinical MRI dataset toolkit" class="md-header__button md-logo" aria-label="Preclinical MRI dataset toolkit" data-md-component="logo">
+    <a href="../index.html" title="Preclinical MRI dataset toolkit" class="md-header__button md-logo" aria-label="Preclinical MRI dataset toolkit" data-md-component="logo">
       
-  <img src="assets/brkraw-logo.svg" alt="logo">
+  <img src="../assets/brkraw-logo.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -105,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Rule Syntax
             
           </span>
         </div>
@@ -205,11 +207,9 @@
   
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="index.html" class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../index.html" class="md-tabs__link">
         
   
   
@@ -228,7 +228,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="getting-started.html" class="md-tabs__link">
+      <a href="../getting-started.html" class="md-tabs__link">
         
   
   
@@ -249,7 +249,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="cli/info-and-params.html" class="md-tabs__link">
+        <a href="../cli/info-and-params.html" class="md-tabs__link">
           
   
   
@@ -269,7 +269,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="api/overview.html" class="md-tabs__link">
+        <a href="../api/overview.html" class="md-tabs__link">
           
   
   
@@ -285,11 +285,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="contrib/contribution.html" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="contribution.html" class="md-tabs__link">
           
   
   
@@ -309,7 +311,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="configuration.html" class="md-tabs__link">
+        <a href="../configuration.html" class="md-tabs__link">
           
   
   
@@ -343,9 +345,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="index.html" title="Preclinical MRI dataset toolkit" class="md-nav__button md-logo" aria-label="Preclinical MRI dataset toolkit" data-md-component="logo">
+    <a href="../index.html" title="Preclinical MRI dataset toolkit" class="md-nav__button md-logo" aria-label="Preclinical MRI dataset toolkit" data-md-component="logo">
       
-  <img src="assets/brkraw-logo.svg" alt="logo">
+  <img src="../assets/brkraw-logo.svg" alt="logo">
 
     </a>
     Preclinical MRI dataset toolkit
@@ -369,37 +371,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Home
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
         
   
   
@@ -415,48 +390,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#highlights" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Highlights
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#quick-links" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Quick links
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -468,7 +401,7 @@
   
   
     <li class="md-nav__item">
-      <a href="getting-started.html" class="md-nav__link">
+      <a href="../getting-started.html" class="md-nav__link">
         
   
   
@@ -547,7 +480,7 @@
   
   
     <li class="md-nav__item">
-      <a href="cli/info-and-params.html" class="md-nav__link">
+      <a href="../cli/info-and-params.html" class="md-nav__link">
         
   
   
@@ -575,7 +508,7 @@
   
   
     <li class="md-nav__item">
-      <a href="cli/session.html" class="md-nav__link">
+      <a href="../cli/session.html" class="md-nav__link">
         
   
   
@@ -603,7 +536,7 @@
   
   
     <li class="md-nav__item">
-      <a href="cli/convert.html" class="md-nav__link">
+      <a href="../cli/convert.html" class="md-nav__link">
         
   
   
@@ -631,7 +564,7 @@
   
   
     <li class="md-nav__item">
-      <a href="cli/addon.html" class="md-nav__link">
+      <a href="../cli/addon.html" class="md-nav__link">
         
   
   
@@ -659,7 +592,7 @@
   
   
     <li class="md-nav__item">
-      <a href="cli/config.html" class="md-nav__link">
+      <a href="../cli/config.html" class="md-nav__link">
         
   
   
@@ -687,7 +620,7 @@
   
   
     <li class="md-nav__item">
-      <a href="cli/prune.html" class="md-nav__link">
+      <a href="../cli/prune.html" class="md-nav__link">
         
   
   
@@ -774,7 +707,7 @@
   
   
     <li class="md-nav__item">
-      <a href="api/overview.html" class="md-nav__link">
+      <a href="../api/overview.html" class="md-nav__link">
         
   
   
@@ -802,7 +735,7 @@
   
   
     <li class="md-nav__item">
-      <a href="api/cli-workflows.html" class="md-nav__link">
+      <a href="../api/cli-workflows.html" class="md-nav__link">
         
   
   
@@ -830,7 +763,7 @@
   
   
     <li class="md-nav__item">
-      <a href="api/layout.html" class="md-nav__link">
+      <a href="../api/layout.html" class="md-nav__link">
         
   
   
@@ -858,7 +791,7 @@
   
   
     <li class="md-nav__item">
-      <a href="api/addon.html" class="md-nav__link">
+      <a href="../api/addon.html" class="md-nav__link">
         
   
   
@@ -886,7 +819,7 @@
   
   
     <li class="md-nav__item">
-      <a href="api/pruner.html" class="md-nav__link">
+      <a href="../api/pruner.html" class="md-nav__link">
         
   
   
@@ -918,26 +851,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
             
   
   
@@ -955,7 +893,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -973,7 +911,7 @@
   
   
     <li class="md-nav__item">
-      <a href="contrib/contribution.html" class="md-nav__link">
+      <a href="contribution.html" class="md-nav__link">
         
   
   
@@ -998,10 +936,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="contrib/rule-syntax.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rule Syntax
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="rule-syntax.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1017,6 +982,92 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#rule-file-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rule File Layout
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rule-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rule Fields
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variable-binding-when" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variable Binding (when)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conditions-if" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conditions (if)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#targets-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Targets (use)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#override-behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Override Behavior
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1029,7 +1080,7 @@
   
   
     <li class="md-nav__item">
-      <a href="contrib/spec-syntax.html" class="md-nav__link">
+      <a href="spec-syntax.html" class="md-nav__link">
         
   
   
@@ -1057,7 +1108,7 @@
   
   
     <li class="md-nav__item">
-      <a href="contrib/addons-and-plugins.html" class="md-nav__link">
+      <a href="addons-and-plugins.html" class="md-nav__link">
         
   
   
@@ -1085,7 +1136,7 @@
   
   
     <li class="md-nav__item">
-      <a href="contrib/development-model.html" class="md-nav__link">
+      <a href="development-model.html" class="md-nav__link">
         
   
   
@@ -1113,7 +1164,7 @@
   
   
     <li class="md-nav__item">
-      <a href="contrib/contributors.html" class="md-nav__link">
+      <a href="contributors.html" class="md-nav__link">
         
   
   
@@ -1200,7 +1251,7 @@
   
   
     <li class="md-nav__item">
-      <a href="configuration.html" class="md-nav__link">
+      <a href="../configuration.html" class="md-nav__link">
         
   
   
@@ -1255,10 +1306,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#highlights" class="md-nav__link">
+  <a href="#rule-file-layout" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Highlights
+        Rule File Layout
       
     </span>
   </a>
@@ -1266,10 +1317,54 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#quick-links" class="md-nav__link">
+  <a href="#rule-fields" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Quick links
+        Rule Fields
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variable-binding-when" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variable Binding (when)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conditions-if" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conditions (if)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#targets-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Targets (use)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#override-behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Override Behavior
       
     </span>
   </a>
@@ -1296,29 +1391,183 @@
   
 
 
-<h1 id="preclinical-mri-dataset-toolkit">Preclinical MRI Dataset Toolkit<a class="headerlink" href="#preclinical-mri-dataset-toolkit" title="Permanent link">&para;</a></h1>
-<p>BrkRaw is a toolkit for loading Bruker Paravision studies, inspecting metadata,
-mapping parameters with rules/specs, and exporting NIfTI with optional sidecar
-metadata. It ships with a CLI and a Python API, and is designed to be extended
-through add-on rules, specs, and plugins.</p>
-<h2 id="highlights">Highlights<a class="headerlink" href="#highlights" title="Permanent link">&para;</a></h2>
+<h1 id="rule-syntax-guide-specsrules-module">Rule Syntax Guide (specs.rules module)<a class="headerlink" href="#rule-syntax-guide-specsrules-module" title="Permanent link">&para;</a></h1>
+<p>This document describes the rule syntax used to select specs and hooks
+from <code>~/.brkraw/rules/*.yaml</code>. Rule files are loaded in filename order and
+evaluated top to bottom. If multiple rules match the same category, the last
+matching rule wins (override).</p>
+<h2 id="rule-file-layout">Rule File Layout<a class="headerlink" href="#rule-file-layout" title="Permanent link">&para;</a></h2>
+<p>A rule file may contain any of the following top-level keys. You can mix them
+in a single file.</p>
 <ul>
-<li>Load Paravision datasets from directories or zip archives.</li>
-<li>Inspect study and scan metadata with rich CLI tables.</li>
-<li>Map parameters via remapper specs and rule-based selection.</li>
-<li>Convert scans to NIfTI with configurable layout entries/templates.</li>
-<li>Extend behavior via rules, specs, and converter hooks.</li>
+<li><code>info_spec</code>: rules that choose which scan metadata spec to use when calling</li>
 </ul>
-<h2 id="quick-links">Quick links<a class="headerlink" href="#quick-links" title="Permanent link">&para;</a></h2>
+<p>info-related commands or methods (for example, metadata parsing in the scan
+  resolver).</p>
 <ul>
-<li>Getting started: getting-started.md</li>
-<li>CLI usage: cli/info-and-params.md</li>
-<li>Python API: api/overview.md</li>
-<li>API workflows: api/cli-workflows.md</li>
-<li>Rules and specs: contrib/rule-syntax.md and contrib/spec-syntax.md</li>
-<li>Addons and plugins: contrib/addons-and-plugins.md</li>
-<li>Contribution: contrib/contribution.md</li>
+<li><code>metadata_spec</code>: rules that choose which metadata spec to use when generating</li>
 </ul>
+<p>sidecar metadata, especially when a separate rule set is needed for metadata
+  creation.</p>
+<ul>
+<li><code>converter_hook</code>: rules that choose a converter hook. These are</li>
+</ul>
+<p>used by the loader when converting to NIfTI so that a custom reconstruction
+  can be selected for scans matching the rule conditions.</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">info_spec</span><span class="p">:</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;mrs-info&quot;</span>
+
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;MRS</span><span class="nv"> </span><span class="s">method</span><span class="nv"> </span><span class="s">uses</span><span class="nv"> </span><span class="s">custom</span><span class="nv"> </span><span class="s">info</span><span class="nv"> </span><span class="s">spec&quot;</span>
+<span class="w">    </span><span class="nt">when</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">method</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">sources</span><span class="p">:</span>
+
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">acqp</span>
+
+<span class="w">            </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ACQ_XXX</span>
+<span class="w">    </span><span class="nt">if</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">eq</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;$method&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;MRS&quot;</span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="nt">use</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;mrs&quot;</span>
+<span class="w">    </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1.0.0&quot;</span>
+
+<span class="nt">converter_hook</span><span class="p">:</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;mrs-reco&quot;</span>
+
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;MRS</span><span class="nv"> </span><span class="s">reconstruction</span><span class="nv"> </span><span class="s">plugin&quot;</span>
+<span class="w">    </span><span class="nt">when</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">method</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">sources</span><span class="p">:</span>
+
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">acqp</span>
+
+<span class="w">            </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ACQ_XXX</span>
+<span class="w">    </span><span class="nt">if</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">any</span><span class="p">:</span>
+
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">eq</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;$method&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;MRS&quot;</span><span class="p p-Indicator">]</span>
+
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">in</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;$method&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;MRS2&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;MRS3&quot;</span><span class="p p-Indicator">]]</span>
+
+<span class="w">    </span><span class="nt">use</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;mrs-reco&quot;</span>
+</code></pre></div>
+<h2 id="rule-fields">Rule Fields<a class="headerlink" href="#rule-fields" title="Permanent link">&para;</a></h2>
+<p>Each rule item supports:</p>
+<ul>
+<li>
+<p><code>name</code> (required): identifier for logging/debugging.</p>
+</li>
+<li>
+<p><code>description</code> (optional): human-readable explanation.</p>
+</li>
+<li>
+<p><code>when</code> (optional): variable bindings using remapper-style sources. Each</p>
+</li>
+</ul>
+<p>variable may include <code>transform</code> to normalize values before matching.</p>
+<ul>
+<li>
+<p><code>if</code> (required when <code>when</code> is present): condition expression using the variables from <code>when</code>.</p>
+</li>
+<li>
+<p><code>use</code> (required): target spec name or spec path, or hook name.</p>
+</li>
+<li>
+<p><code>version</code> (optional): spec version to select when <code>use</code> is a spec name.</p>
+</li>
+<li>
+<p>Default rules can omit <code>when</code>/<code>if</code>, but must be the first entry in a category.</p>
+</li>
+</ul>
+<h2 id="variable-binding-when">Variable Binding (<code>when</code>)<a class="headerlink" href="#variable-binding-when" title="Permanent link">&para;</a></h2>
+<p><code>when</code> defines named variables using remapper-style sources. Each variable name
+is available in the <code>if</code> expression using <code>$&lt;name&gt;</code>. If a variable binding uses
+<code>transform</code>, the transform name is resolved from the spec referenced by <code>use</code>
+via <code>__meta__.transforms_source</code>.</p>
+<p>See <code>docs/contrib/spec-syntax.md</code> for details on remapper sources and transforms.</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">when</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">method</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">sources</span><span class="p">:</span>
+
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">acqp</span>
+
+<span class="w">        </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ACQ_XXX</span>
+<span class="w">    </span><span class="nt">transform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">normalize_method</span>
+</code></pre></div>
+<p>This binds <code>$method</code> to the first available value from the sources list.</p>
+<h2 id="conditions-if">Conditions (<code>if</code>)<a class="headerlink" href="#conditions-if" title="Permanent link">&para;</a></h2>
+<p>The <code>if</code> field uses a simple structured expression. Supported operators:</p>
+<ul>
+<li>
+<p><code>always</code>: <code>true</code> or <code>false</code></p>
+</li>
+<li>
+<p><code>eq</code>: <code>["$var", "value"]</code></p>
+</li>
+<li>
+<p><code>ne</code>: <code>["$var", "value"]</code></p>
+</li>
+<li>
+<p><code>in</code>: <code>["$var", ["A", "B"]]</code></p>
+</li>
+<li>
+<p><code>regex</code>: <code>["$var", "^prefix"]</code></p>
+</li>
+<li>
+<p><code>startswith</code>: <code>["$var", "prefix"]</code></p>
+</li>
+<li>
+<p><code>contains</code>: <code>["$var", "substring"]</code></p>
+</li>
+<li>
+<p><code>gt</code>, <code>ge</code>, <code>lt</code>, <code>le</code>: numeric comparisons</p>
+</li>
+<li>
+<p><code>any</code>: list of expressions (OR)</p>
+</li>
+<li>
+<p><code>all</code>: list of expressions (AND)</p>
+</li>
+<li>
+<p><code>not</code>: single expression (NOT)</p>
+</li>
+</ul>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">if</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">any</span><span class="p">:</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">eq</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;$method&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;XXXX&quot;</span><span class="p p-Indicator">]</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">in</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;$method&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;A&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;B&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;C&quot;</span><span class="p p-Indicator">]]</span>
+</code></pre></div>
+<h2 id="targets-use">Targets (<code>use</code>)<a class="headerlink" href="#targets-use" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>info_spec</code>/<code>metadata_spec</code> can use a spec name or a YAML spec path under</li>
+</ul>
+<p><code>~/.brkraw/specs/</code> (or another configured root).</p>
+<ul>
+<li>Transforms for <code>info_spec</code>/<code>metadata_spec</code> are defined in the spec file under</li>
+</ul>
+<p><code>__meta__.transforms_source</code>.</p>
+<ul>
+<li><code>converter_hook</code> uses the hook name registered under</li>
+</ul>
+<p><code>brkraw.converter</code> (or another configured group).</p>
+<p>When <code>use</code> is a spec name, rules will:</p>
+<ul>
+<li>
+<p>match <code>__meta__.category</code> to the rule category (<code>info_spec</code> or <code>metadata_spec</code>)</p>
+</li>
+<li>
+<p>select <code>version</code> if provided, otherwise the latest version</p>
+</li>
+</ul>
+<h2 id="override-behavior">Override Behavior<a class="headerlink" href="#override-behavior" title="Permanent link">&para;</a></h2>
+<p>All rule files under <code>~/.brkraw/rules/*.yaml</code> are loaded in filename order.
+If multiple rules match the same category, the last matching rule wins.</p>
 
 
 
@@ -1374,10 +1623,10 @@ through add-on rules, specs, and plugins.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.tabs", "navigation.top", "navigation.sections", "navigation.instant", "navigation.instant.prefetch", "search.highlight", "search.share"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.top", "navigation.sections", "navigation.instant", "navigation.instant.prefetch", "search.highlight", "search.share"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>
