@@ -1512,7 +1512,8 @@ extend the project and what kinds of changes belong in core vs addons/plugins.</
 <li>CLI plugins and tooling built on top of the BrkRaw API</li>
 </ul>
 <p>Before opening an issue or PR, start with a GitHub Discussion so we can align on
-scope and the right extension path.</p>
+scope and the right extension path. For core changes, we follow a clear flow:
+Discussion proposal → Issue(s) → Pull request.</p>
 <h2 id="dev-environment-vscode-recommended">Dev environment (VSCode recommended)<a class="headerlink" href="#dev-environment-vscode-recommended" title="Permanent link">&para;</a></h2>
 <p>We track <code>.vscode/</code> to share a common task setup across contributors.</p>
 <p>1) Create a virtual environment and install dev dependencies:</p>
@@ -1576,7 +1577,8 @@ override at runtime via the API/CLI. See <code>docs/api/layout.md</code>.</p>
 Paravision layouts and metadata conventions. All other customization should be
 implemented as addons (rules/specs/transforms/context_map) or plugins.</p>
 <p>If you think a change must live in core, start with a GitHub Discussion and
-explain why it cannot be handled through addons or plugins.</p>
+explain why it cannot be handled through addons or plugins. Once agreed, open
+issue(s) for the scoped work, then combine them in a single PR.</p>
 <h2 id="defaults-we-want-help-with">Defaults we want help with<a class="headerlink" href="#defaults-we-want-help-with" title="Permanent link">&para;</a></h2>
 <p>We are looking for suggestions on default rules/specs to ship out of the box,
 especially for modality-specific workflows. If you work with specific Bruker
@@ -1602,8 +1604,8 @@ you rely on.</p>
 so they can be installed independently. This makes it easier to distribute new
 tools to other labs and users.</p>
 <h2 id="community">Community<a class="headerlink" href="#community" title="Permanent link">&para;</a></h2>
-<p>If you build something useful, please open a PR or start a discussion. We plan
-to periodically highlight community plugins on the BrkRaw main site.</p>
+<p>If you build something useful, please start a discussion. We plan to
+periodically highlight community plugins on the BrkRaw main site.</p>
 <h2 id="contributors">Contributors<a class="headerlink" href="#contributors" title="Permanent link">&para;</a></h2>
 <p>See <code>docs/contrib/contributors.md</code> for the current list.</p>
 

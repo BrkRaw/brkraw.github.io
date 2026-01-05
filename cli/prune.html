@@ -1312,7 +1312,10 @@
 <p><code>path</code>: source dataset path</p>
 </li>
 <li>
-<p><code>--spec</code>: prune spec YAML path</p>
+<p><code>--spec</code>: prune spec YAML path (or basename of an installed spec)</p>
+</li>
+<li>
+<p><code>--spec-name</code>: installed pruner spec name (basename, no path)</p>
 </li>
 </ul>
 <p>Optional overrides:</p>
@@ -1323,9 +1326,24 @@
 <li>
 <p><code>--no-validate</code>: skip spec validation</p>
 </li>
+<li>
+<p><code>--strip-jcamp-comments</code>: remove <code>$$</code> comment lines from kept JCAMP files</p>
+</li>
+<li>
+<p><code>--mode</code>: override spec <code>mode</code> (<code>keep</code> or <code>drop</code>)</p>
+</li>
+<li>
+<p><code>--set-var</code>: template variable for spec substitution (repeatable, <code>KEY=VALUE</code>)</p>
+</li>
+<li>
+<p><code>--scan-ids</code>: override scan IDs to keep (space or comma separated)</p>
+</li>
+<li>
+<p><code>--reco-ids</code>: override reco IDs to keep (space or comma separated)</p>
+</li>
 </ul>
-<p>If <code>--output</code> is omitted, the default filename uses <code>root_name</code> from the spec
-(falling back to <code>&lt;input&gt;_pruned</code> when <code>root_name</code> is missing).</p>
+<p>If <code>--output</code> is omitted, the default filename uses <code>root_name</code> from the spec.
+When <code>root_name</code> is missing, <code>--output</code> is required.</p>
 <p>Notes on <code>update_params</code>:</p>
 <ul>
 <li>
@@ -1337,9 +1355,20 @@
 <li>
 <p>Use it for de-identification or redaction when preparing datasets for sharing.</p>
 </li>
+</ul>
+<p>Optional JCAMP cleanup:</p>
+<ul>
+<li>
+<p><code>strip_jcamp_comments: true</code> removes <code>$$</code> comment lines from JCAMP files that
+  are kept in the pruned archive.</p>
+</li>
 <li>
 <p>No helper utilities are provided; you must ensure JCAMP compliance yourself.</p>
 </li>
+</ul>
+<p>Template variables:</p>
+<ul>
+<li>Strings in the spec containing <code>$key</code> are replaced when <code>--set-var key=value</code> is provided.</li>
 </ul>
 <p>Compatibility guidance:</p>
 <ul>
@@ -1374,8 +1403,33 @@
 
 <span class="w">    </span><span class="nt">dirs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;13&quot;</span><span class="p p-Indicator">]</span>
 </code></pre></div>
+<p>Keeping specific scans/reconstructions without editing the spec:</p>
+<div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>prune<span class="w"> </span>/data/study<span class="w"> </span>--spec<span class="w"> </span>specs/prune.yaml<span class="w"> </span>--scan-ids<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">3</span>
+brkraw<span class="w"> </span>prune<span class="w"> </span>/data/study<span class="w"> </span>--spec<span class="w"> </span>specs/prune.yaml<span class="w"> </span>--scan-ids<span class="w"> </span><span class="m">1</span><span class="w"> </span>--reco-ids<span class="w"> </span><span class="m">1</span>,2
+brkraw<span class="w"> </span>prune<span class="w"> </span>/data/study<span class="w"> </span>--spec<span class="w"> </span>specs/prune.yaml<span class="w"> </span>--set-var<span class="w"> </span><span class="nv">subject</span><span class="o">=</span>01exp<span class="w"> </span>--set-var<span class="w"> </span><span class="nv">study</span><span class="o">=</span>01exp
+</code></pre></div>
 <p>Example:</p>
 <div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>prune<span class="w"> </span>/data/study<span class="w"> </span>--spec<span class="w"> </span>specs/prune.yaml<span class="w"> </span>--output<span class="w"> </span>/data/out/pruned.zip
+</code></pre></div>
+<p>Sidecar log:</p>
+<ul>
+<li>After pruning, BrkRaw writes a <code>.prune.yaml</code> sidecar next to the output zip.
+  The file records the CLI inputs (spec path, scan/reco ids, template vars).</li>
+</ul>
+<p>Using an installed spec by name:</p>
+<div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>prune<span class="w"> </span>/data/study<span class="w"> </span>--spec-name<span class="w"> </span>pruner_default
+</code></pre></div>
+<p>De-identification example (edit the input zip path as needed):</p>
+<div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>prune<span class="w"> </span>/path/to/dataset.zip<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--spec-name<span class="w"> </span>deid4share<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-o<span class="w"> </span>/path/to/output.zip<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--strip-jcamp-comments<span class="w"> </span>--mode<span class="w"> </span>keep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--set-var<span class="w"> </span><span class="nv">subject_id</span><span class="o">=</span>01exp<span class="w"> </span>--set-var<span class="w"> </span><span class="nv">subject_name</span><span class="o">=</span>camri<span class="w"> </span>--set-var<span class="w"> </span><span class="nv">study_id</span><span class="o">=</span><span class="m">01</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--scan-ids<span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">9</span><span class="w"> </span><span class="m">11</span><span class="w"> </span>--reco-ids<span class="w"> </span><span class="m">1</span>
+</code></pre></div>
+<p>If you place <code>path</code> at the end and use list options like <code>--scan-ids</code> or
+<code>--reco-ids</code>, add <code>--</code> before the path to stop option parsing:</p>
+<div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>prune<span class="w"> </span>--spec-name<span class="w"> </span>deid4share<span class="w"> </span>--scan-ids<span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="w"> </span>--reco-ids<span class="w"> </span><span class="m">1</span><span class="w"> </span>--<span class="w"> </span>/path/to/dataset.zip
 </code></pre></div>
 <h2 id="example-prune-spec-minimal-compatible">Example prune spec (minimal compatible)<a class="headerlink" href="#example-prune-spec-minimal-compatible" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><span class="nt">__meta__</span><span class="p">:</span>
@@ -1399,6 +1453,7 @@
 <span class="nt">update_params</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">method</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">PVM_ScanTimeStr</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;120.0&quot;</span>
+<span class="nt">strip_jcamp_comments</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="nt">add_root</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="nt">root_name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;study_pruned&quot;</span>
 </code></pre></div>
