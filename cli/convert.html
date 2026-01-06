@@ -631,6 +631,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Output layout">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#practical-naming-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Practical naming examples
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1314,6 +1331,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Output layout">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#practical-naming-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Practical naming examples
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1364,9 +1398,6 @@ converted.</p>
 <li>
 <p><code>brkraw convert /path/to/study -o out</code> (all scans, all recos)</p>
 </li>
-<li>
-<p><code>brkraw convert /path/to/study --sidecar --context-map maps.yaml</code></p>
-</li>
 </ul>
 <p>Notes:</p>
 <ul>
@@ -1377,13 +1408,7 @@ converted.</p>
 <p><code>-o</code> without an extension is treated as a directory when converting all scans.</p>
 </li>
 <li>
-<p>Multiple slice packs use <code>output.slicepack_suffix</code> from <code>config.yaml</code> or
-  <code>__meta__.slicepack_suffix</code> in the context map.</p>
-</li>
-<li>
-<p><code>--context-map</code> controls metadata/output mapping and selector filtering.
-  Selector keys in the map (<code>selector: true</code>) limit conversions to matching scans.
-  Use <code>target</code> in map rules to choose <code>info_spec</code> or <code>metadata_spec</code>.</p>
+<p>Multiple slice packs use <code>output.slicepack_suffix</code> from <code>config.yaml</code>.</p>
 </li>
 <li>
 <p>Output layout keys are resolved from the merged <code>info_spec</code> and <code>metadata_spec</code>
@@ -1434,24 +1459,85 @@ from merged <code>info_spec</code> + <code>metadata_spec</code> results.</p>
 <p>Each entry is appended in order when the value is present. Values are sanitized
 to <code>A-Z</code>, <code>a-z</code>, <code>0-9</code>, <code>.</code>, <code>_</code>, <code>-</code>. Missing values are skipped.
 Use <code>sep: "/"</code> on a field to insert folder separators.</p>
-<p>See <code>docs/api/layout.md</code> for the programmatic API.</p>
-<p>Example:</p>
+<h3 id="practical-naming-examples">Practical naming examples<a class="headerlink" href="#practical-naming-examples" title="Permanent link">&para;</a></h3>
+<p>Minimal <code>info_spec</code> context (from <code>src/brkraw/apps/loader/info/study.yaml</code>):
+<div class="highlight"><pre><span></span><code><span class="nt">Study.ID</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">sources</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">subject</span>
+<span class="w">      </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SUBJECT_study_name</span>
+<span class="w">  </span><span class="nt">transform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">strip_jcamp_string</span>
+<span class="nt">Subject.ID</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">sources</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">subject</span>
+<span class="w">      </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SUBJECT_id</span>
+<span class="w">  </span><span class="nt">transform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">strip_jcamp_string</span>
+</code></pre></div>
+Assume the mapped values are:
+<div class="highlight"><pre><span></span><code>Study.ID = S001
+Subject.ID = 01
+Protocol = T1w
+</code></pre></div></p>
+<p>Minimal entries (default prefixing):
 <div class="highlight"><pre><span></span><code><span class="nt">output</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">layout_entries</span><span class="p">:</span>
-
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Study.ID</span>
-
-<span class="w">    </span><span class="nt">entry</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">study</span>
-<span class="w">    </span><span class="nt">hide</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
-
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Subject.ID</span>
-
-<span class="w">    </span><span class="nt">entry</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sub</span>
-<span class="w">    </span><span class="nt">hide</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
-
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Protocol</span>
-<span class="w">    </span><span class="nt">hide</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Study.ID</span>
+<span class="w">      </span><span class="nt">entry</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">study</span>
+<span class="w">      </span><span class="nt">sep</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/&quot;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Subject.ID</span>
+<span class="w">      </span><span class="nt">entry</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sub</span>
+<span class="w">      </span><span class="nt">sep</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/&quot;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Protocol</span>
+<span class="w">      </span><span class="nt">entry</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">acq</span>
 </code></pre></div>
+Example result (when values exist):
+<div class="highlight"><pre><span></span><code>study-S001/sub-sub-01/acq-T1w
+</code></pre></div></p>
+<p>Entry omitted (auto entry name):
+<div class="highlight"><pre><span></span><code><span class="nt">output</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">layout_entries</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Study.ID</span>
+<span class="w">      </span><span class="nt">sep</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/&quot;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Subject.ID</span>
+<span class="w">      </span><span class="nt">sep</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/&quot;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Protocol</span>
+</code></pre></div>
+Example result:
+<div class="highlight"><pre><span></span><code>studyid-S001/subjectid-sub-01/protocol-T1w
+</code></pre></div></p>
+<p>Value-only entry (<code>hide: true</code>):
+<div class="highlight"><pre><span></span><code><span class="nt">output</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">layout_entries</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Study.ID</span>
+<span class="w">      </span><span class="nt">entry</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">study</span>
+<span class="w">      </span><span class="nt">sep</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/&quot;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Subject.ID</span>
+<span class="w">      </span><span class="nt">entry</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sub</span>
+<span class="w">      </span><span class="nt">sep</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/&quot;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Protocol</span>
+<span class="w">      </span><span class="nt">hide</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</code></pre></div>
+Example result:
+<div class="highlight"><pre><span></span><code>study-S001/sub-sub-01/T1w
+</code></pre></div></p>
+<p>Single-file output override:
+<div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>convert<span class="w"> </span>/path/to/study<span class="w"> </span>-s<span class="w"> </span><span class="m">3</span><span class="w"> </span>-r<span class="w"> </span><span class="m">1</span><span class="w"> </span>-o<span class="w"> </span>/tmp/myfile.nii.gz
+</code></pre></div>
+This ignores layout entries and writes the file as provided.</p>
+<p>Template override:
+<div class="highlight"><pre><span></span><code><span class="nt">output</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">layout_template</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;study-{Study.ID}/sub-{Subject.ID}/{Protocol}&quot;</span>
+</code></pre></div>
+Example result:
+<div class="highlight"><pre><span></span><code>study-S001/sub-sub-01/T1w
+</code></pre></div></p>
+<p>Extension handling:
+- Layout outputs build the base filename only.
+- The extension is added automatically based on <code>--format</code> and <code>--no-compress</code>
+  (default: <code>.nii.gz</code>, <code>--no-compress</code> =&gt; <code>.nii</code>).
+- Supplying <code>--output</code> with a <code>.nii</code>/<code>.nii.gz</code> filename uses that extension as-is.</p>
+<p>Context map note:
+<code>context_map</code> layout overrides are intended for BIDS-oriented workflows and are
+under active development/testing/documentation.</p>
 <p>Context map layout overrides:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">__meta__</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">layout_entries</span><span class="p">:</span>
