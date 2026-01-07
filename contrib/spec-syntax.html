@@ -592,6 +592,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../cli/hook.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hooks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../cli/config.html" class="md-nav__link">
         
   
@@ -1158,6 +1186,34 @@
   
   
     <li class="md-nav__item">
+      <a href="hook-packages.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hook Packages
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="development-model.html" class="md-nav__link">
         
   
@@ -1620,6 +1676,10 @@ applies to <code>info_spec</code> or <code>metadata_spec</code> (defaults to <co
 <li>
 <p><code>override: true</code> replaces existing values; set <code>override: false</code> to only fill
   missing values when the spec/transform already produced a value (default: true).</p>
+</li>
+<li>
+<p><code>when</code> conditions are evaluated against the original spec/transform outputs,
+  not against values that have already been remapped by earlier context map rules.</p>
 </li>
 <li>
 <p><code>when</code> supports exact match, <code>in</code>, <code>regex</code>, and <code>not</code> conditions.</p>
