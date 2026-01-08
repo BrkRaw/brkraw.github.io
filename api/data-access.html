@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://brkraw.github.io/api/hook.html">
+        <link rel="canonical" href="https://brkraw.github.io/api/data-access.html">
       
       
-        <link rel="prev" href="addon.html">
+        <link rel="prev" href="overview.html">
       
       
-        <link rel="next" href="../reference/extensibility.html">
+        <link rel="next" href="info.html">
       
       
         
@@ -27,7 +27,7 @@
     
     
       
-        <title>hook - Preclinical MRI dataset toolkit</title>
+        <title>data access - Preclinical MRI dataset toolkit</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#hook-python-api" class="md-skip">
+        <a href="#data-access-scanreco-helpers" class="md-skip">
           Skip to content
         </a>
       
@@ -107,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              hook
+              data access
             
           </span>
         </div>
@@ -994,10 +994,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="data-access.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    data access
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="data-access.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1013,6 +1040,131 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#get-a-scan-and-list-whats-available" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Get a scan (and list what’s available)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scan-helpers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scan helpers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-access-parameter-files-and-raw-entries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        File access (parameter files and raw entries)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="File access (parameter files and raw entries)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameter-files-auto-parsed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameter files (auto-parsed)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reading-binary-text-entries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reading binary / text entries
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explicit-vs-attribute-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Explicit vs attribute access
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listing-entries-under-a-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Listing entries under a node
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-data-and-affine-separately" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Get data and affine separately
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fid-rawdata-access-when-available" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FID / rawdata access (when available)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1162,37 +1314,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    hook
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="hook.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="hook.html" class="md-nav__link">
         
   
   
@@ -1208,170 +1333,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#equivalent-cli-command" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Equivalent CLI command
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#entry-points" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Entry points
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#what-is-a-hook" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        What is a hook
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#list-available-hooks-cli-brkraw-hook-list" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        List available hooks (CLI: brkraw hook list)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#install-hook-assets-into-a-config-root" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Install hook assets into a config root
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Install hook assets into a config root">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#install-a-single-hook-cli-brkraw-hook-install" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Install a single hook (CLI: brkraw hook install)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#install-all-hooks-cli-brkraw-hook-install-all" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Install all hooks (CLI: brkraw hook install --all)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#upgrade-behavior" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Upgrade behavior
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#namespacing-rules-for-installed-assets" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Namespacing rules for installed assets
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#uninstall-hook-assets-cli-brkraw-hook-uninstall" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Uninstall hook assets (CLI: brkraw hook uninstall)
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Uninstall hook assets (CLI: brkraw hook uninstall)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#dependency-checks-and-force-removal" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Dependency checks and force removal
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#design-notes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Design notes
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1837,10 +1798,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#equivalent-cli-command" class="md-nav__link">
+  <a href="#get-a-scan-and-list-whats-available" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Equivalent CLI command
+        Get a scan (and list what’s available)
       
     </span>
   </a>
@@ -1848,10 +1809,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#entry-points" class="md-nav__link">
+  <a href="#scan-helpers" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Entry points
+        Scan helpers
       
     </span>
   </a>
@@ -1859,44 +1820,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-is-a-hook" class="md-nav__link">
+  <a href="#file-access-parameter-files-and-raw-entries" class="md-nav__link">
     <span class="md-ellipsis">
       
-        What is a hook
+        File access (parameter files and raw entries)
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#list-available-hooks-cli-brkraw-hook-list" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        List available hooks (CLI: brkraw hook list)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#install-hook-assets-into-a-config-root" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Install hook assets into a config root
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Install hook assets into a config root">
+    <nav class="md-nav" aria-label="File access (parameter files and raw entries)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#install-a-single-hook-cli-brkraw-hook-install" class="md-nav__link">
+  <a href="#parameter-files-auto-parsed" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Install a single hook (CLI: brkraw hook install)
+        Parameter files (auto-parsed)
       
     </span>
   </a>
@@ -1904,10 +1843,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#install-all-hooks-cli-brkraw-hook-install-all" class="md-nav__link">
+  <a href="#reading-binary-text-entries" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Install all hooks (CLI: brkraw hook install --all)
+        Reading binary / text entries
       
     </span>
   </a>
@@ -1915,10 +1854,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#upgrade-behavior" class="md-nav__link">
+  <a href="#explicit-vs-attribute-access" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Upgrade behavior
+        Explicit vs attribute access
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listing-entries-under-a-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Listing entries under a node
       
     </span>
   </a>
@@ -1931,10 +1881,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#namespacing-rules-for-installed-assets" class="md-nav__link">
+  <a href="#get-data-and-affine-separately" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Namespacing rules for installed assets
+        Get data and affine separately
       
     </span>
   </a>
@@ -1942,38 +1892,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#uninstall-hook-assets-cli-brkraw-hook-uninstall" class="md-nav__link">
+  <a href="#fid-rawdata-access-when-available" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Uninstall hook assets (CLI: brkraw hook uninstall)
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Uninstall hook assets (CLI: brkraw hook uninstall)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#dependency-checks-and-force-removal" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Dependency checks and force removal
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#design-notes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Design notes
+        FID / rawdata access (when available)
       
     </span>
   </a>
@@ -2000,149 +1922,110 @@
   
 
 
-<h1 id="hook-python-api">hook (Python API)<a class="headerlink" href="#hook-python-api" title="Permanent link">&para;</a></h1>
-<p>Manage converter hook packages installed in the Python environment.</p>
-<p>Hook packages extend conversion behavior via entry points in the
-<code>brkraw.converter_hook</code> group. A hook package may also ship addon assets
-(specs, rules, pruner specs, transforms) via a <code>brkraw_hook.yaml</code> manifest.</p>
-<p>The hook API supports discovery, installation of packaged assets into the
-configuration root, and uninstallation with dependency checks.</p>
+<h1 id="data-access-scanreco-helpers">Data access (Scan/Reco helpers)<a class="headerlink" href="#data-access-scanreco-helpers" title="Permanent link">&para;</a></h1>
+<p>This page describes how to access scan/reco objects and read dataset files and
+image data from the Python API.</p>
+<p>BrkRaw is <strong>read-only</strong> with respect to the input dataset: it reads files from a
+directory/zip/PvDatasets container and returns in-memory objects.</p>
 <hr />
-<h2 id="equivalent-cli-command">Equivalent CLI command<a class="headerlink" href="#equivalent-cli-command" title="Permanent link">&para;</a></h2>
-<p><code>brkraw hook</code></p>
-<hr />
-<h2 id="entry-points">Entry points<a class="headerlink" href="#entry-points" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">brkraw.apps</span><span class="w"> </span><span class="kn">import</span> <span class="n">hook</span>
-</code></pre></div>
-<p>Public functions:</p>
-<ul>
-<li><code>hook.list_hooks(root=None) -&gt; List[Dict[str, Any]]</code></li>
-<li><code>hook.install_all(root=None, upgrade=False, force=False) -&gt; Dict[str, List[str]]</code></li>
-<li><code>hook.install_hook(target, root=None, upgrade=False, force=False) -&gt; str</code></li>
-<li><code>hook.uninstall_hook(target, root=None, force=False) -&gt; Tuple[str, Dict[str, List[str]]]</code></li>
-</ul>
-<hr />
-<h2 id="what-is-a-hook">What is a hook<a class="headerlink" href="#what-is-a-hook" title="Permanent link">&para;</a></h2>
-<p>A converter hook is a Python package that:</p>
-<ol>
-<li>Exposes one or more entry points under the <code>brkraw.converter_hook</code> group.</li>
-<li>Optionally ships a manifest file named <code>brkraw_hook.yaml</code> or <code>brkraw_hook.yml</code>.</li>
-<li>
-<p>The manifest may list addon assets to install into the configuration root:</p>
-</li>
-<li>
-<p>specs</p>
-</li>
-<li>pruner_specs</li>
-<li>rules</li>
-<li>transforms</li>
-</ol>
-<p>During installation, assets are installed under a hook-specific namespace.</p>
-<hr />
-<h2 id="list-available-hooks-cli-brkraw-hook-list">List available hooks (CLI: <code>brkraw hook list</code>)<a class="headerlink" href="#list-available-hooks-cli-brkraw-hook-list" title="Permanent link">&para;</a></h2>
-<p>List hooks discovered from installed Python packages:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">brkraw.apps</span><span class="w"> </span><span class="kn">import</span> <span class="n">hook</span>
+<h2 id="get-a-scan-and-list-whats-available">Get a scan (and list what’s available)<a class="headerlink" href="#get-a-scan-and-list-whats-available" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">brkraw</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">brk</span>
 
-<span class="n">items</span> <span class="o">=</span> <span class="n">hook</span><span class="o">.</span><span class="n">list_hooks</span><span class="p">()</span>
-<span class="k">for</span> <span class="n">h</span> <span class="ow">in</span> <span class="n">items</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">h</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">],</span> <span class="n">h</span><span class="p">[</span><span class="s2">&quot;version&quot;</span><span class="p">],</span> <span class="n">h</span><span class="p">[</span><span class="s2">&quot;installed&quot;</span><span class="p">],</span> <span class="n">h</span><span class="p">[</span><span class="s2">&quot;install_status&quot;</span><span class="p">])</span>
-</code></pre></div>
-<p>Each hook entry includes:</p>
-<ul>
-<li><code>name</code>: hook distribution name</li>
-<li><code>version</code>: package version (or <code>&lt;Unknown&gt;</code>)</li>
-<li><code>entrypoints</code>: entry point names exposed by the hook</li>
-<li><code>installed</code>: whether the hook has been installed into the config root</li>
-<li><code>installed_version</code>: version recorded in the hook registry (if installed)</li>
-<li><code>install_status</code>: one of <code>No</code>, <code>Yes</code>, <code>Partially</code></li>
-</ul>
-<p><code>install_status</code> reflects whether the registry exists and whether the
-recorded installed files still exist under the configuration root.</p>
-<hr />
-<h2 id="install-hook-assets-into-a-config-root">Install hook assets into a config root<a class="headerlink" href="#install-hook-assets-into-a-config-root" title="Permanent link">&para;</a></h2>
-<p>Hook installation installs manifest assets into the configuration root and
-records results in <code>hooks.yaml</code>.</p>
-<p>Installation does not install the Python package itself. The package must
-already be available in the environment (for example via pip/conda).</p>
-<h3 id="install-a-single-hook-cli-brkraw-hook-install">Install a single hook (CLI: <code>brkraw hook install</code>)<a class="headerlink" href="#install-a-single-hook-cli-brkraw-hook-install" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">brkraw.apps</span><span class="w"> </span><span class="kn">import</span> <span class="n">hook</span>
+<span class="n">loader</span> <span class="o">=</span> <span class="n">brk</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;/path/to/study&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">loader</span><span class="o">.</span><span class="n">avail</span><span class="o">.</span><span class="n">keys</span><span class="p">()))</span>   <span class="c1"># scan ids</span>
 
-<span class="n">status</span> <span class="o">=</span> <span class="n">hook</span><span class="o">.</span><span class="n">install_hook</span><span class="p">(</span><span class="s2">&quot;my-hook-package&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">status</span><span class="p">)</span>  <span class="c1"># &quot;installed&quot; or &quot;skipped&quot;</span>
-</code></pre></div>
-<p>The <code>target</code> may be:</p>
-<ul>
-<li>a hook distribution name, or</li>
-<li>an entry point name exposed by that hook</li>
-</ul>
-<p>If multiple hooks match the target, installation fails with <code>ValueError</code>.
-If no hook matches, installation fails with <code>LookupError</code>.</p>
-<h3 id="install-all-hooks-cli-brkraw-hook-install-all">Install all hooks (CLI: <code>brkraw hook install --all</code>)<a class="headerlink" href="#install-all-hooks-cli-brkraw-hook-install-all" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">brkraw.apps</span><span class="w"> </span><span class="kn">import</span> <span class="n">hook</span>
+<span class="n">scan</span> <span class="o">=</span> <span class="n">loader</span><span class="o">.</span><span class="n">get_scan</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">scan</span><span class="o">.</span><span class="n">avail</span><span class="o">.</span><span class="n">keys</span><span class="p">()))</span>     <span class="c1"># reco ids under this scan</span>
 
-<span class="n">result</span> <span class="o">=</span> <span class="n">hook</span><span class="o">.</span><span class="n">install_all</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">[</span><span class="s2">&quot;installed&quot;</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">[</span><span class="s2">&quot;skipped&quot;</span><span class="p">])</span>
+<span class="n">reco</span> <span class="o">=</span> <span class="n">scan</span><span class="o">.</span><span class="n">get_reco</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 </code></pre></div>
-<h3 id="upgrade-behavior">Upgrade behavior<a class="headerlink" href="#upgrade-behavior" title="Permanent link">&para;</a></h3>
-<p>If a hook is already installed:</p>
+<p>Notes:</p>
 <ul>
-<li><code>upgrade=False</code> and <code>force=False</code> skips installation</li>
-<li><code>upgrade=True</code> reinstalls only if the package version is newer</li>
-<li><code>force=True</code> reinstalls regardless of version</li>
+<li><code>loader.avail</code> is a mapping of <code>{scan_id: Scan}</code>.</li>
+<li><code>scan.avail</code> is a mapping of <code>{reco_id: Reco}</code>.</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="n">hook</span><span class="o">.</span><span class="n">install_hook</span><span class="p">(</span><span class="s2">&quot;my-hook-package&quot;</span><span class="p">,</span> <span class="n">upgrade</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">hook</span><span class="o">.</span><span class="n">install_hook</span><span class="p">(</span><span class="s2">&quot;my-hook-package&quot;</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<hr />
+<h2 id="scan-helpers">Scan helpers<a class="headerlink" href="#scan-helpers" title="Permanent link">&para;</a></h2>
+<p>When you load a dataset, BrkRaw attaches convenience helpers onto each scan
+object so you can access common conversion/inspection pieces directly.</p>
+<p>Typical helpers on a scan:</p>
+<ul>
+<li><code>scan.get_dataobj(reco_id=None)</code> → reconstructed NumPy array(s)</li>
+<li><code>scan.get_affine(reco_id=None, space="subject_ras", ...)</code> → affine matrix/matrices</li>
+<li><code>scan.get_nifti1image(reco_id=None, ...)</code> → <code>nibabel.nifti1.Nifti1Image</code></li>
+<li><code>scan.convert(reco_id=None, format="nifti", ...)</code> → NIfTI output object(s)</li>
+<li><code>scan.get_metadata(reco_id=None, ...)</code> → metadata mapping for sidecars/specs</li>
+<li><code>scan.search_params(key, file=..., reco_id=...)</code> → parameter search results</li>
+</ul>
+<p>The loader also exposes convenience wrappers for common operations:</p>
+<div class="highlight"><pre><span></span><code><span class="n">nii</span> <span class="o">=</span> <span class="n">loader</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="n">scan_id</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">reco_id</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;nifti&quot;</span><span class="p">)</span>
+<span class="n">aff</span> <span class="o">=</span> <span class="n">loader</span><span class="o">.</span><span class="n">get_affine</span><span class="p">(</span><span class="n">scan_id</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">reco_id</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">space</span><span class="o">=</span><span class="s2">&quot;subject_ras&quot;</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">loader</span><span class="o">.</span><span class="n">get_dataobj</span><span class="p">(</span><span class="n">scan_id</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">reco_id</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 </code></pre></div>
-<p>Version comparison uses PEP 440 rules when available, otherwise falls back to
-a numeric string comparison.</p>
 <hr />
-<h2 id="namespacing-rules-for-installed-assets">Namespacing rules for installed assets<a class="headerlink" href="#namespacing-rules-for-installed-assets" title="Permanent link">&para;</a></h2>
-<p>Manifest assets are installed under a hook-specific namespace derived from
-the hook name (non-alphanumeric characters are replaced with <code>_</code>).</p>
-<p>Installed paths are recorded in a registry file:</p>
-<ul>
-<li><code>&lt;config_root&gt;/hooks.yaml</code></li>
-</ul>
-<p>Rules inside hook manifests may reference specs by basename. During install,
-rule <code>use</code> fields are rewritten so they point to the namespaced installed
-spec paths when applicable.</p>
-<hr />
-<h2 id="uninstall-hook-assets-cli-brkraw-hook-uninstall">Uninstall hook assets (CLI: <code>brkraw hook uninstall</code>)<a class="headerlink" href="#uninstall-hook-assets-cli-brkraw-hook-uninstall" title="Permanent link">&para;</a></h2>
-<p>Uninstall removes the assets previously installed by the hook, based on the
-registry record.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">brkraw.apps</span><span class="w"> </span><span class="kn">import</span> <span class="n">hook</span>
+<h2 id="file-access-parameter-files-and-raw-entries">File access (parameter files and raw entries)<a class="headerlink" href="#file-access-parameter-files-and-raw-entries" title="Permanent link">&para;</a></h2>
+<p>Scan and reco objects are “dataset-backed” nodes that can open files relative to
+their location in the dataset tree.</p>
+<h3 id="parameter-files-auto-parsed">Parameter files (auto-parsed)<a class="headerlink" href="#parameter-files-auto-parsed" title="Permanent link">&para;</a></h3>
+<p>Common parameter files are opened and parsed automatically as <code>Parameters</code>
+objects when possible:</p>
+<div class="highlight"><pre><span></span><code><span class="n">scan</span> <span class="o">=</span> <span class="n">loader</span><span class="o">.</span><span class="n">get_scan</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">reco</span> <span class="o">=</span> <span class="n">scan</span><span class="o">.</span><span class="n">get_reco</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 
-<span class="n">name</span><span class="p">,</span> <span class="n">removed</span> <span class="o">=</span> <span class="n">hook</span><span class="o">.</span><span class="n">uninstall_hook</span><span class="p">(</span><span class="s2">&quot;my-hook-package&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">removed</span><span class="p">[</span><span class="s2">&quot;specs&quot;</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">removed</span><span class="p">[</span><span class="s2">&quot;rules&quot;</span><span class="p">])</span>
+<span class="n">method</span> <span class="o">=</span> <span class="n">scan</span><span class="o">.</span><span class="n">method</span>          <span class="c1"># Parameters</span>
+<span class="n">acqp</span> <span class="o">=</span> <span class="n">scan</span><span class="o">.</span><span class="n">acqp</span>              <span class="c1"># Parameters</span>
+<span class="n">visu</span> <span class="o">=</span> <span class="n">reco</span><span class="o">.</span><span class="n">visu_pars</span>         <span class="c1"># Parameters</span>
+<span class="n">reco_params</span> <span class="o">=</span> <span class="n">reco</span><span class="o">.</span><span class="n">reco</span>       <span class="c1"># Parameters</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">method</span><span class="p">[</span><span class="s2">&quot;Method&quot;</span><span class="p">])</span>
 </code></pre></div>
-<p>Behavior:</p>
+<h3 id="reading-binary-text-entries">Reading binary / text entries<a class="headerlink" href="#reading-binary-text-entries" title="Permanent link">&para;</a></h3>
+<p>Non-parameter files are exposed as in-memory file-like buffers:</p>
 <ul>
-<li>if the hook is not installed (no registry entry), uninstallation fails with <code>LookupError</code></li>
-<li>removed files are unlinked if present</li>
-<li>missing files are ignored (no error)</li>
+<li>text-like content → <code>io.StringIO</code></li>
+<li>binary-like content → <code>io.BytesIO</code></li>
 </ul>
-<h3 id="dependency-checks-and-force-removal">Dependency checks and force removal<a class="headerlink" href="#dependency-checks-and-force-removal" title="Permanent link">&para;</a></h3>
-<p>Before removing each file, the hook uninstaller checks whether the file is
-referenced by other installed assets (for example, specs referenced by rules).</p>
-<p>If dependencies are found:</p>
+<p>Example: access the reconstructed <code>2dseq</code> bytes (typically large):</p>
+<div class="highlight"><pre><span></span><code><span class="n">reco</span> <span class="o">=</span> <span class="n">loader</span><span class="o">.</span><span class="n">get_scan</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">get_reco</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">buf</span> <span class="o">=</span> <span class="n">reco</span><span class="p">[</span><span class="s2">&quot;2dseq&quot;</span><span class="p">]</span>           <span class="c1"># BytesIO</span>
+<span class="n">raw</span> <span class="o">=</span> <span class="n">buf</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+</code></pre></div>
+<h3 id="explicit-vs-attribute-access">Explicit vs attribute access<a class="headerlink" href="#explicit-vs-attribute-access" title="Permanent link">&para;</a></h3>
+<p>Files can be accessed using:</p>
 <ul>
-<li><code>force=False</code> raises <code>RuntimeError</code></li>
-<li><code>force=True</code> removes anyway</li>
+<li>attribute access (<code>scan.method</code>, <code>reco.visu_pars</code>)</li>
+<li>dictionary-style access (<code>scan["method"]</code>, <code>reco["2dseq"]</code>)</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="n">hook</span><span class="o">.</span><span class="n">uninstall_hook</span><span class="p">(</span><span class="s2">&quot;my-hook-package&quot;</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<p>If a dataset contains file names that are not valid Python identifiers, prefer
+the dictionary-style form.</p>
+<h3 id="listing-entries-under-a-node">Listing entries under a node<a class="headerlink" href="#listing-entries-under-a-node" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="n">scan</span> <span class="o">=</span> <span class="n">loader</span><span class="o">.</span><span class="n">get_scan</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">scan</span><span class="o">.</span><span class="n">listdir</span><span class="p">())</span>         <span class="c1"># names under the scan folder</span>
+
+<span class="n">reco</span> <span class="o">=</span> <span class="n">scan</span><span class="o">.</span><span class="n">get_reco</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">reco</span><span class="o">.</span><span class="n">listdir</span><span class="p">())</span>         <span class="c1"># names under the reco folder (e.g. 2dseq, visu_pars)</span>
 </code></pre></div>
 <hr />
-<h2 id="design-notes">Design notes<a class="headerlink" href="#design-notes" title="Permanent link">&para;</a></h2>
+<h2 id="get-data-and-affine-separately">Get data and affine separately<a class="headerlink" href="#get-data-and-affine-separately" title="Permanent link">&para;</a></h2>
+<p>For pipelines that need lower-level access than <code>convert()</code>, you can retrieve
+image arrays and affines directly.</p>
+<div class="highlight"><pre><span></span><code><span class="n">scan</span> <span class="o">=</span> <span class="n">loader</span><span class="o">.</span><span class="n">get_scan</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="n">scan</span><span class="o">.</span><span class="n">get_dataobj</span><span class="p">(</span><span class="n">reco_id</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">affine</span> <span class="o">=</span> <span class="n">scan</span><span class="o">.</span><span class="n">get_affine</span><span class="p">(</span><span class="n">reco_id</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">space</span><span class="o">=</span><span class="s2">&quot;subject_ras&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Notes:</p>
 <ul>
-<li>Hook discovery reads entry points from the Python environment.</li>
-<li>Hook installation installs addon assets into the selected configuration root.</li>
-<li>Hook registry (<code>hooks.yaml</code>) is the source of truth for uninstall.</li>
-<li>Uninstall is conservative by default and blocks when dependencies are detected
-  unless forced.</li>
+<li>Some scans produce multiple “slice packs”; in that case these APIs may return
+  a tuple of arrays/matrices (one per pack).</li>
+<li><code>space</code> controls the affine coordinate system (<code>raw</code>, <code>scanner</code>, <code>subject_ras</code>).</li>
 </ul>
+<hr />
+<h2 id="fid-rawdata-access-when-available">FID / rawdata access (when available)<a class="headerlink" href="#fid-rawdata-access-when-available" title="Permanent link">&para;</a></h2>
+<p>Some scan types expose FID/rawdata access:</p>
+<div class="highlight"><pre><span></span><code><span class="n">fid</span> <span class="o">=</span> <span class="n">loader</span><span class="o">.</span><span class="n">get_fid</span><span class="p">(</span><span class="n">scan_id</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+</code></pre></div>
+<p>If the scan has no FID reader, this returns <code>None</code>.</p>
 
 
 
