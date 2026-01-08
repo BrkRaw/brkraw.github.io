@@ -814,15 +814,65 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#basic-usage-of-info" class="md-nav__link">
+  <a href="#basic-usage" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Basic usage of info
+        Basic usage
       
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-api-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Python API overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entry-point" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entry point
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommended-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommended workflow
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Notes">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#scope-control" class="md-nav__link">
@@ -886,7 +936,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#basic-usage" class="md-nav__link">
+  <a href="#basic-usage_1" class="md-nav__link">
     <span class="md-ellipsis">
       
         Basic usage
@@ -1168,34 +1218,6 @@
     
   
     overview
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../api/data-access.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    data access
   
 
     
@@ -1849,15 +1871,65 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#basic-usage-of-info" class="md-nav__link">
+  <a href="#basic-usage" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Basic usage of info
+        Basic usage
       
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-api-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Python API overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entry-point" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entry point
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommended-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommended workflow
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Notes">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#scope-control" class="md-nav__link">
@@ -1921,7 +1993,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#basic-usage" class="md-nav__link">
+  <a href="#basic-usage_1" class="md-nav__link">
     <span class="md-ellipsis">
       
         Basic usage
@@ -2019,10 +2091,71 @@ metadata <strong>before</strong> running any conversion.</p>
 <li>How are scans and recos organized?</li>
 <li>What metadata is available at the study and scan levels?</li>
 </ul>
-<h3 id="basic-usage-of-info">Basic usage of info<a class="headerlink" href="#basic-usage-of-info" title="Permanent link">&para;</a></h3>
+<h3 id="basic-usage">Basic usage<a class="headerlink" href="#basic-usage" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>info<span class="w"> </span>/path/to/study
 </code></pre></div>
 <p>If no path is provided, the command uses <code>BRKRAW_PATH</code>.</p>
+<hr />
+<h2 id="python-api-overview">Python API overview<a class="headerlink" href="#python-api-overview" title="Permanent link">&para;</a></h2>
+<p>The brkraw Python API provides programmatic access to the same core
+functionality as the CLI, using explicit function calls and objects
+instead of shell commands.</p>
+<p>The API is organized around a small set of core tasks:</p>
+<ul>
+<li>Load a dataset and bind a configuration context</li>
+<li>Inspect datasets and acquisition parameters</li>
+<li>Convert scans and generate outputs</li>
+<li>Manage mapping logic and extensions</li>
+</ul>
+<p>This section documents the main API entry points and how they fit together.</p>
+<h2 id="entry-point">Entry point<a class="headerlink" href="#entry-point" title="Permanent link">&para;</a></h2>
+<p>All workflows start by loading a dataset:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">brkraw</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">brk</span>
+<span class="n">loader</span> <span class="o">=</span> <span class="n">brk</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;/path/to/study&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>The returned object acts as a dataset loader and the primary handle for
+inspection and conversion.</p>
+<p>Loading a dataset is non-destructive and does not modify the source files.</p>
+<h2 id="recommended-workflow">Recommended workflow<a class="headerlink" href="#recommended-workflow" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Load a dataset:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="n">loader</span> <span class="o">=</span> <span class="n">brk</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;/path/to/study&quot;</span><span class="p">)</span>
+</code></pre></div>
+<ol>
+<li>Inspect the dataset:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="n">info</span> <span class="o">=</span> <span class="n">loader</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">scope</span><span class="o">=</span><span class="s2">&quot;full&quot;</span><span class="p">,</span> <span class="n">as_dict</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+<ol>
+<li>Convert a scan:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="n">nii</span> <span class="o">=</span> <span class="n">loader</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span>
+    <span class="n">scan_id</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+    <span class="n">reco_id</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;nifti&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+</code></pre></div>
+<ol>
+<li>Reuse the same loader instance when converting multiple scans:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">scan_id</span> <span class="ow">in</span> <span class="n">loader</span><span class="o">.</span><span class="n">avail</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+    <span class="n">nii</span> <span class="o">=</span> <span class="n">loader</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span>
+        <span class="n">scan_id</span><span class="o">=</span><span class="n">scan_id</span><span class="p">,</span>
+        <span class="n">reco_id</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+        <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;nifti&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+</code></pre></div>
+<p>Reusing the loader avoids repeated dataset discovery and validation,
+while keeping scan selection explicit at each call.</p>
+<h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Output naming and metadata generation are controlled by configuration
+  files (<code>config.yaml</code>) and optionally by a <code>context_map</code> YAML passed at
+  runtime.</li>
+<li>Extensions are managed as addons (data files) and hooks (Python packages
+  that install namespaced addon assets).</li>
+</ul>
 <h3 id="scope-control">Scope control<a class="headerlink" href="#scope-control" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>info<span class="w"> </span>/path/to/study<span class="w"> </span>--scope<span class="w"> </span>study
 brkraw<span class="w"> </span>info<span class="w"> </span>/path/to/study<span class="w"> </span>--scope<span class="w"> </span>scan
@@ -2057,7 +2190,7 @@ brkraw<span class="w"> </span>info<span class="w"> </span>/path/to/study<span cl
 <li>Debugging sequence-specific behavior</li>
 <li>Verifying values used by specs and rules</li>
 </ul>
-<h3 id="basic-usage">Basic usage<a class="headerlink" href="#basic-usage" title="Permanent link">&para;</a></h3>
+<h3 id="basic-usage_1">Basic usage<a class="headerlink" href="#basic-usage_1" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>params<span class="w"> </span>/path/to/study<span class="w"> </span>-k<span class="w"> </span>PVM_RepetitionTime<span class="w"> </span>-s<span class="w"> </span><span class="m">3</span>
 </code></pre></div>
 <h3 id="restrict-to-specific-parameter-files">Restrict to specific parameter files<a class="headerlink" href="#restrict-to-specific-parameter-files" title="Permanent link">&para;</a></h3>
