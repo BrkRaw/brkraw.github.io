@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://brkraw.github.io/cli/config.html">
+        <link rel="canonical" href="https://brkraw.github.io/reference/context-map.html">
       
       
-        <link rel="prev" href="prune.html">
+        <link rel="prev" href="specs.html">
       
       
-        <link rel="next" href="addon.html">
+        <link rel="next" href="layout.html">
       
       
         
@@ -27,7 +27,7 @@
     
     
       
-        <title>config - Preclinical MRI dataset toolkit</title>
+        <title>Context map syntax - Preclinical MRI dataset toolkit</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#config" class="md-skip">
+        <a href="#context-map-syntax" class="md-skip">
           Skip to content
         </a>
       
@@ -107,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              config
+              Context map syntax
             
           </span>
         </div>
@@ -246,13 +246,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="index.html" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../cli/index.html" class="md-tabs__link">
           
   
   
@@ -288,11 +286,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../reference/extensibility.html" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="extensibility.html" class="md-tabs__link">
           
   
   
@@ -626,31 +626,26 @@
       
   
   
-    
   
   
-  
     
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   
@@ -668,7 +663,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -686,7 +681,7 @@
   
   
     <li class="md-nav__item">
-      <a href="index.html" class="md-nav__link">
+      <a href="../cli/index.html" class="md-nav__link">
         
   
   
@@ -714,7 +709,7 @@
   
   
     <li class="md-nav__item">
-      <a href="session.html" class="md-nav__link">
+      <a href="../cli/session.html" class="md-nav__link">
         
   
   
@@ -742,7 +737,7 @@
   
   
     <li class="md-nav__item">
-      <a href="info.html" class="md-nav__link">
+      <a href="../cli/info.html" class="md-nav__link">
         
   
   
@@ -770,7 +765,7 @@
   
   
     <li class="md-nav__item">
-      <a href="convert.html" class="md-nav__link">
+      <a href="../cli/convert.html" class="md-nav__link">
         
   
   
@@ -798,7 +793,7 @@
   
   
     <li class="md-nav__item">
-      <a href="prune.html" class="md-nav__link">
+      <a href="../cli/prune.html" class="md-nav__link">
         
   
   
@@ -823,37 +818,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    config
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="config.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../cli/config.html" class="md-nav__link">
         
   
   
@@ -869,120 +837,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#subcommands" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Subcommands
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Subcommands">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#config-init" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        config init
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#config-show" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        config show
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#config-path" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        config path
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#config-edit" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        config edit
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#config-set" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        config set
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#config-unset" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        config unset
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#config-reset" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        config reset
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -995,7 +849,7 @@
   
   
     <li class="md-nav__item">
-      <a href="addon.html" class="md-nav__link">
+      <a href="../cli/addon.html" class="md-nav__link">
         
   
   
@@ -1023,7 +877,7 @@
   
   
     <li class="md-nav__item">
-      <a href="hook.html" class="md-nav__link">
+      <a href="../cli/hook.html" class="md-nav__link">
         
   
   
@@ -1310,26 +1164,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
             
   
   
@@ -1347,7 +1206,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1365,7 +1224,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/extensibility.html" class="md-nav__link">
+      <a href="extensibility.html" class="md-nav__link">
         
   
   
@@ -1393,7 +1252,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/addons-and-plugins.html" class="md-nav__link">
+      <a href="addons-and-plugins.html" class="md-nav__link">
         
   
   
@@ -1421,7 +1280,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/cli-extensions.html" class="md-nav__link">
+      <a href="cli-extensions.html" class="md-nav__link">
         
   
   
@@ -1449,7 +1308,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/rules.html" class="md-nav__link">
+      <a href="rules.html" class="md-nav__link">
         
   
   
@@ -1477,7 +1336,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/specs.html" class="md-nav__link">
+      <a href="specs.html" class="md-nav__link">
         
   
   
@@ -1502,10 +1361,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../reference/context-map.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Context map syntax
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="context-map.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1521,6 +1407,241 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#purpose-and-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Purpose and scope
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#high-level-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        High-level model
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        File format
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#meta-section" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        meta section
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rule-object-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rule object schema
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Rule object schema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#selector" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        selector
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#target" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        target
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        type
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mapping-rules-type-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        mapping rules (type: mapping)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#constant-rules-type-const" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        constant rules (type: const)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#override" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        override
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-conditional-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        when (conditional rules)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rule-lists-and-evaluation-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rule lists and evaluation order
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-new-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating new keys
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scan-selection-with-selectors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scan selection with selectors
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#layout-interaction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Layout interaction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#design-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Design notes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-documents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related documents
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1533,7 +1654,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/layout.html" class="md-nav__link">
+      <a href="layout.html" class="md-nav__link">
         
   
   
@@ -1561,7 +1682,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/hook-packages.html" class="md-nav__link">
+      <a href="hook-packages.html" class="md-nav__link">
         
   
   
@@ -1759,22 +1880,66 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#subcommands" class="md-nav__link">
+  <a href="#purpose-and-scope" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Subcommands
+        Purpose and scope
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Subcommands">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#high-level-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        High-level model
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        File format
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#meta-section" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        meta section
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rule-object-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rule object schema
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Rule object schema">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#config-init" class="md-nav__link">
+  <a href="#selector" class="md-nav__link">
     <span class="md-ellipsis">
       
-        config init
+        selector
       
     </span>
   </a>
@@ -1782,10 +1947,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#config-show" class="md-nav__link">
+  <a href="#target" class="md-nav__link">
     <span class="md-ellipsis">
       
-        config show
+        target
       
     </span>
   </a>
@@ -1793,10 +1958,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#config-path" class="md-nav__link">
+  <a href="#type" class="md-nav__link">
     <span class="md-ellipsis">
       
-        config path
+        type
       
     </span>
   </a>
@@ -1804,10 +1969,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#config-edit" class="md-nav__link">
+  <a href="#mapping-rules-type-mapping" class="md-nav__link">
     <span class="md-ellipsis">
       
-        config edit
+        mapping rules (type: mapping)
       
     </span>
   </a>
@@ -1815,10 +1980,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#config-set" class="md-nav__link">
+  <a href="#constant-rules-type-const" class="md-nav__link">
     <span class="md-ellipsis">
       
-        config set
+        constant rules (type: const)
       
     </span>
   </a>
@@ -1826,10 +1991,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#config-unset" class="md-nav__link">
+  <a href="#override" class="md-nav__link">
     <span class="md-ellipsis">
       
-        config unset
+        override
       
     </span>
   </a>
@@ -1837,10 +2002,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#config-reset" class="md-nav__link">
+  <a href="#when-conditional-rules" class="md-nav__link">
     <span class="md-ellipsis">
       
-        config reset
+        when (conditional rules)
       
     </span>
   </a>
@@ -1849,6 +2014,83 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rule-lists-and-evaluation-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rule lists and evaluation order
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-new-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating new keys
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scan-selection-with-selectors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scan selection with selectors
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#layout-interaction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Layout interaction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#design-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Design notes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-documents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related documents
+      
+    </span>
+  </a>
   
 </li>
       
@@ -1872,92 +2114,251 @@
   
 
 
-<h1 id="config">config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h1>
-<p>Manage BrkRaw configuration locations and <code>config.yaml</code>.</p>
-<p>Use this command to:</p>
-<ul>
-<li>create or reset config roots,</li>
-<li>inspect resolved configuration,</li>
-<li>set or unset individual keys,</li>
-<li>open <code>config.yaml</code> in your preferred editor.</li>
-</ul>
-<p>By default, BrkRaw stores configuration under <code>~/.brkraw</code>, or you can override it
-with <code>BRKRAW_CONFIG_HOME</code> or <code>--root</code>.</p>
+<h1 id="context-map-syntax">Context Map Syntax<a class="headerlink" href="#context-map-syntax" title="Permanent link">&para;</a></h1>
+<p>Context maps provide a runtime-only mapping layer that is applied <strong>after</strong>
+spec and transform resolution. They are used to customize metadata, control
+conversion selection, and define output layout behavior without modifying
+installed specs or rules.</p>
+<p>Context maps are supplied explicitly at runtime and are not installed as
+addons.</p>
 <hr />
-<h2 id="subcommands">Subcommands<a class="headerlink" href="#subcommands" title="Permanent link">&para;</a></h2>
-<h3 id="config-init">config init<a class="headerlink" href="#config-init" title="Permanent link">&para;</a></h3>
-<p>Create the config folders and optionally create <code>config.yaml</code>.</p>
-<div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>config<span class="w"> </span>init
-</code></pre></div>
-<p>Options:</p>
+<h2 id="purpose-and-scope">Purpose and scope<a class="headerlink" href="#purpose-and-scope" title="Permanent link">&para;</a></h2>
+<p>Context maps are intended for:</p>
 <ul>
-<li>
-<p><code>--no-config</code><br />
-  Do not create <code>config.yaml</code>.</p>
-</li>
-<li>
-<p><code>--no-exist-ok</code><br />
-  Fail if the config root already exists.</p>
-</li>
+<li>project-specific subject, session, or run mapping</li>
+<li>conditional metadata overrides</li>
+<li>scan selection based on mapped values</li>
+<li>output layout and naming customization</li>
+</ul>
+<p>They are <strong>not</strong> intended to replace specs or rules. Instead, they operate on
+top of spec outputs.</p>
+<p>Key properties:</p>
+<ul>
+<li>runtime only (not stored in the config root)</li>
+<li>applied after spec and transform evaluation</li>
+<li>scoped to a single invocation or script</li>
+<li>optional but powerful</li>
 </ul>
 <hr />
-<h3 id="config-show">config show<a class="headerlink" href="#config-show" title="Permanent link">&para;</a></h3>
-<p>Print resolved config values (ordered for readability).</p>
-<div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>config<span class="w"> </span>show
-</code></pre></div>
-<p>If <code>config.yaml</code> is empty, prints:</p>
-<div class="highlight"><pre><span></span><code>config.yaml: &lt;empty&gt;
-</code></pre></div>
-<hr />
-<h3 id="config-path">config path<a class="headerlink" href="#config-path" title="Permanent link">&para;</a></h3>
-<p>Print a specific config path.</p>
-<div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>config<span class="w"> </span>path<span class="w"> </span>root
-brkraw<span class="w"> </span>config<span class="w"> </span>path<span class="w"> </span>config
-brkraw<span class="w"> </span>config<span class="w"> </span>path<span class="w"> </span>rules
-brkraw<span class="w"> </span>config<span class="w"> </span>path<span class="w"> </span>specs
-brkraw<span class="w"> </span>config<span class="w"> </span>path<span class="w"> </span>transforms
-</code></pre></div>
-<hr />
-<h3 id="config-edit">config edit<a class="headerlink" href="#config-edit" title="Permanent link">&para;</a></h3>
-<p>Edit <code>config.yaml</code> in an editor.</p>
-<div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>config<span class="w"> </span>edit
-</code></pre></div>
-<p>BrkRaw resolves the editor in this order:</p>
+<h2 id="high-level-model">High-level model<a class="headerlink" href="#high-level-model" title="Permanent link">&para;</a></h2>
+<p>The evaluation order is:</p>
 <ol>
-<li><code>config.yaml: editor</code></li>
-<li><code>$VISUAL</code></li>
-<li><code>$EDITOR</code></li>
+<li>Rules select specs and converter hooks</li>
+<li>Specs and transforms produce structured outputs</li>
+<li>Context map rules are applied to those outputs</li>
+<li>Output selection, metadata sidecars, and layout rendering use the final values</li>
 </ol>
-<p>If <code>config.yaml</code> does not exist, it is reset to defaults before editing.</p>
+<p>Context maps never affect rule matching. They operate on the resolved outputs.</p>
 <hr />
-<h3 id="config-set">config set<a class="headerlink" href="#config-set" title="Permanent link">&para;</a></h3>
-<p>Set a config key.</p>
-<div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>config<span class="w"> </span><span class="nb">set</span><span class="w"> </span>logging.level<span class="w"> </span>DEBUG
-brkraw<span class="w"> </span>config<span class="w"> </span><span class="nb">set</span><span class="w"> </span>output.float_decimals<span class="w"> </span><span class="m">4</span>
+<h2 id="file-format">File format<a class="headerlink" href="#file-format" title="Permanent link">&para;</a></h2>
+<p>A context map is a YAML mapping.</p>
+<p>Top-level keys correspond to output keys produced by specs, or define new keys.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;OutputKey&gt;</span><span class="p">:</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">&lt;rule definition&gt;</span>
 </code></pre></div>
-<p>Nested keys are supported with dot notation:</p>
-<div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>config<span class="w"> </span><span class="nb">set</span><span class="w"> </span>logging.print_width<span class="w"> </span><span class="m">160</span>
-</code></pre></div>
-<p>You can also use <code>KEY=VALUE</code> form:</p>
-<div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>config<span class="w"> </span><span class="nb">set</span><span class="w"> </span>logging.level<span class="o">=</span>DEBUG
-</code></pre></div>
-<p>Values are parsed as YAML scalars (e.g., <code>true</code>, <code>false</code>, numbers, lists).</p>
+<p>Each value may be either:</p>
+<ul>
+<li>a single rule object</li>
+<li>a list of rule objects (evaluated top to bottom)</li>
+</ul>
 <hr />
-<h3 id="config-unset">config unset<a class="headerlink" href="#config-unset" title="Permanent link">&para;</a></h3>
-<p>Unset a config key.</p>
-<div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>config<span class="w"> </span><span class="nb">unset</span><span class="w"> </span>logging.level
-brkraw<span class="w"> </span>config<span class="w"> </span><span class="nb">unset</span><span class="w"> </span>output.layout_template
+<h2 id="meta-section"><strong>meta</strong> section<a class="headerlink" href="#meta-section" title="Permanent link">&para;</a></h2>
+<p>The optional <code>__meta__</code> section defines layout-related defaults.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">__meta__</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">layout_entries</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Study.ID</span>
+<span class="w">      </span><span class="nt">entry</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">study</span>
+<span class="w">      </span><span class="nt">sep</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/&quot;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Subject.ID</span>
+<span class="w">      </span><span class="nt">entry</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sub</span>
+<span class="w">      </span><span class="nt">sep</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/&quot;</span>
+<span class="w">  </span><span class="nt">layout_template</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;study-{Study.ID}/sub-{Subject.ID}/{Protocol}&quot;</span>
+<span class="w">  </span><span class="nt">slicepack_suffix</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;_sl{index}&quot;</span>
 </code></pre></div>
-<p>Nested keys are supported with dot notation. When nested dicts become empty,
-they are removed automatically.</p>
+<p>Notes:</p>
+<ul>
+<li><code>__meta__</code> affects layout rendering only</li>
+<li>it does not affect mapping rules</li>
+<li>values here act as defaults and may be overridden elsewhere</li>
+</ul>
 <hr />
-<h3 id="config-reset">config reset<a class="headerlink" href="#config-reset" title="Permanent link">&para;</a></h3>
-<p>Reset <code>config.yaml</code> to defaults.</p>
-<div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>config<span class="w"> </span>reset
+<h2 id="rule-object-schema">Rule object schema<a class="headerlink" href="#rule-object-schema" title="Permanent link">&para;</a></h2>
+<p>Each rule object supports the following fields.</p>
+<h3 id="selector">selector<a class="headerlink" href="#selector" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">selector</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
-<p>To skip confirmation:</p>
-<div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>config<span class="w"> </span>reset<span class="w"> </span>--yes
+<p>When <code>true</code>, the key must produce a mapped value for a scan to be eligible
+for conversion.</p>
+<p>Selector evaluation uses the merged info and metadata outputs, regardless
+of the <code>target</code> field.</p>
+<hr />
+<h3 id="target">target<a class="headerlink" href="#target" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">target</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">info_spec</span>
 </code></pre></div>
+<p>Controls which spec output the mapping applies to.</p>
+<p>Valid values:</p>
+<ul>
+<li><code>info_spec</code> (default)</li>
+<li><code>metadata_spec</code></li>
+</ul>
+<hr />
+<h3 id="type">type<a class="headerlink" href="#type" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mapping</span>
+</code></pre></div>
+<p>Valid values:</p>
+<ul>
+<li><code>mapping</code></li>
+<li><code>const</code></li>
+</ul>
+<hr />
+<h3 id="mapping-rules-type-mapping">mapping rules (type: mapping)<a class="headerlink" href="#mapping-rules-type-mapping" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mapping</span>
+<span class="nt">values</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">1</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;sub-001&quot;</span>
+<span class="w">  </span><span class="nt">2</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;sub-002&quot;</span>
+<span class="nt">default</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;unknown&quot;</span>
+<span class="nt">override</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</code></pre></div>
+<p>Behavior:</p>
+<ul>
+<li>input value is looked up in <code>values</code></li>
+<li>
+<p>if no match is found:</p>
+</li>
+<li>
+<p><code>default</code> is used if provided</p>
+</li>
+<li>otherwise the original value is preserved</li>
+<li><code>override</code> controls whether existing values are replaced</li>
+</ul>
+<hr />
+<h3 id="constant-rules-type-const">constant rules (type: const)<a class="headerlink" href="#constant-rules-type-const" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">const</span>
+<span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;pilot&quot;</span>
+<span class="nt">override</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</code></pre></div>
+<p>Behavior:</p>
+<ul>
+<li>the constant value is assigned directly</li>
+<li><code>override</code> controls whether existing values are replaced</li>
+</ul>
+<hr />
+<h3 id="override">override<a class="headerlink" href="#override" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">override</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+</code></pre></div>
+<p>Controls whether this rule may replace an existing value.</p>
+<p>Default behavior:</p>
+<ul>
+<li><code>true</code>: replace existing value</li>
+<li><code>false</code>: fill only if the value is missing</li>
+</ul>
+<hr />
+<h3 id="when-conditional-rules">when (conditional rules)<a class="headerlink" href="#when-conditional-rules" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">when</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">ScanID</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="w">  </span><span class="nt">Subject.ID</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;TEST&quot;</span>
+</code></pre></div>
+<p>The <code>when</code> field restricts rule application based on already-resolved values.</p>
+<p>Supported operators include:</p>
+<ul>
+<li>exact match</li>
+<li><code>in</code></li>
+<li><code>regex</code></li>
+<li><code>not</code></li>
+</ul>
+<p>Rules are evaluated against the <strong>original spec outputs</strong>, not against values
+modified by earlier context map rules.</p>
+<hr />
+<h2 id="rule-lists-and-evaluation-order">Rule lists and evaluation order<a class="headerlink" href="#rule-lists-and-evaluation-order" title="Permanent link">&para;</a></h2>
+<p>When a key maps to a list of rules:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">Modality</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">when</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">Method</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">in</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;EPI&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;BOLD&quot;</span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;bold&quot;</span>
+<span class="w">    </span><span class="nt">override</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">default</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;unknown&quot;</span>
+</code></pre></div>
+<p>Evaluation rules:</p>
+<ul>
+<li>rules are evaluated top to bottom</li>
+<li>the first matching rule is applied</li>
+<li>
+<p>if no rule matches:</p>
+</li>
+<li>
+<p><code>default</code> is used if present</p>
+</li>
+<li>otherwise the original value is preserved</li>
+</ul>
+<hr />
+<h2 id="creating-new-keys">Creating new keys<a class="headerlink" href="#creating-new-keys" title="Permanent link">&para;</a></h2>
+<p>Context maps may define keys that are not produced by specs.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">Run</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">const</span>
+<span class="w">  </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+</code></pre></div>
+<p>These keys become available for:</p>
+<ul>
+<li>selector logic</li>
+<li>metadata sidecars</li>
+<li>output layout rendering</li>
+</ul>
+<hr />
+<h2 id="scan-selection-with-selectors">Scan selection with selectors<a class="headerlink" href="#scan-selection-with-selectors" title="Permanent link">&para;</a></h2>
+<p>Keys marked with <code>selector: true</code> are used to filter conversions.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">Modality</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">selector</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mapping</span>
+<span class="w">  </span><span class="nt">values</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">1</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;T1w&quot;</span>
+<span class="w">    </span><span class="nt">2</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;T2w&quot;</span>
+</code></pre></div>
+<p>Only scans that produce a value for this key are converted.</p>
+<hr />
+<h2 id="layout-interaction">Layout interaction<a class="headerlink" href="#layout-interaction" title="Permanent link">&para;</a></h2>
+<p>Context map outputs can be referenced by layout definitions.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">__meta__</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">layout_template</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;sub-{Subject.ID}/ses-{Session}/scan-{ScanID}&quot;</span>
+</code></pre></div>
+<p>Layout resolution uses the final values after all context map rules
+have been applied.</p>
+<hr />
+<h2 id="validation">Validation<a class="headerlink" href="#validation" title="Permanent link">&para;</a></h2>
+<p>Context maps can be validated programmatically.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">brkraw.specs.remapper</span><span class="w"> </span><span class="kn">import</span> <span class="n">validate_context_map</span>
+
+<span class="n">validate_context_map</span><span class="p">(</span><span class="s2">&quot;maps.yaml&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Schema:</p>
+<ul>
+<li><code>src/brkraw/schema/context_map.yaml</code></li>
+</ul>
+<p>Validation checks:</p>
+<ul>
+<li>rule structure</li>
+<li>allowed fields and types</li>
+<li>operator correctness</li>
+</ul>
+<hr />
+<h2 id="design-notes">Design notes<a class="headerlink" href="#design-notes" title="Permanent link">&para;</a></h2>
+<ul>
+<li>context maps are runtime-only and project-scoped</li>
+<li>they do not affect rule selection</li>
+<li>they are applied after spec and transform evaluation</li>
+<li>they can filter scans via selectors</li>
+<li>they are the preferred way to customize layout and metadata per project</li>
+</ul>
+<hr />
+<h2 id="related-documents">Related documents<a class="headerlink" href="#related-documents" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="extensibility.html">Extensibility model</a></li>
+<li><a href="rules.html">Rule syntax reference</a></li>
+<li><a href="specs.html">Spec syntax reference</a></li>
+<li><a href="layout.html">Output layout and naming</a></li>
+<li><a href="../api/convert.html">Convert API reference</a></li>
+</ul>
 
 
 

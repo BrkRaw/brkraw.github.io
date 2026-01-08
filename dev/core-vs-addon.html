@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://brkraw.github.io/contrib/rule-syntax.html">
+        <link rel="canonical" href="https://brkraw.github.io/dev/core-vs-addon.html">
       
       
-        <link rel="prev" href="contribution.html">
+        <link rel="prev" href="contributing.html">
       
       
-        <link rel="next" href="spec-syntax.html">
+        <link rel="next" href="contributors.html">
       
       
         
@@ -27,7 +27,7 @@
     
     
       
-        <title>Rule Syntax - Preclinical MRI dataset toolkit</title>
+        <title>Core vs addon development - Preclinical MRI dataset toolkit</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#rule-syntax-guide-specsrules-module" class="md-skip">
+        <a href="#core-vs-addon-development" class="md-skip">
           Skip to content
         </a>
       
@@ -107,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Rule Syntax
+              Core vs addon development
             
           </span>
         </div>
@@ -227,17 +227,18 @@
   
   
   
-    <li class="md-tabs__item">
-      <a href="../getting-started.html" class="md-tabs__link">
-        
-  
-  
     
+    
+      <li class="md-tabs__item">
+        <a href="../getting-started/index.html" class="md-tabs__link">
+          
+  
   
   Getting Started
 
-      </a>
-    </li>
+        </a>
+      </li>
+    
   
 
       
@@ -249,11 +250,11 @@
     
     
       <li class="md-tabs__item">
-        <a href="../cli/info-and-params.html" class="md-tabs__link">
+        <a href="../cli/index.html" class="md-tabs__link">
           
   
   
-  CLI
+  CLI Reference
 
         </a>
       </li>
@@ -273,7 +274,27 @@
           
   
   
-  API
+  API Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../reference/extensibility.html" class="md-tabs__link">
+          
+  
+  
+  Reference
 
         </a>
       </li>
@@ -291,31 +312,11 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="contribution.html" class="md-tabs__link">
+        <a href="contributing.html" class="md-tabs__link">
           
   
   
-  Contribution
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../configuration.html" class="md-tabs__link">
-          
-  
-  
-  Reference
+  Developer Guide
 
         </a>
       </li>
@@ -400,9 +401,25 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../getting-started.html" class="md-nav__link">
+    
+    
+    
+    
+      
+      
         
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -416,7 +433,191 @@
   
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Getting Started
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/cli.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI quickstart
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/api.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Python API quickstart
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/configuration.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuration basics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/hooks.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Converter hooks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/viewer.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dataset viewer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -451,7 +652,7 @@
   <span class="md-ellipsis">
     
   
-    CLI
+    CLI Reference
   
 
     
@@ -467,7 +668,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    CLI
+    CLI Reference
   
 
           </label>
@@ -480,14 +681,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../cli/info-and-params.html" class="md-nav__link">
+      <a href="../cli/index.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Overview
+    overview
   
 
     
@@ -515,7 +716,35 @@
   <span class="md-ellipsis">
     
   
-    Session helpers
+    session
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli/info.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    info
   
 
     
@@ -543,91 +772,7 @@
   <span class="md-ellipsis">
     
   
-    Convert command
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../cli/addon.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Addons
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../cli/hook.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Hooks
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../cli/config.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Config
+    convert
   
 
     
@@ -655,7 +800,91 @@
   <span class="md-ellipsis">
     
   
-    Prune
+    prune
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli/config.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    config
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli/addon.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    addon
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli/hook.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    hook
   
 
     
@@ -706,7 +935,7 @@
   <span class="md-ellipsis">
     
   
-    API
+    API Reference
   
 
     
@@ -722,7 +951,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    API
+    API Reference
   
 
           </label>
@@ -742,7 +971,7 @@
   <span class="md-ellipsis">
     
   
-    Overview
+    overview
   
 
     
@@ -763,14 +992,70 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/cli-workflows.html" class="md-nav__link">
+      <a href="../api/info.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    CLI Equivalents
+    info and params
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/convert.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    convert
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/prune.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    prune
   
 
     
@@ -798,7 +1083,7 @@
   <span class="md-ellipsis">
     
   
-    Layout API
+    layout
   
 
     
@@ -826,7 +1111,7 @@
   <span class="md-ellipsis">
     
   
-    Addon API
+    addon
   
 
     
@@ -847,14 +1132,297 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/pruner.html" class="md-nav__link">
+      <a href="../api/hook.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Pruner API
+    hook
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/extensibility.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Extensibility model
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/addons-and-plugins.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Addons and plugins
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/cli-extensions.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI extensions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/rules.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rule syntax
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/specs.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Spec syntax
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/context-map.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Context map syntax
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/layout.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Output layout and naming
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/hook-packages.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Converter hook packages
   
 
     
@@ -900,17 +1468,17 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
             
   
   
   <span class="md-ellipsis">
     
   
-    Contribution
+    Developer Guide
   
 
     
@@ -921,12 +1489,12 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_5">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             
   
-    Contribution
+    Developer Guide
   
 
           </label>
@@ -939,14 +1507,14 @@
   
   
     <li class="md-nav__item">
-      <a href="contribution.html" class="md-nav__link">
+      <a href="contributing.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Extending BrkRaw
+    Contributing
   
 
     
@@ -983,7 +1551,7 @@
   <span class="md-ellipsis">
     
   
-    Rule Syntax
+    Core vs addon development
   
 
     
@@ -994,14 +1562,14 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="rule-syntax.html" class="md-nav__link md-nav__link--active">
+      <a href="core-vs-addon.html" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    Rule Syntax
+    Core vs addon development
   
 
     
@@ -1027,10 +1595,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#rule-file-layout" class="md-nav__link">
+  <a href="#when-core-changes-are-appropriate" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Rule File Layout
+        When core changes are appropriate
       
     </span>
   </a>
@@ -1038,54 +1606,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#rule-fields" class="md-nav__link">
+  <a href="#using-the-shared-vscode-setup" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Rule Fields
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#variable-binding-when" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Variable Binding (when)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conditions-if" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Conditions (if)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#targets-use" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Targets (use)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#override-behavior" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Override Behavior
+        Using the shared VSCode setup
       
     </span>
   </a>
@@ -1108,118 +1632,6 @@
   
   
     <li class="md-nav__item">
-      <a href="spec-syntax.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Spec Syntax
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="addons-and-plugins.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Addons and Plugins
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="hook-packages.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Hook Packages
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="development-model.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Core vs Addon Development
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="contributors.html" class="md-nav__link">
         
   
@@ -1228,93 +1640,6 @@
     
   
     Contributors
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
-        
-          
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Reference
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Reference
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../configuration.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Configuration
   
 
     
@@ -1362,10 +1687,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#rule-file-layout" class="md-nav__link">
+  <a href="#when-core-changes-are-appropriate" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Rule File Layout
+        When core changes are appropriate
       
     </span>
   </a>
@@ -1373,54 +1698,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#rule-fields" class="md-nav__link">
+  <a href="#using-the-shared-vscode-setup" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Rule Fields
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#variable-binding-when" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Variable Binding (when)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conditions-if" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Conditions (if)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#targets-use" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Targets (use)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#override-behavior" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Override Behavior
+        Using the shared VSCode setup
       
     </span>
   </a>
@@ -1447,183 +1728,47 @@
   
 
 
-<h1 id="rule-syntax-guide-specsrules-module">Rule Syntax Guide (specs.rules module)<a class="headerlink" href="#rule-syntax-guide-specsrules-module" title="Permanent link">&para;</a></h1>
-<p>This document describes the rule syntax used to select specs and hooks
-from <code>~/.brkraw/rules/*.yaml</code>. Rule files are loaded in filename order and
-evaluated top to bottom. If multiple rules match the same category, the last
-matching rule wins (override).</p>
-<h2 id="rule-file-layout">Rule File Layout<a class="headerlink" href="#rule-file-layout" title="Permanent link">&para;</a></h2>
-<p>A rule file may contain any of the following top-level keys. You can mix them
-in a single file.</p>
+<h1 id="core-vs-addon-development">Core vs Addon Development<a class="headerlink" href="#core-vs-addon-development" title="Permanent link">&para;</a></h1>
+<p>BrkRaw development follows two clearly separated paths:</p>
 <ul>
-<li><code>info_spec</code>: rules that choose which scan metadata spec to use when calling</li>
+<li><strong>Core updates</strong>: maintain compatibility with current and upcoming
+  Paravision layouts, file structures, and metadata conventions.</li>
+<li><strong>Addons and plugins</strong>: implement rules, specs, transforms, context_map
+  definitions, or custom CLI tooling without modifying core code.</li>
 </ul>
-<p>info-related commands or methods (for example, metadata parsing in the scan
-  resolver).</p>
-<ul>
-<li><code>metadata_spec</code>: rules that choose which metadata spec to use when generating</li>
-</ul>
-<p>sidecar metadata, especially when a separate rule set is needed for metadata
-  creation.</p>
-<ul>
-<li><code>converter_hook</code>: rules that choose a converter hook. These are</li>
-</ul>
-<p>used by the loader when converting to NIfTI so that a custom reconstruction
-  can be selected for scans matching the rule conditions.</p>
-<p>Example:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">info_spec</span><span class="p">:</span>
-
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;mrs-info&quot;</span>
-
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;MRS</span><span class="nv"> </span><span class="s">method</span><span class="nv"> </span><span class="s">uses</span><span class="nv"> </span><span class="s">custom</span><span class="nv"> </span><span class="s">info</span><span class="nv"> </span><span class="s">spec&quot;</span>
-<span class="w">    </span><span class="nt">when</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">method</span><span class="p">:</span>
-<span class="w">        </span><span class="nt">sources</span><span class="p">:</span>
-
-<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">acqp</span>
-
-<span class="w">            </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ACQ_XXX</span>
-<span class="w">    </span><span class="nt">if</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">eq</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;$method&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;MRS&quot;</span><span class="p p-Indicator">]</span>
-<span class="w">    </span><span class="nt">use</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;mrs&quot;</span>
-<span class="w">    </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1.0.0&quot;</span>
-
-<span class="nt">converter_hook</span><span class="p">:</span>
-
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;mrs-reco&quot;</span>
-
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;MRS</span><span class="nv"> </span><span class="s">reconstruction</span><span class="nv"> </span><span class="s">plugin&quot;</span>
-<span class="w">    </span><span class="nt">when</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">method</span><span class="p">:</span>
-<span class="w">        </span><span class="nt">sources</span><span class="p">:</span>
-
-<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">acqp</span>
-
-<span class="w">            </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ACQ_XXX</span>
-<span class="w">    </span><span class="nt">if</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">any</span><span class="p">:</span>
-
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">eq</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;$method&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;MRS&quot;</span><span class="p p-Indicator">]</span>
-
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">in</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;$method&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;MRS2&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;MRS3&quot;</span><span class="p p-Indicator">]]</span>
-
-<span class="w">    </span><span class="nt">use</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;mrs-reco&quot;</span>
+<p>This separation is intentional and helps keep the core stable while allowing
+rapid experimentation and customization through extensions.</p>
+<hr />
+<h2 id="when-core-changes-are-appropriate">When core changes are appropriate<a class="headerlink" href="#when-core-changes-are-appropriate" title="Permanent link">&para;</a></h2>
+<p>Core changes are intentionally limited to Paravision compatibility and
+low-level loader or infrastructure concerns.</p>
+<p>If you believe a change must live in core, start with a GitHub Discussion and
+explain clearly why the behavior cannot be implemented as an addon or plugin.
+Once there is agreement, open one or more scoped issues before submitting a
+pull request.</p>
+<hr />
+<h2 id="using-the-shared-vscode-setup">Using the shared VSCode setup<a class="headerlink" href="#using-the-shared-vscode-setup" title="Permanent link">&para;</a></h2>
+<p>Core development should use the shared VSCode configuration to ensure
+consistent workflows across contributors.</p>
+<p>1) Create a virtual environment and install development dependencies:</p>
+<div class="highlight"><pre><span></span><code>python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>.venv
+.<span class="w"> </span>.venv/bin/activate
+python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-U<span class="w"> </span>pip
+python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;.[dev]&quot;</span>
 </code></pre></div>
-<h2 id="rule-fields">Rule Fields<a class="headerlink" href="#rule-fields" title="Permanent link">&para;</a></h2>
-<p>Each rule item supports:</p>
-<ul>
+<ol>
 <li>
-<p><code>name</code> (required): identifier for logging/debugging.</p>
+<p>In VSCode, select the workspace interpreter (<code>.venv/bin/python</code>).</p>
 </li>
 <li>
-<p><code>description</code> (optional): human-readable explanation.</p>
+<p>Optional tasks available from the Command Palette:</p>
 </li>
 <li>
-<p><code>when</code> (optional): variable bindings using remapper-style sources. Each</p>
+<p><code>Setup: venv + deps</code></p>
 </li>
-</ul>
-<p>variable may include <code>transform</code> to normalize values before matching.</p>
-<ul>
-<li>
-<p><code>if</code> (required when <code>when</code> is present): condition expression using the variables from <code>when</code>.</p>
-</li>
-<li>
-<p><code>use</code> (required): target spec name or spec path, or hook name.</p>
-</li>
-<li>
-<p><code>version</code> (optional): spec version to select when <code>use</code> is a spec name.</p>
-</li>
-<li>
-<p>Default rules can omit <code>when</code>/<code>if</code>, but must be the first entry in a category.</p>
-</li>
-</ul>
-<h2 id="variable-binding-when">Variable Binding (<code>when</code>)<a class="headerlink" href="#variable-binding-when" title="Permanent link">&para;</a></h2>
-<p><code>when</code> defines named variables using remapper-style sources. Each variable name
-is available in the <code>if</code> expression using <code>$&lt;name&gt;</code>. If a variable binding uses
-<code>transform</code>, the transform name is resolved from the spec referenced by <code>use</code>
-via <code>__meta__.transforms_source</code>.</p>
-<p>See <code>docs/contrib/spec-syntax.md</code> for details on remapper sources and transforms.</p>
-<p>Example:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">when</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">method</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">sources</span><span class="p">:</span>
-
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">acqp</span>
-
-<span class="w">        </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ACQ_XXX</span>
-<span class="w">    </span><span class="nt">transform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">normalize_method</span>
-</code></pre></div>
-<p>This binds <code>$method</code> to the first available value from the sources list.</p>
-<h2 id="conditions-if">Conditions (<code>if</code>)<a class="headerlink" href="#conditions-if" title="Permanent link">&para;</a></h2>
-<p>The <code>if</code> field uses a simple structured expression. Supported operators:</p>
-<ul>
-<li>
-<p><code>always</code>: <code>true</code> or <code>false</code></p>
-</li>
-<li>
-<p><code>eq</code>: <code>["$var", "value"]</code></p>
-</li>
-<li>
-<p><code>ne</code>: <code>["$var", "value"]</code></p>
-</li>
-<li>
-<p><code>in</code>: <code>["$var", ["A", "B"]]</code></p>
-</li>
-<li>
-<p><code>regex</code>: <code>["$var", "^prefix"]</code></p>
-</li>
-<li>
-<p><code>startswith</code>: <code>["$var", "prefix"]</code></p>
-</li>
-<li>
-<p><code>contains</code>: <code>["$var", "substring"]</code></p>
-</li>
-<li>
-<p><code>gt</code>, <code>ge</code>, <code>lt</code>, <code>le</code>: numeric comparisons</p>
-</li>
-<li>
-<p><code>any</code>: list of expressions (OR)</p>
-</li>
-<li>
-<p><code>all</code>: list of expressions (AND)</p>
-</li>
-<li>
-<p><code>not</code>: single expression (NOT)</p>
-</li>
-</ul>
-<p>Example:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">if</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">any</span><span class="p">:</span>
-
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">eq</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;$method&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;XXXX&quot;</span><span class="p p-Indicator">]</span>
-
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">in</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;$method&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;A&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;B&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;C&quot;</span><span class="p p-Indicator">]]</span>
-</code></pre></div>
-<h2 id="targets-use">Targets (<code>use</code>)<a class="headerlink" href="#targets-use" title="Permanent link">&para;</a></h2>
-<ul>
-<li><code>info_spec</code>/<code>metadata_spec</code> can use a spec name or a YAML spec path under</li>
-</ul>
-<p><code>~/.brkraw/specs/</code> (or another configured root).</p>
-<ul>
-<li>Transforms for <code>info_spec</code>/<code>metadata_spec</code> are defined in the spec file under</li>
-</ul>
-<p><code>__meta__.transforms_source</code>.</p>
-<ul>
-<li><code>converter_hook</code> uses the hook name registered under</li>
-</ul>
-<p><code>brkraw.converter</code> (or another configured group).</p>
-<p>When <code>use</code> is a spec name, rules will:</p>
-<ul>
-<li>
-<p>match <code>__meta__.category</code> to the rule category (<code>info_spec</code> or <code>metadata_spec</code>)</p>
-</li>
-<li>
-<p>select <code>version</code> if provided, otherwise the latest version</p>
-</li>
-</ul>
-<h2 id="override-behavior">Override Behavior<a class="headerlink" href="#override-behavior" title="Permanent link">&para;</a></h2>
-<p>All rule files under <code>~/.brkraw/rules/*.yaml</code> are loaded in filename order.
-If multiple rules match the same category, the last matching rule wins.</p>
+<li><code>MkDocs: Serve</code></li>
+<li><code>Release: Prep (bump + notes)</code></li>
+</ol>
 
 
 

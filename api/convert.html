@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://brkraw.github.io/api/layout.html">
+        <link rel="canonical" href="https://brkraw.github.io/api/convert.html">
       
       
-        <link rel="prev" href="prune.html">
+        <link rel="prev" href="info.html">
       
       
-        <link rel="next" href="addon.html">
+        <link rel="next" href="prune.html">
       
       
         
@@ -27,7 +27,7 @@
     
     
       
-        <title>layout - Preclinical MRI dataset toolkit</title>
+        <title>convert - Preclinical MRI dataset toolkit</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#api-layout" class="md-skip">
+        <a href="#convert-scans-to-nifti-python-api" class="md-skip">
           Skip to content
         </a>
       
@@ -107,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              layout
+              convert
             
           </span>
         </div>
@@ -1022,10 +1022,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="convert.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    convert
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="convert.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1041,6 +1068,270 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#entry-point" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entry point
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-usage-cli-brkraw-convert" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic usage (CLI: brkraw convert)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selecting-scans-and-reconstructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Selecting scans and reconstructions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Selecting scans and reconstructions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scan_id" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        scan_id
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reco_id" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        reco_id
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#batch-conversion-pattern-cli-brkraw-convert-batch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Batch conversion pattern (CLI: brkraw convert-batch)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output control
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Output control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#writing-outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Writing outputs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filename-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Filename layout
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metadata-sidecars-cli-sidecar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Metadata sidecars (CLI: --sidecar)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#affine-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Affine handling
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Affine handling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#affine-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Affine space
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subject-overrides" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Subject overrides
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#axis-flips" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Axis flips
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#units-and-headers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Units and headers
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Units and headers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#spatial-and-temporal-units" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Spatial and temporal units
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#header-overrides" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Header overrides
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#context-maps-and-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Context maps and selection
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#converter-hooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Converter hooks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#design-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Design notes
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1078,37 +1369,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    layout
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="layout.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="layout.html" class="md-nav__link">
         
   
   
@@ -1124,59 +1388,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#render_layout" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        render_layout
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#layout-info-parts" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Layout info parts
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#slice-pack-suffixes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Slice pack suffixes
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1698,10 +1909,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#render_layout" class="md-nav__link">
+  <a href="#entry-point" class="md-nav__link">
     <span class="md-ellipsis">
       
-        render_layout
+        Entry point
       
     </span>
   </a>
@@ -1709,10 +1920,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#layout-info-parts" class="md-nav__link">
+  <a href="#basic-usage-cli-brkraw-convert" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Layout info parts
+        Basic usage (CLI: brkraw convert)
       
     </span>
   </a>
@@ -1720,10 +1931,221 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#slice-pack-suffixes" class="md-nav__link">
+  <a href="#selecting-scans-and-reconstructions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Slice pack suffixes
+        Selecting scans and reconstructions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Selecting scans and reconstructions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scan_id" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        scan_id
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reco_id" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        reco_id
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#batch-conversion-pattern-cli-brkraw-convert-batch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Batch conversion pattern (CLI: brkraw convert-batch)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output control
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Output control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#writing-outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Writing outputs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filename-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Filename layout
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metadata-sidecars-cli-sidecar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Metadata sidecars (CLI: --sidecar)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#affine-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Affine handling
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Affine handling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#affine-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Affine space
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subject-overrides" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Subject overrides
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#axis-flips" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Axis flips
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#units-and-headers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Units and headers
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Units and headers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#spatial-and-temporal-units" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Spatial and temporal units
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#header-overrides" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Header overrides
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#context-maps-and-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Context maps and selection
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#converter-hooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Converter hooks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#design-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Design notes
       
     </span>
   </a>
@@ -1750,108 +2172,218 @@
   
 
 
-<h1 id="api-layout">API: Layout<a class="headerlink" href="#api-layout" title="Permanent link">&para;</a></h1>
-<p>Helpers for building filenames from info/metadata specs.</p>
-<p>Module: <code>brkraw.core.layout</code></p>
-<h2 id="render_layout">render_layout<a class="headerlink" href="#render_layout" title="Permanent link">&para;</a></h2>
+<h1 id="convert-scans-to-nifti-python-api">Convert scans to NIfTI (Python API)<a class="headerlink" href="#convert-scans-to-nifti-python-api" title="Permanent link">&para;</a></h1>
+<p>The brkraw Python API provides explicit functions for converting Bruker
+Paravision scans into NIfTI files, with optional metadata sidecars and
+extensible conversion logic via hooks.</p>
+<p>This API is suitable for interactive use, scripting, and batch processing
+in research pipelines.</p>
+<hr />
+<h2 id="entry-point">Entry point<a class="headerlink" href="#entry-point" title="Permanent link">&para;</a></h2>
+<p>All conversions are performed through a dataset loader.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">brkraw</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">brk</span>
+<span class="n">loader</span> <span class="o">=</span> <span class="n">brk</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;/path/to/study&quot;</span><span class="p">)</span>
+</code></pre></div>
+<hr />
+<h2 id="basic-usage-cli-brkraw-convert">Basic usage (CLI: <code>brkraw convert</code>)<a class="headerlink" href="#basic-usage-cli-brkraw-convert" title="Permanent link">&para;</a></h2>
+<p>Convert a single scan and reconstruction:</p>
+<div class="highlight"><pre><span></span><code><span class="n">nii</span> <span class="o">=</span> <span class="n">loader</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span>
+    <span class="n">scan_id</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+    <span class="n">reco_id</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;nifti&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+</code></pre></div>
+<p>The returned object represents the converted image in memory.
+Writing to disk is explicit:</p>
+<div class="highlight"><pre><span></span><code><span class="n">nii</span><span class="o">.</span><span class="n">to_filename</span><span class="p">(</span><span class="s2">&quot;scan3.nii.gz&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>By default:</p>
+<ul>
+<li>Output is generated in memory</li>
+<li>Files are compressed when written (.nii.gz)</li>
+<li>Affines are computed in subject_ras space</li>
+<li>Metadata follows configured layout and specs</li>
+</ul>
+<hr />
+<h2 id="selecting-scans-and-reconstructions">Selecting scans and reconstructions<a class="headerlink" href="#selecting-scans-and-reconstructions" title="Permanent link">&para;</a></h2>
+<h3 id="scan_id">scan_id<a class="headerlink" href="#scan_id" title="Permanent link">&para;</a></h3>
+<p>Specify the scan ID to convert.</p>
+<div class="highlight"><pre><span></span><code><span class="n">loader</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="n">scan_id</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">reco_id</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</code></pre></div>
+<p>If <code>scan_id</code> is omitted, the call is rejected.
+Batch behavior must be implemented explicitly.</p>
+<h3 id="reco_id">reco_id<a class="headerlink" href="#reco_id" title="Permanent link">&para;</a></h3>
+<p>Specify the reconstruction ID.</p>
+<div class="highlight"><pre><span></span><code><span class="n">loader</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="n">scan_id</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">reco_id</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</code></pre></div>
+<p>Notes:</p>
+<ul>
+<li>Default is 1</li>
+<li>If omitted and multiple recos exist, all recos are converted and returned
+  as a list</li>
+<li>Some converter hooks may not use reco IDs explicitly</li>
+</ul>
+<hr />
+<h2 id="batch-conversion-pattern-cli-brkraw-convert-batch">Batch conversion pattern (CLI: <code>brkraw convert-batch</code>)<a class="headerlink" href="#batch-conversion-pattern-cli-brkraw-convert-batch" title="Permanent link">&para;</a></h2>
+<p>The Python API does not provide a separate batch command.
+Batch behavior is implemented explicitly by iterating over datasets
+or scans.</p>
+<p>Example: convert all scans in a study.</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">scan_id</span> <span class="ow">in</span> <span class="n">loader</span><span class="o">.</span><span class="n">avail</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+    <span class="n">nii</span> <span class="o">=</span> <span class="n">loader</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span>
+        <span class="n">scan_id</span><span class="o">=</span><span class="n">scan_id</span><span class="p">,</span>
+        <span class="n">reco_id</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+        <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;nifti&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="k">if</span> <span class="n">nii</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">out</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;scan</span><span class="si">{</span><span class="n">scan_id</span><span class="si">}</span><span class="s2">.nii.gz&quot;</span>
+        <span class="n">nii</span><span class="o">.</span><span class="n">to_filename</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>
+</code></pre></div>
+<p>Example: convert multiple datasets.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">brkraw</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">brk</span>
+
+<span class="n">root</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;/path/to/datasets&quot;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">dataset</span> <span class="ow">in</span> <span class="n">root</span><span class="o">.</span><span class="n">iterdir</span><span class="p">():</span>
+    <span class="n">loader</span> <span class="o">=</span> <span class="n">brk</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">scan_id</span> <span class="ow">in</span> <span class="n">loader</span><span class="o">.</span><span class="n">avail</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+        <span class="n">nii</span> <span class="o">=</span> <span class="n">loader</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span>
+            <span class="n">scan_id</span><span class="o">=</span><span class="n">scan_id</span><span class="p">,</span>
+            <span class="n">reco_id</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+            <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;nifti&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+</code></pre></div>
+<p>Failures are raised as exceptions and should be handled by the caller.</p>
+<hr />
+<h2 id="output-control">Output control<a class="headerlink" href="#output-control" title="Permanent link">&para;</a></h2>
+<h3 id="writing-outputs">Writing outputs<a class="headerlink" href="#writing-outputs" title="Permanent link">&para;</a></h3>
+<p>The API does not implicitly write files.
+All outputs must be written explicitly by the caller.</p>
+<div class="highlight"><pre><span></span><code><span class="n">nii</span><span class="o">.</span><span class="n">to_filename</span><span class="p">(</span><span class="s2">&quot;out/scan3.nii.gz&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>This design avoids accidental overwrites and enables flexible workflows.</p>
+<h3 id="filename-layout">Filename layout<a class="headerlink" href="#filename-layout" title="Permanent link">&para;</a></h3>
+<p>Layout templates may be rendered using the layout API.</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">brkraw.core</span><span class="w"> </span><span class="kn">import</span> <span class="n">layout</span> <span class="k">as</span> <span class="n">layout_core</span>
 
-<span class="n">name</span> <span class="o">=</span> <span class="n">layout_core</span><span class="o">.</span><span class="n">render_layout</span><span class="p">(</span>
+<span class="n">path</span> <span class="o">=</span> <span class="n">layout_core</span><span class="o">.</span><span class="n">render_layout</span><span class="p">(</span>
     <span class="n">loader</span><span class="p">,</span>
     <span class="n">scan_id</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
-    <span class="n">layout_entries</span><span class="o">=</span><span class="p">[</span>
-        <span class="p">{</span><span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;Study.ID&quot;</span><span class="p">,</span> <span class="s2">&quot;entry&quot;</span><span class="p">:</span> <span class="s2">&quot;study&quot;</span><span class="p">,</span> <span class="s2">&quot;sep&quot;</span><span class="p">:</span> <span class="s2">&quot;/&quot;</span><span class="p">},</span>
-        <span class="p">{</span><span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;Subject.ID&quot;</span><span class="p">,</span> <span class="s2">&quot;entry&quot;</span><span class="p">:</span> <span class="s2">&quot;sub&quot;</span><span class="p">,</span> <span class="s2">&quot;sep&quot;</span><span class="p">:</span> <span class="s2">&quot;/&quot;</span><span class="p">},</span>
-        <span class="p">{</span><span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;Protocol&quot;</span><span class="p">,</span> <span class="s2">&quot;hide&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
-    <span class="p">],</span>
-    <span class="n">context_map</span><span class="o">=</span><span class="s2">&quot;maps.yaml&quot;</span><span class="p">,</span>
+    <span class="n">layout_template</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">{Protocol}</span><span class="s2">_</span><span class="si">{ScanID}</span><span class="s2">&quot;</span><span class="p">,</span>
+    <span class="n">context_map</span><span class="o">=</span><span class="s2">&quot;map.yaml&quot;</span><span class="p">,</span>
 <span class="p">)</span>
+
+<span class="n">nii</span><span class="o">.</span><span class="n">to_filename</span><span class="p">(</span><span class="n">path</span> <span class="o">+</span> <span class="s2">&quot;.nii.gz&quot;</span><span class="p">)</span>
 </code></pre></div>
-<p>You can override specs for testing via API-only kwargs:</p>
-<div class="highlight"><pre><span></span><code><span class="n">name</span> <span class="o">=</span> <span class="n">layout_core</span><span class="o">.</span><span class="n">render_layout</span><span class="p">(</span>
-    <span class="n">loader</span><span class="p">,</span>
+<hr />
+<h2 id="metadata-sidecars-cli-sidecar">Metadata sidecars (CLI: <code>--sidecar</code>)<a class="headerlink" href="#metadata-sidecars-cli-sidecar" title="Permanent link">&para;</a></h2>
+<p>Generate metadata dictionaries for JSON sidecar files.</p>
+<div class="highlight"><pre><span></span><code><span class="n">meta</span> <span class="o">=</span> <span class="n">loader</span><span class="o">.</span><span class="n">get_metadata</span><span class="p">(</span>
     <span class="n">scan_id</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
-    <span class="n">layout_entries</span><span class="o">=</span><span class="p">[{</span><span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;Protocol&quot;</span><span class="p">,</span> <span class="s2">&quot;hide&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">}],</span>
-    <span class="n">override_info_spec</span><span class="o">=</span><span class="s2">&quot;info_override.yaml&quot;</span><span class="p">,</span>
-    <span class="n">override_metadata_spec</span><span class="o">=</span><span class="s2">&quot;metadata_override.yaml&quot;</span><span class="p">,</span>
+    <span class="n">reco_id</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">context_map</span><span class="o">=</span><span class="s2">&quot;map.yaml&quot;</span><span class="p">,</span>
 <span class="p">)</span>
 </code></pre></div>
-<p>Fields:</p>
+<p>Sidecar metadata is generated from:</p>
 <ul>
-<li>
-<p><code>key</code>: dotted key resolved from the layout info (for example <code>Subject.ID</code>).</p>
-</li>
-<li>
-<p><code>entry</code>: prefix label used to emit <code>entry-value</code> (optional when <code>hide</code> is true).</p>
-</li>
-<li>
-<p><code>hide</code>: when true, only the value is appended.</p>
-</li>
-<li>
-<p><code>use_entry</code>: reuse a previously defined <code>entry</code> value.</p>
-</li>
-<li>
-<p><code>sep</code>: separator to insert after this field (default <code>_</code>, use <code>/</code> for folders).</p>
-</li>
-<li>
-<p><code>value_pattern</code>: regex that defines allowed characters (default <code>[A-Za-z0-9._-]</code>).</p>
-</li>
-<li>
-<p><code>value_replace</code>: replacement for disallowed characters (default <code>""</code>).</p>
-</li>
-<li>
-<p><code>max_length</code>: truncate values longer than this length.</p>
-</li>
+<li>Built-in info specs</li>
+<li>Installed metadata specs</li>
+<li>Optional context maps</li>
 </ul>
-<p>Notes:</p>
-<ul>
-<li>
-<p>Values come from merged <code>info_spec</code> + <code>metadata_spec</code> results.</p>
-</li>
-<li>
-<p>Missing values are skipped.</p>
-</li>
-<li>
-<p>When no parts remain, the fallback is <code>scan-&lt;ScanID&gt;</code>.</p>
-</li>
-<li>
-<p><code>context_map</code> applies runtime mapping rules to the spec output.</p>
-</li>
-<li>Metadata still wins on conflicts when keys overlap.</li>
-<li>When <code>context_map.__meta__</code> defines <code>layout_entries</code> or <code>layout_template</code>, those
-  can be passed explicitly to <code>render_layout</code> to override config defaults.</li>
-</ul>
-<h2 id="layout-info-parts">Layout info parts<a class="headerlink" href="#layout-info-parts" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="n">info</span><span class="p">,</span> <span class="n">metadata</span> <span class="o">=</span> <span class="n">layout_core</span><span class="o">.</span><span class="n">load_layout_info_parts</span><span class="p">(</span>
-    <span class="n">loader</span><span class="p">,</span>
+<p>Writing JSON files is the responsibility of the caller.</p>
+<hr />
+<h2 id="affine-handling">Affine handling<a class="headerlink" href="#affine-handling" title="Permanent link">&para;</a></h2>
+<h3 id="affine-space">Affine space<a class="headerlink" href="#affine-space" title="Permanent link">&para;</a></h3>
+<p>Select the affine space used for conversion.</p>
+<div class="highlight"><pre><span></span><code><span class="n">loader</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span>
     <span class="n">scan_id</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
-    <span class="n">context_map</span><span class="o">=</span><span class="s2">&quot;maps.yaml&quot;</span><span class="p">,</span>
+    <span class="n">reco_id</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">space</span><span class="o">=</span><span class="s2">&quot;subject_ras&quot;</span><span class="p">,</span>
 <span class="p">)</span>
 </code></pre></div>
-<p>Notes:</p>
+<p>Valid values are case-sensitive:</p>
 <ul>
-<li><code>info</code> is the mapped <code>info_spec</code> output.</li>
-<li><code>metadata</code> is the mapped <code>metadata_spec</code> output.</li>
+<li>raw</li>
+<li>scanner</li>
+<li>subject_ras</li>
 </ul>
-<h2 id="slice-pack-suffixes">Slice pack suffixes<a class="headerlink" href="#slice-pack-suffixes" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="n">info</span> <span class="o">=</span> <span class="n">layout_core</span><span class="o">.</span><span class="n">load_layout_info</span><span class="p">(</span>
-    <span class="n">loader</span><span class="p">,</span>
+<h3 id="subject-overrides">Subject overrides<a class="headerlink" href="#subject-overrides" title="Permanent link">&para;</a></h3>
+<p>Override subject type or pose when computing subject-view affines
+(<code>space="subject_ras"</code> only).</p>
+<div class="highlight"><pre><span></span><code><span class="n">loader</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span>
     <span class="n">scan_id</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
-<span class="p">)</span>
-<span class="n">suffixes</span> <span class="o">=</span> <span class="n">layout_core</span><span class="o">.</span><span class="n">render_slicepack_suffixes</span><span class="p">(</span>
-    <span class="n">info</span><span class="p">,</span>
-    <span class="n">count</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
-    <span class="n">template</span><span class="o">=</span><span class="s2">&quot;_</span><span class="si">{SliceOrient}</span><span class="s2">&quot;</span><span class="p">,</span>
+    <span class="n">reco_id</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">override_subject_type</span><span class="o">=</span><span class="s2">&quot;Quadruped&quot;</span><span class="p">,</span>
+    <span class="n">override_subject_pose</span><span class="o">=</span><span class="s2">&quot;Head_Supine&quot;</span><span class="p">,</span>
 <span class="p">)</span>
 </code></pre></div>
-<p>Notes:</p>
+<p>Invalid overrides raise an exception.</p>
+<h3 id="axis-flips">Axis flips<a class="headerlink" href="#axis-flips" title="Permanent link">&para;</a></h3>
+<p>Flip axes in the output affine.</p>
+<div class="highlight"><pre><span></span><code><span class="n">loader</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span>
+    <span class="n">scan_id</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+    <span class="n">reco_id</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">flip_x</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="p">)</span>
+</code></pre></div>
+<hr />
+<h2 id="units-and-headers">Units and headers<a class="headerlink" href="#units-and-headers" title="Permanent link">&para;</a></h2>
+<h3 id="spatial-and-temporal-units">Spatial and temporal units<a class="headerlink" href="#spatial-and-temporal-units" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="n">loader</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span>
+    <span class="n">scan_id</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+    <span class="n">reco_id</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">xyz_units</span><span class="o">=</span><span class="s2">&quot;mm&quot;</span><span class="p">,</span>
+    <span class="n">t_units</span><span class="o">=</span><span class="s2">&quot;sec&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+</code></pre></div>
+<p>Values are validated strictly and are case-sensitive.</p>
+<h3 id="header-overrides">Header overrides<a class="headerlink" href="#header-overrides" title="Permanent link">&para;</a></h3>
+<p>Override NIfTI header fields using a YAML file.</p>
+<div class="highlight"><pre><span></span><code><span class="n">loader</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span>
+    <span class="n">scan_id</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+    <span class="n">reco_id</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">header</span><span class="o">=</span><span class="s2">&quot;header_override.yaml&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+</code></pre></div>
+<hr />
+<h2 id="context-maps-and-selection">Context maps and selection<a class="headerlink" href="#context-maps-and-selection" title="Permanent link">&para;</a></h2>
+<p>Apply metadata remapping and conditional selection logic.</p>
+<div class="highlight"><pre><span></span><code><span class="n">loader</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span>
+    <span class="n">scan_id</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+    <span class="n">reco_id</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">context_map</span><span class="o">=</span><span class="s2">&quot;map.yaml&quot;</span><span class="p">,</span>
+    <span class="n">sidecar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="p">)</span>
+</code></pre></div>
+<p>Context maps can:</p>
 <ul>
-<li>
-<p><code>{index}</code> is always 1-based.</p>
-</li>
-<li>
-<p><code>{SliceOrient}</code> resolves from the default info spec when present.</p>
-</li>
+<li>Select or skip scans</li>
+<li>Modify metadata fields</li>
+<li>Override layout rules and suffixes</li>
+</ul>
+<hr />
+<h2 id="converter-hooks">Converter hooks<a class="headerlink" href="#converter-hooks" title="Permanent link">&para;</a></h2>
+<p>Pass arguments to installed converter hooks.</p>
+<div class="highlight"><pre><span></span><code><span class="n">loader</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span>
+    <span class="n">scan_id</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+    <span class="n">reco_id</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">hook_args</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;mrs&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;reference&quot;</span><span class="p">:</span> <span class="s2">&quot;water&quot;</span><span class="p">,</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+<span class="p">)</span>
+</code></pre></div>
+<p>Values are parsed as bool, int, float, or string.</p>
+<hr />
+<h2 id="design-notes">Design notes<a class="headerlink" href="#design-notes" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Conversion APIs are explicit and non-destructive</li>
+<li>No implicit defaults or environment variables are used</li>
+<li>Batch behavior is implemented by the caller</li>
+<li>All affine and override options are case-sensitive</li>
+<li>Errors are raised early and must be handled explicitly</li>
 </ul>
 
 

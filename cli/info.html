@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://brkraw.github.io/cli/config.html">
+        <link rel="canonical" href="https://brkraw.github.io/cli/info.html">
       
       
-        <link rel="prev" href="prune.html">
+        <link rel="prev" href="session.html">
       
       
-        <link rel="next" href="addon.html">
+        <link rel="next" href="convert.html">
       
       
         
@@ -27,7 +27,7 @@
     
     
       
-        <title>config - Preclinical MRI dataset toolkit</title>
+        <title>info - Preclinical MRI dataset toolkit</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#config" class="md-skip">
+        <a href="#cli-inspecting-datasets-info-params" class="md-skip">
           Skip to content
         </a>
       
@@ -107,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              config
+              info
             
           </span>
         </div>
@@ -739,10 +739,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="info.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    info
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="info.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -758,6 +785,220 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#brkraw-info" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        brkraw info
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="brkraw info">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic usage
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-api-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Python API overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entry-point" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entry point
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommended-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommended workflow
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Notes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scope-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scope control
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scan-filtering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scan filtering
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reco-visibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reco visibility
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#environment-defaults" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Environment defaults
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#brkraw-params" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        brkraw params
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="brkraw params">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-usage_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic usage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restrict-to-specific-parameter-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Restrict to specific parameter files
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reco-level-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reco-level parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#environment-defaults_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Environment defaults
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#design-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Design notes
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -823,37 +1064,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    config
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="config.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="config.html" class="md-nav__link">
         
   
   
@@ -869,120 +1083,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#subcommands" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Subcommands
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Subcommands">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#config-init" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        config init
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#config-show" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        config show
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#config-path" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        config path
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#config-edit" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        config edit
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#config-set" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        config set
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#config-unset" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        config unset
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#config-reset" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        config reset
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1759,88 +1859,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#subcommands" class="md-nav__link">
+  <a href="#brkraw-info" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Subcommands
+        brkraw info
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Subcommands">
+    <nav class="md-nav" aria-label="brkraw info">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#config-init" class="md-nav__link">
+  <a href="#basic-usage" class="md-nav__link">
     <span class="md-ellipsis">
       
-        config init
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#config-show" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        config show
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#config-path" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        config path
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#config-edit" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        config edit
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#config-set" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        config set
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#config-unset" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        config unset
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#config-reset" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        config reset
+        Basic usage
       
     </span>
   </a>
@@ -1849,6 +1883,172 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-api-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Python API overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entry-point" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entry point
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommended-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommended workflow
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Notes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scope-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scope control
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scan-filtering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scan filtering
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reco-visibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reco visibility
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#environment-defaults" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Environment defaults
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#brkraw-params" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        brkraw params
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="brkraw params">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-usage_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic usage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restrict-to-specific-parameter-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Restrict to specific parameter files
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reco-level-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reco-level parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#environment-defaults_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Environment defaults
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#design-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Design notes
+      
+    </span>
+  </a>
   
 </li>
       
@@ -1872,92 +2072,158 @@
   
 
 
-<h1 id="config">config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h1>
-<p>Manage BrkRaw configuration locations and <code>config.yaml</code>.</p>
-<p>Use this command to:</p>
-<ul>
-<li>create or reset config roots,</li>
-<li>inspect resolved configuration,</li>
-<li>set or unset individual keys,</li>
-<li>open <code>config.yaml</code> in your preferred editor.</li>
-</ul>
-<p>By default, BrkRaw stores configuration under <code>~/.brkraw</code>, or you can override it
-with <code>BRKRAW_CONFIG_HOME</code> or <code>--root</code>.</p>
-<hr />
-<h2 id="subcommands">Subcommands<a class="headerlink" href="#subcommands" title="Permanent link">&para;</a></h2>
-<h3 id="config-init">config init<a class="headerlink" href="#config-init" title="Permanent link">&para;</a></h3>
-<p>Create the config folders and optionally create <code>config.yaml</code>.</p>
-<div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>config<span class="w"> </span>init
-</code></pre></div>
-<p>Options:</p>
-<ul>
-<li>
-<p><code>--no-config</code><br />
-  Do not create <code>config.yaml</code>.</p>
-</li>
-<li>
-<p><code>--no-exist-ok</code><br />
-  Fail if the config root already exists.</p>
-</li>
-</ul>
-<hr />
-<h3 id="config-show">config show<a class="headerlink" href="#config-show" title="Permanent link">&para;</a></h3>
-<p>Print resolved config values (ordered for readability).</p>
-<div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>config<span class="w"> </span>show
-</code></pre></div>
-<p>If <code>config.yaml</code> is empty, prints:</p>
-<div class="highlight"><pre><span></span><code>config.yaml: &lt;empty&gt;
-</code></pre></div>
-<hr />
-<h3 id="config-path">config path<a class="headerlink" href="#config-path" title="Permanent link">&para;</a></h3>
-<p>Print a specific config path.</p>
-<div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>config<span class="w"> </span>path<span class="w"> </span>root
-brkraw<span class="w"> </span>config<span class="w"> </span>path<span class="w"> </span>config
-brkraw<span class="w"> </span>config<span class="w"> </span>path<span class="w"> </span>rules
-brkraw<span class="w"> </span>config<span class="w"> </span>path<span class="w"> </span>specs
-brkraw<span class="w"> </span>config<span class="w"> </span>path<span class="w"> </span>transforms
-</code></pre></div>
-<hr />
-<h3 id="config-edit">config edit<a class="headerlink" href="#config-edit" title="Permanent link">&para;</a></h3>
-<p>Edit <code>config.yaml</code> in an editor.</p>
-<div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>config<span class="w"> </span>edit
-</code></pre></div>
-<p>BrkRaw resolves the editor in this order:</p>
+<h1 id="cli-inspecting-datasets-info-params">CLI: Inspecting datasets (info &amp; params)<a class="headerlink" href="#cli-inspecting-datasets-info-params" title="Permanent link">&para;</a></h1>
+<p>These commands provide <strong>read-only inspection utilities</strong> for Paravision
+datasets. They are designed to help users understand dataset structure and
+metadata <strong>before</strong> running any conversion.</p>
+<p>Typical workflow:</p>
 <ol>
-<li><code>config.yaml: editor</code></li>
-<li><code>$VISUAL</code></li>
-<li><code>$EDITOR</code></li>
+<li>Use <code>brkraw info</code> to understand study and scan structure</li>
+<li>Use <code>brkraw params</code> to inspect acquisition parameters</li>
+<li>Proceed to <code>convert</code> or <code>convert-batch</code></li>
 </ol>
-<p>If <code>config.yaml</code> does not exist, it is reset to defaults before editing.</p>
 <hr />
-<h3 id="config-set">config set<a class="headerlink" href="#config-set" title="Permanent link">&para;</a></h3>
-<p>Set a config key.</p>
-<div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>config<span class="w"> </span><span class="nb">set</span><span class="w"> </span>logging.level<span class="w"> </span>DEBUG
-brkraw<span class="w"> </span>config<span class="w"> </span><span class="nb">set</span><span class="w"> </span>output.float_decimals<span class="w"> </span><span class="m">4</span>
+<h2 id="brkraw-info">brkraw info<a class="headerlink" href="#brkraw-info" title="Permanent link">&para;</a></h2>
+<p>Print a formatted summary of a Paravision dataset.</p>
+<p>This command is intended to answer questions such as:</p>
+<ul>
+<li>What scans are present in this study?</li>
+<li>How are scans and recos organized?</li>
+<li>What metadata is available at the study and scan levels?</li>
+</ul>
+<h3 id="basic-usage">Basic usage<a class="headerlink" href="#basic-usage" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>info<span class="w"> </span>/path/to/study
 </code></pre></div>
-<p>Nested keys are supported with dot notation:</p>
-<div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>config<span class="w"> </span><span class="nb">set</span><span class="w"> </span>logging.print_width<span class="w"> </span><span class="m">160</span>
-</code></pre></div>
-<p>You can also use <code>KEY=VALUE</code> form:</p>
-<div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>config<span class="w"> </span><span class="nb">set</span><span class="w"> </span>logging.level<span class="o">=</span>DEBUG
-</code></pre></div>
-<p>Values are parsed as YAML scalars (e.g., <code>true</code>, <code>false</code>, numbers, lists).</p>
+<p>If no path is provided, the command uses <code>BRKRAW_PATH</code>.</p>
 <hr />
-<h3 id="config-unset">config unset<a class="headerlink" href="#config-unset" title="Permanent link">&para;</a></h3>
-<p>Unset a config key.</p>
-<div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>config<span class="w"> </span><span class="nb">unset</span><span class="w"> </span>logging.level
-brkraw<span class="w"> </span>config<span class="w"> </span><span class="nb">unset</span><span class="w"> </span>output.layout_template
+<h2 id="python-api-overview">Python API overview<a class="headerlink" href="#python-api-overview" title="Permanent link">&para;</a></h2>
+<p>The brkraw Python API provides programmatic access to the same core
+functionality as the CLI, using explicit function calls and objects
+instead of shell commands.</p>
+<p>The API is organized around a small set of core tasks:</p>
+<ul>
+<li>Load a dataset and bind a configuration context</li>
+<li>Inspect datasets and acquisition parameters</li>
+<li>Convert scans and generate outputs</li>
+<li>Manage mapping logic and extensions</li>
+</ul>
+<p>This section documents the main API entry points and how they fit together.</p>
+<h2 id="entry-point">Entry point<a class="headerlink" href="#entry-point" title="Permanent link">&para;</a></h2>
+<p>All workflows start by loading a dataset:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">brkraw</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">brk</span>
+<span class="n">loader</span> <span class="o">=</span> <span class="n">brk</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;/path/to/study&quot;</span><span class="p">)</span>
 </code></pre></div>
-<p>Nested keys are supported with dot notation. When nested dicts become empty,
-they are removed automatically.</p>
+<p>The returned object acts as a dataset loader and the primary handle for
+inspection and conversion.</p>
+<p>Loading a dataset is non-destructive and does not modify the source files.</p>
+<h2 id="recommended-workflow">Recommended workflow<a class="headerlink" href="#recommended-workflow" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Load a dataset:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="n">loader</span> <span class="o">=</span> <span class="n">brk</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;/path/to/study&quot;</span><span class="p">)</span>
+</code></pre></div>
+<ol>
+<li>Inspect the dataset:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="n">info</span> <span class="o">=</span> <span class="n">loader</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">scope</span><span class="o">=</span><span class="s2">&quot;full&quot;</span><span class="p">,</span> <span class="n">as_dict</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+<ol>
+<li>Convert a scan:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="n">nii</span> <span class="o">=</span> <span class="n">loader</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span>
+    <span class="n">scan_id</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+    <span class="n">reco_id</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;nifti&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+</code></pre></div>
+<ol>
+<li>Reuse the same loader instance when converting multiple scans:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">scan_id</span> <span class="ow">in</span> <span class="n">loader</span><span class="o">.</span><span class="n">avail</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+    <span class="n">nii</span> <span class="o">=</span> <span class="n">loader</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span>
+        <span class="n">scan_id</span><span class="o">=</span><span class="n">scan_id</span><span class="p">,</span>
+        <span class="n">reco_id</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+        <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;nifti&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+</code></pre></div>
+<p>Reusing the loader avoids repeated dataset discovery and validation,
+while keeping scan selection explicit at each call.</p>
+<h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Output naming and metadata generation are controlled by configuration
+  files (<code>config.yaml</code>) and optionally by a <code>context_map</code> YAML passed at
+  runtime.</li>
+<li>Extensions are managed as addons (data files) and hooks (Python packages
+  that install namespaced addon assets).</li>
+</ul>
+<h3 id="scope-control">Scope control<a class="headerlink" href="#scope-control" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>info<span class="w"> </span>/path/to/study<span class="w"> </span>--scope<span class="w"> </span>study
+brkraw<span class="w"> </span>info<span class="w"> </span>/path/to/study<span class="w"> </span>--scope<span class="w"> </span>scan
+brkraw<span class="w"> </span>info<span class="w"> </span>/path/to/study<span class="w"> </span>--scope<span class="w"> </span>full
+</code></pre></div>
+<p>Available scopes:</p>
+<ul>
+<li><code>study</code>: study-level summary only</li>
+<li><code>scan</code>: scan-level summary only</li>
+<li><code>full</code> (default): study and scan</li>
+</ul>
+<h3 id="scan-filtering">Scan filtering<a class="headerlink" href="#scan-filtering" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>info<span class="w"> </span>/path/to/study<span class="w"> </span>--scope<span class="w"> </span>scan<span class="w"> </span>-s<span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">4</span>
+</code></pre></div>
+<p>Multiple scan IDs may be provided.</p>
+<h3 id="reco-visibility">Reco visibility<a class="headerlink" href="#reco-visibility" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>info<span class="w"> </span>/path/to/study<span class="w"> </span>--show-reco
+</code></pre></div>
+<p>Include reco entries under each scan.</p>
+<h3 id="environment-defaults">Environment defaults<a class="headerlink" href="#environment-defaults" title="Permanent link">&para;</a></h3>
+<p>The following environment variables are respected:</p>
+<ul>
+<li><code>BRKRAW_PATH</code>: default dataset path</li>
+<li><code>BRKRAW_SCAN_ID</code>: default scan IDs (comma-separated)</li>
+</ul>
 <hr />
-<h3 id="config-reset">config reset<a class="headerlink" href="#config-reset" title="Permanent link">&para;</a></h3>
-<p>Reset <code>config.yaml</code> to defaults.</p>
-<div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>config<span class="w"> </span>reset
+<h2 id="brkraw-params">brkraw params<a class="headerlink" href="#brkraw-params" title="Permanent link">&para;</a></h2>
+<p>Search parameter files and print matching entries as YAML.</p>
+<p>This command is useful for:</p>
+<ul>
+<li>Inspecting acquisition parameters before conversion</li>
+<li>Debugging sequence-specific behavior</li>
+<li>Verifying values used by specs and rules</li>
+</ul>
+<h3 id="basic-usage_1">Basic usage<a class="headerlink" href="#basic-usage_1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>params<span class="w"> </span>/path/to/study<span class="w"> </span>-k<span class="w"> </span>PVM_RepetitionTime<span class="w"> </span>-s<span class="w"> </span><span class="m">3</span>
 </code></pre></div>
-<p>To skip confirmation:</p>
-<div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>config<span class="w"> </span>reset<span class="w"> </span>--yes
+<h3 id="restrict-to-specific-parameter-files">Restrict to specific parameter files<a class="headerlink" href="#restrict-to-specific-parameter-files" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>params<span class="w"> </span>-k<span class="w"> </span>VisuAcqEchoTime<span class="w"> </span>-s<span class="w"> </span><span class="m">4</span><span class="w"> </span>-f<span class="w"> </span>visu_pars
 </code></pre></div>
+<p>Supported parameter files include:</p>
+<ul>
+<li><code>method</code></li>
+<li><code>acqp</code></li>
+<li><code>visu_pars</code></li>
+<li><code>reco</code></li>
+</ul>
+<h3 id="reco-level-parameters">Reco-level parameters<a class="headerlink" href="#reco-level-parameters" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>params<span class="w"> </span>-k<span class="w"> </span>RECO_size<span class="w"> </span>-s<span class="w"> </span><span class="m">3</span><span class="w"> </span>-r<span class="w"> </span><span class="m">1</span>
+</code></pre></div>
+<p>The reco ID is optional and only required for reco-level files.</p>
+<h3 id="environment-defaults_1">Environment defaults<a class="headerlink" href="#environment-defaults_1" title="Permanent link">&para;</a></h3>
+<p>If options are omitted, the following environment variables are used:</p>
+<ul>
+<li><code>BRKRAW_PATH</code></li>
+<li><code>BRKRAW_SCAN_ID</code></li>
+<li><code>BRKRAW_RECO_ID</code></li>
+<li><code>BRKRAW_PARAM_KEY</code></li>
+<li><code>BRKRAW_PARAM_FILE</code></li>
+</ul>
+<hr />
+<h2 id="design-notes">Design notes<a class="headerlink" href="#design-notes" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>info</code> focuses on structural, human-readable summaries</li>
+<li><code>params</code> focuses on key-based, machine-readable output (YAML)</li>
+<li>Neither command modifies data or configuration</li>
+<li>Both commands are safe to run on shared or read-only datasets</li>
+</ul>
 
 
 

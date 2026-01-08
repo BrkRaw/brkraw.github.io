@@ -2,90 +2,134 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://brkraw.github.io/index.html</loc>
-         <lastmod>2026-01-07</lastmod>
-    </url>
-    <url>
-         <loc>https://brkraw.github.io/configuration.html</loc>
-         <lastmod>2026-01-07</lastmod>
-    </url>
-    <url>
-         <loc>https://brkraw.github.io/getting-started.html</loc>
-         <lastmod>2026-01-07</lastmod>
+         <lastmod>2026-01-08</lastmod>
     </url>
     <url>
          <loc>https://brkraw.github.io/api/addon.html</loc>
-         <lastmod>2026-01-07</lastmod>
+         <lastmod>2026-01-08</lastmod>
     </url>
     <url>
-         <loc>https://brkraw.github.io/api/cli-workflows.html</loc>
-         <lastmod>2026-01-07</lastmod>
+         <loc>https://brkraw.github.io/api/convert.html</loc>
+         <lastmod>2026-01-08</lastmod>
+    </url>
+    <url>
+         <loc>https://brkraw.github.io/api/hook.html</loc>
+         <lastmod>2026-01-08</lastmod>
+    </url>
+    <url>
+         <loc>https://brkraw.github.io/api/info.html</loc>
+         <lastmod>2026-01-08</lastmod>
     </url>
     <url>
          <loc>https://brkraw.github.io/api/layout.html</loc>
-         <lastmod>2026-01-07</lastmod>
+         <lastmod>2026-01-08</lastmod>
     </url>
     <url>
          <loc>https://brkraw.github.io/api/overview.html</loc>
-         <lastmod>2026-01-07</lastmod>
+         <lastmod>2026-01-08</lastmod>
     </url>
     <url>
-         <loc>https://brkraw.github.io/api/pruner.html</loc>
-         <lastmod>2026-01-07</lastmod>
+         <loc>https://brkraw.github.io/api/prune.html</loc>
+         <lastmod>2026-01-08</lastmod>
+    </url>
+    <url>
+         <loc>https://brkraw.github.io/cli/index.html</loc>
+         <lastmod>2026-01-08</lastmod>
     </url>
     <url>
          <loc>https://brkraw.github.io/cli/addon.html</loc>
-         <lastmod>2026-01-07</lastmod>
+         <lastmod>2026-01-08</lastmod>
     </url>
     <url>
          <loc>https://brkraw.github.io/cli/config.html</loc>
-         <lastmod>2026-01-07</lastmod>
+         <lastmod>2026-01-08</lastmod>
     </url>
     <url>
          <loc>https://brkraw.github.io/cli/convert.html</loc>
-         <lastmod>2026-01-07</lastmod>
+         <lastmod>2026-01-08</lastmod>
     </url>
     <url>
          <loc>https://brkraw.github.io/cli/hook.html</loc>
-         <lastmod>2026-01-07</lastmod>
+         <lastmod>2026-01-08</lastmod>
     </url>
     <url>
-         <loc>https://brkraw.github.io/cli/info-and-params.html</loc>
-         <lastmod>2026-01-07</lastmod>
+         <loc>https://brkraw.github.io/cli/info.html</loc>
+         <lastmod>2026-01-08</lastmod>
     </url>
     <url>
          <loc>https://brkraw.github.io/cli/prune.html</loc>
-         <lastmod>2026-01-07</lastmod>
+         <lastmod>2026-01-08</lastmod>
     </url>
     <url>
          <loc>https://brkraw.github.io/cli/session.html</loc>
-         <lastmod>2026-01-07</lastmod>
+         <lastmod>2026-01-08</lastmod>
     </url>
     <url>
-         <loc>https://brkraw.github.io/contrib/addons-and-plugins.html</loc>
-         <lastmod>2026-01-07</lastmod>
+         <loc>https://brkraw.github.io/dev/contributing.html</loc>
+         <lastmod>2026-01-08</lastmod>
     </url>
     <url>
-         <loc>https://brkraw.github.io/contrib/contribution.html</loc>
-         <lastmod>2026-01-07</lastmod>
+         <loc>https://brkraw.github.io/dev/contributors.html</loc>
+         <lastmod>2026-01-08</lastmod>
     </url>
     <url>
-         <loc>https://brkraw.github.io/contrib/contributors.html</loc>
-         <lastmod>2026-01-07</lastmod>
+         <loc>https://brkraw.github.io/dev/core-vs-addon.html</loc>
+         <lastmod>2026-01-08</lastmod>
     </url>
     <url>
-         <loc>https://brkraw.github.io/contrib/development-model.html</loc>
-         <lastmod>2026-01-07</lastmod>
+         <loc>https://brkraw.github.io/getting-started/index.html</loc>
+         <lastmod>2026-01-08</lastmod>
     </url>
     <url>
-         <loc>https://brkraw.github.io/contrib/hook-packages.html</loc>
-         <lastmod>2026-01-07</lastmod>
+         <loc>https://brkraw.github.io/getting-started/api.html</loc>
+         <lastmod>2026-01-08</lastmod>
     </url>
     <url>
-         <loc>https://brkraw.github.io/contrib/rule-syntax.html</loc>
-         <lastmod>2026-01-07</lastmod>
+         <loc>https://brkraw.github.io/getting-started/cli.html</loc>
+         <lastmod>2026-01-08</lastmod>
     </url>
     <url>
-         <loc>https://brkraw.github.io/contrib/spec-syntax.html</loc>
-         <lastmod>2026-01-07</lastmod>
+         <loc>https://brkraw.github.io/getting-started/configuration.html</loc>
+         <lastmod>2026-01-08</lastmod>
+    </url>
+    <url>
+         <loc>https://brkraw.github.io/getting-started/hooks.html</loc>
+         <lastmod>2026-01-08</lastmod>
+    </url>
+    <url>
+         <loc>https://brkraw.github.io/getting-started/viewer.html</loc>
+         <lastmod>2026-01-08</lastmod>
+    </url>
+    <url>
+         <loc>https://brkraw.github.io/reference/addons-and-plugins.html</loc>
+         <lastmod>2026-01-08</lastmod>
+    </url>
+    <url>
+         <loc>https://brkraw.github.io/reference/cli-extensions.html</loc>
+         <lastmod>2026-01-08</lastmod>
+    </url>
+    <url>
+         <loc>https://brkraw.github.io/reference/context-map.html</loc>
+         <lastmod>2026-01-08</lastmod>
+    </url>
+    <url>
+         <loc>https://brkraw.github.io/reference/extensibility.html</loc>
+         <lastmod>2026-01-08</lastmod>
+    </url>
+    <url>
+         <loc>https://brkraw.github.io/reference/hook-packages.html</loc>
+         <lastmod>2026-01-08</lastmod>
+    </url>
+    <url>
+         <loc>https://brkraw.github.io/reference/layout.html</loc>
+         <lastmod>2026-01-08</lastmod>
+    </url>
+    <url>
+         <loc>https://brkraw.github.io/reference/rules.html</loc>
+         <lastmod>2026-01-08</lastmod>
+    </url>
+    <url>
+         <loc>https://brkraw.github.io/reference/specs.html</loc>
+         <lastmod>2026-01-08</lastmod>
     </url>
 </urlset>

@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://brkraw.github.io/cli/config.html">
+        <link rel="canonical" href="https://brkraw.github.io/reference/specs.html">
       
       
-        <link rel="prev" href="prune.html">
+        <link rel="prev" href="rules.html">
       
       
-        <link rel="next" href="addon.html">
+        <link rel="next" href="context-map.html">
       
       
         
@@ -27,7 +27,7 @@
     
     
       
-        <title>config - Preclinical MRI dataset toolkit</title>
+        <title>Spec syntax - Preclinical MRI dataset toolkit</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#config" class="md-skip">
+        <a href="#spec-syntax-reference" class="md-skip">
           Skip to content
         </a>
       
@@ -107,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              config
+              Spec syntax
             
           </span>
         </div>
@@ -246,13 +246,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="index.html" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../cli/index.html" class="md-tabs__link">
           
   
   
@@ -288,11 +286,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../reference/extensibility.html" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="extensibility.html" class="md-tabs__link">
           
   
   
@@ -626,31 +626,26 @@
       
   
   
-    
   
   
-  
     
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   
@@ -668,7 +663,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -686,7 +681,7 @@
   
   
     <li class="md-nav__item">
-      <a href="index.html" class="md-nav__link">
+      <a href="../cli/index.html" class="md-nav__link">
         
   
   
@@ -714,7 +709,7 @@
   
   
     <li class="md-nav__item">
-      <a href="session.html" class="md-nav__link">
+      <a href="../cli/session.html" class="md-nav__link">
         
   
   
@@ -742,7 +737,7 @@
   
   
     <li class="md-nav__item">
-      <a href="info.html" class="md-nav__link">
+      <a href="../cli/info.html" class="md-nav__link">
         
   
   
@@ -770,7 +765,7 @@
   
   
     <li class="md-nav__item">
-      <a href="convert.html" class="md-nav__link">
+      <a href="../cli/convert.html" class="md-nav__link">
         
   
   
@@ -798,7 +793,7 @@
   
   
     <li class="md-nav__item">
-      <a href="prune.html" class="md-nav__link">
+      <a href="../cli/prune.html" class="md-nav__link">
         
   
   
@@ -823,37 +818,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    config
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="config.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../cli/config.html" class="md-nav__link">
         
   
   
@@ -869,120 +837,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#subcommands" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Subcommands
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Subcommands">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#config-init" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        config init
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#config-show" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        config show
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#config-path" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        config path
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#config-edit" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        config edit
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#config-set" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        config set
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#config-unset" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        config unset
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#config-reset" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        config reset
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -995,7 +849,7 @@
   
   
     <li class="md-nav__item">
-      <a href="addon.html" class="md-nav__link">
+      <a href="../cli/addon.html" class="md-nav__link">
         
   
   
@@ -1023,7 +877,7 @@
   
   
     <li class="md-nav__item">
-      <a href="hook.html" class="md-nav__link">
+      <a href="../cli/hook.html" class="md-nav__link">
         
   
   
@@ -1310,26 +1164,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
             
   
   
@@ -1347,7 +1206,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1365,7 +1224,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/extensibility.html" class="md-nav__link">
+      <a href="extensibility.html" class="md-nav__link">
         
   
   
@@ -1393,7 +1252,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/addons-and-plugins.html" class="md-nav__link">
+      <a href="addons-and-plugins.html" class="md-nav__link">
         
   
   
@@ -1421,7 +1280,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/cli-extensions.html" class="md-nav__link">
+      <a href="cli-extensions.html" class="md-nav__link">
         
   
   
@@ -1449,7 +1308,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/rules.html" class="md-nav__link">
+      <a href="rules.html" class="md-nav__link">
         
   
   
@@ -1474,10 +1333,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../reference/specs.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Spec syntax
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="specs.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1493,6 +1379,197 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Purpose
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spec-file-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Spec file structure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#meta-block" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        meta block
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="meta block">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#required-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Required fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optional-meta-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Optional meta fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output keys
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sources
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inputs-derived-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inputs (derived fields)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transforms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Transforms
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#defaults-and-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defaults and requirements
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#study-level-behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Study-level behavior
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-specs-intentionally-do-not-handle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What specs intentionally do not handle
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relationship-to-context-maps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relationship to context maps
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-documents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related documents
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1505,7 +1582,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/context-map.html" class="md-nav__link">
+      <a href="context-map.html" class="md-nav__link">
         
   
   
@@ -1533,7 +1610,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/layout.html" class="md-nav__link">
+      <a href="layout.html" class="md-nav__link">
         
   
   
@@ -1561,7 +1638,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/hook-packages.html" class="md-nav__link">
+      <a href="hook-packages.html" class="md-nav__link">
         
   
   
@@ -1759,22 +1836,44 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#subcommands" class="md-nav__link">
+  <a href="#purpose" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Subcommands
+        Purpose
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Subcommands">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spec-file-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Spec file structure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#meta-block" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        meta block
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="meta block">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#config-init" class="md-nav__link">
+  <a href="#required-fields" class="md-nav__link">
     <span class="md-ellipsis">
       
-        config init
+        Required fields
       
     </span>
   </a>
@@ -1782,65 +1881,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#config-show" class="md-nav__link">
+  <a href="#optional-meta-fields" class="md-nav__link">
     <span class="md-ellipsis">
       
-        config show
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#config-path" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        config path
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#config-edit" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        config edit
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#config-set" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        config set
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#config-unset" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        config unset
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#config-reset" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        config reset
+        Optional meta fields
       
     </span>
   </a>
@@ -1849,6 +1893,116 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output keys
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sources
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inputs-derived-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inputs (derived fields)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transforms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Transforms
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#defaults-and-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defaults and requirements
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#study-level-behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Study-level behavior
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-specs-intentionally-do-not-handle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What specs intentionally do not handle
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relationship-to-context-maps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relationship to context maps
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-documents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related documents
+      
+    </span>
+  </a>
   
 </li>
       
@@ -1872,92 +2026,296 @@
   
 
 
-<h1 id="config">config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h1>
-<p>Manage BrkRaw configuration locations and <code>config.yaml</code>.</p>
-<p>Use this command to:</p>
-<ul>
-<li>create or reset config roots,</li>
-<li>inspect resolved configuration,</li>
-<li>set or unset individual keys,</li>
-<li>open <code>config.yaml</code> in your preferred editor.</li>
-</ul>
-<p>By default, BrkRaw stores configuration under <code>~/.brkraw</code>, or you can override it
-with <code>BRKRAW_CONFIG_HOME</code> or <code>--root</code>.</p>
+<h1 id="spec-syntax-reference">Spec Syntax Reference<a class="headerlink" href="#spec-syntax-reference" title="Permanent link">&para;</a></h1>
+<p>Specs define how Bruker Paravision parameter files are mapped into structured
+outputs. They are pure mapping recipes: no conditional selection, no runtime
+state, no project-specific logic.</p>
+<p>Specs are selected by rules and evaluated by the remapper engine.</p>
 <hr />
-<h2 id="subcommands">Subcommands<a class="headerlink" href="#subcommands" title="Permanent link">&para;</a></h2>
-<h3 id="config-init">config init<a class="headerlink" href="#config-init" title="Permanent link">&para;</a></h3>
-<p>Create the config folders and optionally create <code>config.yaml</code>.</p>
-<div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>config<span class="w"> </span>init
-</code></pre></div>
-<p>Options:</p>
+<h2 id="purpose">Purpose<a class="headerlink" href="#purpose" title="Permanent link">&para;</a></h2>
+<p>Specs are used to:</p>
 <ul>
-<li>
-<p><code>--no-config</code><br />
-  Do not create <code>config.yaml</code>.</p>
-</li>
-<li>
-<p><code>--no-exist-ok</code><br />
-  Fail if the config root already exists.</p>
-</li>
+<li>define fields shown by <code>brkraw info</code></li>
+<li>generate structured metadata dictionaries</li>
+<li>populate sidecar JSON files (for example BIDS-style metadata)</li>
+<li>provide normalized values for layout and naming</li>
+</ul>
+<p>Specs do <strong>not</strong>:</p>
+<ul>
+<li>decide <em>when</em> they apply (rules do that)</li>
+<li>modify values conditionally per project (context maps do that)</li>
+<li>control output filenames directly</li>
 </ul>
 <hr />
-<h3 id="config-show">config show<a class="headerlink" href="#config-show" title="Permanent link">&para;</a></h3>
-<p>Print resolved config values (ordered for readability).</p>
-<div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>config<span class="w"> </span>show
-</code></pre></div>
-<p>If <code>config.yaml</code> is empty, prints:</p>
-<div class="highlight"><pre><span></span><code>config.yaml: &lt;empty&gt;
-</code></pre></div>
-<hr />
-<h3 id="config-path">config path<a class="headerlink" href="#config-path" title="Permanent link">&para;</a></h3>
-<p>Print a specific config path.</p>
-<div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>config<span class="w"> </span>path<span class="w"> </span>root
-brkraw<span class="w"> </span>config<span class="w"> </span>path<span class="w"> </span>config
-brkraw<span class="w"> </span>config<span class="w"> </span>path<span class="w"> </span>rules
-brkraw<span class="w"> </span>config<span class="w"> </span>path<span class="w"> </span>specs
-brkraw<span class="w"> </span>config<span class="w"> </span>path<span class="w"> </span>transforms
-</code></pre></div>
-<hr />
-<h3 id="config-edit">config edit<a class="headerlink" href="#config-edit" title="Permanent link">&para;</a></h3>
-<p>Edit <code>config.yaml</code> in an editor.</p>
-<div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>config<span class="w"> </span>edit
-</code></pre></div>
-<p>BrkRaw resolves the editor in this order:</p>
+<h2 id="spec-file-structure">Spec file structure<a class="headerlink" href="#spec-file-structure" title="Permanent link">&para;</a></h2>
+<p>A spec is a YAML mapping with two kinds of top-level entries:</p>
 <ol>
-<li><code>config.yaml: editor</code></li>
-<li><code>$VISUAL</code></li>
-<li><code>$EDITOR</code></li>
+<li><code>__meta__</code>: required metadata describing the spec</li>
+<li>output keys: mapping definitions</li>
 </ol>
-<p>If <code>config.yaml</code> does not exist, it is reset to defaults before editing.</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">__meta__</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;mrs&quot;</span>
+<span class="w">  </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1.0.0&quot;</span>
+<span class="w">  </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Metadata</span><span class="nv"> </span><span class="s">mapping</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">PRESS/STEAM</span><span class="nv"> </span><span class="s">scans&quot;</span>
+<span class="w">  </span><span class="nt">category</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;info_spec&quot;</span>
+<span class="w">  </span><span class="nt">transforms_source</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;mrs_transforms.py&quot;</span>
+
+<span class="nt">Subject.ID</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">sources</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">subject</span>
+<span class="w">      </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SUBJECT_id</span>
+</code></pre></div>
 <hr />
-<h3 id="config-set">config set<a class="headerlink" href="#config-set" title="Permanent link">&para;</a></h3>
-<p>Set a config key.</p>
-<div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>config<span class="w"> </span><span class="nb">set</span><span class="w"> </span>logging.level<span class="w"> </span>DEBUG
-brkraw<span class="w"> </span>config<span class="w"> </span><span class="nb">set</span><span class="w"> </span>output.float_decimals<span class="w"> </span><span class="m">4</span>
+<h2 id="meta-block"><strong>meta</strong> block<a class="headerlink" href="#meta-block" title="Permanent link">&para;</a></h2>
+<p>Every spec <strong>must</strong> define <code>__meta__</code>.</p>
+<h3 id="required-fields">Required fields<a class="headerlink" href="#required-fields" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">__meta__</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;mrs&quot;</span>
+<span class="w">  </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1.0.0&quot;</span>
+<span class="w">  </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Metadata</span><span class="nv"> </span><span class="s">mapping</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">PRESS/STEAM</span><span class="nv"> </span><span class="s">scans&quot;</span>
+<span class="w">  </span><span class="nt">category</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;info_spec&quot;</span>
 </code></pre></div>
-<p>Nested keys are supported with dot notation:</p>
-<div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>config<span class="w"> </span><span class="nb">set</span><span class="w"> </span>logging.print_width<span class="w"> </span><span class="m">160</span>
-</code></pre></div>
-<p>You can also use <code>KEY=VALUE</code> form:</p>
-<div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>config<span class="w"> </span><span class="nb">set</span><span class="w"> </span>logging.level<span class="o">=</span>DEBUG
-</code></pre></div>
-<p>Values are parsed as YAML scalars (e.g., <code>true</code>, <code>false</code>, numbers, lists).</p>
+<ul>
+<li>
+<p><code>name</code></p>
+</li>
+<li>
+<p>lowercase snake_case</p>
+</li>
+<li>up to four tokens</li>
+<li>
+<p>pattern: <code>^[a-z][a-z0-9]*(?:_[a-z0-9]+){0,3}$</code></p>
+</li>
+<li>
+<p><code>version</code></p>
+</li>
+<li>
+<p>free-form string</p>
+</li>
+<li>
+<p>compared lexically unless pinned by rules</p>
+</li>
+<li>
+<p><code>description</code></p>
+</li>
+<li>
+<p>human-readable summary</p>
+</li>
+<li>
+<p><code>category</code></p>
+</li>
+<li>
+<p>required when selected by rules</p>
+</li>
+<li>
+<p>must be one of:</p>
+<ul>
+<li><code>info_spec</code></li>
+<li><code>metadata_spec</code></li>
+</ul>
+</li>
+</ul>
 <hr />
-<h3 id="config-unset">config unset<a class="headerlink" href="#config-unset" title="Permanent link">&para;</a></h3>
-<p>Unset a config key.</p>
-<div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>config<span class="w"> </span><span class="nb">unset</span><span class="w"> </span>logging.level
-brkraw<span class="w"> </span>config<span class="w"> </span><span class="nb">unset</span><span class="w"> </span>output.layout_template
+<h3 id="optional-meta-fields">Optional meta fields<a class="headerlink" href="#optional-meta-fields" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">__meta__</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">transforms_source</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;transforms.py&quot;</span>
+<span class="w">  </span><span class="nt">include</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;base.yaml&quot;</span>
+<span class="w">  </span><span class="nt">include_mode</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;override&quot;</span>
+<span class="w">  </span><span class="nt">authors</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Jane</span><span class="nv"> </span><span class="s">Doe&quot;</span>
+<span class="w">      </span><span class="nt">email</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;jane@example.com&quot;</span>
+<span class="w">  </span><span class="nt">doi</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;10.1234/example&quot;</span>
+<span class="w">  </span><span class="nt">citation</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Doe</span><span class="nv"> </span><span class="s">et</span><span class="nv"> </span><span class="s">al.,</span><span class="nv"> </span><span class="s">NeuroImage</span><span class="nv"> </span><span class="s">2024&quot;</span>
 </code></pre></div>
-<p>Nested keys are supported with dot notation. When nested dicts become empty,
-they are removed automatically.</p>
+<p>Supported optional fields:</p>
+<ul>
+<li>
+<p><code>transforms_source</code></p>
+</li>
+<li>
+<p>string or list of strings</p>
+</li>
+<li>relative to the spec file unless absolute</li>
+<li>
+<p>later files override earlier ones</p>
+</li>
+<li>
+<p><code>include</code></p>
+</li>
+<li>
+<p>string or list of spec paths</p>
+</li>
+<li>
+<p>merged before the current spec</p>
+</li>
+<li>
+<p><code>include_mode</code></p>
+</li>
+<li>
+<p><code>override</code> (default): current spec wins</p>
+</li>
+<li>
+<p><code>strict</code>: conflict raises an error</p>
+</li>
+<li>
+<p><code>authors</code>, <code>developers</code></p>
+</li>
+<li>
+<p><code>doi</code></p>
+</li>
+<li>
+<p><code>citation</code></p>
+</li>
+</ul>
 <hr />
-<h3 id="config-reset">config reset<a class="headerlink" href="#config-reset" title="Permanent link">&para;</a></h3>
-<p>Reset <code>config.yaml</code> to defaults.</p>
-<div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>config<span class="w"> </span>reset
+<h2 id="output-keys">Output keys<a class="headerlink" href="#output-keys" title="Permanent link">&para;</a></h2>
+<p>Each non-<code>__meta__</code> top-level key defines one output field.</p>
+<p>Keys may be dotted to create nested structures:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">Study.ID</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">sources</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">subject</span>
+<span class="w">      </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SUBJECT_id</span>
 </code></pre></div>
-<p>To skip confirmation:</p>
-<div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>config<span class="w"> </span>reset<span class="w"> </span>--yes
+<p>Produces:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="s2">&quot;Study&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;ID&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">}}</span>
 </code></pre></div>
+<hr />
+<h2 id="sources">Sources<a class="headerlink" href="#sources" title="Permanent link">&para;</a></h2>
+<p>The simplest mapping uses <code>sources</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">FieldName</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">sources</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">method</span>
+<span class="w">      </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PVM_SPackArrNSlices</span>
+</code></pre></div>
+<p>Each source entry supports:</p>
+<ul>
+<li>
+<p><code>file</code>: one of</p>
+</li>
+<li>
+<p><code>method</code></p>
+</li>
+<li><code>acqp</code></li>
+<li><code>visu_pars</code></li>
+<li><code>reco</code></li>
+<li>
+<p><code>subject</code></p>
+</li>
+<li>
+<p><code>key</code>: parameter name inside that file</p>
+</li>
+<li>
+<p><code>reco_id</code>: optional, for <code>visu_pars</code> or <code>reco</code></p>
+</li>
+</ul>
+<p>If multiple sources are listed, the <strong>first available value wins</strong>.</p>
+<hr />
+<h2 id="inputs-derived-fields">Inputs (derived fields)<a class="headerlink" href="#inputs-derived-fields" title="Permanent link">&para;</a></h2>
+<p>Use <code>inputs</code> when a field depends on multiple values.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">out.joined</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">inputs</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">a</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">sources</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">method</span>
+<span class="w">          </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PVM_SPackArrNSlices</span>
+<span class="w">    </span><span class="nt">b</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">const</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="w">  </span><span class="nt">transform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">join_fields</span>
+</code></pre></div>
+<p>Rules:</p>
+<ul>
+<li>exactly one of <code>sources</code> or <code>inputs</code> is required</li>
+<li>
+<p><code>inputs</code> may reference:</p>
+</li>
+<li>
+<p><code>sources</code></p>
+</li>
+<li><code>const</code></li>
+<li><code>ref</code> (previously resolved output)</li>
+<li><code>$scan_id</code>, <code>$reco_id</code></li>
+</ul>
+<hr />
+<h2 id="transforms">Transforms<a class="headerlink" href="#transforms" title="Permanent link">&para;</a></h2>
+<p>Transforms are Python functions referenced by name.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">FieldName</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">sources</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">acqp</span>
+<span class="w">      </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ACQ_XXX</span>
+<span class="w">  </span><span class="nt">transform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">normalize_method</span>
+</code></pre></div>
+<p>Behavior:</p>
+<ul>
+<li>a single transform receives the resolved value</li>
+<li>a list applies transforms sequentially</li>
+<li>with <code>inputs</code>, the first transform receives keyword arguments</li>
+</ul>
+<p>Transforms are resolved from <code>__meta__.transforms_source</code>.</p>
+<hr />
+<h2 id="defaults-and-requirements">Defaults and requirements<a class="headerlink" href="#defaults-and-requirements" title="Permanent link">&para;</a></h2>
+<p>Source and input entries may define:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">default</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</code></pre></div>
+<ul>
+<li><code>default</code>: fallback if no value is found</li>
+<li><code>required</code>: missing value raises an error</li>
+</ul>
+<hr />
+<h2 id="study-level-behavior">Study-level behavior<a class="headerlink" href="#study-level-behavior" title="Permanent link">&para;</a></h2>
+<p>When a Study-like object is used as the source:</p>
+<ul>
+<li>only <code>file: subject</code> is allowed</li>
+<li>at least one subject source must be present</li>
+</ul>
+<hr />
+<h2 id="what-specs-intentionally-do-not-handle">What specs intentionally do not handle<a class="headerlink" href="#what-specs-intentionally-do-not-handle" title="Permanent link">&para;</a></h2>
+<p>Specs do <strong>not</strong> define:</p>
+<ul>
+<li>conditional overrides per project</li>
+<li>subject or session remapping</li>
+<li>scan selection logic</li>
+<li>output layout rules</li>
+</ul>
+<p>Those belong to:</p>
+<ul>
+<li><strong>rules</strong> (selection)</li>
+<li><strong>context maps</strong> (runtime remapping)</li>
+<li><strong>layout configuration</strong> (naming)</li>
+</ul>
+<hr />
+<h2 id="relationship-to-context-maps">Relationship to context maps<a class="headerlink" href="#relationship-to-context-maps" title="Permanent link">&para;</a></h2>
+<p>Specs produce <strong>canonical outputs</strong>.</p>
+<p>Context maps:</p>
+<ul>
+<li>are supplied at runtime</li>
+<li>operate <em>after</em> spec evaluation</li>
+<li>may override or extend spec outputs</li>
+<li>may introduce selectors for conversion</li>
+</ul>
+<p>See <code>reference/context-map.md</code> for mapping rules and schema.</p>
+<hr />
+<h2 id="validation">Validation<a class="headerlink" href="#validation" title="Permanent link">&para;</a></h2>
+<p>To validate a spec:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">brkraw.specs.remapper</span><span class="w"> </span><span class="kn">import</span> <span class="n">map_parameters</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">map_parameters</span><span class="p">(</span><span class="n">scan</span><span class="p">,</span> <span class="n">spec</span><span class="p">,</span> <span class="n">validate</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+<p>Validation checks:</p>
+<ul>
+<li>schema compliance</li>
+<li>transform resolution</li>
+<li>source correctness</li>
+</ul>
+<hr />
+<h2 id="related-documents">Related documents<a class="headerlink" href="#related-documents" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="rules.html">Rule syntax</a></li>
+<li><a href="context-map.html">Context map syntax</a></li>
+<li><a href="extensibility.html">Extensibility model</a></li>
+<li><a href="layout.html">Output layout and naming</a></li>
+</ul>
 
 
 
