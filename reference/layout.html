@@ -992,6 +992,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../api/data-access.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    data access
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../api/info.html" class="md-nav__link">
         
   
@@ -1287,7 +1315,7 @@
   <span class="md-ellipsis">
     
   
-    CLI extensions
+    CLI plugins (overview)
   
 
     
@@ -1535,6 +1563,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#fixed-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fixed keys
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#slicepack-suffix" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1623,7 +1662,7 @@
   <span class="md-ellipsis">
     
   
-    Converter hook packages
+    Hook packages (overview)
   
 
     
@@ -1739,6 +1778,118 @@
     
   
     Core vs addon development
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dev/cli-extensions.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Building CLI plugins
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dev/hook-packages.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Building hook packages
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dev/roadmap.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Roadmap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dev/documentation.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentation
   
 
     
@@ -1890,6 +2041,17 @@
     <span class="md-ellipsis">
       
         layout_template
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fixed-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fixed keys
       
     </span>
   </a>
@@ -2113,6 +2275,20 @@ output paths and filenames
 <ul>
 <li>strict compatibility is required</li>
 <li>external standards mandate exact paths</li>
+</ul>
+<hr />
+<h2 id="fixed-keys">Fixed keys<a class="headerlink" href="#fixed-keys" title="Permanent link">&para;</a></h2>
+<p>Some placeholders are always available, even if they are not present in mapped
+metadata. These are referred to as <em>fixed keys</em>.</p>
+<ul>
+<li><code>{ScanID}</code> / <code>{scan_id}</code> / <code>{scanid}</code>: current scan id.</li>
+<li><code>{RecoID}</code> / <code>{reco_id}</code> / <code>{recoid}</code>: current reconstruction id (may be empty when not applicable).</li>
+<li><code>{Counter}</code> / <code>{counter}</code>: optional run-local counter for de-duplication (used by <code>brkraw convert --dedupe</code>).</li>
+</ul>
+<p>These fixed keys work in both:</p>
+<ul>
+<li><code>layout_template</code> placeholders</li>
+<li><code>layout_entries</code> via <code>key: ScanID</code> / <code>key: RecoID</code> / <code>key: Counter</code></li>
 </ul>
 <hr />
 <h2 id="slicepack-suffix">slicepack suffix<a class="headerlink" href="#slicepack-suffix" title="Permanent link">&para;</a></h2>

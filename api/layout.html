@@ -997,6 +997,34 @@
   
   
     <li class="md-nav__item">
+      <a href="data-access.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    data access
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="info.html" class="md-nav__link">
         
   
@@ -1148,6 +1176,23 @@
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="render_layout">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fixed-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fixed keys
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1367,7 +1412,7 @@
   <span class="md-ellipsis">
     
   
-    CLI extensions
+    CLI plugins (overview)
   
 
     
@@ -1507,7 +1552,7 @@
   <span class="md-ellipsis">
     
   
-    Converter hook packages
+    Hook packages (overview)
   
 
     
@@ -1643,6 +1688,118 @@
   
   
     <li class="md-nav__item">
+      <a href="../dev/cli-extensions.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Building CLI plugins
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dev/hook-packages.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Building hook packages
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dev/roadmap.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Roadmap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dev/documentation.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../dev/contributors.html" class="md-nav__link">
         
   
@@ -1706,6 +1863,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="render_layout">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fixed-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fixed keys
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1767,6 +1941,13 @@
     <span class="n">context_map</span><span class="o">=</span><span class="s2">&quot;maps.yaml&quot;</span><span class="p">,</span>
 <span class="p">)</span>
 </code></pre></div>
+<h3 id="fixed-keys">Fixed keys<a class="headerlink" href="#fixed-keys" title="Permanent link">&para;</a></h3>
+<p>These placeholders are always available, regardless of mapped metadata:</p>
+<ul>
+<li><code>{ScanID}</code> / <code>{scan_id}</code> / <code>{scanid}</code></li>
+<li><code>{RecoID}</code> / <code>{reco_id}</code> / <code>{recoid}</code> (may be <code>None</code>)</li>
+<li><code>{Counter}</code> / <code>{counter}</code> (optional; use for de-duplication)</li>
+</ul>
 <p>You can override specs for testing via API-only kwargs:</p>
 <div class="highlight"><pre><span></span><code><span class="n">name</span> <span class="o">=</span> <span class="n">layout_core</span><span class="o">.</span><span class="n">render_layout</span><span class="p">(</span>
     <span class="n">loader</span><span class="p">,</span>

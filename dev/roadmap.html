@@ -1,0 +1,3038 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Bruker Paravision dataset loader and NIfTI converter">
+      
+      
+      
+        <link rel="canonical" href="https://brkraw.github.io/dev/roadmap.html">
+      
+      
+        <link rel="prev" href="hook-packages.html">
+      
+      
+        <link rel="next" href="documentation.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Roadmap - Preclinical MRI dataset toolkit</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#roadmap-dataset-driven-integration-tests" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../index.html" title="Preclinical MRI dataset toolkit" class="md-header__button md-logo" aria-label="Preclinical MRI dataset toolkit" data-md-component="logo">
+      
+  <img src="../assets/brkraw-logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Preclinical MRI dataset toolkit
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Roadmap
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/BrkRaw/brkraw" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    BrkRaw/brkraw
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../index.html" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../getting-started/index.html" class="md-tabs__link">
+          
+  
+  
+  Getting Started
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../cli/index.html" class="md-tabs__link">
+          
+  
+  
+  CLI Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../api/overview.html" class="md-tabs__link">
+          
+  
+  
+  API Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../reference/extensibility.html" class="md-tabs__link">
+          
+  
+  
+  Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="contributing.html" class="md-tabs__link">
+          
+  
+  
+  Developer Guide
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="Preclinical MRI dataset toolkit" class="md-nav__button md-logo" aria-label="Preclinical MRI dataset toolkit" data-md-component="logo">
+      
+  <img src="../assets/brkraw-logo.svg" alt="logo">
+
+    </a>
+    Preclinical MRI dataset toolkit
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/BrkRaw/brkraw" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    BrkRaw/brkraw
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Getting Started
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/cli.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI quickstart
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/api.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Python API quickstart
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/configuration.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuration basics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/hooks.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Converter hooks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/viewer.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dataset viewer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CLI Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli/session.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    session
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli/info.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    info
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli/convert.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    convert
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli/prune.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    prune
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli/config.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    config
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli/addon.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    addon
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli/hook.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    hook
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    API Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/overview.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/data-access.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    data access
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/info.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    info and params
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/convert.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    convert
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/prune.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    prune
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/layout.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    layout
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/addon.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    addon
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/hook.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    hook
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/extensibility.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Extensibility model
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/addons-and-plugins.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Addons and plugins
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/cli-extensions.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI plugins (overview)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/rules.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rule syntax
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/specs.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Spec syntax
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/context-map.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Context map syntax
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/layout.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Output layout and naming
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/hook-packages.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hook packages (overview)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer Guide
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Developer Guide
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="contributing.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contributing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="core-vs-addon.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Core vs addon development
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="cli-extensions.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Building CLI plugins
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="hook-packages.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Building hook packages
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Roadmap
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="roadmap.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Roadmap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#guiding-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Guiding principles
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dataset-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dataset strategy
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dataset strategy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#two-contribution-paths" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Two contribution paths
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#canonical-dataset-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Canonical dataset repository
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dataset-registry-and-ci-tiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dataset registry and CI tiers
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#registry-implementation-to-build" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Registry implementation (to build)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dataset-governance-hosted-vs-linked" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dataset governance (hosted vs linked)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dataset governance (hosted vs linked)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hosted-datasets-pr-to-brkraw-dataset-required-vs-recommended" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hosted datasets (PR to brkraw-dataset): required vs recommended
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linked-datasets-registry-required-vs-recommended" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Linked datasets (registry): required vs recommended
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dataset-manifest-yaml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dataset manifest (YAML)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manifest-validation-in-the-dataset-repo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Manifest validation (in the dataset repo)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ci-integration-with-manifests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CI integration with manifests
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-brkraw-prune-to-curate-datasets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using brkraw prune to curate datasets
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-harness-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Test harness design
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Test harness design">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inputs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dataset-and-study-discovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dataset and study discovery
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#execution-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Execution model
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loggingartifacts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logging/artifacts
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proposed-test-suite-phased" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Proposed test suite (phased)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Proposed test suite (phased)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#phase-1-infrastructure-discovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 1: Infrastructure + discovery
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-2-resolver-coverage-detailed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 2: Resolver coverage (detailed)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-3-apps-coverage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 3: Apps coverage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-4-cli-smoke-tests-minimal-but-real" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 4: CLI smoke tests (minimal but real)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-5-fid-resolver-optional-gated" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 5: FID resolver (optional / gated)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ci-plan-github-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CI plan (GitHub Actions)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CI plan (GitHub Actions)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jobs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Jobs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caching" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Caching
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#artifacts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Artifacts
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#open-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Open questions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#developer-ux-brkraw-test-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Developer UX: brkraw test command
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="documentation.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="contributors.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contributors
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#guiding-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Guiding principles
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dataset-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dataset strategy
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dataset strategy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#two-contribution-paths" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Two contribution paths
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#canonical-dataset-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Canonical dataset repository
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dataset-registry-and-ci-tiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dataset registry and CI tiers
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#registry-implementation-to-build" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Registry implementation (to build)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dataset-governance-hosted-vs-linked" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dataset governance (hosted vs linked)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dataset governance (hosted vs linked)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hosted-datasets-pr-to-brkraw-dataset-required-vs-recommended" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hosted datasets (PR to brkraw-dataset): required vs recommended
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linked-datasets-registry-required-vs-recommended" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Linked datasets (registry): required vs recommended
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dataset-manifest-yaml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dataset manifest (YAML)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manifest-validation-in-the-dataset-repo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Manifest validation (in the dataset repo)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ci-integration-with-manifests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CI integration with manifests
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-brkraw-prune-to-curate-datasets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using brkraw prune to curate datasets
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-harness-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Test harness design
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Test harness design">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inputs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dataset-and-study-discovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dataset and study discovery
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#execution-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Execution model
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loggingartifacts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logging/artifacts
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proposed-test-suite-phased" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Proposed test suite (phased)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Proposed test suite (phased)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#phase-1-infrastructure-discovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 1: Infrastructure + discovery
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-2-resolver-coverage-detailed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 2: Resolver coverage (detailed)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-3-apps-coverage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 3: Apps coverage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-4-cli-smoke-tests-minimal-but-real" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 4: CLI smoke tests (minimal but real)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-5-fid-resolver-optional-gated" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 5: FID resolver (optional / gated)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ci-plan-github-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CI plan (GitHub Actions)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CI plan (GitHub Actions)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jobs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Jobs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caching" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Caching
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#artifacts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Artifacts
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#open-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Open questions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#developer-ux-brkraw-test-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Developer UX: brkraw test command
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="roadmap-dataset-driven-integration-tests">Roadmap: Dataset-driven integration tests<a class="headerlink" href="#roadmap-dataset-driven-integration-tests" title="Permanent link">&para;</a></h1>
+<p>This project currently has strong unit-tested coverage in core/dataclasses, but
+end-to-end validation of <code>resolver/</code>, <code>apps/</code>, and <code>cli/</code> is limited by the need
+for real Paravision datasets.</p>
+<p>The goal of this roadmap is to add <strong>dataset-driven integration tests</strong> that
+can run locally and in CI by downloading a canonical dataset bundle and
+executing a detailed validation suite over every discovered study.</p>
+<hr />
+<h2 id="guiding-principles">Guiding principles<a class="headerlink" href="#guiding-principles" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Prefer <strong>real data</strong> over mocks for resolver/app behavior.</li>
+<li>Fail on <strong>exceptions</strong>, not on domain-specific <code>None</code> returns (unless the API
+  contract says otherwise).</li>
+<li>Produce <strong>structured logs/artifacts</strong> per study/scan/reco so failures are easy
+  to diagnose after CI runs.</li>
+<li>Keep tests configurable: fast subset locally, full suite in CI/nightly.</li>
+<li>Avoid new runtime dependencies unless required; keep optional extras behind
+  <code>.[dev]</code> or <code>.[test]</code> if introduced.</li>
+</ul>
+<hr />
+<h2 id="dataset-strategy">Dataset strategy<a class="headerlink" href="#dataset-strategy" title="Permanent link">&para;</a></h2>
+<p>This test plan assumes <strong>multiple datasets</strong> are available to CI and local
+developers, and that those datasets may be delivered via different mechanisms
+(committed as pruned archives vs fetched from external links).</p>
+<h3 id="two-contribution-paths">Two contribution paths<a class="headerlink" href="#two-contribution-paths" title="Permanent link">&para;</a></h3>
+<p>There are two supported ways to contribute datasets used by integration tests.
+Both paths are discoverable through the dataset registry (so CI and
+<code>brkraw test</code> can run the same selection logic).</p>
+<p>1) <strong>PR a pruned dataset into <code>brkraw-dataset</code></strong> (the "hosted" path)
+   - The dataset is a single archive produced by <code>brkraw prune</code>.
+   - The manifest is a true <em>sidecar</em>: its filename must match the archive
+     filename (same basename), for example:
+     - <code>unc_camri_pv51_example_001.zip</code>
+     - <code>unc_camri_pv51_example_001.yaml</code> (or <code>.yml</code>)
+   - Add a registry entry in the same PR so CI can discover and select it.
+   - Intended for small, sequence-focused, reviewable datasets.
+   - Recommended size policy: keep each pruned dataset bundle <strong>≤ 200 MB</strong>.
+   - Repository layout recommendation:
+     - Store hosted datasets under a contributor-owned namespace folder, e.g.:
+       <code>datasets/&lt;contributor_slug&gt;/&lt;dataset_basename&gt;.zip</code> and
+       <code>datasets/&lt;contributor_slug&gt;/&lt;dataset_basename&gt;.yaml</code>.
+     - Tests should treat the <code>dataset.yaml</code> derived from the sidecar as the
+       source of truth for <code>dataset_id</code> and <code>version</code> (folder names are only for
+       organization and ownership clarity).</p>
+<p>2) <strong>Register an external dataset link in a registry</strong> (the "linked" path)
+   - The dataset is not committed to the repo, but a pinned download source is
+     registered so CI (and other institutions) can fetch it reproducibly.
+   - Registry entries control which CI tier the dataset runs in.</p>
+<h3 id="canonical-dataset-repository">Canonical dataset repository<a class="headerlink" href="#canonical-dataset-repository" title="Permanent link">&para;</a></h3>
+<p>Notes:
+- Canonical dataset repo: <code>https://github.com/BrkRaw/brkraw-dataset.git</code>
+- Prefer Git LFS for hosted binary datasets when needed.
+- The repo may be large; prefer caching and incremental fetch.</p>
+<h3 id="dataset-registry-and-ci-tiers">Dataset registry and CI tiers<a class="headerlink" href="#dataset-registry-and-ci-tiers" title="Permanent link">&para;</a></h3>
+<p>Maintain a registry (in <code>brkraw-dataset</code>) that lists datasets and how to fetch
+them. Registry entries also control CI selection:</p>
+<ul>
+<li><code>priority: true</code> → runs in <code>integration-small</code></li>
+<li><code>priority: false</code> → runs only in <code>integration-full</code> (scheduled/nightly)</li>
+</ul>
+<p>Example registry entry (conceptual):</p>
+<div class="highlight"><pre><span></span><code><span class="nt">datasets</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">dataset_id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unc_camri_pv51_example_001</span>
+<span class="w">    </span><span class="nt">priority</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">source</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">local</span>
+<span class="w">      </span><span class="nt">archive</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">datasets/shlee/unc_camri_pv51_example_001.zip</span>
+<span class="w">      </span><span class="nt">manifest</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">datasets/shlee/unc_camri_pv51_example_001.yaml</span>
+<span class="w">      </span><span class="nt">sha256</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;archive-hash&gt;&quot;</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">dataset_id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">private_site_dataset_002</span>
+<span class="w">    </span><span class="nt">priority</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">    </span><span class="nt">source</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http</span>
+<span class="w">      </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://example.org/brkraw/private_site_dataset_002.tar.zst</span>
+<span class="w">      </span><span class="nt">sha256</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;archive-hash&gt;&quot;</span>
+<span class="w">      </span><span class="nt">extract</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tar</span>
+<span class="w">      </span><span class="nt">subdir</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">private_site_dataset_002</span>
+</code></pre></div>
+<p>Acquisition logic should:</p>
+<ul>
+<li>Support <code>local</code> (use checked-in archive + verify <code>sha256</code>) and <code>http</code> (download</li>
+<li>verify <code>sha256</code> + extract) at minimum.</li>
+<li>Produce a normalized on-disk layout: a single <code>BRKRAW_TEST_DATA_ROOT</code>
+  containing one or more dataset roots with <code>dataset.yaml</code>.</li>
+<li>Cache by immutable identifiers:</li>
+<li><code>local</code>: cache key includes archive path + <code>sha256</code></li>
+<li><code>http</code>: cache key includes URL + <code>sha256</code></li>
+<li>Allow private sources via secrets (tokenized git URLs or authenticated
+  downloads).</li>
+</ul>
+<p>This makes integration tests reproducible regardless of whether data is stored
+in Git or provided as an external download.</p>
+<hr />
+<h2 id="registry-implementation-to-build">Registry implementation (to build)<a class="headerlink" href="#registry-implementation-to-build" title="Permanent link">&para;</a></h2>
+<p>The dataset registry is a first-class component and needs implementation work
+in both the dataset repo and BrkRaw:</p>
+<ul>
+<li>Registry format</li>
+<li>Define a stable YAML schema for entries (<code>dataset_id</code>, <code>priority</code>, <code>source</code>,
+    optional tags/metadata).</li>
+<li>Hosted datasets</li>
+<li>Support entries that reference pruned archives stored in <code>brkraw-dataset</code>
+    (recommended <code>source.type: local</code>).</li>
+<li>External datasets</li>
+<li>Support <code>source.type: http</code> with <code>sha256</code> and extraction rules.</li>
+<li>Support authenticated/private sources via CI secrets.</li>
+<li>Tooling</li>
+<li>Add a small helper to:<ul>
+<li>load and validate the registry</li>
+<li>resolve the selected dataset set (<code>--small/--full</code>, tags)</li>
+<li>materialize datasets into <code>BRKRAW_TEST_DATA_ROOT</code></li>
+<li>emit a resolved list for test parametrization</li>
+</ul>
+</li>
+</ul>
+<p>This work is required before CI can reliably run <code>integration-small</code> vs
+<code>integration-full</code> tiers using only the registry.</p>
+<hr />
+<h2 id="dataset-governance-hosted-vs-linked">Dataset governance (hosted vs linked)<a class="headerlink" href="#dataset-governance-hosted-vs-linked" title="Permanent link">&para;</a></h2>
+<p>Governance requirements should be proportional to how datasets are contributed.
+This plan distinguishes:</p>
+<ul>
+<li><strong>Hosted datasets</strong>: pruned archives submitted by PR to <code>brkraw-dataset</code>.</li>
+<li><strong>Linked datasets</strong>: external datasets registered via the dataset registry.</li>
+</ul>
+<p>The hosted path should remain lightweight so contributors can submit small
+sequence-focused datasets without excessive paperwork, while still ensuring
+legal clarity and CI reproducibility.</p>
+<h3 id="hosted-datasets-pr-to-brkraw-dataset-required-vs-recommended">Hosted datasets (PR to <code>brkraw-dataset</code>): required vs recommended<a class="headerlink" href="#hosted-datasets-pr-to-brkraw-dataset-required-vs-recommended" title="Permanent link">&para;</a></h3>
+<p>Required (must be provided in the sidecar manifest):</p>
+<ul>
+<li>Permission statement: contributor confirms they can distribute the pruned
+  archive via the <code>brkraw-dataset</code> repository.</li>
+<li>License identifier (for the dataset bundle).</li>
+<li>Minimal attribution (at least names; ORCIDs optional).</li>
+<li>Paravision version (if known) and a short <code>notes</code> description.</li>
+<li>Privacy confirmation: de-identified / no PHI.</li>
+<li>Integrity pinning: a checksum for the archived bundle (recommended <code>sha256</code>).</li>
+</ul>
+<p>Recommended (helps long-term maintenance, but not required for acceptance):</p>
+<ul>
+<li>Dataset-level <code>CITATION.cff</code> / <code>CITATION.md</code> content (or a pointer to a paper).</li>
+<li>Provenance fields (scanner/site, acquisition date range, etc.).</li>
+<li><code>curation</code> details (which <code>brkraw prune</code> spec/version was used).</li>
+</ul>
+<h3 id="linked-datasets-registry-required-vs-recommended">Linked datasets (registry): required vs recommended<a class="headerlink" href="#linked-datasets-registry-required-vs-recommended" title="Permanent link">&para;</a></h3>
+<p>Required (must be present in the registry entry, and/or resolvable via a linked
+manifest):</p>
+<ul>
+<li>Pinned source with immutable versioning:</li>
+<li><code>git</code>: commit SHA (preferred) or immutable tag</li>
+<li><code>http</code>: <code>sha256</code> of the downloaded archive</li>
+<li>License and attribution information (either embedded or via a stable link).</li>
+<li>Access method documented (public vs authenticated via CI secrets).</li>
+</ul>
+<p>Recommended:</p>
+<ul>
+<li>Same provenance/curation/privacy fields as hosted datasets.</li>
+<li>Size/tier guidance so only representative subsets run in <code>integration-small</code>.</li>
+</ul>
+<h3 id="dataset-manifest-yaml">Dataset manifest (YAML)<a class="headerlink" href="#dataset-manifest-yaml" title="Permanent link">&para;</a></h3>
+<p>Use a single YAML manifest per dataset and keep its schema stable so CI can
+validate it and so test runs can emit consistent per-dataset reports.</p>
+<p>There are two representations:</p>
+<ul>
+<li><strong>Hosted (archive + sidecar in <code>brkraw-dataset</code>)</strong></li>
+<li>The manifest is stored next to the pruned archive as a sidecar (same basename).</li>
+<li><strong>Materialized (directory under <code>BRKRAW_TEST_DATA_ROOT</code>)</strong></li>
+<li>Acquisition tooling should write/copy a canonical <code>dataset.yaml</code> into the
+    extracted dataset directory so tests can discover datasets uniformly.</li>
+<li>For hosted archives, <code>dataset.yaml</code> is derived from the sidecar.</li>
+</ul>
+<p>Naming rule:</p>
+<ul>
+<li>If the pruned dataset archive is <code>NAME.zip</code> (or <code>.tar.gz</code>, etc.), the manifest
+  must be <code>NAME.yaml</code> (same basename).</li>
+</ul>
+<p>Recommended minimal schema:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">dataset_id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unc_camri_pv51_example_001</span>
+<span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+
+<span class="nt">institution</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Center for Animal MRI, UNC at Chapel Hill</span>
+<span class="nt">authors</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Sung-Ho Lee</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Yen-Yu Ian Shih</span>
+<span class="nt">license</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CC-BY-4.0</span>
+
+<span class="nt">subject</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">species</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rat</span>
+<span class="w">  </span><span class="nt">strain</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SD</span>
+
+<span class="nt">paravision</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;5.1&quot;</span>
+
+<span class="nt">scans</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">3</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">FLASH</span>
+<span class="w">    </span><span class="nt">recos</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">1</span><span class="p p-Indicator">]</span>
+<span class="w">  </span><span class="nt">4</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">FieldMap</span>
+<span class="w">    </span><span class="nt">recos</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">1</span><span class="p p-Indicator">]</span>
+
+<span class="nt">curation</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">tool</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">brkraw prune</span>
+<span class="w">  </span><span class="nt">pruner_spec</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deid_v1</span>
+<span class="w">  </span><span class="nt">notes</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Pruned from original export; removed non-essential/sensitive files.</span>
+
+<span class="nt">privacy</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">deidentified</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">notes</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">No PHI; JCAMP comments stripped where applicable.</span>
+
+<span class="nt">artifacts</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">sha256</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;bundle-or-root-hash&gt;&quot;</span>
+
+<span class="nt">notes</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Paravision 5.1 example dataset</span>
+<span class="nt">comments</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Add any additional context if needed</span>
+</code></pre></div>
+<p>Guidelines:</p>
+<ul>
+<li><code>dataset_id</code> must be unique within the dataset set and stable over time.</li>
+<li><code>version</code> should change when curated contents change (even if the source study
+  is the same).</li>
+<li><code>scans</code> keys should be scan ids as they appear in BrkRaw (<code>loader.avail</code>).</li>
+<li>Prefer structured <code>authors</code> entries so ORCIDs/affiliations can be added later.</li>
+</ul>
+<h3 id="manifest-validation-in-the-dataset-repo">Manifest validation (in the dataset repo)<a class="headerlink" href="#manifest-validation-in-the-dataset-repo" title="Permanent link">&para;</a></h3>
+<p>Add a lightweight validator to <code>brkraw-dataset</code> so PRs cannot introduce
+incomplete/invalid manifests.</p>
+<p>Minimum checks:</p>
+<ul>
+<li>For hosted datasets: archive + sidecar manifest basenames match
+  (<code>NAME.*</code> + <code>NAME.yaml</code>/<code>NAME.yml</code>).</li>
+<li>Registry contains an entry for every hosted dataset bundle.</li>
+<li>required keys present (<code>dataset_id</code>, <code>license</code>, <code>paravision.version</code>, <code>scans</code>)</li>
+<li>scan ids are integers and scan entries include <code>name</code></li>
+<li><code>license</code> matches an allowlist (SPDX-like identifiers where possible)</li>
+<li>optional: verify <code>artifacts.sha256</code> matches the dataset root content</li>
+</ul>
+<p>Implementation options (pick one):</p>
+<ul>
+<li>JSON Schema + <code>jsonschema</code> (already a dependency here; would be new there)</li>
+<li>Simple Python validator (no extra deps) run via <code>python -m</code> or pytest</li>
+</ul>
+<h3 id="ci-integration-with-manifests">CI integration with manifests<a class="headerlink" href="#ci-integration-with-manifests" title="Permanent link">&para;</a></h3>
+<p>Use manifests to drive the integration suite:</p>
+<ul>
+<li>discover dataset roots by locating <code>dataset.yaml</code></li>
+<li>optionally select subsets by tags/fields (institution, paravision version, size)</li>
+<li>name artifacts using <code>dataset_id</code> rather than filesystem paths</li>
+</ul>
+<h3 id="using-brkraw-prune-to-curate-datasets">Using <code>brkraw prune</code> to curate datasets<a class="headerlink" href="#using-brkraw-prune-to-curate-datasets" title="Permanent link">&para;</a></h3>
+<p>Instead of committing raw exports directly, prefer a standardized pipeline:</p>
+<p>1) Start from an original study export (kept outside the repo).
+2) Use <code>brkraw prune</code> with a published pruner spec to:
+   - drop sensitive files
+   - rewrite/strip JCAMP comments when needed
+   - normalize directory structure for test stability
+3) Commit only the pruned output plus the dataset manifest/license/credit files.</p>
+<p>This keeps the dataset repo smaller, consistent, and reviewable, while also
+making the curation steps reproducible.</p>
+<p>Open questions to settle for the dataset system:</p>
+<ul>
+<li>Where should pruner specs live (in <code>brkraw-dataset</code>, or bundled here under
+  <code>docs/dev/</code> with a mirror copy in the dataset repo)?</li>
+<li>Do we enforce a single license for the entire dataset repo, or per-dataset?</li>
+<li>Do we require <code>CITATION.cff</code> at dataset-level, repo-level, or both?</li>
+<li>Where should the dataset registry live, and how are private download sources
+  represented (secrets, presigned URLs, separate registry)?</li>
+</ul>
+<hr />
+<h2 id="test-harness-design">Test harness design<a class="headerlink" href="#test-harness-design" title="Permanent link">&para;</a></h2>
+<h3 id="inputs">Inputs<a class="headerlink" href="#inputs" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>BRKRAW_TEST_DATA_ROOT</code>: directory containing one or more datasets (each
+  dataset is expected to have a <code>dataset.yaml</code> when materialized).</li>
+<li><code>BRKRAW_TEST_DATASET</code>: optional path to a single dataset (directory or archive).</li>
+<li><code>BRKRAW_TEST_REGISTRY</code>: optional registry file path (for fetching/selecting datasets).</li>
+<li><code>BRKRAW_TEST_INCLUDE_FID=1</code>: include FID-based resolvers (default off).</li>
+<li><code>BRKRAW_TEST_MAX_STUDIES</code>, <code>BRKRAW_TEST_MAX_SCANS</code>, <code>BRKRAW_TEST_MAX_RECOS</code>:
+  caps for local runs.</li>
+</ul>
+<h3 id="dataset-and-study-discovery">Dataset and study discovery<a class="headerlink" href="#dataset-and-study-discovery" title="Permanent link">&para;</a></h3>
+<p>Implement a discovery routine that:</p>
+<p>1) identifies dataset roots (prefer <code>dataset.yaml</code> when available), then
+2) discovers Paravision study roots under each dataset root.</p>
+<p>Study discovery should:</p>
+<ul>
+<li>ignore hidden directories and common junk (<code>.git</code>, <code>.venv</code>, <code>__pycache__</code>, etc.)</li>
+<li>detect candidate studies based on Paravision directory structure heuristics
+  (define explicit rules and keep them stable)</li>
+<li>deduplicate nested matches (prefer the shallowest valid root)</li>
+</ul>
+<h3 id="execution-model">Execution model<a class="headerlink" href="#execution-model" title="Permanent link">&para;</a></h3>
+<p>For each discovered study:</p>
+<p>1) Load with <code>brkraw.load(...)</code> (or the lowest-level loader API that is stable).
+2) Iterate scans and reconstructions:
+   - determine <code>scan_id</code> list (from <code>loader.avail</code>)
+   - determine <code>reco_id</code> list (from scan availability; include hook-specific
+     <code>reco_id=None</code> cases when applicable)
+3) Run a set of checks and log results.</p>
+<h3 id="loggingartifacts">Logging/artifacts<a class="headerlink" href="#loggingartifacts" title="Permanent link">&para;</a></h3>
+<p>Write machine-readable artifacts grouped by dataset and study, e.g.:</p>
+<ul>
+<li><code>artifacts/&lt;dataset_id&gt;/&lt;study_slug&gt;/results.jsonl</code> (one line per check)</li>
+<li><code>artifacts/&lt;dataset_id&gt;/&lt;study_slug&gt;/summary.json</code></li>
+<li><code>artifacts/&lt;dataset_id&gt;/&lt;study_slug&gt;/brkraw.log</code> (captured logs)</li>
+</ul>
+<p>Each record should include at least:</p>
+<ul>
+<li>study path + derived identifier</li>
+<li>scan_id / reco_id (when applicable)</li>
+<li>component (<code>resolver.affine</code>, <code>resolver.nifti</code>, <code>apps.loader</code>, etc.)</li>
+<li>operation (<code>get_affine</code>, <code>get_metadata</code>, <code>convert</code>, ...)</li>
+<li>status (<code>ok</code>/<code>fail</code>)</li>
+<li>duration</li>
+<li>exception type/message/traceback when failing</li>
+<li>key result statistics when successful (e.g. affine shape, determinant,
+  header fields, output object type)</li>
+</ul>
+<hr />
+<h2 id="proposed-test-suite-phased">Proposed test suite (phased)<a class="headerlink" href="#proposed-test-suite-phased" title="Permanent link">&para;</a></h2>
+<h3 id="phase-1-infrastructure-discovery">Phase 1: Infrastructure + discovery<a class="headerlink" href="#phase-1-infrastructure-discovery" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Add <code>tests/integration/</code> with:</li>
+<li>dataset discovery helper</li>
+<li>pytest parametrization across studies</li>
+<li>artifact/log writer utilities</li>
+<li>Add CI job skeleton (without enabling on PRs yet).</li>
+</ul>
+<p>Deliverable:
+- Running <code>pytest -m integration</code> locally against a dataset root produces
+  artifacts and a clear summary.</p>
+<h3 id="phase-2-resolver-coverage-detailed">Phase 2: Resolver coverage (detailed)<a class="headerlink" href="#phase-2-resolver-coverage-detailed" title="Permanent link">&para;</a></h3>
+<p>Per scan/reco, validate that the following do not raise exceptions:</p>
+<ul>
+<li><code>resolver.affine</code>:</li>
+<li>compute requested affine spaces</li>
+<li>log determinant/orthogonality checks and shape</li>
+<li><code>resolver.shape</code>:</li>
+<li>compute expected data shape and timing-related outputs</li>
+<li><code>resolver.nifti</code>:</li>
+<li>build NIfTI objects with header validation</li>
+</ul>
+<p>Define stable expectations that do not require "golden" outputs, e.g.:</p>
+<ul>
+<li>affine is 4x4</li>
+<li>determinant not near zero</li>
+<li>voxel sizes are finite</li>
+<li>header qform/sform are present and consistent</li>
+</ul>
+<p>Deliverable:
+- A detailed per-study scan/reco report that flags anomalies and exceptions.</p>
+<h3 id="phase-3-apps-coverage">Phase 3: Apps coverage<a class="headerlink" href="#phase-3-apps-coverage" title="Permanent link">&para;</a></h3>
+<p>Validate high-level app behaviors against real datasets:</p>
+<ul>
+<li><code>apps.loader</code>:</li>
+<li><code>get_scan</code>, <code>get_dataobj</code>, <code>get_affine</code>, <code>convert</code>, metadata access</li>
+<li><code>apps.addon</code>:</li>
+<li>load bundled/default addons</li>
+<li>validate example specs/rules/transforms resolve</li>
+<li><code>apps.hook</code>:</li>
+<li>list/install/uninstall flows against a temporary config root</li>
+<li>ensure hook manifest parsing and file installation paths are correct</li>
+</ul>
+<p>Deliverable:
+- Integration tests that exercise the public APIs without depending on CLI I/O.</p>
+<h3 id="phase-4-cli-smoke-tests-minimal-but-real">Phase 4: CLI smoke tests (minimal but real)<a class="headerlink" href="#phase-4-cli-smoke-tests-minimal-but-real" title="Permanent link">&para;</a></h3>
+<p>CLI is a thin frontend, so keep this to:</p>
+<ul>
+<li><code>brkraw info</code> against one known dataset</li>
+<li><code>brkraw convert</code> producing at least one <code>.nii</code>/<code>.nii.gz</code> in a temp directory
+  (and optionally a sidecar JSON)</li>
+<li>addon/hook CLI commands against a temp config root for a known example addon/hook</li>
+</ul>
+<p>Deliverable:
+- A small number of CLI tests that catch packaging/argparse regressions.</p>
+<h3 id="phase-5-fid-resolver-optional-gated">Phase 5: FID resolver (optional / gated)<a class="headerlink" href="#phase-5-fid-resolver-optional-gated" title="Permanent link">&para;</a></h3>
+<p>FID reconstruction can be expensive and not universally needed.</p>
+<ul>
+<li>Default: excluded in CI and local runs.</li>
+<li>Opt-in: <code>BRKRAW_TEST_INCLUDE_FID=1</code> enables FID tests.</li>
+<li>Consider separating into a dedicated CI workflow or nightly job.</li>
+</ul>
+<p>Deliverable:
+- A gated suite that provides coverage without slowing default pipelines.</p>
+<hr />
+<h2 id="ci-plan-github-actions">CI plan (GitHub Actions)<a class="headerlink" href="#ci-plan-github-actions" title="Permanent link">&para;</a></h2>
+<h3 id="jobs">Jobs<a class="headerlink" href="#jobs" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>unit</code> (PR): existing unit tests (fast, no dataset).</li>
+<li><code>integration-small</code> (PR, optional): runs on a small, prioritized dataset subset.</li>
+<li><code>integration-full</code> (scheduled/nightly): runs against the full registry validate set.</li>
+</ul>
+<h3 id="caching">Caching<a class="headerlink" href="#caching" title="Permanent link">&para;</a></h3>
+<ul>
+<li>cache fetched datasets keyed by immutable identifiers from the registry:</li>
+<li>hosted/local: archive path + <code>sha256</code></li>
+<li>http: URL + <code>sha256</code></li>
+<li>cache Python deps via pip and the venv wheel cache.</li>
+</ul>
+<h3 id="artifacts">Artifacts<a class="headerlink" href="#artifacts" title="Permanent link">&para;</a></h3>
+<ul>
+<li>always upload <code>artifacts/</code> when integration job fails.</li>
+<li>optionally upload on success in nightly runs for auditing.</li>
+</ul>
+<hr />
+<h2 id="open-questions">Open questions<a class="headerlink" href="#open-questions" title="Permanent link">&para;</a></h2>
+<ul>
+<li>What is the stable heuristic for "Paravision study root" discovery?</li>
+<li>Which datasets are representative enough for PR-level checks?</li>
+<li>Should integration tests assert numerical ranges (tight) or only structural
+  invariants (loose)?</li>
+<li>How do we handle known-bad datasets (xfail list vs allowlist)?</li>
+</ul>
+<hr />
+<h2 id="developer-ux-brkraw-test-command">Developer UX: <code>brkraw test</code> command<a class="headerlink" href="#developer-ux-brkraw-test-command" title="Permanent link">&para;</a></h2>
+<p>To make dataset-driven testing usable outside CI (for example, at different
+institutions), add a first-party command:</p>
+<div class="highlight"><pre><span></span><code>brkraw test
+</code></pre></div>
+<p>Goals:</p>
+<ul>
+<li>Run the same integration suite locally against:</li>
+<li>a dataset root path, or</li>
+<li>a registry entry (fetch + cache + run)</li>
+<li>Support tier selection (<code>--small</code> / <code>--full</code>) consistent with CI semantics.</li>
+<li>Support <code>--include-fid</code> opt-in for the expensive FID resolver suite.</li>
+<li>Write the same <code>artifacts/</code> outputs as CI for easy sharing and debugging.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.top", "navigation.sections", "navigation.instant", "navigation.instant.prefetch", "search.highlight", "search.share"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

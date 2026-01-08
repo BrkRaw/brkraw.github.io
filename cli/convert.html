@@ -914,6 +914,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#-dedupe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        --dedupe
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#compression" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1389,6 +1400,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../api/data-access.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    data access
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../api/info.html" class="md-nav__link">
         
   
@@ -1679,7 +1718,7 @@
   <span class="md-ellipsis">
     
   
-    CLI extensions
+    CLI plugins (overview)
   
 
     
@@ -1819,7 +1858,7 @@
   <span class="md-ellipsis">
     
   
-    Converter hook packages
+    Hook packages (overview)
   
 
     
@@ -1935,6 +1974,118 @@
     
   
     Core vs addon development
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dev/cli-extensions.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Building CLI plugins
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dev/hook-packages.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Building hook packages
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dev/roadmap.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Roadmap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dev/documentation.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentation
   
 
     
@@ -2087,6 +2238,17 @@
     <span class="md-ellipsis">
       
         --prefix
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-dedupe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        --dedupe
       
     </span>
   </a>
@@ -2426,6 +2588,14 @@ and batch processing in real research environments.</p>
 <div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>convert<span class="w"> </span>/path/to/study<span class="w"> </span>--scan-id<span class="w"> </span><span class="m">3</span><span class="w"> </span>--prefix<span class="w"> </span><span class="s2">&quot;{Protocol}_{ScanID}&quot;</span>
 </code></pre></div>
 <p>Template fields are resolved from layout info and metadata specs.</p>
+<h3 id="-dedupe">--dedupe<a class="headerlink" href="#-dedupe" title="Permanent link">&para;</a></h3>
+<p>Avoid overwriting files when output names collide.</p>
+<p>When enabled, BrkRaw checks whether the resolved output file path(s) already
+exist (or would collide within the same run). If so, it increments an internal
+counter and retries layout rendering.</p>
+<p>You may reference the counter explicitly in templates:</p>
+<div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>convert<span class="w"> </span>/path/to/study<span class="w"> </span>--scan-id<span class="w"> </span><span class="m">3</span><span class="w"> </span>--dedupe<span class="w"> </span>--prefix<span class="w"> </span><span class="s2">&quot;{Protocol}_{ScanID}_{RecoID}_{Counter}&quot;</span>
+</code></pre></div>
 <h3 id="compression">Compression<a class="headerlink" href="#compression" title="Permanent link">&para;</a></h3>
 <p>By default, output is written as .nii.gz.</p>
 <p>Disable compression:</p>

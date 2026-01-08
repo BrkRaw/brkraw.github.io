@@ -992,6 +992,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../api/data-access.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    data access
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../api/info.html" class="md-nav__link">
         
   
@@ -1461,7 +1489,7 @@
   <span class="md-ellipsis">
     
   
-    CLI extensions
+    CLI plugins (overview)
   
 
     
@@ -1601,7 +1629,7 @@
   <span class="md-ellipsis">
     
   
-    Converter hook packages
+    Hook packages (overview)
   
 
     
@@ -1717,6 +1745,118 @@
     
   
     Core vs addon development
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dev/cli-extensions.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Building CLI plugins
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dev/hook-packages.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Building hook packages
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dev/roadmap.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Roadmap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dev/documentation.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentation
   
 
     
@@ -1958,6 +2098,9 @@ Most customization should be implemented as addons or plugins.</p>
 <h2 id="addons">Addons<a class="headerlink" href="#addons" title="Permanent link">&para;</a></h2>
 <p>Addons are files installed into the user's BrkRaw configuration root.
 They are loaded dynamically at runtime and do not require Python packaging.</p>
+<p>Use addons for case-dependent customization of BrkRaw behavior (for example,
+choosing different mappings or conversion overrides depending on scan
+parameters), without adding new features to the core.</p>
 <p>Addon types include:</p>
 <ul>
 <li>specs</li>
