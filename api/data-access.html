@@ -2131,6 +2131,8 @@ image arrays and affines directly.</p>
 <li>Some scans produce multiple “slice packs”; in that case these APIs may return
   a tuple of arrays/matrices (one per pack).</li>
 <li><code>space</code> controls the affine coordinate system (<code>raw</code>, <code>scanner</code>, <code>subject_ras</code>).</li>
+<li><code>scan.get_affine(...)</code> also accepts optional post-transforms via extra kwargs:
+  <code>flip_x/flip_y/flip_z</code> and <code>rad_x/rad_y/rad_z</code> (radians), applied right before returning.</li>
 </ul>
 <hr />
 <h2 id="fid-rawdata-access-when-available">FID / rawdata access (when available)<a class="headerlink" href="#fid-rawdata-access-when-available" title="Permanent link">&para;</a></h2>

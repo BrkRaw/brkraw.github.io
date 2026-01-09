@@ -997,6 +997,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#brkraw-hook-preset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        brkraw hook preset
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#common-workflow-example-brkraw-mrs" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1926,6 +1937,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#brkraw-hook-preset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        brkraw hook preset
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#common-workflow-example-brkraw-mrs" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2062,6 +2084,20 @@
 </li>
 <li>or <code>readme: path/to/file.md</code></li>
 <li>The docs file is resolved relative to the manifest location inside the package.</li>
+</ul>
+<hr />
+<h2 id="brkraw-hook-preset">brkraw hook preset<a class="headerlink" href="#brkraw-hook-preset" title="Permanent link">&para;</a></h2>
+<p>Generate a YAML template for hook arguments by inspecting the hook entrypoint signature.</p>
+<div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>hook<span class="w"> </span>preset<span class="w"> </span>mrs
+</code></pre></div>
+<p>Write to a file:</p>
+<div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>hook<span class="w"> </span>preset<span class="w"> </span>mrs<span class="w"> </span>-o<span class="w"> </span>hook_args.yaml
+</code></pre></div>
+<p>You can pass the generated file to <code>brkraw convert</code> via <code>--hook-args-yaml</code>.</p>
+<p>Notes:</p>
+<ul>
+<li>The template is a best-effort based on Python function signatures.</li>
+<li>Unknown keys in presets are ignored at runtime (logged at DEBUG).</li>
 </ul>
 <hr />
 <h2 id="common-workflow-example-brkraw-mrs">Common workflow example (brkraw-mrs)<a class="headerlink" href="#common-workflow-example-brkraw-mrs" title="Permanent link">&para;</a></h2>

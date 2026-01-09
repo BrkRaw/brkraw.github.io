@@ -1740,6 +1740,67 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#hook-arguments-kwargs-and-presets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hook arguments (kwargs) and presets
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hook arguments (kwargs) and presets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-brkraw-passes-hook-args" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How BrkRaw passes hook args
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommended-pattern-accept-kwargs-and-validate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommended pattern: accept **kwargs and validate
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#make-brkraw-hook-preset-useful" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Make brkraw hook preset useful
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#document-supported-keys-clearly" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Document supported keys clearly
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#reference-implementations" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1938,6 +1999,67 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#hook-arguments-kwargs-and-presets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hook arguments (kwargs) and presets
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hook arguments (kwargs) and presets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-brkraw-passes-hook-args" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How BrkRaw passes hook args
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommended-pattern-accept-kwargs-and-validate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommended pattern: accept **kwargs and validate
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#make-brkraw-hook-preset-useful" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Make brkraw hook preset useful
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#document-supported-keys-clearly" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Document supported keys clearly
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#reference-implementations" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1982,7 +2104,7 @@ terminology, see <code>docs/reference/extensibility.md</code> and
 <span class="n">mrs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;brkraw_mrs.hook:get_hook&quot;</span>
 </code></pre></div>
 <p>The returned hook object must conform to the converter hook schema defined in
-<code>brkraw.specs.converter.validator</code>.</p>
+<code>brkraw.specs.hook.validator</code>.</p>
 <hr />
 <h2 id="hook-manifest">Hook manifest<a class="headerlink" href="#hook-manifest" title="Permanent link">&para;</a></h2>
 <p>Each hook package must ship a <code>brkraw_hook.yaml</code> (or <code>brkraw_hook.yml</code>) file.
@@ -2046,6 +2168,76 @@ listing.</p>
 </code></pre></div>
 <p>Ensure <code>brkraw_hook.yaml</code> and any documentation files are included as package
 data so they are available after installation.</p>
+<hr />
+<h2 id="hook-arguments-kwargs-and-presets">Hook arguments (kwargs) and presets<a class="headerlink" href="#hook-arguments-kwargs-and-presets" title="Permanent link">&para;</a></h2>
+<p>BrkRaw supports passing hook arguments at runtime via:</p>
+<ul>
+<li>CLI: <code>brkraw convert --hook-arg HOOK:KEY=VALUE</code></li>
+<li>CLI: <code>brkraw convert --hook-args-yaml hook_args.yaml</code></li>
+<li>CLI template generation: <code>brkraw hook preset &lt;hook-entrypoint&gt;</code></li>
+</ul>
+<h3 id="how-brkraw-passes-hook-args">How BrkRaw passes hook args<a class="headerlink" href="#how-brkraw-passes-hook-args" title="Permanent link">&para;</a></h3>
+<p>BrkRaw collects all hook args into a mapping:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">hooks</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">&lt;hook-entrypoint&gt;</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">value</span>
+</code></pre></div>
+<p>At conversion time, BrkRaw looks up args by the selected hook entrypoint name
+(for example <code>sordino</code>, <code>mrs</code>) and passes them as keyword arguments to hook
+functions (typically <code>get_dataobj</code> and/or <code>get_affine</code>).</p>
+<p>If users provide extra keys that your hook does not accept, BrkRaw will drop
+unsupported kwargs (and log the dropped keys at DEBUG) to avoid <code>TypeError</code>
+crashes.</p>
+<h3 id="recommended-pattern-accept-kwargs-and-validate">Recommended pattern: accept <code>**kwargs</code> and validate<a class="headerlink" href="#recommended-pattern-accept-kwargs-and-validate" title="Permanent link">&para;</a></h3>
+<p>For hooks with many optional arguments, prefer:</p>
+<ul>
+<li>accept <code>**kwargs</code></li>
+<li>normalize/validate into a typed options object (dataclass is recommended)</li>
+</ul>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">dataclasses</span><span class="w"> </span><span class="kn">import</span> <span class="n">dataclass</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Dict</span>
+
+<span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Options</span><span class="p">:</span>
+    <span class="n">reference</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;water&quot;</span>
+    <span class="n">peak_ppm</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">3.02</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_build_options</span><span class="p">(</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Options</span><span class="p">:</span>
+    <span class="k">return</span> <span class="n">Options</span><span class="p">(</span>
+        <span class="n">reference</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;reference&quot;</span><span class="p">,</span> <span class="s2">&quot;water&quot;</span><span class="p">)),</span>
+        <span class="n">peak_ppm</span><span class="o">=</span><span class="nb">float</span><span class="p">(</span><span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;peak_ppm&quot;</span><span class="p">,</span> <span class="mf">3.02</span><span class="p">)),</span>
+    <span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">get_dataobj</span><span class="p">(</span><span class="n">scan</span><span class="p">,</span> <span class="n">reco_id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="n">options</span> <span class="o">=</span> <span class="n">_build_options</span><span class="p">(</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="o">...</span>
+</code></pre></div>
+<p>This keeps the hook resilient to new keys, allows strict validation inside the
+hook, and makes it easy to document defaults.</p>
+<h3 id="make-brkraw-hook-preset-useful">Make <code>brkraw hook preset</code> useful<a class="headerlink" href="#make-brkraw-hook-preset-useful" title="Permanent link">&para;</a></h3>
+<p><code>brkraw hook preset &lt;hook-entrypoint&gt;</code> generates a YAML template by inspecting
+your hook module.</p>
+<p>To improve preset generation for kwargs-based hooks, expose one of:</p>
+<ul>
+<li><code>HOOK_PRESET</code> / <code>HOOK_ARGS</code> / <code>HOOK_DEFAULTS</code>: mapping of default values</li>
+<li><code>_build_options({})</code> that returns a dataclass (or an object with <code>__dict__</code>)</li>
+</ul>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="n">HOOK_DEFAULTS</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;reference&quot;</span><span class="p">:</span> <span class="s2">&quot;water&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;peak_ppm&quot;</span><span class="p">:</span> <span class="mf">3.02</span><span class="p">,</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>If none of these are available and your hook only takes <code>**kwargs</code>, BrkRaw
+cannot infer supported keys and the preset will be empty.</p>
+<h3 id="document-supported-keys-clearly">Document supported keys clearly<a class="headerlink" href="#document-supported-keys-clearly" title="Permanent link">&para;</a></h3>
+<p>Hook docs shipped via <code>brkraw_hook.yaml</code> (<code>docs:</code> or <code>readme:</code>) should include:</p>
+<ul>
+<li>supported hook args (name, type, default)</li>
+<li>what each argument affects</li>
+<li>example CLI usage (<code>--hook-arg</code> / <code>--hook-args-yaml</code>)</li>
+</ul>
 <hr />
 <h2 id="reference-implementations">Reference implementations<a class="headerlink" href="#reference-implementations" title="Permanent link">&para;</a></h2>
 <ul>

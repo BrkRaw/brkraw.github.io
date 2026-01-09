@@ -664,6 +664,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#generate-hook-argument-presets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generate hook argument presets
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#uninstall-a-hook" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1893,6 +1904,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#generate-hook-argument-presets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generate hook argument presets
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#uninstall-a-hook" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1965,6 +1987,14 @@ Python environment as <code>brkraw</code>.</p>
 </code></pre></div>
 <p>Render markdown nicely in the terminal (requires <code>rich</code>):</p>
 <div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>hook<span class="w"> </span>docs<span class="w"> </span>&lt;hook-name&gt;<span class="w"> </span>--render
+</code></pre></div>
+<hr />
+<h2 id="generate-hook-argument-presets">Generate hook argument presets<a class="headerlink" href="#generate-hook-argument-presets" title="Permanent link">&para;</a></h2>
+<p>When a hook supports many optional arguments, generate a YAML template:</p>
+<div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>hook<span class="w"> </span>preset<span class="w"> </span>&lt;hook-entrypoint&gt;<span class="w"> </span>-o<span class="w"> </span>hook_args.yaml
+</code></pre></div>
+<p>Then pass it to <code>brkraw convert</code>:</p>
+<div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>convert<span class="w"> </span>/path/to/study<span class="w"> </span>--scan-id<span class="w"> </span><span class="m">14</span><span class="w"> </span>--hook-args-yaml<span class="w"> </span>hook_args.yaml
 </code></pre></div>
 <hr />
 <h2 id="uninstall-a-hook">Uninstall a hook<a class="headerlink" href="#uninstall-a-hook" title="Permanent link">&para;</a></h2>

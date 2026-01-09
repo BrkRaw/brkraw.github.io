@@ -914,10 +914,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#-dedupe" class="md-nav__link">
+  <a href="#output-name-collisions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        --dedupe
+        Output name collisions
       
     </span>
   </a>
@@ -1113,6 +1113,17 @@
     <span class="md-ellipsis">
       
         --hook-arg
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-hook-args-yaml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        --hook-args-yaml
       
     </span>
   </a>
@@ -2245,10 +2256,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#-dedupe" class="md-nav__link">
+  <a href="#output-name-collisions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        --dedupe
+        Output name collisions
       
     </span>
   </a>
@@ -2450,6 +2461,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#-hook-args-yaml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        --hook-args-yaml
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2588,14 +2610,12 @@ and batch processing in real research environments.</p>
 <div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>convert<span class="w"> </span>/path/to/study<span class="w"> </span>--scan-id<span class="w"> </span><span class="m">3</span><span class="w"> </span>--prefix<span class="w"> </span><span class="s2">&quot;{Protocol}_{ScanID}&quot;</span>
 </code></pre></div>
 <p>Template fields are resolved from layout info and metadata specs.</p>
-<h3 id="-dedupe">--dedupe<a class="headerlink" href="#-dedupe" title="Permanent link">&para;</a></h3>
-<p>Avoid overwriting files when output names collide.</p>
-<p>When enabled, BrkRaw checks whether the resolved output file path(s) already
-exist (or would collide within the same run). If so, it increments an internal
-counter and retries layout rendering.</p>
-<p>You may reference the counter explicitly in templates:</p>
-<div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>convert<span class="w"> </span>/path/to/study<span class="w"> </span>--scan-id<span class="w"> </span><span class="m">3</span><span class="w"> </span>--dedupe<span class="w"> </span>--prefix<span class="w"> </span><span class="s2">&quot;{Protocol}_{ScanID}_{RecoID}_{Counter}&quot;</span>
-</code></pre></div>
+<h3 id="output-name-collisions">Output name collisions<a class="headerlink" href="#output-name-collisions" title="Permanent link">&para;</a></h3>
+<p>BrkRaw avoids overwriting outputs when output names collide.</p>
+<ul>
+<li>If your template uses <code>{Counter}</code>, it starts at <code>1</code> and increments until the output name is unique.</li>
+<li>If your template does not use <code>{Counter}</code>, BrkRaw appends <code>_&lt;N&gt;</code> (for example <code>_2</code>, <code>_3</code>, ...) as needed.</li>
+</ul>
 <h3 id="compression">Compression<a class="headerlink" href="#compression" title="Permanent link">&para;</a></h3>
 <p>By default, output is written as .nii.gz.</p>
 <p>Disable compression:</p>
@@ -2689,6 +2709,17 @@ Values are case-sensitive.</p>
 <div class="highlight"><pre><span></span><code>HOOK_NAME:KEY=VALUE
 </code></pre></div>
 <p>Values are parsed as bool, int, float, or string.</p>
+<h3 id="-hook-args-yaml">--hook-args-yaml<a class="headerlink" href="#-hook-args-yaml" title="Permanent link">&para;</a></h3>
+<p>Load hook arguments from a YAML file (repeatable). CLI <code>--hook-arg</code> values override YAML.</p>
+<div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>convert<span class="w"> </span>/path/to/study<span class="w"> </span>--scan-id<span class="w"> </span><span class="m">3</span><span class="w"> </span>--hook-args-yaml<span class="w"> </span>hook_args.yaml
+</code></pre></div>
+<p>Example YAML:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">hooks</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">mrs</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">reference</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">water</span>
+<span class="w">    </span><span class="nt">peak_ppm</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3.02</span>
+</code></pre></div>
+<p>You can also set <code>BRKRAW_CONVERT_HOOK_ARGS_YAML</code> (comma-separated paths).</p>
 <h2 id="batch-conversion">Batch conversion<a class="headerlink" href="#batch-conversion" title="Permanent link">&para;</a></h2>
 <h3 id="brkraw-convert-batch">brkraw convert-batch<a class="headerlink" href="#brkraw-convert-batch" title="Permanent link">&para;</a></h3>
 <p>Convert all datasets under a root directory.</p>
@@ -2710,6 +2741,7 @@ brkraw<span class="w"> </span>convert
 <ul>
 <li>All affine-related options are case-sensitive</li>
 <li>--output must be a directory when converting multiple scans</li>
+<li>Output names are deduped automatically; use <code>{Counter}</code> to control the numeric suffix position</li>
 <li>Invalid subject overrides are rejected early</li>
 <li>Missing metadata selectors may silently skip scans</li>
 </ul>
