@@ -2424,6 +2424,15 @@ installed specs or rules.</p>
 <p>Context maps are supplied explicitly at runtime and are not installed as
 addons.</p>
 <hr />
+<div class="admonition warning">
+<p class="admonition-title">Experimental / lightly tested</p>
+<p>Context maps are currently an early-stage, conceptual model that was
+introduced for <code>brkraw-bids</code> development and has not yet been extensively
+tested across diverse datasets.
+Expect sharp edges and potential breaking changes in syntax/behavior.
+Validate outputs carefully before relying on context maps in production
+pipelines.</p>
+</div>
 <h2 id="purpose-and-scope">Purpose and scope<a class="headerlink" href="#purpose-and-scope" title="Permanent link">&para;</a></h2>
 <p>Context maps are intended for:</p>
 <ul>
@@ -2440,6 +2449,8 @@ top of spec outputs.</p>
 <li>applied after spec and transform evaluation</li>
 <li>scoped to a single invocation or script</li>
 <li>optional but powerful</li>
+<li>designed to live alongside a raw dataset as a small “manifest” that captures
+  project-specific conversion and organization intent for reproducibility</li>
 </ul>
 <hr />
 <h2 id="high-level-model">High-level model<a class="headerlink" href="#high-level-model" title="Permanent link">&para;</a></h2>
@@ -2482,6 +2493,8 @@ top of spec outputs.</p>
 <li><code>__meta__</code> affects layout rendering only</li>
 <li>it does not affect mapping rules</li>
 <li>values here act as defaults and may be overridden elsewhere</li>
+<li>you may define both <code>layout_entries</code> and <code>layout_template</code>; if both are
+  present, <code>layout_template</code> takes precedence (it overrides <code>layout_entries</code>)</li>
 </ul>
 <hr />
 <h2 id="rule-object-schema">Rule object schema<a class="headerlink" href="#rule-object-schema" title="Permanent link">&para;</a></h2>
@@ -2603,24 +2616,44 @@ in the rule tree marks the key for selection.</p>
 <li><code>mapping</code></li>
 <li><code>const</code></li>
 </ul>
+<p>Notes (implementation):</p>
+<ul>
+<li><code>type</code> may be omitted when it can be inferred:<ul>
+<li><code>values:</code> implies <code>type: mapping</code></li>
+<li><code>value:</code> implies <code>type: const</code></li>
+</ul>
+</li>
+</ul>
 <hr />
 <h3 id="mapping-rules-type-mapping">mapping rules (type: mapping)<a class="headerlink" href="#mapping-rules-type-mapping" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mapping</span>
-<span class="nt">values</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">1</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;sub-001&quot;</span>
-<span class="w">  </span><span class="nt">2</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;sub-002&quot;</span>
-<span class="nt">default</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;unknown&quot;</span>
-<span class="nt">override</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<div class="highlight"><pre><span></span><code><span class="nt">Subject.ID</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mapping</span>
+<span class="w">  </span><span class="nt">values</span><span class="p">:</span>
+<span class="w">    </span><span class="s">&quot;JohnDoe&#39;s</span><span class="nv"> </span><span class="s">rat</span><span class="nv"> </span><span class="s">no1&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&quot;JD01&quot;</span>
+<span class="w">    </span><span class="s">&quot;JohnDoe&#39;s</span><span class="nv"> </span><span class="s">rat</span><span class="nv"> </span><span class="s">no2&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&quot;JD02&quot;</span>
+<span class="w">  </span><span class="nt">default</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;unknown&quot;</span>
+<span class="w">  </span><span class="nt">override</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
 <p>Behavior:</p>
 <ul>
-<li>input value is looked up in <code>values</code></li>
+<li>the current value of <code>Subject.ID</code> (from the selected spec output) is looked up
+  in <code>values</code></li>
+<li>if a match is found, the mapped value replaces <code>Subject.ID</code></li>
 <li>if no match is found:<ul>
-<li><code>default</code> is used if provided</li>
+<li><code>default</code> is used if provided (e.g., <code>unknown</code>)</li>
 <li>otherwise the original value is preserved</li>
 </ul>
 </li>
-<li><code>override</code> controls whether existing values are replaced</li>
+<li><code>override</code> controls whether an existing non-null value may be replaced
+  (layout typically adds the BIDS entity prefix, e.g. <code>sub-{Subject.ID}</code>).</li>
+</ul>
+<p>Notes (implementation):</p>
+<ul>
+<li>If the current value is a list/tuple, mapping is applied element-wise and the
+  container type is preserved.</li>
+<li>If the current value does not match directly, BrkRaw also tries <code>str(value)</code>
+  as a lookup key (useful when the current value is numeric but YAML keys are
+  strings).</li>
 </ul>
 <hr />
 <h3 id="constant-rules-type-const">constant rules (type: const)<a class="headerlink" href="#constant-rules-type-const" title="Permanent link">&para;</a></h3>
@@ -2656,6 +2689,22 @@ in the rule tree marks the key for selection.</p>
 <li><code>in</code></li>
 <li><code>regex</code></li>
 <li><code>not</code></li>
+</ul>
+<p>Notes (implementation):</p>
+<ul>
+<li><code>when</code> is evaluated as an AND across keys (all conditions must match).</li>
+<li>Each condition may be:<ul>
+<li>a scalar (exact match), or</li>
+<li>an operator mapping (all operators inside the mapping must match)</li>
+</ul>
+</li>
+<li>Reserved IDs are available in <code>when</code> (case-insensitive):<ul>
+<li><code>ScanID</code>, <code>scan_id</code>, <code>scanid</code></li>
+<li><code>RecoID</code>, <code>reco_id</code>, <code>recoid</code></li>
+</ul>
+</li>
+<li><code>in</code> accepts either a scalar or a list; if the actual value is a list/tuple,
+  it matches when any element is in the expected list.</li>
 </ul>
 <p>Rules are evaluated against the <strong>original spec outputs</strong>, not against values
 modified by earlier context map rules.</p>
@@ -2696,6 +2745,12 @@ for a case is the combination of parent + case conditions.</p>
 <li>selector logic</li>
 <li>metadata sidecars</li>
 <li>output layout rendering</li>
+</ul>
+<p>Note:</p>
+<ul>
+<li>Creating a new key with <code>type: mapping</code> typically requires either <code>default:</code>
+  or an explicit <code>values:</code> entry for <code>null</code>/<code>None</code>, because a missing key has no
+  input value to look up.</li>
 </ul>
 <hr />
 <h2 id="scan-selection-with-selectors">Scan selection with selectors<a class="headerlink" href="#scan-selection-with-selectors" title="Permanent link">&para;</a></h2>

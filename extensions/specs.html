@@ -2359,24 +2359,32 @@ make the output modality-aware.</p>
 <span class="w">  </span><span class="nt">category</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;info_spec&quot;</span>
 <span class="w">  </span><span class="nt">transforms_source</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;spec-name&gt;_transforms.py&quot;</span>
 
-<span class="nt">Modality</span><span class="p">:</span>
+<span class="nt">Method</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">sources</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">method</span>
 <span class="w">      </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Method</span>
 <span class="w">  </span><span class="nt">transform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">to_bids_modality</span>
 
-<span class="nt">TaskName</span><span class="p">:</span>
+<span class="nt">Protocol</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">sources</span><span class="p">:</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">method</span>
-<span class="w">      </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PVM_FMRI_Name</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">acqp</span>
+<span class="w">      </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ACQ_Protocol</span>
+<span class="w">  </span><span class="nt">transform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">to_bids_protocol</span>
 </code></pre></div>
-<p>Before rule (default info spec):</p>
-<div class="highlight"><pre><span></span><code>Protocol: EPI
-Method: EPI
+<p>Specification:</p>
+<ul>
+<li>Field <code>Method</code> is specified by reading <code>Method</code> from the <code>method</code> file,
+  processing it with <code>to_bids_modality</code>, and mapping the result to <code>Method</code>.</li>
+<li>Field <code>Protocol</code> is specified by reading <code>ACQ_Protocol</code> from the <code>acqp</code> file,
+  processing it with <code>to_bids_protocol</code>, and mapping the result to <code>Protocol</code>.</li>
+</ul>
+<p>Example input parameters:</p>
+<div class="highlight"><pre><span></span><code>method:Method = Bruker:EPI
+acqp:ACQ_Protocol = 3_fMRI_protocol
 </code></pre></div>
-<p>After rule selects <code>bids_bold_info</code>:</p>
-<div class="highlight"><pre><span></span><code>Modality: bold
-TaskName: rest
+<p>Example output (after mapping + transforms):</p>
+<div class="highlight"><pre><span></span><code>Method: bold
+Protocol: func
 </code></pre></div>
 <hr />
 <h2 id="metadata-specs-sidecar-focused">Metadata specs (sidecar-focused)<a class="headerlink" href="#metadata-specs-sidecar-focused" title="Permanent link">&para;</a></h2>
@@ -2401,12 +2409,26 @@ structured, then let layout handle filenames.</p>
 <span class="w">      </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PVM_EPI_PhaseEncDir</span>
 <span class="w">  </span><span class="nt">transform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">to_bids_phase_dir</span>
 </code></pre></div>
+<p>Specification:</p>
+<ul>
+<li>Field <code>RepetitionTime</code> is specified by reading <code>PVM_RepetitionTime</code> from the
+  <code>method</code> file, processing it with <code>ms_to_s</code>, and mapping the result to
+  <code>RepetitionTime</code>.</li>
+<li>Field <code>PhaseEncodingDirection</code> is specified by reading <code>PVM_EPI_PhaseEncDir</code>
+  from the <code>method</code> file, processing it with <code>to_bids_phase_dir</code>, and mapping
+  the result to <code>PhaseEncodingDirection</code>.</li>
+</ul>
 <p>Resulting sidecar fragment:</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;RepetitionTime&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">2.0</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;PhaseEncodingDirection&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;j-&quot;</span>
 <span class="p">}</span>
 </code></pre></div>
+<p>Note:</p>
+<ul>
+<li>When this metadata spec is selected, its output keys become sidecar JSON keys
+  (after transforms are applied).</li>
+</ul>
 <hr />
 <h2 id="spec-file-structure">Spec file structure<a class="headerlink" href="#spec-file-structure" title="Permanent link">&para;</a></h2>
 <p>A spec is a YAML mapping with two kinds of top-level entries:</p>
@@ -2427,6 +2449,12 @@ structured, then let layout handle filenames.</p>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">subject</span>
 <span class="w">      </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SUBJECT_id</span>
 </code></pre></div>
+<p>Specification:</p>
+<ul>
+<li>Field <code>Subject.ID</code> is specified by reading <code>SUBJECT_id</code> from the <code>subject</code>
+  file and mapping the value to a dotted output key (<code>Subject.ID</code>), which
+  produces a nested structure.</li>
+</ul>
 <hr />
 <h2 id="meta-block"><strong>meta</strong> block<a class="headerlink" href="#meta-block" title="Permanent link">&para;</a></h2>
 <p>Every spec <strong>must</strong> define <code>__meta__</code>.</p>
@@ -2437,8 +2465,15 @@ structured, then let layout handle filenames.</p>
 <span class="w">  </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Metadata</span><span class="nv"> </span><span class="s">mapping</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">scan</span><span class="nv"> </span><span class="s">family&quot;</span>
 <span class="w">  </span><span class="nt">category</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;info_spec&quot;</span>
 </code></pre></div>
+<p>Specification:</p>
 <ul>
-<li><code>name</code><ul>
+<li>
+<p><code>__meta__</code> specifies the identity and compatibility of the spec (for example,
+  rules can select by <code>name</code>/<code>version</code>, and selection can validate <code>category</code>).</p>
+</li>
+<li>
+<p><code>name</code></p>
+<ul>
 <li>lowercase snake_case</li>
 <li>up to four tokens</li>
 <li>pattern: <code>^[a-z][a-z0-9]*(?:_[a-z0-9]+){0,3}$</code></li>
@@ -2475,6 +2510,13 @@ structured, then let layout handle filenames.</p>
 <span class="w">  </span><span class="nt">doi</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;10.1234/example&quot;</span>
 <span class="w">  </span><span class="nt">citation</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Doe</span><span class="nv"> </span><span class="s">et</span><span class="nv"> </span><span class="s">al.,</span><span class="nv"> </span><span class="s">NeuroImage</span><span class="nv"> </span><span class="s">2024&quot;</span>
 </code></pre></div>
+<p>Specification:</p>
+<ul>
+<li>If <code>include</code> is specified, referenced spec(s) are merged first, then the
+  current spec applies its overrides (unless <code>include_mode: strict</code>).</li>
+<li>If <code>transforms_source</code> is specified, <code>transform:</code> function names can be
+  resolved when the spec is loaded from YAML.</li>
+</ul>
 <p>Supported optional fields:</p>
 <ul>
 <li><code>transforms_source</code><ul>
@@ -2509,6 +2551,11 @@ structured, then let layout handle filenames.</p>
 <p>Produces:</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span><span class="s2">&quot;Study&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;ID&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">}}</span>
 </code></pre></div>
+<p>Specification:</p>
+<ul>
+<li>Dotted output keys (e.g., <code>Study.ID</code>) specify nested keys in the resulting
+  mapping.</li>
+</ul>
 <hr />
 <h2 id="sources">Sources<a class="headerlink" href="#sources" title="Permanent link">&para;</a></h2>
 <p>The simplest mapping uses <code>sources</code>.</p>
@@ -2517,6 +2564,11 @@ structured, then let layout handle filenames.</p>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">method</span>
 <span class="w">      </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PVM_SPackArrNSlices</span>
 </code></pre></div>
+<p>Specification:</p>
+<ul>
+<li>Field <code>FieldName</code> is specified by reading <code>PVM_SPackArrNSlices</code> from the
+  <code>method</code> file and mapping the value to <code>FieldName</code>.</li>
+</ul>
 <p>Each source entry supports:</p>
 <ul>
 <li><code>file</code>: one of:<ul>
@@ -2544,6 +2596,15 @@ structured, then let layout handle filenames.</p>
 <span class="w">      </span><span class="nt">const</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
 <span class="w">  </span><span class="nt">transform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">join_fields</span>
 </code></pre></div>
+<p>Specification:</p>
+<ul>
+<li>Field <code>out.joined</code> is specified by:<ul>
+<li>input <code>a</code>: read <code>PVM_SPackArrNSlices</code> from the <code>method</code> file</li>
+<li>input <code>b</code>: constant <code>3</code></li>
+<li>transform: call <code>join_fields(a=..., b=3)</code> and map the result to <code>out.joined</code></li>
+</ul>
+</li>
+</ul>
 <p>Rules:</p>
 <ul>
 <li>exactly one of <code>sources</code>, <code>inputs</code>, <code>const</code>, or <code>ref</code> is required</li>
@@ -2562,6 +2623,12 @@ structured, then let layout handle filenames.</p>
 <span class="nt">FieldCopy</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">ref</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;FieldName&quot;</span>
 </code></pre></div>
+<p>Specification:</p>
+<ul>
+<li>Field <code>FieldName</code> is specified as the constant value <code>1</code>.</li>
+<li>Field <code>FieldCopy</code> is specified as a reference to the previously-resolved
+  output <code>FieldName</code>.</li>
+</ul>
 <hr />
 <h2 id="transforms">Transforms<a class="headerlink" href="#transforms" title="Permanent link">&para;</a></h2>
 <p>Transforms are Python functions referenced by name.</p>
@@ -2571,6 +2638,11 @@ structured, then let layout handle filenames.</p>
 <span class="w">      </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ACQ_XXX</span>
 <span class="w">  </span><span class="nt">transform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">normalize_method</span>
 </code></pre></div>
+<p>Specification:</p>
+<ul>
+<li>Field <code>FieldName</code> is specified by reading <code>ACQ_XXX</code> from the <code>acqp</code> file,
+  processing it with <code>normalize_method</code>, and mapping the result to <code>FieldName</code>.</li>
+</ul>
 <p>Behavior:</p>
 <ul>
 <li>a single transform receives the resolved value</li>
@@ -2609,19 +2681,39 @@ This is useful when you want a computed fallback in a <code>sources</code> chain
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">method</span>
 <span class="w">      </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PVM_SPackArrNSlices</span>
 </code></pre></div>
+<p>Specification:</p>
+<ul>
+<li>Field <code>FieldName</code> is specified by a <code>sources</code> chain:<ul>
+<li>first source: computed value via <code>join_fields(...)</code></li>
+<li>fallback source: raw <code>method:PVM_SPackArrNSlices</code> value</li>
+</ul>
+</li>
+</ul>
 <hr />
 <h2 id="defaults-and-requirements">Defaults and requirements<a class="headerlink" href="#defaults-and-requirements" title="Permanent link">&para;</a></h2>
 <p>Input entries (inside <code>inputs:</code>) may define:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">default</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
 </code></pre></div>
+<p>Specification:</p>
 <ul>
-<li><code>default</code>: fallback if no input value is found</li>
+<li>
+<p>If an input has no value, <code>default</code> specifies the fallback value.</p>
+</li>
+<li>
+<p><code>default</code>: fallback if no input value is found</p>
+</li>
 </ul>
 <p>Input entries (inside <code>inputs:</code>) may also define:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
+<p>Specification:</p>
 <ul>
-<li><code>required</code>: missing input raises an error (instead of returning <code>None</code>)</li>
+<li>
+<p>If an input has no value and <code>required: true</code>, mapping raises an error.</p>
+</li>
+<li>
+<p><code>required</code>: missing input raises an error (instead of returning <code>None</code>)</p>
+</li>
 </ul>
 <p>Output rules do not have a <code>required</code> flag; use <code>sources</code> ordering or an inline
 <code>inputs</code> source entry for fallbacks.</p>
@@ -2667,6 +2759,11 @@ the spec loader:</p>
 <span class="n">spec</span><span class="p">,</span> <span class="n">transforms</span> <span class="o">=</span> <span class="n">load_spec</span><span class="p">(</span><span class="s2">&quot;spec.yaml&quot;</span><span class="p">,</span> <span class="n">validate</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">result</span> <span class="o">=</span> <span class="n">map_parameters</span><span class="p">(</span><span class="n">scan</span><span class="p">,</span> <span class="n">spec</span><span class="p">,</span> <span class="n">transforms</span><span class="o">=</span><span class="n">transforms</span><span class="p">)</span>
 </code></pre></div>
+<p>Note:</p>
+<ul>
+<li><code>load_spec(...)</code> returns both the spec mapping and the transform registry
+  needed to evaluate <code>transform:</code> references.</li>
+</ul>
 <p>Validation checks:</p>
 <ul>
 <li>schema compliance</li>
