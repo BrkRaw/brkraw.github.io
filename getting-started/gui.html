@@ -6,17 +6,17 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Bruker Paravision dataset loader and NIfTI converter">
+        <meta name="description" content="A modular toolkit for Bruker MRI raw-data handling.">
       
       
       
-        <link rel="canonical" href="https://brkraw.github.io/getting-started/viewer.html">
+        <link rel="canonical" href="https://brkraw.github.io/getting-started/gui.html">
       
       
-        <link rel="prev" href="hooks.html">
+        <link rel="prev" href="api.html">
       
       
-        <link rel="next" href="../cli/index.html">
+        <link rel="next" href="bids.html">
       
       
         
@@ -27,7 +27,7 @@
     
     
       
-        <title>Dataset viewer - Preclinical MRI dataset toolkit</title>
+        <title>Graphical User Interface - A Modular Toolkit for Bruker MRI raw-data handling.</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#dataset-viewer-cli-extension" class="md-skip">
+        <a href="#graphical-user-interface" class="md-skip">
           Skip to content
         </a>
       
@@ -88,7 +88,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../index.html" title="Preclinical MRI dataset toolkit" class="md-header__button md-logo" aria-label="Preclinical MRI dataset toolkit" data-md-component="logo">
+    <a href="../index.html" title="A Modular Toolkit for Bruker MRI raw-data handling." class="md-header__button md-logo" aria-label="A Modular Toolkit for Bruker MRI raw-data handling." data-md-component="logo">
       
   <img src="../assets/brkraw-logo.svg" alt="logo">
 
@@ -101,13 +101,13 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Preclinical MRI dataset toolkit
+            A Modular Toolkit for Bruker MRI raw-data handling.
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Dataset viewer
+              Graphical User Interface
             
           </span>
         </div>
@@ -292,11 +292,11 @@
     
     
       <li class="md-tabs__item">
-        <a href="../reference/extensibility.html" class="md-tabs__link">
+        <a href="../extensions/extensibility.html" class="md-tabs__link">
           
   
   
-  Reference
+  Extensions
 
         </a>
       </li>
@@ -346,12 +346,12 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../index.html" title="Preclinical MRI dataset toolkit" class="md-nav__button md-logo" aria-label="Preclinical MRI dataset toolkit" data-md-component="logo">
+    <a href="../index.html" title="A Modular Toolkit for Bruker MRI raw-data handling." class="md-nav__button md-logo" aria-label="A Modular Toolkit for Bruker MRI raw-data handling." data-md-component="logo">
       
   <img src="../assets/brkraw-logo.svg" alt="logo">
 
     </a>
-    Preclinical MRI dataset toolkit
+    A Modular Toolkit for Bruker MRI raw-data handling.
   </label>
   
     <div class="md-nav__source">
@@ -494,7 +494,7 @@
   <span class="md-ellipsis">
     
   
-    CLI quickstart
+    Command Line Interface
   
 
     
@@ -522,63 +522,7 @@
   <span class="md-ellipsis">
     
   
-    Python API quickstart
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="configuration.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Configuration basics
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="hooks.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Converter hooks
+    Python API
   
 
     
@@ -608,32 +552,14 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Dataset viewer
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="viewer.html" class="md-nav__link md-nav__link--active">
+      <a href="gui.html" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    Dataset viewer
+    Graphical User Interface
   
 
     
@@ -643,58 +569,62 @@
 
       </a>
       
-        
+    </li>
+  
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+              
+            
+              
+                
   
   
   
+  
+    <li class="md-nav__item">
+      <a href="bids.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
     
   
+    BIDS integration
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#install-the-viewer" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Install the viewer
-      
-    </span>
-  </a>
+
+    
+  </span>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#launch" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Launch
-      
-    </span>
-  </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#when-to-use-it" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        When to use it
-      
-    </span>
-  </a>
+
+      </a>
+    </li>
   
-</li>
-      
-    </ul>
+
+              
+            
+              
+                
   
-</nav>
-      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="config.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -794,6 +724,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../cli/init.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    init
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../cli/session.html" class="md-nav__link">
         
   
@@ -850,6 +808,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../cli/params.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    params
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../cli/convert.html" class="md-nav__link">
         
   
@@ -886,6 +872,34 @@
     
   
     prune
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli/cache.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    cache
   
 
     
@@ -1303,7 +1317,7 @@
   <span class="md-ellipsis">
     
   
-    Reference
+    Extensions
   
 
     
@@ -1319,7 +1333,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Reference
+    Extensions
   
 
           </label>
@@ -1332,14 +1346,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/extensibility.html" class="md-nav__link">
+      <a href="../extensions/extensibility.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Extensibility model
+    Overview
   
 
     
@@ -1360,7 +1374,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/addons-and-plugins.html" class="md-nav__link">
+      <a href="../extensions/addons-and-plugins.html" class="md-nav__link">
         
   
   
@@ -1388,7 +1402,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/cli-extensions.html" class="md-nav__link">
+      <a href="../extensions/cli-extensions.html" class="md-nav__link">
         
   
   
@@ -1416,14 +1430,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/rules.html" class="md-nav__link">
+      <a href="../extensions/rules.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Rule syntax
+    Rules
   
 
     
@@ -1444,14 +1458,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/specs.html" class="md-nav__link">
+      <a href="../extensions/specs.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Spec syntax
+    Specs
   
 
     
@@ -1472,14 +1486,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/context-map.html" class="md-nav__link">
+      <a href="../extensions/context-map.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Context map syntax
+    Context maps
   
 
     
@@ -1500,14 +1514,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/layout.html" class="md-nav__link">
+      <a href="../extensions/layout.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Output layout and naming
+    Layout and naming
   
 
     
@@ -1528,7 +1542,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/hook-packages.html" class="md-nav__link">
+      <a href="../extensions/hook-packages.html" class="md-nav__link">
         
   
   
@@ -1831,47 +1845,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#install-the-viewer" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Install the viewer
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#launch" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Launch
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#when-to-use-it" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        When to use it
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1890,38 +1863,28 @@
   
 
 
-<h1 id="dataset-viewer-cli-extension">Dataset viewer (CLI extension)<a class="headerlink" href="#dataset-viewer-cli-extension" title="Permanent link">&para;</a></h1>
-<p><code>brkraw-viewer</code> is a graphical dataset viewer distributed as a
-separate CLI extension.</p>
-<p>The viewer has been intentionally separated from the BrkRaw core to
-encourage independent contributions and experimentation around GUI
-development.</p>
-<p>A new GUI is planned. The current viewer provides a minimal
-implementation based on functionality from earlier BrkRaw versions.</p>
-<hr />
-<h2 id="install-the-viewer">Install the viewer<a class="headerlink" href="#install-the-viewer" title="Permanent link">&para;</a></h2>
-<p>Install the extension package:</p>
-<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>brkraw-viewer
-</code></pre></div>
-<p>Verify the command is available:</p>
-<div class="highlight"><pre><span></span><code>brkraw-viewer<span class="w"> </span>--help
-</code></pre></div>
-<hr />
-<h2 id="launch">Launch<a class="headerlink" href="#launch" title="Permanent link">&para;</a></h2>
-<p>Start the viewer:</p>
-<div class="highlight"><pre><span></span><code>brkraw-viewer
-</code></pre></div>
-<p>Select a dataset directory, zip archive, or <code>.PvDatasets</code> file from the UI.</p>
-<hr />
-<h2 id="when-to-use-it">When to use it<a class="headerlink" href="#when-to-use-it" title="Permanent link">&para;</a></h2>
-<p>The viewer is useful for:</p>
+<h1 id="graphical-user-interface">Graphical User Interface<a class="headerlink" href="#graphical-user-interface" title="Permanent link">&para;</a></h1>
+<p><code>brkraw-viewer</code> is an optional GUI extension that plugs into BrkRaw to provide
+interactive tools for raw-data workflows. Its primary goal is to let you
+quickly inspect raw data images for QC without requiring a prior conversion
+step.</p>
+<p>The legacy GUI features that previously shipped with BrkRaw have been retired
+and split into this separate module. Going forward, the GUI will evolve as an
+independent, GUI-first ecosystem around BrkRaw.</p>
+<p>The viewer is built to be extensible through the BrkRaw hook system, so hook
+packages can introduce dedicated GUI extensions and deliver modality-specific
+QC experiences.</p>
+<p>Current development focuses on:</p>
 <ul>
-<li>Browsing study and scan structure</li>
-<li>Checking scan and reconstruction IDs</li>
-<li>Inspecting acquisition metadata interactively</li>
+<li>Improving the image viewer compared to earlier versions.</li>
+<li>Implementing orientation inspection and reorientation workflows.</li>
+<li>Bringing core capabilities that already exist in the CLI into the GUI.</li>
 </ul>
-<p>For conversion and reproducible workflows, use the BrkRaw CLI or
-Python API instead.</p>
+<p>Project links:</p>
+<ul>
+<li><a href="https://brkraw.github.io/brkraw-viewer">BrkRaw Viewer page</a></li>
+<li><a href="https://github.com/BrkRaw/brkraw-viewer">GitHub repository</a></li>
+</ul>
 
 
 

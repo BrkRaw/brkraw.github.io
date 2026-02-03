@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Bruker Paravision dataset loader and NIfTI converter">
+        <meta name="description" content="A modular toolkit for Bruker MRI raw-data handling.">
       
       
       
@@ -27,7 +27,7 @@
     
     
       
-        <title>hook - Preclinical MRI dataset toolkit</title>
+        <title>hook - A Modular Toolkit for Bruker MRI raw-data handling.</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#brkraw-hook" class="md-skip">
+        <a href="#hook" class="md-skip">
           Skip to content
         </a>
       
@@ -88,7 +88,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../index.html" title="Preclinical MRI dataset toolkit" class="md-header__button md-logo" aria-label="Preclinical MRI dataset toolkit" data-md-component="logo">
+    <a href="../index.html" title="A Modular Toolkit for Bruker MRI raw-data handling." class="md-header__button md-logo" aria-label="A Modular Toolkit for Bruker MRI raw-data handling." data-md-component="logo">
       
   <img src="../assets/brkraw-logo.svg" alt="logo">
 
@@ -101,7 +101,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Preclinical MRI dataset toolkit
+            A Modular Toolkit for Bruker MRI raw-data handling.
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -292,11 +292,11 @@
     
     
       <li class="md-tabs__item">
-        <a href="../reference/extensibility.html" class="md-tabs__link">
+        <a href="../extensions/extensibility.html" class="md-tabs__link">
           
   
   
-  Reference
+  Extensions
 
         </a>
       </li>
@@ -346,12 +346,12 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../index.html" title="Preclinical MRI dataset toolkit" class="md-nav__button md-logo" aria-label="Preclinical MRI dataset toolkit" data-md-component="logo">
+    <a href="../index.html" title="A Modular Toolkit for Bruker MRI raw-data handling." class="md-nav__button md-logo" aria-label="A Modular Toolkit for Bruker MRI raw-data handling." data-md-component="logo">
       
   <img src="../assets/brkraw-logo.svg" alt="logo">
 
     </a>
-    Preclinical MRI dataset toolkit
+    A Modular Toolkit for Bruker MRI raw-data handling.
   </label>
   
     <div class="md-nav__source">
@@ -489,7 +489,7 @@
   <span class="md-ellipsis">
     
   
-    CLI quickstart
+    Command Line Interface
   
 
     
@@ -517,7 +517,7 @@
   <span class="md-ellipsis">
     
   
-    Python API quickstart
+    Python API
   
 
     
@@ -538,14 +538,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting-started/configuration.html" class="md-nav__link">
+      <a href="../getting-started/gui.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Configuration basics
+    Graphical User Interface
   
 
     
@@ -566,14 +566,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting-started/hooks.html" class="md-nav__link">
+      <a href="../getting-started/bids.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Converter hooks
+    BIDS integration
   
 
     
@@ -594,14 +594,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting-started/viewer.html" class="md-nav__link">
+      <a href="../getting-started/config.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Dataset viewer
+    User Configuration
   
 
     
@@ -714,6 +714,34 @@
   
   
     <li class="md-nav__item">
+      <a href="init.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    init
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="session.html" class="md-nav__link">
         
   
@@ -770,6 +798,34 @@
   
   
     <li class="md-nav__item">
+      <a href="params.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    params
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="convert.html" class="md-nav__link">
         
   
@@ -806,6 +862,34 @@
     
   
     prune
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="cache.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    cache
   
 
     
@@ -942,6 +1026,34 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#common-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common options
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-root" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        --root
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#what-gets-installed" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -953,10 +1065,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#brkraw-hook-list" class="md-nav__link">
+  <a href="#hook-list" class="md-nav__link">
     <span class="md-ellipsis">
       
-        brkraw hook list
+        hook list
       
     </span>
   </a>
@@ -964,10 +1076,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#brkraw-hook-install" class="md-nav__link">
+  <a href="#hook-install" class="md-nav__link">
     <span class="md-ellipsis">
       
-        brkraw hook install
+        hook install
       
     </span>
   </a>
@@ -975,10 +1087,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#brkraw-hook-uninstall" class="md-nav__link">
+  <a href="#hook-uninstall" class="md-nav__link">
     <span class="md-ellipsis">
       
-        brkraw hook uninstall
+        hook uninstall
       
     </span>
   </a>
@@ -986,10 +1098,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#brkraw-hook-docs" class="md-nav__link">
+  <a href="#hook-docs" class="md-nav__link">
     <span class="md-ellipsis">
       
-        brkraw hook docs
+        hook docs
       
     </span>
   </a>
@@ -997,21 +1109,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#brkraw-hook-preset" class="md-nav__link">
+  <a href="#hook-preset" class="md-nav__link">
     <span class="md-ellipsis">
       
-        brkraw hook preset
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#common-workflow-example-brkraw-mrs" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Common workflow example (brkraw-mrs)
+        hook preset
       
     </span>
   </a>
@@ -1347,7 +1448,7 @@
   <span class="md-ellipsis">
     
   
-    Reference
+    Extensions
   
 
     
@@ -1363,7 +1464,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Reference
+    Extensions
   
 
           </label>
@@ -1376,14 +1477,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/extensibility.html" class="md-nav__link">
+      <a href="../extensions/extensibility.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Extensibility model
+    Overview
   
 
     
@@ -1404,7 +1505,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/addons-and-plugins.html" class="md-nav__link">
+      <a href="../extensions/addons-and-plugins.html" class="md-nav__link">
         
   
   
@@ -1432,7 +1533,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/cli-extensions.html" class="md-nav__link">
+      <a href="../extensions/cli-extensions.html" class="md-nav__link">
         
   
   
@@ -1460,14 +1561,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/rules.html" class="md-nav__link">
+      <a href="../extensions/rules.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Rule syntax
+    Rules
   
 
     
@@ -1488,14 +1589,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/specs.html" class="md-nav__link">
+      <a href="../extensions/specs.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Spec syntax
+    Specs
   
 
     
@@ -1516,14 +1617,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/context-map.html" class="md-nav__link">
+      <a href="../extensions/context-map.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Context map syntax
+    Context maps
   
 
     
@@ -1544,14 +1645,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/layout.html" class="md-nav__link">
+      <a href="../extensions/layout.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Output layout and naming
+    Layout and naming
   
 
     
@@ -1572,7 +1673,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/hook-packages.html" class="md-nav__link">
+      <a href="../extensions/hook-packages.html" class="md-nav__link">
         
   
   
@@ -1882,6 +1983,34 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#common-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common options
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-root" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        --root
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#what-gets-installed" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1893,10 +2022,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#brkraw-hook-list" class="md-nav__link">
+  <a href="#hook-list" class="md-nav__link">
     <span class="md-ellipsis">
       
-        brkraw hook list
+        hook list
       
     </span>
   </a>
@@ -1904,10 +2033,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#brkraw-hook-install" class="md-nav__link">
+  <a href="#hook-install" class="md-nav__link">
     <span class="md-ellipsis">
       
-        brkraw hook install
+        hook install
       
     </span>
   </a>
@@ -1915,10 +2044,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#brkraw-hook-uninstall" class="md-nav__link">
+  <a href="#hook-uninstall" class="md-nav__link">
     <span class="md-ellipsis">
       
-        brkraw hook uninstall
+        hook uninstall
       
     </span>
   </a>
@@ -1926,10 +2055,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#brkraw-hook-docs" class="md-nav__link">
+  <a href="#hook-docs" class="md-nav__link">
     <span class="md-ellipsis">
       
-        brkraw hook docs
+        hook docs
       
     </span>
   </a>
@@ -1937,21 +2066,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#brkraw-hook-preset" class="md-nav__link">
+  <a href="#hook-preset" class="md-nav__link">
     <span class="md-ellipsis">
       
-        brkraw hook preset
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#common-workflow-example-brkraw-mrs" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Common workflow example (brkraw-mrs)
+        hook preset
       
     </span>
   </a>
@@ -1978,18 +2096,30 @@
   
 
 
-<h1 id="brkraw-hook">brkraw hook<a class="headerlink" href="#brkraw-hook" title="Permanent link">&para;</a></h1>
+<h1 id="hook">hook<a class="headerlink" href="#hook" title="Permanent link">&para;</a></h1>
 <p>Manage converter hook packages and their bundled addon assets (specs, rules, pruner specs, transforms).</p>
-<p>A converter hook is a Python package that exposes one or more entrypoints in the <code>brkraw.converter_hook</code> group and can optionally ship addon files via a hook manifest.</p>
-<p>Typical example: <code>brkraw-mrs</code> (a converter hook package that installs specs/rules/transforms for MRS outputs).</p>
+<p>A converter hook is a Python package that exposes one or more entrypoints in the
+<code>brkraw.converter_hook</code> group. Hook packages can optionally ship addon files via a
+hook manifest (<code>brkraw_hook.yaml</code> / <code>brkraw_hook.yml</code>).</p>
+<div class="admonition note">
+<p class="admonition-title">Available hook packages</p>
+<p>Currently installable hook packages include <code>brkraw-mrs</code> and <code>brkraw-dti</code>.</p>
+</div>
+<hr />
+<h2 id="common-options">Common options<a class="headerlink" href="#common-options" title="Permanent link">&para;</a></h2>
+<h3 id="-root">--root<a class="headerlink" href="#-root" title="Permanent link">&para;</a></h3>
+<p>Override config root directory (default: <code>BRKRAW_CONFIG_HOME</code> or <code>~/.brkraw</code>).</p>
+<div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>hook<span class="w"> </span>--root<span class="w"> </span>/path/to/config<span class="w"> </span>list
+</code></pre></div>
 <hr />
 <h2 id="what-gets-installed">What gets installed<a class="headerlink" href="#what-gets-installed" title="Permanent link">&para;</a></h2>
-<p>When you install a hook, BrkRaw installs addon assets under a per-hook namespace to avoid filename collisions:</p>
+<p>When you install a hook, BrkRaw installs addon assets under a per-hook namespace
+to avoid filename collisions:</p>
 <ul>
-<li>specs: <code>~/.brkraw/specs/&lt;hook_namespace&gt;/...</code></li>
-<li>rules: <code>~/.brkraw/rules/&lt;hook_namespace&gt;/...</code></li>
-<li>pruner specs: <code>~/.brkraw/pruner_specs/&lt;hook_namespace&gt;/...</code></li>
-<li>transforms: <code>~/.brkraw/transforms/&lt;hook_namespace&gt;/...</code></li>
+<li>specs: <code>~/.brkraw/specs/&lt;hook-namespace&gt;/...</code></li>
+<li>rules: <code>~/.brkraw/rules/&lt;hook-namespace&gt;/...</code></li>
+<li>pruner specs: <code>~/.brkraw/pruner_specs/&lt;hook-namespace&gt;/...</code></li>
+<li>transforms: <code>~/.brkraw/transforms/&lt;hook-namespace&gt;/...</code></li>
 </ul>
 <p>BrkRaw also records installed files in a registry file:</p>
 <ul>
@@ -1997,123 +2127,59 @@
 </ul>
 <p>This registry is used for status reporting and clean uninstall.</p>
 <hr />
-<h2 id="brkraw-hook-list">brkraw hook list<a class="headerlink" href="#brkraw-hook-list" title="Permanent link">&para;</a></h2>
-<p>List detected converter hook packages in the current Python environment and show whether their addon assets are installed.</p>
+<h2 id="hook-list">hook list<a class="headerlink" href="#hook-list" title="Permanent link">&para;</a></h2>
+<p>List detected hook packages in the current Python environment and show whether
+their addon assets are installed in the config root.</p>
 <div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>hook<span class="w"> </span>list
 </code></pre></div>
-<p>The table shows:</p>
-<ul>
-<li>name: distribution name (package name)</li>
-<li>version: installed package version</li>
-<li>entrypoints: names registered in <code>brkraw.converter_hook</code></li>
-<li>
-<p>installed: one of:</p>
-</li>
-<li>
-<p>Yes (all expected assets are present)</p>
-</li>
-<li>Partially (registry exists but some files are missing)</li>
-<li>No (hook detected but not installed into config root)</li>
-</ul>
 <hr />
-<h2 id="brkraw-hook-install">brkraw hook install<a class="headerlink" href="#brkraw-hook-install" title="Permanent link">&para;</a></h2>
+<h2 id="hook-install">hook install<a class="headerlink" href="#hook-install" title="Permanent link">&para;</a></h2>
 <p>Install addon assets bundled with a hook package.</p>
-<p>Install by package name:</p>
-<div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>hook<span class="w"> </span>install<span class="w"> </span>brkraw-mrs
+<div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>hook<span class="w"> </span>install<span class="w"> </span>&lt;hook-name&gt;
 </code></pre></div>
-<p>Install by entrypoint name (if you prefer the entrypoint label):</p>
-<div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>hook<span class="w"> </span>install<span class="w"> </span>mrs
+<p>You can also install by entrypoint name:</p>
+<div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>hook<span class="w"> </span>install<span class="w"> </span>&lt;entrypoint-name&gt;
 </code></pre></div>
-<p>Install all detected hooks in the current environment:</p>
+<p>Install all detected hooks:</p>
 <div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>hook<span class="w"> </span>install<span class="w"> </span>all
 </code></pre></div>
-<p>Upgrade behavior:</p>
-<div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>hook<span class="w"> </span>install<span class="w"> </span>brkraw-mrs<span class="w"> </span>--upgrade
-</code></pre></div>
-<p>Force reinstall (even if same or older version is already installed):</p>
-<div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>hook<span class="w"> </span>install<span class="w"> </span>brkraw-mrs<span class="w"> </span>--force
-</code></pre></div>
-<p>Notes:</p>
+<p>Options:</p>
 <ul>
-<li>Hooks are discovered via the <code>brkraw.converter_hook</code> entrypoint group.</li>
-<li>
-<p>A hook package must ship a manifest file named:</p>
-</li>
-<li>
-<p><code>brkraw_hook.yaml</code> or <code>brkraw_hook.yml</code></p>
-</li>
-<li>
-<p>The manifest lists addon assets to install:</p>
-</li>
-<li>
-<p><code>specs</code>, <code>rules</code>, <code>pruner_specs</code>, <code>transforms</code></p>
-</li>
-<li>During install, rule <code>use:</code> references may be rewritten so rules point to the namespaced spec paths (for example <code>specs/&lt;namespace&gt;/&lt;specfile&gt;.yaml</code>).</li>
+<li><code>--upgrade</code>: reinstall when a newer version is available.</li>
+<li><code>--force</code>: reinstall even if the same (or older) version is installed.</li>
 </ul>
 <hr />
-<h2 id="brkraw-hook-uninstall">brkraw hook uninstall<a class="headerlink" href="#brkraw-hook-uninstall" title="Permanent link">&para;</a></h2>
-<p>Remove addon assets installed by a hook and print the pip uninstall command for the Python package itself.</p>
-<div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>hook<span class="w"> </span>uninstall<span class="w"> </span>brkraw-mrs
+<h2 id="hook-uninstall">hook uninstall<a class="headerlink" href="#hook-uninstall" title="Permanent link">&para;</a></h2>
+<p>Remove addon assets installed by a hook.</p>
+<div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>hook<span class="w"> </span>uninstall<span class="w"> </span>&lt;hook-name&gt;
 </code></pre></div>
-<p>Force uninstall even when dependencies are detected:</p>
-<div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>hook<span class="w"> </span>uninstall<span class="w"> </span>brkraw-mrs<span class="w"> </span>--force
-</code></pre></div>
+<p>Option:</p>
+<ul>
+<li><code>--force</code>: remove even if dependency checks are detected.</li>
+</ul>
 <p>Notes:</p>
 <ul>
-<li>This removes installed addon files recorded in <code>~/.brkraw/hooks.yaml</code>.</li>
-<li>The Python package itself is not uninstalled automatically.
-  The command prints something like:</li>
+<li>This removes files recorded in <code>~/.brkraw/hooks.yaml</code>.</li>
+<li>The Python package itself is not uninstalled automatically.</li>
 </ul>
-<div class="highlight"><pre><span></span><code>To uninstall the package, run: pip uninstall brkraw-mrs
-</code></pre></div>
 <hr />
-<h2 id="brkraw-hook-docs">brkraw hook docs<a class="headerlink" href="#brkraw-hook-docs" title="Permanent link">&para;</a></h2>
+<h2 id="hook-docs">hook docs<a class="headerlink" href="#hook-docs" title="Permanent link">&para;</a></h2>
 <p>Show documentation shipped by a hook package (from its manifest).</p>
-<div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>hook<span class="w"> </span>docs<span class="w"> </span>brkraw-mrs
+<div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>hook<span class="w"> </span>docs<span class="w"> </span>&lt;hook-name&gt;
 </code></pre></div>
-<p>Render markdown using <code>rich</code> (if installed):</p>
-<div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>hook<span class="w"> </span>docs<span class="w"> </span>brkraw-mrs<span class="w"> </span>--render
-</code></pre></div>
-<p>Notes:</p>
+<p>Option:</p>
 <ul>
-<li>
-<p>The manifest must include either:</p>
-</li>
-<li>
-<p><code>docs: path/to/file.md</code></p>
-</li>
-<li>or <code>readme: path/to/file.md</code></li>
-<li>The docs file is resolved relative to the manifest location inside the package.</li>
+<li><code>--render</code>: render markdown using <code>rich</code> (if installed).</li>
 </ul>
 <hr />
-<h2 id="brkraw-hook-preset">brkraw hook preset<a class="headerlink" href="#brkraw-hook-preset" title="Permanent link">&para;</a></h2>
+<h2 id="hook-preset">hook preset<a class="headerlink" href="#hook-preset" title="Permanent link">&para;</a></h2>
 <p>Generate a YAML template for hook arguments by inspecting the hook entrypoint signature.</p>
-<div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>hook<span class="w"> </span>preset<span class="w"> </span>mrs
+<div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>hook<span class="w"> </span>preset<span class="w"> </span>&lt;hook-entrypoint&gt;
 </code></pre></div>
 <p>Write to a file:</p>
-<div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>hook<span class="w"> </span>preset<span class="w"> </span>mrs<span class="w"> </span>-o<span class="w"> </span>hook_args.yaml
+<div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>hook<span class="w"> </span>preset<span class="w"> </span>&lt;hook-entrypoint&gt;<span class="w"> </span>-o<span class="w"> </span>hook_args.yaml
 </code></pre></div>
-<p>You can pass the generated file to <code>brkraw convert</code> via <code>--hook-args-yaml</code>.</p>
-<p>Notes:</p>
-<ul>
-<li>The template is a best-effort based on Python function signatures.</li>
-<li>Unknown keys in presets are ignored at runtime (logged at DEBUG).</li>
-</ul>
-<hr />
-<h2 id="common-workflow-example-brkraw-mrs">Common workflow example (brkraw-mrs)<a class="headerlink" href="#common-workflow-example-brkraw-mrs" title="Permanent link">&para;</a></h2>
-<p>Install the hook assets:</p>
-<div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>hook<span class="w"> </span>install<span class="w"> </span>brkraw-mrs
-</code></pre></div>
-<p>Verify installation status:</p>
-<div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>hook<span class="w"> </span>list
-</code></pre></div>
-<p>Read hook-specific usage notes:</p>
-<div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>hook<span class="w"> </span>docs<span class="w"> </span>brkraw-mrs<span class="w"> </span>--render
-</code></pre></div>
-<p>If you later remove it:</p>
-<div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>hook<span class="w"> </span>uninstall<span class="w"> </span>brkraw-mrs
-pip<span class="w"> </span>uninstall<span class="w"> </span>brkraw-mrs
-</code></pre></div>
+<p>You can pass the generated file to <code>brkraw convert</code> / <code>brkraw convert-batch</code> via <code>--hook-args-yaml</code>.</p>
 
 
 

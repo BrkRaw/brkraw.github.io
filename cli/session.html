@@ -6,14 +6,14 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Bruker Paravision dataset loader and NIfTI converter">
+        <meta name="description" content="A modular toolkit for Bruker MRI raw-data handling.">
       
       
       
         <link rel="canonical" href="https://brkraw.github.io/cli/session.html">
       
       
-        <link rel="prev" href="index.html">
+        <link rel="prev" href="init.html">
       
       
         <link rel="next" href="info.html">
@@ -27,7 +27,7 @@
     
     
       
-        <title>session - Preclinical MRI dataset toolkit</title>
+        <title>session - A Modular Toolkit for Bruker MRI raw-data handling.</title>
       
     
     
@@ -88,7 +88,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../index.html" title="Preclinical MRI dataset toolkit" class="md-header__button md-logo" aria-label="Preclinical MRI dataset toolkit" data-md-component="logo">
+    <a href="../index.html" title="A Modular Toolkit for Bruker MRI raw-data handling." class="md-header__button md-logo" aria-label="A Modular Toolkit for Bruker MRI raw-data handling." data-md-component="logo">
       
   <img src="../assets/brkraw-logo.svg" alt="logo">
 
@@ -101,7 +101,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Preclinical MRI dataset toolkit
+            A Modular Toolkit for Bruker MRI raw-data handling.
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -292,11 +292,11 @@
     
     
       <li class="md-tabs__item">
-        <a href="../reference/extensibility.html" class="md-tabs__link">
+        <a href="../extensions/extensibility.html" class="md-tabs__link">
           
   
   
-  Reference
+  Extensions
 
         </a>
       </li>
@@ -346,12 +346,12 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../index.html" title="Preclinical MRI dataset toolkit" class="md-nav__button md-logo" aria-label="Preclinical MRI dataset toolkit" data-md-component="logo">
+    <a href="../index.html" title="A Modular Toolkit for Bruker MRI raw-data handling." class="md-nav__button md-logo" aria-label="A Modular Toolkit for Bruker MRI raw-data handling." data-md-component="logo">
       
   <img src="../assets/brkraw-logo.svg" alt="logo">
 
     </a>
-    Preclinical MRI dataset toolkit
+    A Modular Toolkit for Bruker MRI raw-data handling.
   </label>
   
     <div class="md-nav__source">
@@ -489,7 +489,7 @@
   <span class="md-ellipsis">
     
   
-    CLI quickstart
+    Command Line Interface
   
 
     
@@ -517,7 +517,7 @@
   <span class="md-ellipsis">
     
   
-    Python API quickstart
+    Python API
   
 
     
@@ -538,14 +538,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting-started/configuration.html" class="md-nav__link">
+      <a href="../getting-started/gui.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Configuration basics
+    Graphical User Interface
   
 
     
@@ -566,14 +566,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting-started/hooks.html" class="md-nav__link">
+      <a href="../getting-started/bids.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Converter hooks
+    BIDS integration
   
 
     
@@ -594,14 +594,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting-started/viewer.html" class="md-nav__link">
+      <a href="../getting-started/config.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Dataset viewer
+    User Configuration
   
 
     
@@ -711,6 +711,34 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="init.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    init
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -774,6 +802,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#applying-session-defaults-in-your-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Applying Session Defaults in Your Shell
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shell-helpers-brkraw-set-brkraw-unset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shell Helpers (brkraw-set / brkraw-unset)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#session-set" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -806,6 +856,28 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#note-on-brkraw_scan_id" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Note on BRKRAW_SCAN_ID
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interface-with-paravision-pvcmd-auto-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interface With ParaVision (pvcmd Auto-Detection)
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -830,6 +902,34 @@
     
   
     info
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="params.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    params
   
 
     
@@ -886,6 +986,34 @@
     
   
     prune
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="cache.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    cache
   
 
     
@@ -1303,7 +1431,7 @@
   <span class="md-ellipsis">
     
   
-    Reference
+    Extensions
   
 
     
@@ -1319,7 +1447,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Reference
+    Extensions
   
 
           </label>
@@ -1332,14 +1460,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/extensibility.html" class="md-nav__link">
+      <a href="../extensions/extensibility.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Extensibility model
+    Overview
   
 
     
@@ -1360,7 +1488,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/addons-and-plugins.html" class="md-nav__link">
+      <a href="../extensions/addons-and-plugins.html" class="md-nav__link">
         
   
   
@@ -1388,7 +1516,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/cli-extensions.html" class="md-nav__link">
+      <a href="../extensions/cli-extensions.html" class="md-nav__link">
         
   
   
@@ -1416,14 +1544,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/rules.html" class="md-nav__link">
+      <a href="../extensions/rules.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Rule syntax
+    Rules
   
 
     
@@ -1444,14 +1572,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/specs.html" class="md-nav__link">
+      <a href="../extensions/specs.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Spec syntax
+    Specs
   
 
     
@@ -1472,14 +1600,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/context-map.html" class="md-nav__link">
+      <a href="../extensions/context-map.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Context map syntax
+    Context maps
   
 
     
@@ -1500,14 +1628,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/layout.html" class="md-nav__link">
+      <a href="../extensions/layout.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Output layout and naming
+    Layout and naming
   
 
     
@@ -1528,7 +1656,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/hook-packages.html" class="md-nav__link">
+      <a href="../extensions/hook-packages.html" class="md-nav__link">
         
   
   
@@ -1838,6 +1966,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#applying-session-defaults-in-your-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Applying Session Defaults in Your Shell
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shell-helpers-brkraw-set-brkraw-unset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shell Helpers (brkraw-set / brkraw-unset)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#session-set" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1864,6 +2014,28 @@
     <span class="md-ellipsis">
       
         session env
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#note-on-brkraw_scan_id" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Note on BRKRAW_SCAN_ID
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interface-with-paravision-pvcmd-auto-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interface With ParaVision (pvcmd Auto-Detection)
       
     </span>
   </a>
@@ -1901,6 +2073,35 @@ dataset or with the same conversion defaults.</p>
 <li><code>brkraw init --shell-rc ~/.zshrc</code> (or <code>~/.bashrc</code>) can install helper
   functions <code>brkraw-set</code> and <code>brkraw-unset</code> for convenience.</li>
 </ul>
+<p><code>brkraw session</code> also accepts <code>--root</code>, but session defaults are stored only in
+environment variables (not in the config root).</p>
+<hr />
+<h2 id="applying-session-defaults-in-your-shell">Applying Session Defaults in Your Shell<a class="headerlink" href="#applying-session-defaults-in-your-shell" title="Permanent link">&para;</a></h2>
+<p><code>brkraw session set</code> and <code>brkraw session unset</code> print shell code (export/unset).
+To apply it to your current shell, wrap it with <code>eval</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">eval</span><span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>brkraw<span class="w"> </span>session<span class="w"> </span><span class="nb">set</span><span class="w"> </span>--path<span class="w"> </span>/path/to/study<span class="w"> </span>--scan-id<span class="w"> </span><span class="m">3</span><span class="w"> </span>--reco-id<span class="w"> </span><span class="m">1</span><span class="k">)</span><span class="s2">&quot;</span>
+</code></pre></div>
+<p>This pattern works in both <code>bash</code> and <code>zsh</code>.</p>
+<hr />
+<h2 id="shell-helpers-brkraw-set-brkraw-unset">Shell Helpers (brkraw-set / brkraw-unset)<a class="headerlink" href="#shell-helpers-brkraw-set-brkraw-unset" title="Permanent link">&para;</a></h2>
+<p>On Linux (and other systems using <code>bash</code>), you can install small helper
+functions into your shell rc file so you don't have to type <code>eval "$( ... )"</code>
+each time:</p>
+<div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>init<span class="w"> </span>--shell-rc<span class="w"> </span>~/.bashrc
+</code></pre></div>
+<p>Then start a new shell (or reload your rc file):</p>
+<div class="highlight"><pre><span></span><code><span class="nb">source</span><span class="w"> </span>~/.bashrc
+</code></pre></div>
+<p>Examples:</p>
+<div class="highlight"><pre><span></span><code>brkraw-set<span class="w"> </span>-p<span class="w"> </span>/path/to/study<span class="w"> </span>-s<span class="w"> </span><span class="m">3</span><span class="w"> </span>-r<span class="w"> </span><span class="m">1</span>
+brkraw<span class="w"> </span>convert
+</code></pre></div>
+<p>Unset everything:</p>
+<div class="highlight"><pre><span></span><code>brkraw-unset
+</code></pre></div>
+<p>Unset only the dataset path:</p>
+<div class="highlight"><pre><span></span><code>brkraw-unset<span class="w"> </span>-p
+</code></pre></div>
 <hr />
 <h2 id="session-set">session set<a class="headerlink" href="#session-set" title="Permanent link">&para;</a></h2>
 <p>Emit <code>export ...</code> statements for BrkRaw defaults.</p>
@@ -1924,15 +2125,17 @@ dataset or with the same conversion defaults.</p>
 <p>Supported keys include:</p>
 <ul>
 <li>OUTPUT, PREFIX, SCAN_ID, RECO_ID, SIDECAR, CONTEXT_MAP</li>
-<li>COMPRESS, SPACE, FLIP_X</li>
+<li>COMPRESS, SPACE, FLATTEN_FG</li>
 <li>OVERRIDE_SUBJECT_TYPE, OVERRIDE_SUBJECT_POSE</li>
 <li>XYZ_UNITS, T_UNITS</li>
-<li>HEADER, FORMAT</li>
+<li>HEADER</li>
+<li>FORMAT</li>
 </ul>
 <p>Notes:</p>
 <ul>
 <li><code>--convert-option</code> expects <code>KEY=VALUE</code>.</li>
 <li>Keys are normalized to uppercase and <code>-</code> becomes <code>_</code>.</li>
+<li>When setting <code>--path</code>, the path is validated and BrkRaw checks it can load as a dataset.</li>
 </ul>
 <hr />
 <h2 id="session-unset">session unset<a class="headerlink" href="#session-unset" title="Permanent link">&para;</a></h2>
@@ -1961,6 +2164,41 @@ dataset or with the same conversion defaults.</p>
 <p>If nothing is set:</p>
 <div class="highlight"><pre><span></span><code>(none)
 </code></pre></div>
+<hr />
+<h2 id="note-on-brkraw_scan_id">Note on BRKRAW_SCAN_ID<a class="headerlink" href="#note-on-brkraw_scan_id" title="Permanent link">&para;</a></h2>
+<p><code>BRKRAW_SCAN_ID</code> is stored as a comma-separated string.
+Different commands may interpret it differently:</p>
+<ul>
+<li><code>brkraw info</code> treats it as a list of scan ids.</li>
+<li><code>brkraw convert</code> uses only the first scan id when <code>--scan-id</code> is omitted.</li>
+<li><code>brkraw params</code> expects a single scan id; set <code>-s/--scan-id</code> explicitly if needed.</li>
+</ul>
+<hr />
+<h2 id="interface-with-paravision-pvcmd-auto-detection">Interface With ParaVision (pvcmd Auto-Detection)<a class="headerlink" href="#interface-with-paravision-pvcmd-auto-detection" title="Permanent link">&para;</a></h2>
+<p>When running in a ParaVision environment, BrkRaw can auto-populate session
+defaults by querying ParaVision's active parameter space.</p>
+<p>Typical scenario:</p>
+<ul>
+<li>After completing a scan, you select a protocol/scan in the ParaVision
+  <em>Experiments</em> view and the <em>method</em> panel is visible.</li>
+<li>You open the ParaVision-provided terminal and run <code>brkraw</code>.</li>
+</ul>
+<p>If <code>pvcmd</code> is available and <code>ParxServer</code> is active, <code>brkraw</code> will use <code>pvcmd</code> to
+detect the current experiment path and scan context, and set these environment
+variables before processing CLI arguments:</p>
+<ul>
+<li><code>BRKRAW_PATH</code></li>
+<li><code>BRKRAW_SCAN_ID</code></li>
+<li><code>BRKRAW_RECO_ID</code></li>
+</ul>
+<p>This lets you run commands without explicitly providing <code>path</code> and <code>--scan-id</code>,
+for example:</p>
+<div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>info
+brkraw<span class="w"> </span>convert<span class="w"> </span>--reco-id<span class="w"> </span><span class="m">1</span>
+</code></pre></div>
+<p>Internally, this uses <code>pvcmd</code> to query the active parameter space and extract a
+path like <code>&lt;exp_path&gt;/&lt;scan_id&gt;/pdata/&lt;reco_id&gt;</code> before <code>argparse</code> parses the
+command line.</p>
 
 
 

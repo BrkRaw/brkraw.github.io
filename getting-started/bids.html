@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://brkraw.github.io/api/addon.html">
+        <link rel="canonical" href="https://brkraw.github.io/getting-started/bids.html">
       
       
-        <link rel="prev" href="layout.html">
+        <link rel="prev" href="gui.html">
       
       
-        <link rel="next" href="hook.html">
+        <link rel="next" href="config.html">
       
       
         
@@ -27,7 +27,7 @@
     
     
       
-        <title>addon - A Modular Toolkit for Bruker MRI raw-data handling.</title>
+        <title>BIDS integration - A Modular Toolkit for Bruker MRI raw-data handling.</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#addon-python-api" class="md-skip">
+        <a href="#bids-integration-current-guidance" class="md-skip">
           Skip to content
         </a>
       
@@ -107,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              addon
+              BIDS integration
             
           </span>
         </div>
@@ -226,11 +226,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../getting-started/index.html" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="index.html" class="md-tabs__link">
           
   
   
@@ -266,13 +268,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="overview.html" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../api/overview.html" class="md-tabs__link">
           
   
   
@@ -399,26 +399,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
@@ -436,7 +441,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -454,7 +459,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting-started/index.html" class="md-nav__link">
+      <a href="index.html" class="md-nav__link">
         
   
   
@@ -482,7 +487,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting-started/cli.html" class="md-nav__link">
+      <a href="cli.html" class="md-nav__link">
         
   
   
@@ -510,7 +515,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting-started/api.html" class="md-nav__link">
+      <a href="api.html" class="md-nav__link">
         
   
   
@@ -538,7 +543,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting-started/gui.html" class="md-nav__link">
+      <a href="gui.html" class="md-nav__link">
         
   
   
@@ -563,10 +568,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../getting-started/bids.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BIDS integration
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="bids.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -582,6 +614,81 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#practical-guidance-recommended-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Practical guidance (recommended usage)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bids-like-layout-example-informal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BIDS-like layout example (informal)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metadata-specs-and-current-defaults" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Metadata specs and current defaults
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#future-direction-brkraw-bids" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Future direction: brkraw-bids
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -594,7 +701,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting-started/config.html" class="md-nav__link">
+      <a href="config.html" class="md-nav__link">
         
   
   
@@ -993,31 +1100,26 @@
       
   
   
-    
   
   
-  
     
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
   
   
@@ -1035,7 +1137,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1053,7 +1155,7 @@
   
   
     <li class="md-nav__item">
-      <a href="overview.html" class="md-nav__link">
+      <a href="../api/overview.html" class="md-nav__link">
         
   
   
@@ -1081,7 +1183,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data-access.html" class="md-nav__link">
+      <a href="../api/data-access.html" class="md-nav__link">
         
   
   
@@ -1109,7 +1211,7 @@
   
   
     <li class="md-nav__item">
-      <a href="info.html" class="md-nav__link">
+      <a href="../api/info.html" class="md-nav__link">
         
   
   
@@ -1137,7 +1239,7 @@
   
   
     <li class="md-nav__item">
-      <a href="convert.html" class="md-nav__link">
+      <a href="../api/convert.html" class="md-nav__link">
         
   
   
@@ -1165,7 +1267,7 @@
   
   
     <li class="md-nav__item">
-      <a href="prune.html" class="md-nav__link">
+      <a href="../api/prune.html" class="md-nav__link">
         
   
   
@@ -1193,7 +1295,7 @@
   
   
     <li class="md-nav__item">
-      <a href="layout.html" class="md-nav__link">
+      <a href="../api/layout.html" class="md-nav__link">
         
   
   
@@ -1218,37 +1320,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    addon
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="addon.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../api/addon.html" class="md-nav__link">
         
   
   
@@ -1264,203 +1339,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#equivalent-cli-command" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Equivalent CLI command
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#entry-points" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Entry points
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configuration-root" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Configuration root
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#install-an-addon-file" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Install an addon file
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Install an addon file">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#install-a-yaml-file-auto-classify" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Install a YAML file (auto-classify)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#install-from-in-memory-mappings" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Install from in-memory mappings
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#spec-transforms-installation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Spec transforms installation
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#install-bundled-defaults" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Install bundled defaults
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#list-installed-addons" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        List installed addons
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#remove-installed-addons" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Remove installed addons
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Remove installed addons">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#restrict-removal-kind" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Restrict removal kind
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dependency-checks-and-force-removal" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Dependency checks and force removal
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#resolve-spec-references" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Resolve spec references
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#resolve-pruner-spec-references" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Resolve pruner spec references
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#design-notes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Design notes
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1473,7 +1351,7 @@
   
   
     <li class="md-nav__item">
-      <a href="hook.html" class="md-nav__link">
+      <a href="../api/hook.html" class="md-nav__link">
         
   
   
@@ -2066,10 +1944,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#equivalent-cli-command" class="md-nav__link">
+  <a href="#practical-guidance-recommended-usage" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Equivalent CLI command
+        Practical guidance (recommended usage)
       
     </span>
   </a>
@@ -2077,10 +1955,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#entry-points" class="md-nav__link">
+  <a href="#bids-like-layout-example-informal" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Entry points
+        BIDS-like layout example (informal)
       
     </span>
   </a>
@@ -2088,10 +1966,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuration-root" class="md-nav__link">
+  <a href="#metadata-specs-and-current-defaults" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Configuration root
+        Metadata specs and current defaults
       
     </span>
   </a>
@@ -2099,49 +1977,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#install-an-addon-file" class="md-nav__link">
+  <a href="#future-direction-brkraw-bids" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Install an addon file
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Install an addon file">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#install-a-yaml-file-auto-classify" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Install a YAML file (auto-classify)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#install-from-in-memory-mappings" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Install from in-memory mappings
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#spec-transforms-installation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Spec transforms installation
+        Future direction: brkraw-bids
       
     </span>
   </a>
@@ -2149,93 +1988,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#install-bundled-defaults" class="md-nav__link">
+  <a href="#references" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Install bundled defaults
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#list-installed-addons" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        List installed addons
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#remove-installed-addons" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Remove installed addons
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Remove installed addons">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#restrict-removal-kind" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Restrict removal kind
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dependency-checks-and-force-removal" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Dependency checks and force removal
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#resolve-spec-references" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Resolve spec references
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#resolve-pruner-spec-references" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Resolve pruner spec references
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#design-notes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Design notes
+        References
       
     </span>
   </a>
@@ -2262,228 +2018,103 @@
   
 
 
-<h1 id="addon-python-api">addon (Python API)<a class="headerlink" href="#addon-python-api" title="Permanent link">&para;</a></h1>
-<p>Manage installed addon assets used by brkraw mapping logic.</p>
-<p>Addons are data files installed under a configuration root and used by:
-- info specs
-- metadata specs
-- rules
-- pruner specs
-- transforms referenced by specs</p>
-<p>The addon API supports installation, listing, removal, and reference resolution.</p>
-<hr />
-<h2 id="equivalent-cli-command">Equivalent CLI command<a class="headerlink" href="#equivalent-cli-command" title="Permanent link">&para;</a></h2>
-<p><code>brkraw addon</code></p>
-<hr />
-<h2 id="entry-points">Entry points<a class="headerlink" href="#entry-points" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">brkraw.api</span><span class="w"> </span><span class="kn">import</span> <span class="n">addon_manager</span> <span class="k">as</span> <span class="n">addon</span>
-</code></pre></div>
-<p>Note: <code>brkraw.api.addon_manager</code> manages installed addon files under the config
-root. <code>brkraw.api.addon</code> refers to the spec/remapper module (spec loading,
-context maps, mapping).</p>
-<p>Public functions:</p>
+<h1 id="bids-integration-current-guidance">BIDS integration (current guidance)<a class="headerlink" href="#bids-integration-current-guidance" title="Permanent link">&para;</a></h1>
+<p>Earlier versions of BrkRaw provided more direct support for BIDS-style workflows,<br />
+and these features were actively used by many users. However, as the BIDS<br />
+specification has rapidly expanded and evolved, maintaining a fully compliant<br />
+BIDS implementation directly within the BrkRaw core became increasingly difficult.</p>
+<p>As a result, BrkRaw has shifted toward an extensible, framework-based design,<br />
+rather than hard-coding BIDS logic into the core.</p>
+<p>In the current architecture, BIDS-related behavior is conceptually expressed<br />
+through a layered workflow:</p>
 <ul>
-<li><code>addon.add(path, root=None) -&gt; List[pathlib.Path]</code></li>
-<li><code>addon.add_rule_data(rule_data, *, filename=None, source_path=None, root=None) -&gt; List[pathlib.Path]</code></li>
-<li><code>addon.add_spec_data(spec_data, *, filename=None, source_path=None, root=None, transforms_dir=None) -&gt; List[pathlib.Path]</code></li>
-<li><code>addon.add_pruner_spec_data(spec_data, *, filename=None, source_path=None, root=None) -&gt; List[pathlib.Path]</code></li>
-<li><code>addon.install_defaults(root=None) -&gt; List[pathlib.Path]</code></li>
-<li><code>addon.list_installed(root=None) -&gt; Dict[str, List[Dict[str, str]]]</code></li>
-<li><code>addon.remove(filename, *, root=None, kind=None, force=False) -&gt; List[pathlib.Path]</code></li>
-<li><code>addon.resolve_spec_reference(use, *, category=None, version=None, root=None) -&gt; pathlib.Path</code></li>
-<li><code>addon.resolve_pruner_spec_reference(use, *, version=None, root=None) -&gt; pathlib.Path</code></li>
+<li><strong>Rules</strong> select modality-specific logic, metadata specs, and hooks.  </li>
+<li><strong>Specs</strong> map Bruker ParaVision parameters into normalized metadata fields.  </li>
+<li><strong>Context maps</strong> normalize subject, session, and scan-level identifiers at runtime.  </li>
+<li><strong>Output layouts</strong> render structured file paths and filenames.</li>
 </ul>
+<p>This rule–spec–context–layout workflow forms the architectural foundation for<br />
+future BIDS-oriented extensions.</p>
 <hr />
-<h2 id="configuration-root">Configuration root<a class="headerlink" href="#configuration-root" title="Permanent link">&para;</a></h2>
-<p>All addon installation and lookup happens under a configuration root.</p>
-<p>Many functions accept <code>root</code>:</p>
+<h2 id="practical-guidance-recommended-usage">Practical guidance (recommended usage)<a class="headerlink" href="#practical-guidance-recommended-usage" title="Permanent link">&para;</a></h2>
+<p>While the framework above is flexible, it is <strong>not intended for general users</strong><br />
+to construct fully BIDS-compliant datasets at this stage. In addition, parts of<br />
+the BrkRaw core - particularly <strong>context mapping</strong> and <strong>output layout handling</strong><br />
+- may continue to evolve.</p>
+<p>For now, BIDS-related usage of BrkRaw is recommended in the following, limited scope:</p>
 <ul>
-<li><code>root=None</code> uses the default resolved root from brkraw configuration</li>
-<li><code>root=/custom/root</code> scopes installation and listing to that root</li>
+<li>Generating metadata sidecars via <strong>metadata specs</strong>  </li>
+<li>Producing <strong>BIDS-like directory structures</strong> using output layout templates</li>
 </ul>
+<p>These outputs are suitable for inspection, preparation, or downstream processing,<br />
+but <strong>should not be considered strictly BIDS-compliant datasets</strong>.</p>
 <hr />
-<h2 id="install-an-addon-file">Install an addon file<a class="headerlink" href="#install-an-addon-file" title="Permanent link">&para;</a></h2>
-<h3 id="install-a-yaml-file-auto-classify">Install a YAML file (auto-classify)<a class="headerlink" href="#install-a-yaml-file-auto-classify" title="Permanent link">&para;</a></h3>
-<p><code>addon.add()</code> installs a YAML file and automatically classifies it as one of:</p>
+<h2 id="bids-like-layout-example-informal">BIDS-like layout example (informal)<a class="headerlink" href="#bids-like-layout-example-informal" title="Permanent link">&para;</a></h2>
+<p>You can approximate a BIDS-like directory structure using output layout<br />
+configuration. This is useful for inspection or early-stage preparation,<br />
+but it does not replace a full BIDS implementation.</p>
+<p>Example layout configuration:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">output</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">layout_entries</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Subject.ID</span>
+<span class="w">      </span><span class="nt">entry</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sub</span>
+<span class="w">      </span><span class="nt">sep</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/&quot;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Session.ID</span>
+<span class="w">      </span><span class="nt">entry</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ses</span>
+<span class="w">      </span><span class="nt">sep</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/&quot;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Subject.ID</span>
+<span class="w">      </span><span class="nt">entry</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sub</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Session.ID</span>
+<span class="w">      </span><span class="nt">entry</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ses</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Modality</span>
+<span class="w">      </span><span class="nt">hide</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ScanID</span>
+<span class="w">      </span><span class="nt">entry</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">scan</span>
+</code></pre></div>
+<p>This configuration produces paths such as:</p>
+<div class="highlight"><pre><span></span><code>sub-01/ses-1/sub-01_ses-1_anat_scan-3.nii.gz
+</code></pre></div>
+<p>Important notes:</p>
 <ul>
-<li>rule</li>
-<li>spec (info_spec or metadata_spec)</li>
-<li>pruner spec</li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">brkraw.api</span><span class="w"> </span><span class="kn">import</span> <span class="n">addon_manager</span> <span class="k">as</span> <span class="n">addon</span>
-
-<span class="n">installed</span> <span class="o">=</span> <span class="n">addon</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;/path/to/file.yaml&quot;</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">path</span> <span class="ow">in</span> <span class="n">installed</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
-</code></pre></div>
-<p>Behavior:</p>
-<ul>
-<li>the YAML content is loaded and validated</li>
-<li>the target install location is chosen based on the detected type</li>
-<li>transforms referenced by specs may be installed automatically (see below)</li>
-</ul>
-<h3 id="install-from-in-memory-mappings">Install from in-memory mappings<a class="headerlink" href="#install-from-in-memory-mappings" title="Permanent link">&para;</a></h3>
-<p>Install a spec mapping:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">brkraw.api</span><span class="w"> </span><span class="kn">import</span> <span class="n">addon_manager</span> <span class="k">as</span> <span class="n">addon</span>
-
-<span class="n">installed</span> <span class="o">=</span> <span class="n">addon</span><span class="o">.</span><span class="n">add_spec_data</span><span class="p">(</span>
-    <span class="n">spec_data</span><span class="p">,</span>
-    <span class="n">filename</span><span class="o">=</span><span class="s2">&quot;my_spec.yaml&quot;</span><span class="p">,</span>
-<span class="p">)</span>
-</code></pre></div>
-<p>Install a rule mapping:</p>
-<div class="highlight"><pre><span></span><code><span class="n">installed</span> <span class="o">=</span> <span class="n">addon</span><span class="o">.</span><span class="n">add_rule_data</span><span class="p">(</span>
-    <span class="n">rule_data</span><span class="p">,</span>
-    <span class="n">filename</span><span class="o">=</span><span class="s2">&quot;my_rule.yaml&quot;</span><span class="p">,</span>
-<span class="p">)</span>
-</code></pre></div>
-<p>Install a pruner spec mapping:</p>
-<div class="highlight"><pre><span></span><code><span class="n">installed</span> <span class="o">=</span> <span class="n">addon</span><span class="o">.</span><span class="n">add_pruner_spec_data</span><span class="p">(</span>
-    <span class="n">pruner_spec_data</span><span class="p">,</span>
-    <span class="n">filename</span><span class="o">=</span><span class="s2">&quot;my_pruner.yaml&quot;</span><span class="p">,</span>
-<span class="p">)</span>
-</code></pre></div>
-<p>Notes:</p>
-<ul>
-<li><code>filename</code> must end with <code>.yaml</code> or <code>.yml</code></li>
-<li>if <code>filename</code> is omitted, <code>source_path</code> is required</li>
+<li>This layout is <strong>not BIDS-compliant by itself</strong>.  </li>
+<li>Scan-ID-based naming is often insufficient for BIDS.  </li>
+<li>Correct BIDS organization requires modality-aware and project-specific mapping.</li>
 </ul>
 <hr />
-<h2 id="spec-transforms-installation">Spec transforms installation<a class="headerlink" href="#spec-transforms-installation" title="Permanent link">&para;</a></h2>
-<p>Specs may declare transforms via <code>__meta__.transforms_source</code> (at the root
-or within sections). When installing a spec with <code>add_spec_data()</code>:</p>
+<h2 id="metadata-specs-and-current-defaults">Metadata specs and current defaults<a class="headerlink" href="#metadata-specs-and-current-defaults" title="Permanent link">&para;</a></h2>
+<p>The metadata specs installed via <code>brkraw init</code> are <strong>not a frozen BIDS standard</strong>.<br />
+Because the official BIDS specification continues to evolve, BrkRaw does not<br />
+attempt to track all BIDS updates directly within the core package.</p>
+<p>Instead, future BIDS-aligned metadata specs are expected to be provided through:</p>
 <ul>
-<li>referenced transform scripts are installed into the transforms directory</li>
-<li>the spec mapping may be rewritten so <code>transforms_source</code> points to the
-  installed transform paths relative to the spec</li>
+<li>Dedicated extension packages  </li>
+<li>Modality-specific hooks</li>
 </ul>
-<p>If transforms are referenced but cannot be resolved to a readable file,
-installation fails with <code>FileNotFoundError</code>.</p>
+<p>At present, the default metadata specs distributed with BrkRaw generate sidecar<br />
+metadata based on the <strong>DICOM metadata definitions provided in the Bruker<br />
+ParaVision manual</strong>, rather than the full BIDS specification.</p>
 <hr />
-<h2 id="install-bundled-defaults">Install bundled defaults<a class="headerlink" href="#install-bundled-defaults" title="Permanent link">&para;</a></h2>
-<p>Install brkraw bundled default specs, rules, and pruner specs:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">brkraw.api</span><span class="w"> </span><span class="kn">import</span> <span class="n">addon_manager</span> <span class="k">as</span> <span class="n">addon</span>
-
-<span class="n">installed</span> <span class="o">=</span> <span class="n">addon</span><span class="o">.</span><span class="n">install_defaults</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">installed</span><span class="p">))</span>
+<h2 id="future-direction-brkraw-bids">Future direction: brkraw-bids<a class="headerlink" href="#future-direction-brkraw-bids" title="Permanent link">&para;</a></h2>
+<p>BrkRaw intentionally avoids embedding BIDS logic directly into the core.</p>
+<p>More advanced and BIDS-specific tasks - such as:</p>
+<ul>
+<li>Modality-aware naming and entity resolution  </li>
+<li>Scan-level to BIDS-entity mapping  </li>
+<li>Project- or study-specific conventions  </li>
+<li>Dataset-wide validation and restructuring</li>
+</ul>
+<p>are planned to be handled by a dedicated tool:</p>
+<div class="highlight"><pre><span></span><code>brkraw-bids
 </code></pre></div>
-<p>This is typically used when preparing a fresh configuration root.</p>
+<p>This separation keeps BrkRaw focused on reliable data access, metadata normalization,<br />
+and extensible conversion, while allowing BIDS-specific logic to evolve independently.</p>
 <hr />
-<h2 id="list-installed-addons">List installed addons<a class="headerlink" href="#list-installed-addons" title="Permanent link">&para;</a></h2>
-<p>List installed specs, pruner specs, rules, and transforms:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">brkraw.api</span><span class="w"> </span><span class="kn">import</span> <span class="n">addon_manager</span> <span class="k">as</span> <span class="n">addon</span>
-
-<span class="n">data</span> <span class="o">=</span> <span class="n">addon</span><span class="o">.</span><span class="n">list_installed</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
-</code></pre></div>
-<p>Returned keys include:</p>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
 <ul>
-<li><code>specs</code></li>
-<li><code>pruner_specs</code></li>
-<li><code>rules</code></li>
-<li><code>transforms</code></li>
-</ul>
-<p>Each item is returned as a dictionary of string fields suitable for
-display or serialization.</p>
-<p>Notes:</p>
-<ul>
-<li>spec categories may be inferred from rules when <code>__meta__.category</code> is missing</li>
-<li>transforms are listed with their referencing spec labels when available</li>
-</ul>
-<hr />
-<h2 id="remove-installed-addons">Remove installed addons<a class="headerlink" href="#remove-installed-addons" title="Permanent link">&para;</a></h2>
-<p>Remove an installed file by filename:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">brkraw.api</span><span class="w"> </span><span class="kn">import</span> <span class="n">addon_manager</span> <span class="k">as</span> <span class="n">addon</span>
-
-<span class="n">removed</span> <span class="o">=</span> <span class="n">addon</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&quot;my_spec.yaml&quot;</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">path</span> <span class="ow">in</span> <span class="n">removed</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
-</code></pre></div>
-<p>Important:</p>
-<ul>
-<li><code>filename</code> matches the installed file name, not <code>__meta__.name</code></li>
-</ul>
-<h3 id="restrict-removal-kind">Restrict removal kind<a class="headerlink" href="#restrict-removal-kind" title="Permanent link">&para;</a></h3>
-<p>Optionally restrict removal to one kind:</p>
-<div class="highlight"><pre><span></span><code><span class="n">addon</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&quot;my_rule.yaml&quot;</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;rule&quot;</span><span class="p">)</span>
-</code></pre></div>
-<p>Valid kinds:</p>
-<ul>
-<li><code>spec</code></li>
-<li><code>pruner</code></li>
-<li><code>rule</code></li>
-<li><code>transform</code></li>
-</ul>
-<h3 id="dependency-checks-and-force-removal">Dependency checks and force removal<a class="headerlink" href="#dependency-checks-and-force-removal" title="Permanent link">&para;</a></h3>
-<p>Removal checks whether the target is referenced by other installed assets.</p>
-<p>Examples of dependency warnings:</p>
-<ul>
-<li>a spec referenced by rules</li>
-<li>a spec included by another spec</li>
-<li>a transform referenced by a spec</li>
-</ul>
-<p>If dependencies are found:</p>
-<ul>
-<li><code>force=False</code> raises <code>RuntimeError</code></li>
-<li><code>force=True</code> removes the file anyway</li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="n">addon</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&quot;my_spec.yaml&quot;</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-</code></pre></div>
-<hr />
-<h2 id="resolve-spec-references">Resolve spec references<a class="headerlink" href="#resolve-spec-references" title="Permanent link">&para;</a></h2>
-<p>Rules and other assets may reference specs either by path-like values or
-by logical names.</p>
-<p>Resolve a spec reference:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">brkraw.api</span><span class="w"> </span><span class="kn">import</span> <span class="n">addon_manager</span> <span class="k">as</span> <span class="n">addon</span>
-
-<span class="n">spec_path</span> <span class="o">=</span> <span class="n">addon</span><span class="o">.</span><span class="n">resolve_spec_reference</span><span class="p">(</span>
-    <span class="s2">&quot;MySpecName&quot;</span><span class="p">,</span>
-    <span class="n">category</span><span class="o">=</span><span class="s2">&quot;metadata_spec&quot;</span><span class="p">,</span>
-<span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">spec_path</span><span class="p">)</span>
-</code></pre></div>
-<p>Behavior:</p>
-<ul>
-<li>if <code>use</code> looks like a path, it is resolved under the root</li>
-<li>otherwise, it is treated as a logical name and the latest version is selected</li>
-<li>if multiple specs share the latest version, resolution fails with <code>ValueError</code></li>
-</ul>
-<p>Resolve a specific version:</p>
-<div class="highlight"><pre><span></span><code><span class="n">spec_path</span> <span class="o">=</span> <span class="n">addon</span><span class="o">.</span><span class="n">resolve_spec_reference</span><span class="p">(</span>
-    <span class="s2">&quot;MySpecName&quot;</span><span class="p">,</span>
-    <span class="n">category</span><span class="o">=</span><span class="s2">&quot;metadata_spec&quot;</span><span class="p">,</span>
-    <span class="n">version</span><span class="o">=</span><span class="s2">&quot;1.2.0&quot;</span><span class="p">,</span>
-<span class="p">)</span>
-</code></pre></div>
-<p>Notes:</p>
-<ul>
-<li><code>category</code> filtering is optional but recommended for disambiguation</li>
-<li>missing specs raise <code>FileNotFoundError</code></li>
-</ul>
-<hr />
-<h2 id="resolve-pruner-spec-references">Resolve pruner spec references<a class="headerlink" href="#resolve-pruner-spec-references" title="Permanent link">&para;</a></h2>
-<p>Resolve a pruner spec by name (latest version by default):</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">brkraw.api</span><span class="w"> </span><span class="kn">import</span> <span class="n">addon_manager</span> <span class="k">as</span> <span class="n">addon</span>
-
-<span class="n">path</span> <span class="o">=</span> <span class="n">addon</span><span class="o">.</span><span class="n">resolve_pruner_spec_reference</span><span class="p">(</span><span class="s2">&quot;minimal_share&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
-</code></pre></div>
-<p>Resolve a specific version:</p>
-<div class="highlight"><pre><span></span><code><span class="n">path</span> <span class="o">=</span> <span class="n">addon</span><span class="o">.</span><span class="n">resolve_pruner_spec_reference</span><span class="p">(</span>
-    <span class="s2">&quot;minimal_share&quot;</span><span class="p">,</span>
-    <span class="n">version</span><span class="o">=</span><span class="s2">&quot;1.0.0&quot;</span><span class="p">,</span>
-<span class="p">)</span>
-</code></pre></div>
-<p>Missing names or versions raise <code>FileNotFoundError</code>.
-Tied versions raise <code>ValueError</code>.</p>
-<hr />
-<h2 id="design-notes">Design notes<a class="headerlink" href="#design-notes" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Addon installation is file-based and deterministic under the chosen root.</li>
-<li>YAML inputs are validated before writing.</li>
-<li>Removal is conservative by default and blocks when dependencies are detected
-  unless forced.</li>
-<li>Reference resolution prefers the latest version and rejects ambiguous ties.</li>
+<li>Rules for modality-specific selection: <a href="../extensions/rules.html">Rule syntax</a>  </li>
+<li>Specs for <code>info_spec</code> and <code>metadata_spec</code>: <a href="../extensions/specs.html">Spec syntax</a>  </li>
+<li>Context maps for runtime remapping: <a href="../extensions/context-map.html">Context map syntax</a>  </li>
+<li>Layout rules for directory structure and naming: <a href="../extensions/layout.html">Layout and naming</a></li>
 </ul>
 
 

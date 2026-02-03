@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Bruker Paravision dataset loader and NIfTI converter">
+        <meta name="description" content="A modular toolkit for Bruker MRI raw-data handling.">
       
       
       
@@ -16,7 +16,7 @@
         <link rel="prev" href="addon.html">
       
       
-        <link rel="next" href="../reference/extensibility.html">
+        <link rel="next" href="../extensions/extensibility.html">
       
       
         
@@ -27,7 +27,7 @@
     
     
       
-        <title>hook - Preclinical MRI dataset toolkit</title>
+        <title>hook - A Modular Toolkit for Bruker MRI raw-data handling.</title>
       
     
     
@@ -88,7 +88,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../index.html" title="Preclinical MRI dataset toolkit" class="md-header__button md-logo" aria-label="Preclinical MRI dataset toolkit" data-md-component="logo">
+    <a href="../index.html" title="A Modular Toolkit for Bruker MRI raw-data handling." class="md-header__button md-logo" aria-label="A Modular Toolkit for Bruker MRI raw-data handling." data-md-component="logo">
       
   <img src="../assets/brkraw-logo.svg" alt="logo">
 
@@ -101,7 +101,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Preclinical MRI dataset toolkit
+            A Modular Toolkit for Bruker MRI raw-data handling.
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -292,11 +292,11 @@
     
     
       <li class="md-tabs__item">
-        <a href="../reference/extensibility.html" class="md-tabs__link">
+        <a href="../extensions/extensibility.html" class="md-tabs__link">
           
   
   
-  Reference
+  Extensions
 
         </a>
       </li>
@@ -346,12 +346,12 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../index.html" title="Preclinical MRI dataset toolkit" class="md-nav__button md-logo" aria-label="Preclinical MRI dataset toolkit" data-md-component="logo">
+    <a href="../index.html" title="A Modular Toolkit for Bruker MRI raw-data handling." class="md-nav__button md-logo" aria-label="A Modular Toolkit for Bruker MRI raw-data handling." data-md-component="logo">
       
   <img src="../assets/brkraw-logo.svg" alt="logo">
 
     </a>
-    Preclinical MRI dataset toolkit
+    A Modular Toolkit for Bruker MRI raw-data handling.
   </label>
   
     <div class="md-nav__source">
@@ -489,7 +489,7 @@
   <span class="md-ellipsis">
     
   
-    CLI quickstart
+    Command Line Interface
   
 
     
@@ -517,7 +517,7 @@
   <span class="md-ellipsis">
     
   
-    Python API quickstart
+    Python API
   
 
     
@@ -538,14 +538,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting-started/configuration.html" class="md-nav__link">
+      <a href="../getting-started/gui.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Configuration basics
+    Graphical User Interface
   
 
     
@@ -566,14 +566,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting-started/hooks.html" class="md-nav__link">
+      <a href="../getting-started/bids.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Converter hooks
+    BIDS integration
   
 
     
@@ -594,14 +594,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting-started/viewer.html" class="md-nav__link">
+      <a href="../getting-started/config.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Dataset viewer
+    User Configuration
   
 
     
@@ -709,6 +709,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../cli/init.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    init
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../cli/session.html" class="md-nav__link">
         
   
@@ -765,6 +793,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../cli/params.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    params
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../cli/convert.html" class="md-nav__link">
         
   
@@ -801,6 +857,34 @@
     
   
     prune
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli/cache.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    cache
   
 
     
@@ -1247,6 +1331,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#where-hooks-apply-loader-vs-scan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where Hooks Apply (Loader vs Scan)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#what-is-a-hook" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1414,7 +1509,7 @@
   <span class="md-ellipsis">
     
   
-    Reference
+    Extensions
   
 
     
@@ -1430,7 +1525,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Reference
+    Extensions
   
 
           </label>
@@ -1443,14 +1538,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/extensibility.html" class="md-nav__link">
+      <a href="../extensions/extensibility.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Extensibility model
+    Overview
   
 
     
@@ -1471,7 +1566,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/addons-and-plugins.html" class="md-nav__link">
+      <a href="../extensions/addons-and-plugins.html" class="md-nav__link">
         
   
   
@@ -1499,7 +1594,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/cli-extensions.html" class="md-nav__link">
+      <a href="../extensions/cli-extensions.html" class="md-nav__link">
         
   
   
@@ -1527,14 +1622,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/rules.html" class="md-nav__link">
+      <a href="../extensions/rules.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Rule syntax
+    Rules
   
 
     
@@ -1555,14 +1650,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/specs.html" class="md-nav__link">
+      <a href="../extensions/specs.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Spec syntax
+    Specs
   
 
     
@@ -1583,14 +1678,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/context-map.html" class="md-nav__link">
+      <a href="../extensions/context-map.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Context map syntax
+    Context maps
   
 
     
@@ -1611,14 +1706,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/layout.html" class="md-nav__link">
+      <a href="../extensions/layout.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Output layout and naming
+    Layout and naming
   
 
     
@@ -1639,7 +1734,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/hook-packages.html" class="md-nav__link">
+      <a href="../extensions/hook-packages.html" class="md-nav__link">
         
   
   
@@ -1971,6 +2066,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#where-hooks-apply-loader-vs-scan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where Hooks Apply (Loader vs Scan)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#what-is-a-hook" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2124,14 +2230,40 @@ configuration root, and uninstallation with dependency checks.</p>
 <p><code>brkraw hook</code></p>
 <hr />
 <h2 id="entry-points">Entry points<a class="headerlink" href="#entry-points" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">brkraw.apps</span><span class="w"> </span><span class="kn">import</span> <span class="n">hook</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">brkraw.api</span><span class="w"> </span><span class="kn">import</span> <span class="n">hook_manager</span> <span class="k">as</span> <span class="n">hook</span>
 </code></pre></div>
+<p>Note: <code>brkraw.api.hook_manager</code> manages hook packages and their installed addon
+assets. <code>brkraw.api.hook</code> refers to the hook <em>spec</em> module (entrypoint
+resolution/validation).</p>
 <p>Public functions:</p>
 <ul>
 <li><code>hook.list_hooks(root=None) -&gt; List[Dict[str, Any]]</code></li>
 <li><code>hook.install_all(root=None, upgrade=False, force=False) -&gt; Dict[str, List[str]]</code></li>
 <li><code>hook.install_hook(target, root=None, upgrade=False, force=False) -&gt; str</code></li>
-<li><code>hook.uninstall_hook(target, root=None, force=False) -&gt; Tuple[str, Dict[str, List[str]]]</code></li>
+<li><code>hook.read_hook_docs(target, root=None) -&gt; Tuple[str, str]</code></li>
+<li><code>hook.uninstall_hook(target, root=None, force=False) -&gt; Tuple[str, Dict[str, List[str]], bool]</code></li>
+</ul>
+<hr />
+<h2 id="where-hooks-apply-loader-vs-scan">Where Hooks Apply (Loader vs Scan)<a class="headerlink" href="#where-hooks-apply-loader-vs-scan" title="Permanent link">&para;</a></h2>
+<p>In BrkRaw, converter hooks are applied at the <strong>loader level</strong>.</p>
+<ul>
+<li>Hooks are resolved and attached by <code>BrukerLoader</code> when you call loader APIs such as:<ul>
+<li><code>loader.convert(...)</code></li>
+<li><code>loader.get_dataobj(...)</code></li>
+<li><code>loader.get_affine(...)</code></li>
+</ul>
+</li>
+<li>A hook works by overriding a scan’s conversion helpers (for example <code>get_dataobj</code>,
+  <code>get_affine</code>, <code>convert</code>). The loader is responsible for resolving the hook and
+  wiring those overrides onto the scan before use.</li>
+</ul>
+<p>Scan objects are still important, but mainly for <strong>hook development</strong>:</p>
+<ul>
+<li>You typically use scan/reco access (<code>loader.get_scan(...)</code>, <code>scan.get_reco(...)</code>,
+  reading parameters/files) to implement and test a new hook’s logic.</li>
+<li>Calling scan methods directly is not the primary “hook application” interface;
+  use the loader for hook-aware execution so hook resolution and hook arguments
+  are handled consistently.</li>
 </ul>
 <hr />
 <h2 id="what-is-a-hook">What is a hook<a class="headerlink" href="#what-is-a-hook" title="Permanent link">&para;</a></h2>
@@ -2139,12 +2271,8 @@ configuration root, and uninstallation with dependency checks.</p>
 <ol>
 <li>Exposes one or more entry points under the <code>brkraw.converter_hook</code> group.</li>
 <li>Optionally ships a manifest file named <code>brkraw_hook.yaml</code> or <code>brkraw_hook.yml</code>.</li>
-<li>
-<p>The manifest may list addon assets to install into the configuration root:</p>
-</li>
-<li>
-<p>specs</p>
-</li>
+<li>The manifest may list addon assets to install into the configuration root:</li>
+<li>specs</li>
 <li>pruner_specs</li>
 <li>rules</li>
 <li>transforms</li>
@@ -2153,7 +2281,7 @@ configuration root, and uninstallation with dependency checks.</p>
 <hr />
 <h2 id="list-available-hooks-cli-brkraw-hook-list">List available hooks (CLI: <code>brkraw hook list</code>)<a class="headerlink" href="#list-available-hooks-cli-brkraw-hook-list" title="Permanent link">&para;</a></h2>
 <p>List hooks discovered from installed Python packages:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">brkraw.apps</span><span class="w"> </span><span class="kn">import</span> <span class="n">hook</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">brkraw.api</span><span class="w"> </span><span class="kn">import</span> <span class="n">hook_manager</span> <span class="k">as</span> <span class="n">hook</span>
 
 <span class="n">items</span> <span class="o">=</span> <span class="n">hook</span><span class="o">.</span><span class="n">list_hooks</span><span class="p">()</span>
 <span class="k">for</span> <span class="n">h</span> <span class="ow">in</span> <span class="n">items</span><span class="p">:</span>
@@ -2177,7 +2305,7 @@ records results in <code>hooks.yaml</code>.</p>
 <p>Installation does not install the Python package itself. The package must
 already be available in the environment (for example via pip/conda).</p>
 <h3 id="install-a-single-hook-cli-brkraw-hook-install">Install a single hook (CLI: <code>brkraw hook install</code>)<a class="headerlink" href="#install-a-single-hook-cli-brkraw-hook-install" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">brkraw.apps</span><span class="w"> </span><span class="kn">import</span> <span class="n">hook</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">brkraw.api</span><span class="w"> </span><span class="kn">import</span> <span class="n">hook_manager</span> <span class="k">as</span> <span class="n">hook</span>
 
 <span class="n">status</span> <span class="o">=</span> <span class="n">hook</span><span class="o">.</span><span class="n">install_hook</span><span class="p">(</span><span class="s2">&quot;my-hook-package&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">status</span><span class="p">)</span>  <span class="c1"># &quot;installed&quot; or &quot;skipped&quot;</span>
@@ -2190,7 +2318,7 @@ already be available in the environment (for example via pip/conda).</p>
 <p>If multiple hooks match the target, installation fails with <code>ValueError</code>.
 If no hook matches, installation fails with <code>LookupError</code>.</p>
 <h3 id="install-all-hooks-cli-brkraw-hook-install-all">Install all hooks (CLI: <code>brkraw hook install --all</code>)<a class="headerlink" href="#install-all-hooks-cli-brkraw-hook-install-all" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">brkraw.apps</span><span class="w"> </span><span class="kn">import</span> <span class="n">hook</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">brkraw.api</span><span class="w"> </span><span class="kn">import</span> <span class="n">hook_manager</span> <span class="k">as</span> <span class="n">hook</span>
 
 <span class="n">result</span> <span class="o">=</span> <span class="n">hook</span><span class="o">.</span><span class="n">install_all</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">[</span><span class="s2">&quot;installed&quot;</span><span class="p">])</span>
@@ -2223,18 +2351,22 @@ spec paths when applicable.</p>
 <h2 id="uninstall-hook-assets-cli-brkraw-hook-uninstall">Uninstall hook assets (CLI: <code>brkraw hook uninstall</code>)<a class="headerlink" href="#uninstall-hook-assets-cli-brkraw-hook-uninstall" title="Permanent link">&para;</a></h2>
 <p>Uninstall removes the assets previously installed by the hook, based on the
 registry record.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">brkraw.apps</span><span class="w"> </span><span class="kn">import</span> <span class="n">hook</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">brkraw.api</span><span class="w"> </span><span class="kn">import</span> <span class="n">hook_manager</span> <span class="k">as</span> <span class="n">hook</span>
 
-<span class="n">name</span><span class="p">,</span> <span class="n">removed</span> <span class="o">=</span> <span class="n">hook</span><span class="o">.</span><span class="n">uninstall_hook</span><span class="p">(</span><span class="s2">&quot;my-hook-package&quot;</span><span class="p">)</span>
+<span class="n">name</span><span class="p">,</span> <span class="n">removed</span><span class="p">,</span> <span class="n">module_missing</span> <span class="o">=</span> <span class="n">hook</span><span class="o">.</span><span class="n">uninstall_hook</span><span class="p">(</span><span class="s2">&quot;my-hook-package&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">removed</span><span class="p">[</span><span class="s2">&quot;specs&quot;</span><span class="p">])</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">removed</span><span class="p">[</span><span class="s2">&quot;rules&quot;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Python module missing:&quot;</span><span class="p">,</span> <span class="n">module_missing</span><span class="p">)</span>
 </code></pre></div>
 <p>Behavior:</p>
 <ul>
 <li>if the hook is not installed (no registry entry), uninstallation fails with <code>LookupError</code></li>
 <li>removed files are unlinked if present</li>
 <li>missing files are ignored (no error)</li>
+<li>the return value includes <code>module_missing</code>, which is <code>True</code> when the hook's
+  entrypoint cannot be found in the current Python environment (package may have
+  already been uninstalled).</li>
 </ul>
 <h3 id="dependency-checks-and-force-removal">Dependency checks and force removal<a class="headerlink" href="#dependency-checks-and-force-removal" title="Permanent link">&para;</a></h3>
 <p>Before removing each file, the hook uninstaller checks whether the file is

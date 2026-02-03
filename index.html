@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Bruker Paravision dataset loader and NIfTI converter">
+        <meta name="description" content="A modular toolkit for Bruker MRI raw-data handling.">
       
       
       
@@ -25,7 +25,7 @@
     
     
       
-        <title>Preclinical MRI dataset toolkit</title>
+        <title>A Modular Toolkit for Bruker MRI raw-data handling.</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#preclinical-mri-dataset-toolkit" class="md-skip">
+        <a href="#brkraw" class="md-skip">
           Skip to content
         </a>
       
@@ -86,7 +86,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="index.html" title="Preclinical MRI dataset toolkit" class="md-header__button md-logo" aria-label="Preclinical MRI dataset toolkit" data-md-component="logo">
+    <a href="index.html" title="A Modular Toolkit for Bruker MRI raw-data handling." class="md-header__button md-logo" aria-label="A Modular Toolkit for Bruker MRI raw-data handling." data-md-component="logo">
       
   <img src="assets/brkraw-logo.svg" alt="logo">
 
@@ -99,7 +99,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Preclinical MRI dataset toolkit
+            A Modular Toolkit for Bruker MRI raw-data handling.
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -290,11 +290,11 @@
     
     
       <li class="md-tabs__item">
-        <a href="reference/extensibility.html" class="md-tabs__link">
+        <a href="extensions/extensibility.html" class="md-tabs__link">
           
   
   
-  Reference
+  Extensions
 
         </a>
       </li>
@@ -344,12 +344,12 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="index.html" title="Preclinical MRI dataset toolkit" class="md-nav__button md-logo" aria-label="Preclinical MRI dataset toolkit" data-md-component="logo">
+    <a href="index.html" title="A Modular Toolkit for Bruker MRI raw-data handling." class="md-nav__button md-logo" aria-label="A Modular Toolkit for Bruker MRI raw-data handling." data-md-component="logo">
       
   <img src="assets/brkraw-logo.svg" alt="logo">
 
     </a>
-    Preclinical MRI dataset toolkit
+    A Modular Toolkit for Bruker MRI raw-data handling.
   </label>
   
     <div class="md-nav__source">
@@ -433,10 +433,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#highlights" class="md-nav__link">
+  <a href="#inspect-and-convert-paravision-raw-data-directly-and-flexibly" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Highlights
+        Inspect and convert ParaVision raw data, directly and flexibly
       
     </span>
   </a>
@@ -444,102 +444,24 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#supported-scope-and-limitations" class="md-nav__link">
+  <a href="#how-brkraw-works" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Supported scope and limitations
+        How BrkRaw works?
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Supported scope and limitations">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#supported" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Supported
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tested-paravision-versions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Tested Paravision versions
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#not-in-scope-limitations" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Not in scope / limitations
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ecosystem-and-extensions" class="md-nav__link">
+  <a href="#new-here-start-with-getting-started" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Ecosystem and extensions
+        New here? Start with 👉 Getting Started
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Ecosystem and extensions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#official-resources" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Official resources
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#converter-and-ui-extensions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Converter and UI extensions
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#extension-templates" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Extension templates
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -645,7 +567,7 @@
   <span class="md-ellipsis">
     
   
-    CLI quickstart
+    Command Line Interface
   
 
     
@@ -673,7 +595,7 @@
   <span class="md-ellipsis">
     
   
-    Python API quickstart
+    Python API
   
 
     
@@ -694,14 +616,14 @@
   
   
     <li class="md-nav__item">
-      <a href="getting-started/configuration.html" class="md-nav__link">
+      <a href="getting-started/gui.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Configuration basics
+    Graphical User Interface
   
 
     
@@ -722,14 +644,14 @@
   
   
     <li class="md-nav__item">
-      <a href="getting-started/hooks.html" class="md-nav__link">
+      <a href="getting-started/bids.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Converter hooks
+    BIDS integration
   
 
     
@@ -750,14 +672,14 @@
   
   
     <li class="md-nav__item">
-      <a href="getting-started/viewer.html" class="md-nav__link">
+      <a href="getting-started/config.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Dataset viewer
+    User Configuration
   
 
     
@@ -865,6 +787,34 @@
   
   
     <li class="md-nav__item">
+      <a href="cli/init.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    init
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="cli/session.html" class="md-nav__link">
         
   
@@ -921,6 +871,34 @@
   
   
     <li class="md-nav__item">
+      <a href="cli/params.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    params
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="cli/convert.html" class="md-nav__link">
         
   
@@ -957,6 +935,34 @@
     
   
     prune
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="cli/cache.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    cache
   
 
     
@@ -1374,7 +1380,7 @@
   <span class="md-ellipsis">
     
   
-    Reference
+    Extensions
   
 
     
@@ -1390,7 +1396,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Reference
+    Extensions
   
 
           </label>
@@ -1403,14 +1409,14 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/extensibility.html" class="md-nav__link">
+      <a href="extensions/extensibility.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Extensibility model
+    Overview
   
 
     
@@ -1431,7 +1437,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/addons-and-plugins.html" class="md-nav__link">
+      <a href="extensions/addons-and-plugins.html" class="md-nav__link">
         
   
   
@@ -1459,7 +1465,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/cli-extensions.html" class="md-nav__link">
+      <a href="extensions/cli-extensions.html" class="md-nav__link">
         
   
   
@@ -1487,14 +1493,14 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/rules.html" class="md-nav__link">
+      <a href="extensions/rules.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Rule syntax
+    Rules
   
 
     
@@ -1515,14 +1521,14 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/specs.html" class="md-nav__link">
+      <a href="extensions/specs.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Spec syntax
+    Specs
   
 
     
@@ -1543,14 +1549,14 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/context-map.html" class="md-nav__link">
+      <a href="extensions/context-map.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Context map syntax
+    Context maps
   
 
     
@@ -1571,14 +1577,14 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/layout.html" class="md-nav__link">
+      <a href="extensions/layout.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Output layout and naming
+    Layout and naming
   
 
     
@@ -1599,7 +1605,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/hook-packages.html" class="md-nav__link">
+      <a href="extensions/hook-packages.html" class="md-nav__link">
         
   
   
@@ -1909,10 +1915,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#highlights" class="md-nav__link">
+  <a href="#inspect-and-convert-paravision-raw-data-directly-and-flexibly" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Highlights
+        Inspect and convert ParaVision raw data, directly and flexibly
       
     </span>
   </a>
@@ -1920,102 +1926,24 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#supported-scope-and-limitations" class="md-nav__link">
+  <a href="#how-brkraw-works" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Supported scope and limitations
+        How BrkRaw works?
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Supported scope and limitations">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#supported" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Supported
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tested-paravision-versions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Tested Paravision versions
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#not-in-scope-limitations" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Not in scope / limitations
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ecosystem-and-extensions" class="md-nav__link">
+  <a href="#new-here-start-with-getting-started" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Ecosystem and extensions
+        New here? Start with 👉 Getting Started
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Ecosystem and extensions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#official-resources" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Official resources
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#converter-and-ui-extensions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Converter and UI extensions
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#extension-templates" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Extension templates
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2039,102 +1967,19 @@
   
 
 
-<h1 id="preclinical-mri-dataset-toolkit">Preclinical MRI Dataset Toolkit<a class="headerlink" href="#preclinical-mri-dataset-toolkit" title="Permanent link">&para;</a></h1>
-<p>Documentation for BrkRaw.</p>
-<p>BrkRaw is a toolkit for loading Bruker Paravision MRI studies, inspecting and
-normalizing metadata, mapping parameters through rule and spec systems, and
-exporting data to NIfTI with optional sidecar metadata.</p>
-<p>It provides both a CLI and a Python API, and is designed to be extended through
-add-on rules, specs, and converter plugins.</p>
-<hr />
-<h2 id="highlights">Highlights<a class="headerlink" href="#highlights" title="Permanent link">&para;</a></h2>
+<h1 id="brkraw"><strong>BrkRaw</strong><a class="headerlink" href="#brkraw" title="Permanent link">&para;</a></h1>
+<p>A modular toolkit for converting Bruker Paravision MRI data into structured, reproducible, explicit file-format outputs.</p>
+<h2 id="inspect-and-convert-paravision-raw-data-directly-and-flexibly"><strong>Inspect and convert ParaVision raw data, directly and flexibly</strong><a class="headerlink" href="#inspect-and-convert-paravision-raw-data-directly-and-flexibly" title="Permanent link">&para;</a></h2>
+<p>Inspect studies, explore parameters, and convert data step by step with a flexible, parameter-based,
+spec- and rule-driven workflow.</p>
+<p><img alt="brkraw-cli-demo" src="assets/gif/intro.gif" /></p>
+<h2 id="how-brkraw-works"><strong>How BrkRaw works?</strong><a class="headerlink" href="#how-brkraw-works" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Load Bruker Paravision datasets from directories, zip archives, or
-  Paravision-exported <code>.PvDatasets</code> files</li>
-<li>Inspect study, scan, and reconstruction metadata via rich CLI tables</li>
-<li>Map parameters using rule-based selection and remapper specs</li>
-<li>Convert scans to NIfTI with configurable layout entries and templates</li>
-<li>Extend conversion behavior via rules, specs, and converter hooks</li>
+<li>Inspect-first workflow: metadata can be inspected directly from the CLI before conversion.</li>
+<li>Parameter-based parsing: rules and specs define metadata extraction and sidecar generation.</li>
+<li>Extensible conversion: the same rule-based framework drives conversion and reconstruction via hooks.</li>
 </ul>
-<hr />
-<h2 id="supported-scope-and-limitations">Supported scope and limitations<a class="headerlink" href="#supported-scope-and-limitations" title="Permanent link">&para;</a></h2>
-<p>BrkRaw focuses on <strong>preclinical MRI datasets acquired with Bruker Paravision</strong>.
-The current scope is intentionally constrained to ensure correctness and
-reproducibility.</p>
-<h3 id="supported">Supported<a class="headerlink" href="#supported" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Bruker Paravision datasets (PV5, PV6, PV7, PV360)</li>
-<li>Paravision-exported <code>.PvDatasets</code> archives</li>
-<li>Preclinical MRI acquisitions (2D and 3D)</li>
-<li>Multiple reconstructions (<code>reco_id</code>) per scan</li>
-<li>Multi-slicepack acquisitions
-  (exported as separate outputs with suffixes)</li>
-<li>Loading from directory trees, zip archives, or <code>.PvDatasets</code> files</li>
-<li>Export to NIfTI with optional JSON sidecar metadata</li>
-</ul>
-<h3 id="tested-paravision-versions">Tested Paravision versions<a class="headerlink" href="#tested-paravision-versions" title="Permanent link">&para;</a></h3>
-<p>BrkRaw has been validated using <strong>Bruker Paravision standard datasets</strong>
-exported from the following versions:</p>
-<ul>
-<li>Paravision <strong>PV 360.3.5 - 360.3.7</strong></li>
-</ul>
-<p>Standard dataset definitions are based on Bruker documentation:
-<a href="https://www.bruker.com/en/products-and-solutions/preclinical-mri/paravision">https://www.bruker.com/en/products-and-solutions/preclinical-mri/paravision</a></p>
-<p>Support for other Paravision versions may work but has not been
-systematically validated.</p>
-<h3 id="not-in-scope-limitations">Not in scope / limitations<a class="headerlink" href="#not-in-scope-limitations" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Clinical DICOM datasets</li>
-<li>Automatic DICOM-to-NIfTI conversion</li>
-<li>Vendor-agnostic MRI pipelines</li>
-<li>Full BIDS compliance without user-provided rules or specs</li>
-<li>Interactive visualization (handled by external viewers)</li>
-</ul>
-<p>BrkRaw intentionally separates <strong>data interpretation</strong> from
-<strong>conversion rules</strong>. Users are expected to encode project- or
-modality-specific logic through rules, specs, or extensions rather
-than hard-coded heuristics.</p>
-<hr />
-<h2 id="ecosystem-and-extensions">Ecosystem and extensions<a class="headerlink" href="#ecosystem-and-extensions" title="Permanent link">&para;</a></h2>
-<p>BrkRaw is designed as a <strong>core engine</strong> with a growing ecosystem of
-extensions and supporting tools.</p>
-<h3 id="official-resources">Official resources<a class="headerlink" href="#official-resources" title="Permanent link">&para;</a></h3>
-<ul>
-<li>
-<p>BrkRaw organization page<br />
-<a href="https://brkraw.github.io">https://brkraw.github.io</a></p>
-</li>
-<li>
-<p>Jupyter notebook tutorials<br />
-<a href="https://github.com/BrkRaw/brkraw-tutorial">https://github.com/BrkRaw/brkraw-tutorial</a></p>
-</li>
-</ul>
-<h3 id="converter-and-ui-extensions">Converter and UI extensions<a class="headerlink" href="#converter-and-ui-extensions" title="Permanent link">&para;</a></h3>
-<ul>
-<li>
-<p><strong>brkraw-mrs</strong><br />
-  MRS (Magnetic Resonance Spectroscopy) support via converter hook<br />
-<a href="https://github.com/BrkRaw/brkraw-mrs">https://github.com/BrkRaw/brkraw-mrs</a></p>
-</li>
-<li>
-<p><strong>brkraw-viewer</strong><br />
-  Support plugin for orientation QC/reorientation, metadata/spec utilities, naming-policy tests, and config editing<br />
-<a href="https://github.com/BrkRaw/brkraw-viewer">https://github.com/BrkRaw/brkraw-viewer</a></p>
-</li>
-</ul>
-<h3 id="extension-templates">Extension templates<a class="headerlink" href="#extension-templates" title="Permanent link">&para;</a></h3>
-<ul>
-<li>
-<p><strong>brkraw-cli</strong><br />
-  Template repository for building BrkRaw CLI extensions<br />
-<a href="https://github.com/BrkRaw/brkraw-cli">https://github.com/BrkRaw/brkraw-cli</a></p>
-</li>
-<li>
-<p><strong>brkraw-hook</strong><br />
-  Public template for implementing converter hooks<br />
-<a href="https://github.com/BrkRaw/brkraw-hook">https://github.com/BrkRaw/brkraw-hook</a></p>
-</li>
-</ul>
+<h2 id="new-here-start-with-getting-started">New here? Start with  👉 <a href="getting-started/index.html">Getting Started</a><a class="headerlink" href="#new-here-start-with-getting-started" title="Permanent link">&para;</a></h2>
 
 
 

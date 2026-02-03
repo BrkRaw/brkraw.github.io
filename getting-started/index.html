@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Bruker Paravision dataset loader and NIfTI converter">
+        <meta name="description" content="A modular toolkit for Bruker MRI raw-data handling.">
       
       
       
@@ -27,7 +27,7 @@
     
     
       
-        <title>Overview - Preclinical MRI dataset toolkit</title>
+        <title>Overview - A Modular Toolkit for Bruker MRI raw-data handling.</title>
       
     
     
@@ -88,7 +88,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../index.html" title="Preclinical MRI dataset toolkit" class="md-header__button md-logo" aria-label="Preclinical MRI dataset toolkit" data-md-component="logo">
+    <a href="../index.html" title="A Modular Toolkit for Bruker MRI raw-data handling." class="md-header__button md-logo" aria-label="A Modular Toolkit for Bruker MRI raw-data handling." data-md-component="logo">
       
   <img src="../assets/brkraw-logo.svg" alt="logo">
 
@@ -101,7 +101,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Preclinical MRI dataset toolkit
+            A Modular Toolkit for Bruker MRI raw-data handling.
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -292,11 +292,11 @@
     
     
       <li class="md-tabs__item">
-        <a href="../reference/extensibility.html" class="md-tabs__link">
+        <a href="../extensions/extensibility.html" class="md-tabs__link">
           
   
   
-  Reference
+  Extensions
 
         </a>
       </li>
@@ -346,12 +346,12 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../index.html" title="Preclinical MRI dataset toolkit" class="md-nav__button md-logo" aria-label="Preclinical MRI dataset toolkit" data-md-component="logo">
+    <a href="../index.html" title="A Modular Toolkit for Bruker MRI raw-data handling." class="md-nav__button md-logo" aria-label="A Modular Toolkit for Bruker MRI raw-data handling." data-md-component="logo">
       
   <img src="../assets/brkraw-logo.svg" alt="logo">
 
     </a>
-    Preclinical MRI dataset toolkit
+    A Modular Toolkit for Bruker MRI raw-data handling.
   </label>
   
     <div class="md-nav__source">
@@ -527,6 +527,45 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#virtual-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Virtual Environment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-via-pip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Install via pip
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -541,21 +580,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#choose-a-workflow" class="md-nav__link">
+  <a href="#next-step" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Choose a workflow
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#notes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Notes
+        Next step
       
     </span>
   </a>
@@ -585,7 +613,7 @@
   <span class="md-ellipsis">
     
   
-    CLI quickstart
+    Command Line Interface
   
 
     
@@ -613,7 +641,7 @@
   <span class="md-ellipsis">
     
   
-    Python API quickstart
+    Python API
   
 
     
@@ -634,14 +662,14 @@
   
   
     <li class="md-nav__item">
-      <a href="configuration.html" class="md-nav__link">
+      <a href="gui.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Configuration basics
+    Graphical User Interface
   
 
     
@@ -662,14 +690,14 @@
   
   
     <li class="md-nav__item">
-      <a href="hooks.html" class="md-nav__link">
+      <a href="bids.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Converter hooks
+    BIDS integration
   
 
     
@@ -690,14 +718,14 @@
   
   
     <li class="md-nav__item">
-      <a href="viewer.html" class="md-nav__link">
+      <a href="config.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Dataset viewer
+    User Configuration
   
 
     
@@ -805,6 +833,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../cli/init.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    init
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../cli/session.html" class="md-nav__link">
         
   
@@ -861,6 +917,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../cli/params.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    params
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../cli/convert.html" class="md-nav__link">
         
   
@@ -897,6 +981,34 @@
     
   
     prune
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli/cache.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    cache
   
 
     
@@ -1314,7 +1426,7 @@
   <span class="md-ellipsis">
     
   
-    Reference
+    Extensions
   
 
     
@@ -1330,7 +1442,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Reference
+    Extensions
   
 
           </label>
@@ -1343,14 +1455,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/extensibility.html" class="md-nav__link">
+      <a href="../extensions/extensibility.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Extensibility model
+    Overview
   
 
     
@@ -1371,7 +1483,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/addons-and-plugins.html" class="md-nav__link">
+      <a href="../extensions/addons-and-plugins.html" class="md-nav__link">
         
   
   
@@ -1399,7 +1511,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/cli-extensions.html" class="md-nav__link">
+      <a href="../extensions/cli-extensions.html" class="md-nav__link">
         
   
   
@@ -1427,14 +1539,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/rules.html" class="md-nav__link">
+      <a href="../extensions/rules.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Rule syntax
+    Rules
   
 
     
@@ -1455,14 +1567,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/specs.html" class="md-nav__link">
+      <a href="../extensions/specs.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Spec syntax
+    Specs
   
 
     
@@ -1483,14 +1595,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/context-map.html" class="md-nav__link">
+      <a href="../extensions/context-map.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Context map syntax
+    Context maps
   
 
     
@@ -1511,14 +1623,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/layout.html" class="md-nav__link">
+      <a href="../extensions/layout.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Output layout and naming
+    Layout and naming
   
 
     
@@ -1539,7 +1651,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/hook-packages.html" class="md-nav__link">
+      <a href="../extensions/hook-packages.html" class="md-nav__link">
         
   
   
@@ -1857,6 +1969,45 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#virtual-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Virtual Environment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-via-pip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Install via pip
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1871,21 +2022,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#choose-a-workflow" class="md-nav__link">
+  <a href="#next-step" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Choose a workflow
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#notes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Notes
+        Next step
       
     </span>
   </a>
@@ -1913,68 +2053,55 @@
 
 
 <h1 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h1>
-<p>This section provides <strong>task-oriented entry points</strong> for using BrkRaw.
-Each page focuses on a common user workflow with minimal setup and
-practical examples.</p>
-<p>Before diving into specific workflows, make sure BrkRaw is installed
-and initialized.</p>
+<p>This section provides task-oriented entry points for using BrkRaw.
+Each page focuses on a common workflow with minimal setup and practical examples.</p>
 <hr />
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
-<p>Install BrkRaw using pip:</p>
-<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>brkraw
+<h3 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h3>
+<p>BrkRaw supports Python 3.8 or higher. We recommend Python 3.10+ for better compatibility
+with current and future extension modules, including converter hooks.</p>
+<h3 id="virtual-environment">Virtual Environment<a class="headerlink" href="#virtual-environment" title="Permanent link">&para;</a></h3>
+<p>We recommend installing BrkRaw in a virtual environment to isolate dependencies and avoid conflicts.</p>
+<p>Common tools include:</p>
+<ul>
+<li><strong><a href="https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html">Conda</a></strong>: Popular for scientific computing.</li>
+<li><strong><a href="https://github.com/astral-sh/uv">uv</a></strong>: A fast Python package and project manager.</li>
+<li><strong><a href="https://github.com/pyenv/pyenv">pyenv</a></strong>: Simple Python version management.</li>
+</ul>
+<h3 id="install-via-pip">Install via pip<a class="headerlink" href="#install-via-pip" title="Permanent link">&para;</a></h3>
+<p>Install the latest stable release from PyPI:</p>
+<div class="highlight"><pre><span></span><code>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>brkraw
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Why <code>python -m</code>?</p>
+<p>Using <code>python -m pip</code> ensures that the package is installed into the specific
+Python environment you are currently using. Running <code>pip</code> directly can sometimes
+install packages into a different Python version if your system <code>PATH</code> is not configured perfectly.</p>
+</div>
+<p>To upgrade an existing installation:</p>
+<div class="highlight"><pre><span></span><code>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>brkraw
 </code></pre></div>
 <p>Verify the installation:</p>
 <div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>--help
 </code></pre></div>
-<p>This documentation assumes that BrkRaw is available on your PATH.</p>
 <hr />
 <h2 id="initial-configuration">Initial configuration<a class="headerlink" href="#initial-configuration" title="Permanent link">&para;</a></h2>
-<p>BrkRaw uses a user-level configuration directory to manage output
-layout, logging, and installed extensions.</p>
-<p>Initialize the default configuration by running:</p>
+<p>BrkRaw uses a user-level configuration directory for output layout,
+logging, and extensions. Initialize the default configuration by running:</p>
 <div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>init
 </code></pre></div>
 <p>This creates a configuration directory (by default under <code>~/.brkraw</code>)
 and a base <code>config.yaml</code> file.</p>
-<p>Most users can start with the default configuration and adjust it
-later as needed. A guided overview of commonly modified settings is
-available in the <strong>Configuration basics</strong> section.</p>
+<p>Most users can start with the defaults and adjust settings later as needed.</p>
 <hr />
-<h2 id="choose-a-workflow">Choose a workflow<a class="headerlink" href="#choose-a-workflow" title="Permanent link">&para;</a></h2>
-<p>Select the entry point that best matches your use case:</p>
+<h2 id="next-step">Next step<a class="headerlink" href="#next-step" title="Permanent link">&para;</a></h2>
+<p>Choose the entry point that matches your use case:</p>
 <ul>
-<li>
-<p><strong>CLI quickstart</strong><br />
-  Inspect datasets and convert scans from the command line.</p>
-</li>
-<li>
-<p><strong>Python API quickstart</strong><br />
-  Script conversions, automate workflows, and integrate BrkRaw into
-  analysis pipelines.</p>
-</li>
-<li>
-<p><strong>Configuration basics</strong><br />
-  Learn which configuration options are commonly adjusted and why.</p>
-</li>
-<li>
-<p><strong>Converter hooks</strong><br />
-  Extend BrkRaw with modality-specific converters
-  (e.g. NIfTI-MRS output).</p>
-</li>
-<li>
-<p><strong>Dataset viewer</strong><br />
-  Interactively inspect Paravision datasets using a lightweight viewer.</p>
-</li>
-</ul>
-<hr />
-<h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
-<ul>
-<li>These pages focus on practical usage rather than exhaustive
-  reference material.</li>
-<li>Advanced configuration options and full parameter definitions are
-  documented elsewhere in the Reference sections.</li>
-<li>Some configuration options and extension interfaces may evolve in
-  future releases as BrkRaw develops.</li>
+<li><a href="cli.html"><strong>Command Line Interface (CLI)</strong></a>  </li>
+<li><a href="api.html"><strong>Python API</strong></a></li>
+<li><a href="gui.html"><strong>Graphical User Interface (GUI)</strong></a></li>
+<li><a href="bids.html"><strong>BIDS integration</strong></a></li>
+<li><a href="config.html"><strong>User Configuration</strong></a></li>
 </ul>
 
 

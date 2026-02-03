@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Bruker Paravision dataset loader and NIfTI converter">
+        <meta name="description" content="A modular toolkit for Bruker MRI raw-data handling.">
       
       
       
@@ -16,7 +16,7 @@
         <link rel="prev" href="cli.html">
       
       
-        <link rel="next" href="configuration.html">
+        <link rel="next" href="gui.html">
       
       
         
@@ -27,7 +27,7 @@
     
     
       
-        <title>Python API quickstart - Preclinical MRI dataset toolkit</title>
+        <title>Python API - A Modular Toolkit for Bruker MRI raw-data handling.</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#python-api-quickstart" class="md-skip">
+        <a href="#python-api" class="md-skip">
           Skip to content
         </a>
       
@@ -88,7 +88,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../index.html" title="Preclinical MRI dataset toolkit" class="md-header__button md-logo" aria-label="Preclinical MRI dataset toolkit" data-md-component="logo">
+    <a href="../index.html" title="A Modular Toolkit for Bruker MRI raw-data handling." class="md-header__button md-logo" aria-label="A Modular Toolkit for Bruker MRI raw-data handling." data-md-component="logo">
       
   <img src="../assets/brkraw-logo.svg" alt="logo">
 
@@ -101,13 +101,13 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Preclinical MRI dataset toolkit
+            A Modular Toolkit for Bruker MRI raw-data handling.
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Python API quickstart
+              Python API
             
           </span>
         </div>
@@ -292,11 +292,11 @@
     
     
       <li class="md-tabs__item">
-        <a href="../reference/extensibility.html" class="md-tabs__link">
+        <a href="../extensions/extensibility.html" class="md-tabs__link">
           
   
   
-  Reference
+  Extensions
 
         </a>
       </li>
@@ -346,12 +346,12 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../index.html" title="Preclinical MRI dataset toolkit" class="md-nav__button md-logo" aria-label="Preclinical MRI dataset toolkit" data-md-component="logo">
+    <a href="../index.html" title="A Modular Toolkit for Bruker MRI raw-data handling." class="md-nav__button md-logo" aria-label="A Modular Toolkit for Bruker MRI raw-data handling." data-md-component="logo">
       
   <img src="../assets/brkraw-logo.svg" alt="logo">
 
     </a>
-    Preclinical MRI dataset toolkit
+    A Modular Toolkit for Bruker MRI raw-data handling.
   </label>
   
     <div class="md-nav__source">
@@ -494,7 +494,7 @@
   <span class="md-ellipsis">
     
   
-    CLI quickstart
+    Command Line Interface
   
 
     
@@ -531,7 +531,7 @@
   <span class="md-ellipsis">
     
   
-    Python API quickstart
+    Python API
   
 
     
@@ -549,7 +549,7 @@
   <span class="md-ellipsis">
     
   
-    Python API quickstart
+    Python API
   
 
     
@@ -579,6 +579,17 @@
     <span class="md-ellipsis">
       
         Load a dataset
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list-available-scans-and-reconstructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        List available scans and reconstructions
       
     </span>
   </a>
@@ -619,6 +630,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#convert-with-hooks-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Convert with hooks (optional)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#write-sidecar-metadata" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -630,10 +652,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#customize-output-naming-and-layout" class="md-nav__link">
+  <a href="#build-output-paths" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Customize output naming and layout
+        Build output paths
       
     </span>
   </a>
@@ -645,17 +667,6 @@
     <span class="md-ellipsis">
       
         Batch conversion example
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#manage-addons-programmatically" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Manage addons programmatically
       
     </span>
   </a>
@@ -678,14 +689,14 @@
   
   
     <li class="md-nav__item">
-      <a href="configuration.html" class="md-nav__link">
+      <a href="gui.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Configuration basics
+    Graphical User Interface
   
 
     
@@ -706,14 +717,14 @@
   
   
     <li class="md-nav__item">
-      <a href="hooks.html" class="md-nav__link">
+      <a href="bids.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Converter hooks
+    BIDS integration
   
 
     
@@ -734,14 +745,14 @@
   
   
     <li class="md-nav__item">
-      <a href="viewer.html" class="md-nav__link">
+      <a href="config.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Dataset viewer
+    User Configuration
   
 
     
@@ -849,6 +860,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../cli/init.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    init
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../cli/session.html" class="md-nav__link">
         
   
@@ -905,6 +944,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../cli/params.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    params
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../cli/convert.html" class="md-nav__link">
         
   
@@ -941,6 +1008,34 @@
     
   
     prune
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli/cache.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    cache
   
 
     
@@ -1358,7 +1453,7 @@
   <span class="md-ellipsis">
     
   
-    Reference
+    Extensions
   
 
     
@@ -1374,7 +1469,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Reference
+    Extensions
   
 
           </label>
@@ -1387,14 +1482,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/extensibility.html" class="md-nav__link">
+      <a href="../extensions/extensibility.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Extensibility model
+    Overview
   
 
     
@@ -1415,7 +1510,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/addons-and-plugins.html" class="md-nav__link">
+      <a href="../extensions/addons-and-plugins.html" class="md-nav__link">
         
   
   
@@ -1443,7 +1538,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/cli-extensions.html" class="md-nav__link">
+      <a href="../extensions/cli-extensions.html" class="md-nav__link">
         
   
   
@@ -1471,14 +1566,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/rules.html" class="md-nav__link">
+      <a href="../extensions/rules.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Rule syntax
+    Rules
   
 
     
@@ -1499,14 +1594,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/specs.html" class="md-nav__link">
+      <a href="../extensions/specs.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Spec syntax
+    Specs
   
 
     
@@ -1527,14 +1622,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/context-map.html" class="md-nav__link">
+      <a href="../extensions/context-map.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Context map syntax
+    Context maps
   
 
     
@@ -1555,14 +1650,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/layout.html" class="md-nav__link">
+      <a href="../extensions/layout.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Output layout and naming
+    Layout and naming
   
 
     
@@ -1583,7 +1678,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/hook-packages.html" class="md-nav__link">
+      <a href="../extensions/hook-packages.html" class="md-nav__link">
         
   
   
@@ -1904,6 +1999,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#list-available-scans-and-reconstructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        List available scans and reconstructions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#inspect-dataset-information-cli-brkraw-info" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1937,6 +2043,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#convert-with-hooks-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Convert with hooks (optional)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#write-sidecar-metadata" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1948,10 +2065,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#customize-output-naming-and-layout" class="md-nav__link">
+  <a href="#build-output-paths" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Customize output naming and layout
+        Build output paths
       
     </span>
   </a>
@@ -1963,17 +2080,6 @@
     <span class="md-ellipsis">
       
         Batch conversion example
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#manage-addons-programmatically" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Manage addons programmatically
       
     </span>
   </a>
@@ -2000,7 +2106,7 @@
   
 
 
-<h1 id="python-api-quickstart">Python API quickstart<a class="headerlink" href="#python-api-quickstart" title="Permanent link">&para;</a></h1>
+<h1 id="python-api">Python API<a class="headerlink" href="#python-api" title="Permanent link">&para;</a></h1>
 <p>This page provides a minimal, task-oriented introduction to the
 BrkRaw Python API. The examples mirror common CLI workflows and are
 intended for interactive use and scripting.</p>
@@ -2014,6 +2120,16 @@ intended for interactive use and scripting.</p>
 </code></pre></div>
 <p>The returned object acts as a dataset loader and entry point for
 inspection and conversion.</p>
+<hr />
+<h2 id="list-available-scans-and-reconstructions">List available scans and reconstructions<a class="headerlink" href="#list-available-scans-and-reconstructions" title="Permanent link">&para;</a></h2>
+<p>Before converting, it is often helpful to list available scan and reconstruction IDs.</p>
+<div class="highlight"><pre><span></span><code><span class="n">scan_ids</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">loader</span><span class="o">.</span><span class="n">avail</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Scan IDs:&quot;</span><span class="p">,</span> <span class="n">scan_ids</span><span class="p">)</span>
+
+<span class="n">scan</span> <span class="o">=</span> <span class="n">loader</span><span class="o">.</span><span class="n">get_scan</span><span class="p">(</span><span class="n">scan_ids</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">reco_ids</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">scan</span><span class="o">.</span><span class="n">avail</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Reco IDs for first scan:&quot;</span><span class="p">,</span> <span class="n">reco_ids</span><span class="p">)</span>
+</code></pre></div>
 <hr />
 <h2 id="inspect-dataset-information-cli-brkraw-info">Inspect dataset information (CLI: <code>brkraw info</code>)<a class="headerlink" href="#inspect-dataset-information-cli-brkraw-info" title="Permanent link">&para;</a></h2>
 <p>Retrieve structured metadata describing the study and scans.</p>
@@ -2038,35 +2154,73 @@ conversion.</p>
 <div class="highlight"><pre><span></span><code><span class="n">nii</span> <span class="o">=</span> <span class="n">loader</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span>
     <span class="mi">3</span><span class="p">,</span>
     <span class="n">reco_id</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
-    <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;nifti&quot;</span><span class="p">,</span>
 <span class="p">)</span>
 </code></pre></div>
 <p>Save the output to disk:</p>
-<div class="highlight"><pre><span></span><code><span class="n">nii</span><span class="o">.</span><span class="n">to_filename</span><span class="p">(</span><span class="s2">&quot;scan3.nii.gz&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="n">nii</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;Conversion returned no output.&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">nii</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">img</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">nii</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">img</span><span class="o">.</span><span class="n">to_filename</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;scan3_part</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">.nii.gz&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">nii</span><span class="o">.</span><span class="n">to_filename</span><span class="p">(</span><span class="s2">&quot;scan3.nii.gz&quot;</span><span class="p">)</span>
 </code></pre></div>
+<hr />
+<h2 id="convert-with-hooks-optional">Convert with hooks (optional)<a class="headerlink" href="#convert-with-hooks-optional" title="Permanent link">&para;</a></h2>
+<p>Converter hooks are optional extensions that can modify reconstruction, metadata, or output behavior.
+To list and install hooks, use the CLI:</p>
+<div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>hook<span class="w"> </span>list
+brkraw<span class="w"> </span>hook<span class="w"> </span>install<span class="w"> </span>&lt;hook-name&gt;
+</code></pre></div>
+<p>To pass hook arguments from Python, use <code>hook_args_by_name</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="n">nii</span> <span class="o">=</span> <span class="n">loader</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span>
+    <span class="mi">3</span><span class="p">,</span>
+    <span class="n">reco_id</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">hook_args_by_name</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;&lt;hook-name&gt;&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="c1"># Fill this with the hook&#39;s supported arguments.</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+<span class="p">)</span>
+</code></pre></div>
+<p>To generate a YAML preset template of hook arguments, run:</p>
+<div class="highlight"><pre><span></span><code>brkraw<span class="w"> </span>hook<span class="w"> </span>preset<span class="w"> </span>&lt;hook-name&gt;
+</code></pre></div>
+<p>For details, see <a href="../api/hook.html">Hooks</a>.</p>
 <hr />
 <h2 id="write-sidecar-metadata">Write sidecar metadata<a class="headerlink" href="#write-sidecar-metadata" title="Permanent link">&para;</a></h2>
 <p>Generate metadata dictionaries for JSON sidecar files.</p>
 <div class="highlight"><pre><span></span><code><span class="n">meta</span> <span class="o">=</span> <span class="n">loader</span><span class="o">.</span><span class="n">get_metadata</span><span class="p">(</span>
     <span class="mi">3</span><span class="p">,</span>
     <span class="n">reco_id</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
-    <span class="n">context_map</span><span class="o">=</span><span class="s2">&quot;maps.yaml&quot;</span><span class="p">,</span>
 <span class="p">)</span>
 </code></pre></div>
-<p>The metadata content is controlled by context maps, rules, and specs.</p>
+<p>The metadata content is controlled by rules and specs.</p>
 <hr />
-<h2 id="customize-output-naming-and-layout">Customize output naming and layout<a class="headerlink" href="#customize-output-naming-and-layout" title="Permanent link">&para;</a></h2>
-<p>Render output paths using layout templates.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">brkraw.core</span><span class="w"> </span><span class="kn">import</span> <span class="n">layout</span> <span class="k">as</span> <span class="n">layout_core</span>
+<h2 id="build-output-paths">Build output paths<a class="headerlink" href="#build-output-paths" title="Permanent link">&para;</a></h2>
+<p>Render output paths using layout templates, then pass the result to <code>to_filename()</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">brkraw.core</span><span class="w"> </span><span class="kn">import</span> <span class="n">layout</span> <span class="k">as</span> <span class="n">layout_core</span>
 
-<span class="n">name</span> <span class="o">=</span> <span class="n">layout_core</span><span class="o">.</span><span class="n">render_layout</span><span class="p">(</span>
+<span class="n">out_path</span> <span class="o">=</span> <span class="n">layout_core</span><span class="o">.</span><span class="n">render_layout</span><span class="p">(</span>
     <span class="n">loader</span><span class="p">,</span>
     <span class="n">scan_id</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
     <span class="n">layout_template</span><span class="o">=</span><span class="s2">&quot;sub-</span><span class="si">{Subject.ID}</span><span class="s2">/scan-</span><span class="si">{ScanID}</span><span class="s2">_</span><span class="si">{Protocol}</span><span class="s2">&quot;</span><span class="p">,</span>
-    <span class="n">context_map</span><span class="o">=</span><span class="s2">&quot;maps.yaml&quot;</span><span class="p">,</span>
 <span class="p">)</span>
+
+<span class="n">Path</span><span class="p">(</span><span class="n">out_path</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">nii</span> <span class="o">=</span> <span class="n">loader</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">reco_id</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">nii</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;Conversion returned no output.&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">nii</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">img</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">nii</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">img</span><span class="o">.</span><span class="n">to_filename</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">out_path</span><span class="si">}</span><span class="s2">_part</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">.nii.gz&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">nii</span><span class="o">.</span><span class="n">to_filename</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">out_path</span><span class="si">}</span><span class="s2">.nii.gz&quot;</span><span class="p">)</span>
 </code></pre></div>
-<p>This mirrors the layout behavior used by the CLI.</p>
+<p>This mirrors the layout behavior used by the CLI, but <code>render_layout()</code> only builds a path string.</p>
 <hr />
 <h2 id="batch-conversion-example">Batch conversion example<a class="headerlink" href="#batch-conversion-example" title="Permanent link">&para;</a></h2>
 <p>Convert the same scan across multiple datasets.</p>
@@ -2076,29 +2230,37 @@ conversion.</p>
 <span class="n">root</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;/path/to/root&quot;</span><span class="p">)</span>
 
 <span class="k">for</span> <span class="n">dataset</span> <span class="ow">in</span> <span class="n">root</span><span class="o">.</span><span class="n">iterdir</span><span class="p">():</span>
-    <span class="n">loader</span> <span class="o">=</span> <span class="n">brk</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">scan_id</span> <span class="ow">in</span> <span class="n">loader</span><span class="o">.</span><span class="n">avail</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
-        <span class="n">nii</span> <span class="o">=</span> <span class="n">loader</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span>
-            <span class="n">scan_id</span><span class="p">,</span>
-            <span class="n">reco_id</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
-            <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;nifti&quot;</span><span class="p">,</span>
-        <span class="p">)</span>
-        <span class="k">if</span> <span class="n">nii</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">out</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">dataset</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">_scan</span><span class="si">{</span><span class="n">scan_id</span><span class="si">}</span><span class="s2">.nii.gz&quot;</span>
-            <span class="n">nii</span><span class="o">.</span><span class="n">to_filename</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>
-</code></pre></div>
-<hr />
-<h2 id="manage-addons-programmatically">Manage addons programmatically<a class="headerlink" href="#manage-addons-programmatically" title="Permanent link">&para;</a></h2>
-<p>Add, list, and remove addons from Python.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">brkraw.apps</span><span class="w"> </span><span class="kn">import</span> <span class="n">addon</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">dataset</span><span class="o">.</span><span class="n">is_dir</span><span class="p">():</span>
+        <span class="k">continue</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">loader</span> <span class="o">=</span> <span class="n">brk</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+        <span class="c1"># Not a Paravision dataset directory.</span>
+        <span class="k">continue</span>
 
-<span class="n">addon</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;/path/to/spec.yaml&quot;</span><span class="p">)</span>
-<span class="n">addon</span><span class="o">.</span><span class="n">list_installed</span><span class="p">()</span>
-<span class="n">addon</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&quot;spec.yaml&quot;</span><span class="p">,</span> <span class="n">root</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">scan_id</span> <span class="ow">in</span> <span class="n">loader</span><span class="o">.</span><span class="n">avail</span><span class="p">:</span>
+        <span class="n">nii</span> <span class="o">=</span> <span class="n">loader</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="n">scan_id</span><span class="p">,</span> <span class="n">reco_id</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">nii</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">continue</span>
+
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">nii</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">img</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">nii</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+                <span class="n">img</span><span class="o">.</span><span class="n">to_filename</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">dataset</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">_scan</span><span class="si">{</span><span class="n">scan_id</span><span class="si">}</span><span class="s2">_part</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">.nii.gz&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">nii</span><span class="o">.</span><span class="n">to_filename</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">dataset</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">_scan</span><span class="si">{</span><span class="n">scan_id</span><span class="si">}</span><span class="s2">.nii.gz&quot;</span><span class="p">)</span>
 </code></pre></div>
-<p>For advanced usage, see the full API documentation under <code>docs/api/</code>.</p>
+<p>For advanced usage, see the API reference:</p>
+<ul>
+<li><a href="../api/overview.html">Overview</a></li>
+<li><a href="../api/data-access.html">Data access</a></li>
+<li><a href="../api/info.html">Info and params</a></li>
+<li><a href="../api/convert.html">Convert</a></li>
+<li><a href="../api/addon.html">Addons</a></li>
+<li><a href="../api/hook.html">Hooks</a></li>
+<li><a href="../api/layout.html">Layout and naming</a></li>
+</ul>
 <p>If you need lower-level access (scan objects, dataset file access, <code>get_dataobj</code>,
-<code>get_affine</code>), start with <code>docs/api/data-access.md</code>.</p>
+<code>get_affine</code>), start with <a href="../api/data-access.html">Data access</a>.</p>
 
 
 

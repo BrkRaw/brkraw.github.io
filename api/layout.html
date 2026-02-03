@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Bruker Paravision dataset loader and NIfTI converter">
+        <meta name="description" content="A modular toolkit for Bruker MRI raw-data handling.">
       
       
       
@@ -27,7 +27,7 @@
     
     
       
-        <title>layout - Preclinical MRI dataset toolkit</title>
+        <title>layout - A Modular Toolkit for Bruker MRI raw-data handling.</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#api-layout" class="md-skip">
+        <a href="#layout-python-api" class="md-skip">
           Skip to content
         </a>
       
@@ -88,7 +88,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../index.html" title="Preclinical MRI dataset toolkit" class="md-header__button md-logo" aria-label="Preclinical MRI dataset toolkit" data-md-component="logo">
+    <a href="../index.html" title="A Modular Toolkit for Bruker MRI raw-data handling." class="md-header__button md-logo" aria-label="A Modular Toolkit for Bruker MRI raw-data handling." data-md-component="logo">
       
   <img src="../assets/brkraw-logo.svg" alt="logo">
 
@@ -101,7 +101,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Preclinical MRI dataset toolkit
+            A Modular Toolkit for Bruker MRI raw-data handling.
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -292,11 +292,11 @@
     
     
       <li class="md-tabs__item">
-        <a href="../reference/extensibility.html" class="md-tabs__link">
+        <a href="../extensions/extensibility.html" class="md-tabs__link">
           
   
   
-  Reference
+  Extensions
 
         </a>
       </li>
@@ -346,12 +346,12 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../index.html" title="Preclinical MRI dataset toolkit" class="md-nav__button md-logo" aria-label="Preclinical MRI dataset toolkit" data-md-component="logo">
+    <a href="../index.html" title="A Modular Toolkit for Bruker MRI raw-data handling." class="md-nav__button md-logo" aria-label="A Modular Toolkit for Bruker MRI raw-data handling." data-md-component="logo">
       
   <img src="../assets/brkraw-logo.svg" alt="logo">
 
     </a>
-    Preclinical MRI dataset toolkit
+    A Modular Toolkit for Bruker MRI raw-data handling.
   </label>
   
     <div class="md-nav__source">
@@ -489,7 +489,7 @@
   <span class="md-ellipsis">
     
   
-    CLI quickstart
+    Command Line Interface
   
 
     
@@ -517,7 +517,7 @@
   <span class="md-ellipsis">
     
   
-    Python API quickstart
+    Python API
   
 
     
@@ -538,14 +538,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting-started/configuration.html" class="md-nav__link">
+      <a href="../getting-started/gui.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Configuration basics
+    Graphical User Interface
   
 
     
@@ -566,14 +566,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting-started/hooks.html" class="md-nav__link">
+      <a href="../getting-started/bids.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Converter hooks
+    BIDS integration
   
 
     
@@ -594,14 +594,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting-started/viewer.html" class="md-nav__link">
+      <a href="../getting-started/config.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Dataset viewer
+    User Configuration
   
 
     
@@ -709,6 +709,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../cli/init.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    init
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../cli/session.html" class="md-nav__link">
         
   
@@ -765,6 +793,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../cli/params.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    params
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../cli/convert.html" class="md-nav__link">
         
   
@@ -801,6 +857,34 @@
     
   
     prune
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli/cache.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    cache
   
 
     
@@ -1169,6 +1253,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#equivalent-cli-behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Equivalent CLI behavior
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#render_layout" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1320,7 +1415,7 @@
   <span class="md-ellipsis">
     
   
-    Reference
+    Extensions
   
 
     
@@ -1336,7 +1431,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Reference
+    Extensions
   
 
           </label>
@@ -1349,14 +1444,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/extensibility.html" class="md-nav__link">
+      <a href="../extensions/extensibility.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Extensibility model
+    Overview
   
 
     
@@ -1377,7 +1472,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/addons-and-plugins.html" class="md-nav__link">
+      <a href="../extensions/addons-and-plugins.html" class="md-nav__link">
         
   
   
@@ -1405,7 +1500,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/cli-extensions.html" class="md-nav__link">
+      <a href="../extensions/cli-extensions.html" class="md-nav__link">
         
   
   
@@ -1433,14 +1528,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/rules.html" class="md-nav__link">
+      <a href="../extensions/rules.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Rule syntax
+    Rules
   
 
     
@@ -1461,14 +1556,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/specs.html" class="md-nav__link">
+      <a href="../extensions/specs.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Spec syntax
+    Specs
   
 
     
@@ -1489,14 +1584,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/context-map.html" class="md-nav__link">
+      <a href="../extensions/context-map.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Context map syntax
+    Context maps
   
 
     
@@ -1517,14 +1612,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/layout.html" class="md-nav__link">
+      <a href="../extensions/layout.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Output layout and naming
+    Layout and naming
   
 
     
@@ -1545,7 +1640,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/hook-packages.html" class="md-nav__link">
+      <a href="../extensions/hook-packages.html" class="md-nav__link">
         
   
   
@@ -1855,6 +1950,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#equivalent-cli-behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Equivalent CLI behavior
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#render_layout" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1924,13 +2030,20 @@
   
 
 
-<h1 id="api-layout">API: Layout<a class="headerlink" href="#api-layout" title="Permanent link">&para;</a></h1>
+<h1 id="layout-python-api">Layout (Python API)<a class="headerlink" href="#layout-python-api" title="Permanent link">&para;</a></h1>
 <p>Helpers for building filenames from info/metadata specs.</p>
 <p>Module: <code>brkraw.core.layout</code></p>
+<hr />
+<h2 id="equivalent-cli-behavior">Equivalent CLI behavior<a class="headerlink" href="#equivalent-cli-behavior" title="Permanent link">&para;</a></h2>
+<p>The CLI (<code>brkraw convert</code>) uses the layout system to build output paths and
+handles de-duplication, sanitization, and multi-slicepack suffixes.</p>
+<p>In the Python API, <code>render_layout()</code> only builds a path string. You then pass
+that path to <code>to_filename()</code> yourself.</p>
+<hr />
 <h2 id="render_layout">render_layout<a class="headerlink" href="#render_layout" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">brkraw.core</span><span class="w"> </span><span class="kn">import</span> <span class="n">layout</span> <span class="k">as</span> <span class="n">layout_core</span>
 
-<span class="n">name</span> <span class="o">=</span> <span class="n">layout_core</span><span class="o">.</span><span class="n">render_layout</span><span class="p">(</span>
+<span class="n">out_path</span> <span class="o">=</span> <span class="n">layout_core</span><span class="o">.</span><span class="n">render_layout</span><span class="p">(</span>
     <span class="n">loader</span><span class="p">,</span>
     <span class="n">scan_id</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
     <span class="n">layout_entries</span><span class="o">=</span><span class="p">[</span>
@@ -1938,15 +2051,41 @@
         <span class="p">{</span><span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;Subject.ID&quot;</span><span class="p">,</span> <span class="s2">&quot;entry&quot;</span><span class="p">:</span> <span class="s2">&quot;sub&quot;</span><span class="p">,</span> <span class="s2">&quot;sep&quot;</span><span class="p">:</span> <span class="s2">&quot;/&quot;</span><span class="p">},</span>
         <span class="p">{</span><span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;Protocol&quot;</span><span class="p">,</span> <span class="s2">&quot;hide&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
     <span class="p">],</span>
-    <span class="n">context_map</span><span class="o">=</span><span class="s2">&quot;maps.yaml&quot;</span><span class="p">,</span>
 <span class="p">)</span>
+</code></pre></div>
+<p>Use it when writing files:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+
+<span class="n">nii</span> <span class="o">=</span> <span class="n">loader</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">reco_id</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">nii</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;Conversion returned no output.&quot;</span><span class="p">)</span>
+
+<span class="n">Path</span><span class="p">(</span><span class="n">out_path</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">nii</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">img</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">nii</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">img</span><span class="o">.</span><span class="n">to_filename</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">out_path</span><span class="si">}</span><span class="s2">_part</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">.nii.gz&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">nii</span><span class="o">.</span><span class="n">to_filename</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">out_path</span><span class="si">}</span><span class="s2">.nii.gz&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>If both <code>layout_entries</code> and <code>layout_template</code> are provided, the template wins.</p>
+<div class="highlight"><pre><span></span><code><span class="n">name</span> <span class="o">=</span> <span class="n">layout_core</span><span class="o">.</span><span class="n">render_layout</span><span class="p">(</span>
+    <span class="n">loader</span><span class="p">,</span>
+    <span class="n">scan_id</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+    <span class="n">layout_entries</span><span class="o">=</span><span class="p">[{</span><span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;Subject.ID&quot;</span><span class="p">,</span> <span class="s2">&quot;entry&quot;</span><span class="p">:</span> <span class="s2">&quot;sub&quot;</span><span class="p">,</span> <span class="s2">&quot;sep&quot;</span><span class="p">:</span> <span class="s2">&quot;/&quot;</span><span class="p">}],</span>
+    <span class="n">layout_template</span><span class="o">=</span><span class="s2">&quot;sub-</span><span class="si">{Subject.ID}</span><span class="s2">/scan-</span><span class="si">{ScanID}</span><span class="s2">&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+</code></pre></div>
+<p>Example outputs (same inputs):</p>
+<div class="highlight"><pre><span></span><code>layout_entries only  -&gt; sub-001
+layout_template only -&gt; sub-001/scan-3
+both provided        -&gt; sub-001/scan-3
 </code></pre></div>
 <h3 id="fixed-keys">Fixed keys<a class="headerlink" href="#fixed-keys" title="Permanent link">&para;</a></h3>
 <p>These placeholders are always available, regardless of mapped metadata:</p>
 <ul>
 <li><code>{ScanID}</code> / <code>{scan_id}</code> / <code>{scanid}</code></li>
 <li><code>{RecoID}</code> / <code>{reco_id}</code> / <code>{recoid}</code> (may be <code>None</code>)</li>
-<li><code>{Counter}</code> / <code>{counter}</code> (optional; use for de-duplication)</li>
+<li><code>{Counter}</code> / <code>{counter}</code> (used for de-duplication)</li>
 </ul>
 <p>You can override specs for testing via API-only kwargs:</p>
 <div class="highlight"><pre><span></span><code><span class="n">name</span> <span class="o">=</span> <span class="n">layout_core</span><span class="o">.</span><span class="n">render_layout</span><span class="p">(</span>
@@ -1963,7 +2102,7 @@
 <p><code>key</code>: dotted key resolved from the layout info (for example <code>Subject.ID</code>).</p>
 </li>
 <li>
-<p><code>entry</code>: prefix label used to emit <code>entry-value</code> (optional when <code>hide</code> is true).</p>
+<p><code>entry</code>: prefix label used to emit <code>entry-value</code> (optional; default entry is derived from <code>key</code> when <code>hide</code> is false).</p>
 </li>
 <li>
 <p><code>hide</code>: when true, only the value is appended.</p>
@@ -1972,7 +2111,7 @@
 <p><code>use_entry</code>: reuse a previously defined <code>entry</code> value.</p>
 </li>
 <li>
-<p><code>sep</code>: separator to insert after this field (default <code>_</code>, use <code>/</code> for folders).</p>
+<p><code>sep</code>: separator to insert between fields (default <code>_</code>, use <code>/</code> for folders).</p>
 </li>
 <li>
 <p><code>value_pattern</code>: regex that defines allowed characters (default <code>[A-Za-z0-9._-]</code>).</p>
@@ -1993,20 +2132,23 @@
 <p>Missing values are skipped.</p>
 </li>
 <li>
+<p>For <code>layout_template</code>, missing placeholders render as empty strings.</p>
+</li>
+<li>
 <p>When no parts remain, the fallback is <code>scan-&lt;ScanID&gt;</code>.</p>
 </li>
 <li>
-<p><code>context_map</code> applies runtime mapping rules to the spec output.</p>
+<p><code>use_entry</code> only works when the referenced entry was recorded (for example, it is not recorded when <code>hide: true</code> and <code>entry</code> is omitted).</p>
+</li>
+<li>
+<p><code>context_map</code> is optional. When provided, it applies runtime remapping rules to spec output.</p>
 </li>
 <li>Metadata still wins on conflicts when keys overlap.</li>
-<li>When <code>context_map.__meta__</code> defines <code>layout_entries</code> or <code>layout_template</code>, those
-  can be passed explicitly to <code>render_layout</code> to override config defaults.</li>
 </ul>
 <h2 id="layout-info-parts">Layout info parts<a class="headerlink" href="#layout-info-parts" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><span class="n">info</span><span class="p">,</span> <span class="n">metadata</span> <span class="o">=</span> <span class="n">layout_core</span><span class="o">.</span><span class="n">load_layout_info_parts</span><span class="p">(</span>
     <span class="n">loader</span><span class="p">,</span>
     <span class="n">scan_id</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
-    <span class="n">context_map</span><span class="o">=</span><span class="s2">&quot;maps.yaml&quot;</span><span class="p">,</span>
 <span class="p">)</span>
 </code></pre></div>
 <p>Notes:</p>
@@ -2022,17 +2164,12 @@
 <span class="n">suffixes</span> <span class="o">=</span> <span class="n">layout_core</span><span class="o">.</span><span class="n">render_slicepack_suffixes</span><span class="p">(</span>
     <span class="n">info</span><span class="p">,</span>
     <span class="n">count</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
-    <span class="n">template</span><span class="o">=</span><span class="s2">&quot;_</span><span class="si">{SliceOrient}</span><span class="s2">&quot;</span><span class="p">,</span>
+    <span class="n">template</span><span class="o">=</span><span class="s2">&quot;_slpack</span><span class="si">{index}</span><span class="s2">&quot;</span><span class="p">,</span>
 <span class="p">)</span>
 </code></pre></div>
 <p>Notes:</p>
 <ul>
-<li>
-<p><code>{index}</code> is always 1-based.</p>
-</li>
-<li>
-<p><code>{SliceOrient}</code> resolves from the default info spec when present.</p>
-</li>
+<li><code>{index}</code> is always 1-based.</li>
 </ul>
 
 
